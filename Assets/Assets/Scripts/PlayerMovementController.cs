@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovementController : NetworkBehaviour
 {
@@ -106,10 +107,13 @@ public class PlayerMovementController : NetworkBehaviour
     private readonly static string TakeDamageAnim = "TakeDamage";
     private readonly static string DeathAnim = "Death";
 
+    public InputActionReference moveAction; // arrastar do Input Actions no inspetor
+    private Vector2 moveInput;
+
     private void Start()
-    {
+    { 
         calculatedTimeRotateBack = timeRotateBack;
-        playerAnimator = GetComponent<Animator>();
+        playerAnimator = GetComponentInChildren<Animator>();
         playerRb = GetComponent<Rigidbody>();
         playerRb.freezeRotation = true;
         jumps = maxJumps;
@@ -138,7 +142,7 @@ public class PlayerMovementController : NetworkBehaviour
 
     private void Update()
     {
-        if (!_canMove) return;
+        //if (!_canMove) return;
         CheckAnimation();
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
         if (grounded && !jumping)
@@ -183,8 +187,9 @@ public class PlayerMovementController : NetworkBehaviour
 
     private void GetInputsActions()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
+        moveInput = moveAction.action.ReadValue<Vector2>();
+        horizontalInput = moveInput.x;
+        verticalInput = moveInput.y;
 
         if (Input.GetKeyDown(KeyCode.Space) && jumps > 0)
         {
@@ -289,7 +294,6 @@ public class PlayerMovementController : NetworkBehaviour
         // on ground
         if (grounded)
         {
-            Debug.Log("Grounded ?");
             playerRb.linearVelocity = Vector3.SmoothDamp(playerRb.linearVelocity, Vector3.zero, ref smoothDampvelocity, smoothFrictionFactor);
             playerRb.AddForce(moveDirection.normalized * currentMoveSpeed * 10f, ForceMode.Force);
         }
