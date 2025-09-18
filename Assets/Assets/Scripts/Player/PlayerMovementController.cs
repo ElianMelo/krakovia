@@ -1,4 +1,6 @@
 using System.Collections;
+using System.ComponentModel;
+using Unity.Collections;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -45,10 +47,10 @@ public class PlayerMovementController : NetworkBehaviour
     public float maxSlopeAngle;
     private RaycastHit slopeHit;
 
-    public Transform orientation;
-    public Transform cameraOrientation;
-    public Transform slopeDetectorFront;
-    public Transform slopeDetectorBack;
+    [HideInInspector] public Transform orientation;
+    [HideInInspector] public Transform cameraOrientation;
+    [HideInInspector] public Transform slopeDetectorFront;
+    [HideInInspector] public Transform slopeDetectorBack;
 
     private float horizontalInput;
     private float verticalInput;
@@ -178,6 +180,14 @@ public class PlayerMovementController : NetworkBehaviour
         {
             SmoothRotateForward();
         }
+    }
+
+    public void SetupFollower(Transform follower)
+    {
+        orientation = follower;
+        cameraOrientation = follower;
+        slopeDetectorFront = follower;
+        slopeDetectorBack = follower;
     }
 
     private void SmoothRotateForward()
