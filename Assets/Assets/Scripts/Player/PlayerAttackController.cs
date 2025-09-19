@@ -22,10 +22,11 @@ public class PlayerAttackController : NetworkBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             animator.SetTrigger("Attack1");
-            GameObject enemy = SphereCastEnemy();
+            PlayerController enemy = SphereCastEnemy();
             if(enemy != null)
             {
                 Debug.Log("Enemy Found!");
+                enemy.ReceiveDamage();
             } else
             {
                 Debug.Log("Enemy NOT Found!");
@@ -33,7 +34,7 @@ public class PlayerAttackController : NetworkBehaviour
         }
     }
 
-    public GameObject SphereCastEnemy()
+    public PlayerController SphereCastEnemy()
     {
         List<RaycastHit> raycastHits = Physics.SphereCastAll(transform.position, range, transform.up, range, mask)
             .ToList();
@@ -49,7 +50,7 @@ public class PlayerAttackController : NetworkBehaviour
 
         foreach (var item in raycastHits)
         {
-            GameObject enemy = item.collider?.gameObject;
+            PlayerController enemy = item.collider?.gameObject?.GetComponent<PlayerController>();
             if (enemy != null)
             {
                 return enemy;
