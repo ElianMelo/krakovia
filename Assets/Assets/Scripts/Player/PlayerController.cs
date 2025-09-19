@@ -3,10 +3,8 @@ using UnityEngine;
 
 public class PlayerController : NetworkBehaviour
 {
-    private Animator animator;
     void Start()
     {
-        animator = GetComponentInChildren<Animator>();
     }
 
     public override void OnNetworkSpawn()
@@ -19,12 +17,7 @@ public class PlayerController : NetworkBehaviour
         playerMovementController.SetupFollower(playerFollower.transform);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            animator.SetTrigger("Attack1");
-        }
     }
 }

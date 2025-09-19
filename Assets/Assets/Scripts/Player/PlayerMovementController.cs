@@ -123,8 +123,9 @@ public class PlayerMovementController : NetworkBehaviour
         // PlayerManager.Instance.OnPlayerDeath.AddListener(Death);
     }
 
-    private void OnDestroy()
+    private new void OnDestroy()
     {
+        base.OnDestroy();
         // PlayerManager.Instance.OnPlayerTakeDamage.RemoveListener(TakeDamage);
         // PlayerManager.Instance.OnPlayerDeath.RemoveListener(Death);
     }
@@ -144,6 +145,8 @@ public class PlayerMovementController : NetworkBehaviour
     private void Update()
     {
         //if (!_canMove) return;
+        if (!IsOwner) return;
+        if (orientation == null) return;
         CheckAnimation();
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
         if (grounded && !jumping)
@@ -172,6 +175,8 @@ public class PlayerMovementController : NetworkBehaviour
 
     private void FixedUpdate()
     {
+        if (!IsOwner) return;
+        if (orientation == null) return;
         if (dashing) return;
         if (diving) return;
         Move();
