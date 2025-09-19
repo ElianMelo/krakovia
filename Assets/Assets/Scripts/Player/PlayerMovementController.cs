@@ -60,7 +60,7 @@ public class PlayerMovementController : NetworkBehaviour
     private Animator playerAnimator;
     private Rigidbody playerRb;
 
-    private int maxJumps = 2;
+    private int maxJumps = 1;
     private int jumps;
 
     private Vector3 smoothDampvelocity = Vector3.zero;
@@ -99,11 +99,10 @@ public class PlayerMovementController : NetworkBehaviour
 
     private readonly static string JumpAnim = "Jump";
     private readonly static string DashAnim = "Dash";
-    private readonly static string DiveAnim = "Dive";
 
     private readonly static string RunningAnim = "Running";
     private readonly static string FallingAnim = "Falling";
-    private readonly static string VerticalVelocityAnim = "VerticalVelocity";
+    // private readonly static string VerticalVelocityAnim = "VerticalVelocity";
     private readonly static string DashingAnim = "Dashing";
 
     private readonly static string TakeDamageAnim = "TakeDamage";
@@ -416,17 +415,12 @@ public class PlayerMovementController : NetworkBehaviour
         playerAnimator.SetBool(RunningAnim, isRunning);
         playerAnimator.SetBool(DashingAnim, state == MovementState.dashing);
         playerAnimator.SetBool(FallingAnim, state == MovementState.airing);
-        playerAnimator.SetFloat(VerticalVelocityAnim, Mathf.Lerp(0, 1, Mathf.Abs(playerRb.linearVelocity.y) / 20));
+        // playerAnimator.SetFloat(VerticalVelocityAnim, Mathf.Lerp(0, 1, Mathf.Abs(playerRb.linearVelocity.y) / 20));
     }
 
     public void CallDashAnimation()
     {
         playerAnimator.SetTrigger(DashAnim);
-    }
-
-    public void CallDiveAnimation()
-    {
-        playerAnimator.SetTrigger(DiveAnim);
     }
 
     public void TakeDamage()
