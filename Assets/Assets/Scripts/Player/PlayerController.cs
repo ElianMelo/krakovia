@@ -8,21 +8,26 @@ public class PlayerController : NetworkBehaviour
 
     public void ReceiveDamage()
     {
-        ReceiveDamageRpc(NetworkObjectId);
+        ReceiveDamageRpc(OwnerClientId);
     }
 
     [Rpc(SendTo.Server)]
-    private void ReceiveDamageRpc(ulong sourceNetworkObjectId)
+    private void ReceiveDamageRpc(ulong targetOwnerClientId)
     {
-        SendDamageRpc(sourceNetworkObjectId);
-        Debug.Log("Receive Damage?");
+        var rpcParams = new RpcParams
+        {
+            Send = new RpcSendParams
+            {
+                Target = NetworkManager.Singleton.RpcTarget.Single(targetOwnerClientId, RpcTargetUse.Persistent)
+            }
+        };
+        SendDamageClientRpc(rpcParams);
     }
 
-    [Rpc(SendTo.ClientsAndHost)]
-    private void SendDamageRpc(ulong sourceNetworkObjectId)
+    [Rpc(SendTo.SpecifiedInParams)]
+    private void SendDamageClientRpc(RpcParams rpcParams = default)
     {
-        if (sourceNetworkObjectId != NetworkObjectId) return;
-        Debug.Log("Receive Damage Client?");
+        Debug.Log("Damage Received!");
     }
 
     public override void OnNetworkSpawn()
