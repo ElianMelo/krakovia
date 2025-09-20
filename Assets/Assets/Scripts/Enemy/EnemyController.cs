@@ -6,6 +6,9 @@ public class EnemyController : NetworkBehaviour
     [SerializeField] private int maxHP = 5;
     private NetworkVariable<int> currentHP = new NetworkVariable<int>();
 
+    public int MaxHP => maxHP;
+    public NetworkVariable<int> CurrentHP => currentHP;
+
     public override void OnNetworkSpawn()
     {
         if (IsServer)
