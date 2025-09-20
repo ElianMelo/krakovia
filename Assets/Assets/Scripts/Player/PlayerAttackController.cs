@@ -21,6 +21,7 @@ public class PlayerAttackController : NetworkBehaviour
     private float qSkillCooldown = 3f;
     private float fSkillCooldown = 5f;
 
+    public Transform spellPosition;
     public GameObject mouseLeftSkillPrefab;
     public GameObject mouseRightSkillPrefab;
     public GameObject qSkillPrefab;
@@ -43,7 +44,7 @@ public class PlayerAttackController : NetworkBehaviour
 
     private void SpawnAttackVFX(GameObject vfxPrefab)
     {
-        Instantiate(vfxPrefab, transform.forward * 1.2f, transform.rotation);
+        Instantiate(vfxPrefab, spellPosition);
     }
 
     private void MouseLeftSkill()
