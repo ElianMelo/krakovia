@@ -21,6 +21,7 @@ public class PlayerAttackController : NetworkBehaviour
         if (!IsOwner) return;
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            InterfaceManager.Instance.UpdatePlayerSkillFirstCooldown(3f);
             animator.SetTrigger("Attack1");
             PlayerController enemy = SphereCastEnemy();
             if(enemy != null)

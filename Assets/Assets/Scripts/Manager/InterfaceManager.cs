@@ -16,6 +16,11 @@ public class InterfaceManager : MonoBehaviour
         playerInterfaceController.UpdatePlayerHp(currentValue, maxValue);
     }
 
+    public void UpdatePlayerSkillFirstCooldown(float time)
+    {
+        playerInterfaceController.UpdatePlayerSkillFirstCooldown(time);
+    }
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.F1))
