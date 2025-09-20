@@ -101,18 +101,24 @@ public class PlayerAttackController : NetworkBehaviour
 
     private void CastSearchTarget()
     {
-        var playerController = SphereCastFor<PlayerController>();
-        if (playerController != null)
+        var playerControllers = SphereCastFor<PlayerController>();
+        if (playerControllers != null && playerControllers.Count > 0)
         {
-            Debug.Log("Player Found!");
-            playerController.ReceiveDamage();
+            foreach (var playerController in playerControllers)
+            {
+                Debug.Log("Player Found!");
+                playerController.ReceiveDamage();
+            }
         }
 
-        var enemyController = SphereCastFor<EnemyController>();
-        if (enemyController != null)
+        var enemyControllers = SphereCastFor<EnemyController>();
+        if (enemyControllers != null && enemyControllers.Count > 0)
         {
-            Debug.Log("Enemy Found!");
-            enemyController.ReceiveDamage();
+            foreach (var enemyController in enemyControllers)
+            {
+                Debug.Log("Enemy Found!");
+                enemyController.ReceiveDamage();
+            }
         }
     }
 
@@ -140,8 +146,10 @@ public class PlayerAttackController : NetworkBehaviour
         canUseFSkill = true;
     }
 
-    private T SphereCastFor<T>() where T : Component
+    private List<T> SphereCastFor<T>() where T : Component
     {
+        List<T> components = new List<T>();
+
         var raycastHits = Physics.SphereCastAll(
             transform.position,
             range,
@@ -158,10 +166,10 @@ public class PlayerAttackController : NetworkBehaviour
             var component = hit.collider?.GetComponent<T>();
             if (component != null)
             {
-                return component;
+                components.Add(component);
             }
         }
 
-        return null;
+        return components;
     }
 }
