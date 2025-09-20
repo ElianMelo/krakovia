@@ -49,8 +49,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 854577265
-  InScenePlacedSourceGlobalObjectIdHash: 0
+  GlobalObjectIdHash: 2088991478
+  InScenePlacedSourceGlobalObjectIdHash: 3351929801
   DeferredDespawnTick: 0
   Ownership: 1
   AlwaysReplicateAsRoot: 0
@@ -88,7 +88,7 @@ Transform:
   m_GameObject: {fileID: 3290925670695503460}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.47, y: 0, z: 20.11}
+  m_LocalPosition: {x: -14.55, y: 0, z: 31.619999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
-  spawnRadius: 5
+  spawnRadius: 10
   maxEnemies: 10
   spawnInterval: 5
   enemyTypes:
@@ -139,7 +139,7 @@ Transform:
   m_GameObject: {fileID: 3491526500964282536}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.61, y: 0, z: 30.27}
+  m_LocalPosition: {x: 7.27, y: 0, z: 35.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
-  spawnRadius: 5
+  spawnRadius: 10
   maxEnemies: 10
   spawnInterval: 5
   enemyTypes:
@@ -190,7 +190,7 @@ Transform:
   m_GameObject: {fileID: 4258643467569184135}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.4, y: 0, z: 49.1}
+  m_LocalPosition: {x: 5.379999, y: 0, z: 60.609997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
-  spawnRadius: 5
+  spawnRadius: 10
   maxEnemies: 10
   spawnInterval: 5
   enemyTypes:
@@ -241,7 +241,7 @@ Transform:
   m_GameObject: {fileID: 5828800762876703045}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.35, y: 0, z: 38.04}
+  m_LocalPosition: {x: 26.329998, y: 0, z: 49.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
-  spawnRadius: 5
+  spawnRadius: 10
   maxEnemies: 10
   spawnInterval: 5
   enemyTypes:
@@ -292,7 +292,7 @@ Transform:
   m_GameObject: {fileID: 8938439020654074281}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 44.61, y: 0, z: 10.27}
+  m_LocalPosition: {x: 29.59, y: 0, z: 21.779999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
-  spawnRadius: 5
+  spawnRadius: 10
   maxEnemies: 10
   spawnInterval: 5
   enemyTypes:

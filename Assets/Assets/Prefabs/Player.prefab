@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7139763713036793758}
   - component: {fileID: 8771433725741179720}
   - component: {fileID: 8285264019283815069}
+  - component: {fileID: 339601554767367683}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -249,6 +250,23 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   TransitionStateInfoList: []
   m_Animator: {fileID: 5776349123416661461}
+--- !u!114 &339601554767367683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4665702926503793426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6c0be61502bb534f922ebb746851216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.Components.NetworkRigidbody
+  ShowTopMostFoldoutHeaderGroup: 1
+  NetworkRigidbodyBaseExpanded: 0
+  UseRigidBodyForMotion: 0
+  AutoUpdateKinematicState: 1
+  AutoSetKinematicOnDespawn: 1
 --- !u!1001 &4295922499292063547
 PrefabInstance:
   m_ObjectHideFlags: 0
