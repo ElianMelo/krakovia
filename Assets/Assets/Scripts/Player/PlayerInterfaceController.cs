@@ -19,4 +19,16 @@ public class PlayerInterfaceController : MonoBehaviour
     {
         playerSkillFirst.StartCooldown(time);
     }
+    public void UpdatePlayerSkillSecondCooldown(float time)
+    {
+        playerSkillSecond.StartCooldown(time);
+    }
+    public void UpdatePlayerSkillThirdCooldown(float time)
+    {
+        playerSkillThird.StartCooldown(time);
+    }
+    public void UpdatePlayerSkillForthCooldown(float time)
+    {
+        playerSkillForth.StartCooldown(time);
+    }
 }
