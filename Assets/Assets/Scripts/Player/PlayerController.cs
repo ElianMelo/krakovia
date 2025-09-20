@@ -6,7 +6,7 @@ public class PlayerController : NetworkBehaviour
     private PlayerMovementController playerMovementController;
     private PlayerFollower playerFollower;
 
-    private int playerHP;
+    private int playerHP = 10;
     private int maxHP = 10;
 
     public void ReceiveDamage()

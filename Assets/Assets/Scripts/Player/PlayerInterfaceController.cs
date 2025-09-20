@@ -7,6 +7,6 @@ public class PlayerInterfaceController : MonoBehaviour
 
     public void UpdatePlayerHp(int currentValue, int maxValue)
     {
-        playerHpSlide.value = currentValue / maxValue;
+        playerHpSlide.value = (float) currentValue / maxValue;
     }
 }
