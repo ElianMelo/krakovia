@@ -21,6 +21,21 @@ public class InterfaceManager : MonoBehaviour
         playerInterfaceController.UpdatePlayerSkillFirstCooldown(time);
     }
 
+    public void UpdatePlayerSkillSecondCooldown(float time)
+    {
+        playerInterfaceController.UpdatePlayerSkillSecondCooldown(time);
+    }
+
+    public void UpdatePlayerSkillThirdCooldown(float time)
+    {
+        playerInterfaceController.UpdatePlayerSkillThirdCooldown(time);
+    }
+
+    public void UpdatePlayerSkillForthCooldown(float time)
+    {
+        playerInterfaceController.UpdatePlayerSkillForthCooldown(time);
+    }
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.F1))
