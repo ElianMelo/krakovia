@@ -111,6 +111,11 @@ public class PlayerMovementController : NetworkBehaviour
     public InputActionReference moveAction; // arrastar do Input Actions no inspetor
     private Vector2 moveInput;
 
+    public void SetupPlayerAnimator(Animator animator)
+    {
+        playerAnimator = animator;
+    }
+
     private void Start()
     { 
         calculatedTimeRotateBack = timeRotateBack;
