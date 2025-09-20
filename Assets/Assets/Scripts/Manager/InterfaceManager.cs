@@ -3,13 +3,19 @@ using UnityEngine;
 
 public class InterfaceManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public static InterfaceManager Instance;
+
+    public PlayerInterfaceController playerInterfaceController;
+    private void Awake()
     {
-        
+        Instance = this;
     }
 
-    // Update is called once per frame
+    public void UpdatePlayerHP(int currentValue, int maxValue)
+    {
+        playerInterfaceController.UpdatePlayerHp(currentValue, maxValue);
+    }
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.F1))
