@@ -43,7 +43,7 @@ public class PlayerAttackController : NetworkBehaviour
             animator.SetTrigger("Attack1");
             canUseMouseLeftSkill = false;
             StartCoroutine(EnableMouseLeftSkill(mouseLeftSkillCooldown));
-            CastSearchPlayer();
+            CastSearchTarget();
         }
     }
 
@@ -55,7 +55,7 @@ public class PlayerAttackController : NetworkBehaviour
             animator.SetTrigger("Attack2");
             canUseMouseRightSkill = false;
             StartCoroutine(EnableMouseRightSkill(mouseRightSkillCooldown));
-            CastSearchPlayer();
+            CastSearchTarget();
         }
     }
 
@@ -67,7 +67,7 @@ public class PlayerAttackController : NetworkBehaviour
             animator.SetTrigger("Attack3");
             canUseQSkill = false;
             StartCoroutine(EnableQSkill(qSkillCooldown));
-            CastSearchPlayer();
+            CastSearchTarget();
         }
     }
 
@@ -79,21 +79,24 @@ public class PlayerAttackController : NetworkBehaviour
             animator.SetTrigger("Attack4");
             canUseFSkill = false;
             StartCoroutine(EnableFSkill(fSkillCooldown));
-            CastSearchPlayer();
+            CastSearchTarget();
         }
     }
 
-    private void CastSearchPlayer()
+    private void CastSearchTarget()
     {
-        PlayerController playerController = SphereCastPlayerController();
+        var playerController = SphereCastFor<PlayerController>();
         if (playerController != null)
         {
-            Debug.Log("Enemy Found!");
+            Debug.Log("Player Found!");
             playerController.ReceiveDamage();
         }
-        else
+
+        var enemyController = SphereCastFor<EnemyController>();
+        if (enemyController != null)
         {
-            Debug.Log("Enemy NOT Found!");
+            Debug.Log("Enemy Found!");
+            enemyController.ReceiveDamage();
         }
     }
 
@@ -121,26 +124,25 @@ public class PlayerAttackController : NetworkBehaviour
         canUseFSkill = true;
     }
 
-    public PlayerController SphereCastPlayerController()
+    private T SphereCastFor<T>() where T : Component
     {
-        List<RaycastHit> raycastHits = Physics.SphereCastAll(transform.position, range, transform.up, range, mask)
-            .ToList();
+        var raycastHits = Physics.SphereCastAll(
+            transform.position,
+            range,
+            transform.up,
+            range,
+            mask
+        );
 
-        foreach (var item in raycastHits)
+        foreach (var hit in raycastHits)
         {
-            if (item.collider?.gameObject == gameObject)
-            {
-                raycastHits.Remove(item);
-                break;
-            }
-        }
+            if (hit.collider?.gameObject == gameObject)
+                continue;
 
-        foreach (var item in raycastHits)
-        {
-            PlayerController playerController = item.collider?.gameObject?.GetComponent<PlayerController>();
-            if (playerController != null)
+            var component = hit.collider?.GetComponent<T>();
+            if (component != null)
             {
-                return playerController;
+                return component;
             }
         }
 

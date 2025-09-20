@@ -52,6 +52,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eec685fc405c81347b729958241f781e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eec685fc405c81347b729958241f781e, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: eec685fc405c81347b729958241f781e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -65,6 +77,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eec685fc405c81347b729958241f781e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8613249257654796655}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eec685fc405c81347b729958241f781e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1079369031430894768}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eec685fc405c81347b729958241f781e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3066065264092073755}
   m_SourcePrefab: {fileID: 100100000, guid: eec685fc405c81347b729958241f781e, type: 3}
 --- !u!1 &1160617717093947312 stripped
 GameObject:
@@ -156,5 +174,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   ShowTopMostFoldoutHeaderGroup: 1
   moveSpeed: 2
-  wanderRadius: 1.5
+  wanderRadius: 2
   idleTime: 2
+--- !u!114 &-1079369031430894768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160617717093947312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86df05891ccf44f468446a25cd9dda21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+  ShowTopMostFoldoutHeaderGroup: 1
+  maxHP: 5
+--- !u!136 &3066065264092073755
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160617717093947312}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Height: 1.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.75, z: 0}
