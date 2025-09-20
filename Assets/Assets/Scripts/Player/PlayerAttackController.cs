@@ -44,7 +44,7 @@ public class PlayerAttackController : NetworkBehaviour
 
     private void SpawnAttackVFX(GameObject vfxPrefab)
     {
-        Instantiate(vfxPrefab, spellPosition);
+        Instantiate(vfxPrefab, spellPosition.position, spellPosition.rotation);
     }
 
     private void MouseLeftSkill()
