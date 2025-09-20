@@ -6,6 +6,9 @@ public class PlayerController : NetworkBehaviour
     private PlayerMovementController playerMovementController;
     private PlayerFollower playerFollower;
 
+    private int playerHP = 10;
+    private int maxHP = 10;
+
     public void ReceiveDamage()
     {
         ReceiveDamageRpc(OwnerClientId);
@@ -28,6 +31,8 @@ public class PlayerController : NetworkBehaviour
     private void SendDamageClientRpc(RpcParams rpcParams = default)
     {
         Debug.Log("Damage Received!");
+        playerHP -= 1;
+        InterfaceManager.Instance.UpdatePlayerHP(playerHP, maxHP);
     }
 
     public override void OnNetworkSpawn()
