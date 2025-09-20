@@ -20,6 +20,12 @@ public class PlayerAttackController : NetworkBehaviour
     private float mouseRightSkillCooldown = 2f;
     private float qSkillCooldown = 3f;
     private float fSkillCooldown = 5f;
+
+    public GameObject mouseLeftSkillPrefab;
+    public GameObject mouseRightSkillPrefab;
+    public GameObject qSkillPrefab;
+    public GameObject fSkillPrefab;
+
     void Start()
     {
         if (!IsOwner) return;
@@ -35,12 +41,18 @@ public class PlayerAttackController : NetworkBehaviour
         FSkill();
     }
 
+    private void SpawnAttackVFX(GameObject vfxPrefab)
+    {
+        Instantiate(vfxPrefab, transform.forward * 1.2f, transform.rotation);
+    }
+
     private void MouseLeftSkill()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && canUseMouseLeftSkill)
         {
             InterfaceManager.Instance.UpdatePlayerSkillFirstCooldown(mouseLeftSkillCooldown);
             animator.SetTrigger("Attack1");
+            SpawnAttackVFX(mouseLeftSkillPrefab);
             canUseMouseLeftSkill = false;
             StartCoroutine(EnableMouseLeftSkill(mouseLeftSkillCooldown));
             CastSearchTarget();
@@ -53,6 +65,7 @@ public class PlayerAttackController : NetworkBehaviour
         {
             InterfaceManager.Instance.UpdatePlayerSkillSecondCooldown(mouseRightSkillCooldown);
             animator.SetTrigger("Attack2");
+            SpawnAttackVFX(mouseRightSkillPrefab);
             canUseMouseRightSkill = false;
             StartCoroutine(EnableMouseRightSkill(mouseRightSkillCooldown));
             CastSearchTarget();
@@ -65,6 +78,7 @@ public class PlayerAttackController : NetworkBehaviour
         {
             InterfaceManager.Instance.UpdatePlayerSkillThirdCooldown(qSkillCooldown);
             animator.SetTrigger("Attack3");
+            SpawnAttackVFX(qSkillPrefab);
             canUseQSkill = false;
             StartCoroutine(EnableQSkill(qSkillCooldown));
             CastSearchTarget();
@@ -77,6 +91,7 @@ public class PlayerAttackController : NetworkBehaviour
         {
             InterfaceManager.Instance.UpdatePlayerSkillForthCooldown(fSkillCooldown);
             animator.SetTrigger("Attack4");
+            SpawnAttackVFX(fSkillPrefab);
             canUseFSkill = false;
             StartCoroutine(EnableFSkill(fSkillCooldown));
             CastSearchTarget();
