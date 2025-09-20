@@ -235,6 +235,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 384
   range: 5
+  mouseLeftSkillPrefab: {fileID: 4042337778869966810, guid: f9a9001194ef6f344ad10c81081fc30b, type: 3}
+  mouseRightSkillPrefab: {fileID: 4042337778869966810, guid: f9a9001194ef6f344ad10c81081fc30b, type: 3}
+  qSkillPrefab: {fileID: 4042337778869966810, guid: f9a9001194ef6f344ad10c81081fc30b, type: 3}
+  fSkillPrefab: {fileID: 4042337778869966810, guid: f9a9001194ef6f344ad10c81081fc30b, type: 3}
 --- !u!114 &8285264019283815069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -500,7 +504,7 @@ PrefabInstance:
       addedObject: {fileID: 5776349123416661461}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 35d6f7bd21aceac4ba4ea9f5938b8175, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4502700291684558285}
+      addedObject: {fileID: 8559852874510824859}
   m_SourcePrefab: {fileID: 100100000, guid: 35d6f7bd21aceac4ba4ea9f5938b8175, type: 3}
 --- !u!4 &1733164756925747859 stripped
 Transform:
@@ -564,7 +568,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4502700291684558285
+--- !u!114 &8559852874510824859
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -579,7 +583,7 @@ MonoBehaviour:
   handler:
     _Editor_SelectedChain: 0
     _Editor_ChainCategory: 0
-    _EditorCategory: 4
+    _EditorCategory: 1
     _EditorMainCategory: 0
     _EditorMotionCategory: 2
     m_hemi: {fileID: -2508796484986968503, guid: 44d994eaad14fdf49a2dd378b4d62094, type: 3}
@@ -691,15 +695,7 @@ MonoBehaviour:
         rootSpaceRotation: {x: 0.82087576, y: 0.16351132, z: -0.04228456, w: 0.54556334}
       LastBaseTransform: {fileID: 4329251983678767312}
     UseExtraFeatures: 1
-    ExtraFeatures:
-    - CustomName: 
-      enabled: 1
-      FeatureReference: {fileID: 11400000, guid: 47c7c919a484851498e8d4fa3b6ae305, type: 2}
-      customStringList: []
-      customObjectList:
-      - {fileID: 1597685415192758213}
-      customEventsList: []
-      variables: []
+    ExtraFeatures: []
     IsHumanoid: 1
     dummyContainer: {fileID: 0}
     inBetweenPreGenerateMemory: []
@@ -726,7 +722,7 @@ MonoBehaviour:
     Mecanim: {fileID: 5776349123416661461}
     RagdollLogic: 0
     RagdollSizeMultiplier: 1
-    RagdollThicknessMultiplier: 1
+    RagdollThicknessMultiplier: 0.856
     ReferenceMass: 50
     RigidbodiesInterpolation: 1
     RigidbodiesDetectionMode: 0
@@ -1060,71 +1056,6 @@ MonoBehaviour:
         InverseSecondaryAxis: 1
         SecondaryAxisAngleLimit: 30
         ThirdAxisAngleLimit: 20
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      - SourceBone: {fileID: 7671887784727089747}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 10
-        colliders:
-        - ColliderType: 0
-          ColliderCenter: {x: -0.0001813393, y: 0.0012333961, z: -0.00014598682}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 1
-          ColliderRadius: 0.00055999996
-          ColliderLength: 0.002510347
-          ColliderBoxSize: {x: 0.00083999994, y: 0.002510347, z: 0.00083999994}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.12
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 0
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 0
-        MainAxisLowLimit: -45
-        MainAxisHighLimit: 30
-        SecondaryAxis: 2
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 0
-        SecondaryAxisAngleLimit: 20
-        ThirdAxisAngleLimit: 55
         OverrideMaterial: {fileID: 0}
         UseIndividualParameters: 0
         OverrideInterpolation: 1
