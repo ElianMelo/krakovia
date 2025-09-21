@@ -44,7 +44,7 @@ public class PlayerAttackController : NetworkBehaviour
     void Start()
     {
         if (!IsOwner) return;
-        animator = GetComponentInChildren<Animator>();
+        // animator = GetComponentInChildren<Animator>();
         playerClassController = GetComponent<PlayerClassController>();
     }
 
@@ -55,6 +55,11 @@ public class PlayerAttackController : NetworkBehaviour
         MouseRightSkill();
         QSkill();
         FSkill();
+    }
+
+    public void SetupPlayerAnimator(Animator animator)
+    {
+        this.animator = animator;
     }
 
     private void SpawnAttackVFX(SkillCommand skillCommand, float forwardIntensity, float upAjust = 0f)

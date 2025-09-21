@@ -119,7 +119,7 @@ public class PlayerMovementController : NetworkBehaviour
     private void Start()
     { 
         calculatedTimeRotateBack = timeRotateBack;
-        playerAnimator = GetComponentInChildren<Animator>();
+        // playerAnimator = GetComponentInChildren<Animator>();
         playerRb = GetComponent<Rigidbody>();
         playerRb.freezeRotation = true;
         jumps = maxJumps;

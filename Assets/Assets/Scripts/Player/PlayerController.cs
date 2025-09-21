@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerController : NetworkBehaviour
 {
     private PlayerMovementController playerMovementController;
+    private PlayerAttackController playerAttackController;
     private PlayerClassController playerClassController;
     private PlayerFollower playerFollower;
     private ClientNetworkAnimator clientNetworkAnimator;
@@ -43,8 +44,9 @@ public class PlayerController : NetworkBehaviour
         clientNetworkAnimator = GetComponent<ClientNetworkAnimator>();
         playerClassController = GetComponent<PlayerClassController>();
         playerMovementController = GetComponent<PlayerMovementController>();
+        playerAttackController = GetComponent<PlayerAttackController>();
 
-        if (OwnerClientId == 0)
+        if (OwnerClientId == 1)
         {
             clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Fairy);
         }
@@ -54,6 +56,7 @@ public class PlayerController : NetworkBehaviour
         }
 
         playerMovementController.SetupPlayerAnimator(clientNetworkAnimator.Animator);
+        playerAttackController.SetupPlayerAnimator(clientNetworkAnimator.Animator);
 
         // Logic strict to the owner
         if (!IsOwner) return;

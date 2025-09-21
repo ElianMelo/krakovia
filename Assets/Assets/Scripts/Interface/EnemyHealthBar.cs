@@ -19,7 +19,7 @@ public class EnemyHealthBar : NetworkBehaviour
     {
         if (!IsOwner)
         {
-            hpBar.gameObject.SetActive(false);
+            hpBar.enabled = false;
             return;
         }
 
@@ -39,7 +39,7 @@ public class EnemyHealthBar : NetworkBehaviour
         if (player == null) return;
 
         float distance = Vector3.Distance(player.position, transform.position);
-        hpBar.gameObject.SetActive(distance <= showDistance && enemy.CurrentHP.Value < enemy.MaxHP);
+        hpBar.enabled = distance <= showDistance && enemy.CurrentHP.Value < enemy.MaxHP;
     }
 
     public override void OnDestroy()
