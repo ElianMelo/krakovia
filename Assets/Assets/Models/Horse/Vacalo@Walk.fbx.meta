@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: d2072f5ead3af7a4080f0a7aeafc1462
+guid: 5208c77c6bbabf44c9a8f46bf039b331
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: normalhorse_mat
+    second: {fileID: 2100000, guid: 972a2660c833b8b4d8cfac347874d216, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
