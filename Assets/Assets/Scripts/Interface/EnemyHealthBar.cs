@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class EnemyHealthBar : NetworkBehaviour
 {
     [SerializeField] private Slider hpBar;
+    [SerializeField] private Image hpBarBackground;
+    [SerializeField] private Image hpBarfront;
     [SerializeField] private float showDistance = 10f;
 
     private EnemyController enemy;
@@ -17,29 +19,40 @@ public class EnemyHealthBar : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
+        enemy.CurrentHP.OnValueChanged += OnHealthChanged;
+        player = NetworkManager.Singleton.LocalClient.PlayerObject.transform;
+
         if (!IsOwner)
-        {
-            hpBar.enabled = false;
+        {            
+            SwitchHpBarVisuals(false);
             return;
         }
 
-        player = NetworkManager.Singleton.LocalClient.PlayerObject.transform;
-
-        enemy.CurrentHP.OnValueChanged += OnHealthChanged;
         OnHealthChanged(enemy.CurrentHP.Value, enemy.CurrentHP.Value);
     }
 
     private void OnHealthChanged(int oldValue, int newValue)
     {
         hpBar.value = newValue / (float)enemy.MaxHP;
+        CheckShowDistance();
     }
 
     private void Update()
     {
         if (player == null) return;
+        CheckShowDistance();
+    }
 
-        float distance = Vector3.Distance(player.position, transform.position);
-        hpBar.enabled = distance <= showDistance && enemy.CurrentHP.Value < enemy.MaxHP;
+    private void CheckShowDistance()
+    {
+        float distance = Vector3.Distance(Camera.main.transform.position, transform.position);
+        SwitchHpBarVisuals(distance <= showDistance && enemy.CurrentHP.Value < enemy.MaxHP);
+    }
+
+    private void SwitchHpBarVisuals(bool toggle)
+    {
+        hpBarBackground.enabled = toggle;
+        hpBarfront.enabled = toggle;
     }
 
     public override void OnDestroy()

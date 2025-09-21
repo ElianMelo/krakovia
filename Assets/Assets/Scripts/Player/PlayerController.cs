@@ -46,7 +46,7 @@ public class PlayerController : NetworkBehaviour
         playerMovementController = GetComponent<PlayerMovementController>();
         playerAttackController = GetComponent<PlayerAttackController>();
 
-        if (OwnerClientId == 1)
+        if (OwnerClientId == 0)
         {
             clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Fairy);
         }

@@ -635,7 +635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 203853337
+  GlobalObjectIdHash: 4086807136
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -738,6 +738,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealthBar
   ShowTopMostFoldoutHeaderGroup: 1
   hpBar: {fileID: 4414924759646450403}
+  hpBarBackground: {fileID: 4464124172089672335}
+  hpBarfront: {fileID: 6489099082379472929}
   showDistance: 10
 --- !u!54 &5018204428219081361
 Rigidbody:
