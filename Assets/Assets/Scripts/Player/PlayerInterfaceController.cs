@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class PlayerInterfaceController : MonoBehaviour
 {
     public Slider playerHpSlide;
+    public Slider playerExperienceSlide;
 
     public SkillBlock playerSkillFirst;
     public SkillBlock playerSkillSecond;
@@ -13,6 +14,10 @@ public class PlayerInterfaceController : MonoBehaviour
     public void UpdatePlayerHp(int currentValue, int maxValue)
     {
         playerHpSlide.value = (float) currentValue / maxValue;
+    }
+    public void UpdatePlayerExperience(int currentValue, int maxValue)
+    {
+        playerHpSlide.value = (float)currentValue / maxValue;
     }
 
     public void UpdatePlayerSkillFirstCooldown(float time)

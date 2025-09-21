@@ -37,4 +37,23 @@ public class PlayerController : NetworkBehaviour
         playerFollower.player = transform;
         playerMovementController.SetupFollower(playerFollower.transform);
     }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.F5))
+        {
+            SwapPlayerTo(PlayerClass.Fairy);
+        }
+        if (Input.GetKeyDown(KeyCode.F6))
+        {
+            SwapPlayerTo(PlayerClass.Skeleton);
+        }
+    }
+
+    private void SwapPlayerTo(PlayerClass playerClass)
+    {
+        clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(playerClass);
+        playerMovementController.SetupPlayerAnimator(clientNetworkAnimator.Animator);
+        playerAttackController.SetupPlayerAnimator(clientNetworkAnimator.Animator);
+    }
 }

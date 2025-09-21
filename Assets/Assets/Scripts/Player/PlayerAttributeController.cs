@@ -3,12 +3,34 @@ using UnityEngine;
 
 public class PlayerAttributeController : NetworkBehaviour
 {
-    private int playerHP = 10;
+    private int currentHP = 10;
     private int maxHP = 10;
+    private int currentExperience = 10;
+    private int maxExperience = 10;
+
+    [Header("Experience")]
+    public float experienceIncreaseAmount = 10;
 
     [Header("Fairy")]
     public int fairyMaxHP = 10;
     public int fairyMouseLeftSkillDamage = 10;
+    public int fairyMouseRightSkillDamage = 10;
+    public int fairyQSkillDamage = 10;
+    public int fairyFSkillDamage = 10;
+
+    [Header("Skeleton")]
+    public int skeletonMaxHP = 10;
+    public int skeletonMouseLeftSkillDamage = 10;
+    public int skeletonMouseRightSkillDamage = 10;
+    public int skeletonQSkillDamage = 10;
+    public int skeletonFSkillDamage = 10;
+
+    [Header("Horse")]
+    public int horseMaxHP = 10;
+    public int horseMouseLeftSkillDamage = 10;
+    public int horseMouseRightSkillDamage = 10;
+    public int horseQSkillDamage = 10;
+    public int horseFSkillDamage = 10;
 
     public void ReceiveDamage()
     {
@@ -32,7 +54,12 @@ public class PlayerAttributeController : NetworkBehaviour
     private void SendDamageClientRpc(RpcParams rpcParams = default)
     {
         Debug.Log("Damage Received!");
-        playerHP -= 1;
-        InterfaceManager.Instance.UpdatePlayerHP(playerHP, maxHP);
+        currentHP -= 1;
+        InterfaceManager.Instance.UpdatePlayerHP(currentHP, maxHP);
+    }
+
+    public void ReceiveExp(int experience)
+    {
+        InterfaceManager.Instance.UpdatePlayerHP(currentHP, maxHP);
     }
 }

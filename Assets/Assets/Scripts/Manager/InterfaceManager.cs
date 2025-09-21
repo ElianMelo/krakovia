@@ -16,6 +16,11 @@ public class InterfaceManager : MonoBehaviour
         playerInterfaceController.UpdatePlayerHp(currentValue, maxValue);
     }
 
+    public void UpdatePlayerExperience(int currentValue, int maxValue)
+    {
+        playerInterfaceController.UpdatePlayerHp(currentValue, maxValue);
+    }
+
     public void UpdatePlayerSkillFirstCooldown(float time)
     {
         playerInterfaceController.UpdatePlayerSkillFirstCooldown(time);
