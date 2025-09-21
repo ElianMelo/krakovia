@@ -17,13 +17,17 @@ public class PlayerController : NetworkBehaviour
         playerMovementController = GetComponent<PlayerMovementController>();
         playerAttackController = GetComponent<PlayerAttackController>();
 
-        if (OwnerClientId == 1)
+        if (OwnerClientId == 0)
         {
-            clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Fairy);
+            clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Horse);
         }
-        else
+        else if(OwnerClientId == 2)
         {
             clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Skeleton);
+        }
+        else if (OwnerClientId == 3)
+        {
+            clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Fairy);
         }
 
         playerMovementController.SetupPlayerAnimator(clientNetworkAnimator.Animator);
@@ -47,6 +51,10 @@ public class PlayerController : NetworkBehaviour
         if (Input.GetKeyDown(KeyCode.F6))
         {
             SwapPlayerTo(PlayerClass.Skeleton);
+        }
+        if (Input.GetKeyDown(KeyCode.F7))
+        {
+            SwapPlayerTo(PlayerClass.Horse);
         }
     }
 

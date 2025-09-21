@@ -20,10 +20,10 @@ public class PlayerClassController : MonoBehaviour
     public RagdollAnimator2 skeletonRagdoll;
     public Animator skeletonAnimator;
 
-    //[Header("Horse")]
-    //public GameObject horseVisuals;
-    //public RagdollAnimator2 horseRagdoll;
-    //public Animator horseAnimator;
+    [Header("Horse")]
+    public SkinnedMeshRenderer horseVisuals;
+    public RagdollAnimator2 horseRagdoll;
+    public Animator horseAnimator;
 
     private PlayerClass _playerClass;
     public PlayerClass PlayerClass => _playerClass;
@@ -36,7 +36,7 @@ public class PlayerClassController : MonoBehaviour
         {
             case PlayerClass.Fairy: SwitchFairy(true); return fairyAnimator;
             case PlayerClass.Skeleton: SwitchSkeleton(true); return skeletonAnimator;
-            case PlayerClass.Horse: return fairyAnimator;
+            case PlayerClass.Horse: SwitchHorse(true); return horseAnimator;
             default: return fairyAnimator;
         }
     }
@@ -45,6 +45,7 @@ public class PlayerClassController : MonoBehaviour
     {
         SwitchFairy(false);
         SwitchSkeleton(false);
+        SwitchHorse(false);
     }
 
     private void SwitchFairy(bool target)
@@ -59,5 +60,12 @@ public class PlayerClassController : MonoBehaviour
         skeletonAnimator.enabled = target;
         skeletonRagdoll.enabled = target;
         skeletonVisuals.enabled = target;
+    }
+
+    private void SwitchHorse(bool target)
+    {
+        horseAnimator.enabled = target;
+        horseRagdoll.enabled = target;
+        horseVisuals.enabled = target;
     }
 }
