@@ -56,7 +56,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 3515468744
+  GlobalObjectIdHash: 3886245546
   InScenePlacedSourceGlobalObjectIdHash: 3886245546
   DeferredDespawnTick: 0
   Ownership: 1
@@ -239,10 +239,14 @@ MonoBehaviour:
     m_Bits: 384
   range: 5
   spellPosition: {fileID: 601245606459656940}
-  mouseLeftSkillPrefab: {fileID: 5492344958117361843, guid: dd98d3af6fbe63a42951c3ac5c569515, type: 3}
+  mouseLeftSkillPrefab: {fileID: 1338476522247539718, guid: eeba6d528bac2814fa0e5afe8a5ab266, type: 3}
+  mouseLeftSkillForward: 1.1
   mouseRightSkillPrefab: {fileID: 3627845501207778855, guid: b9a7af22fad0d5f4b9c65775deec137d, type: 3}
-  qSkillPrefab: {fileID: 3714107444110275119, guid: f4998a066e16a9c41af2c8c1a2dda1ad, type: 3}
-  fSkillPrefab: {fileID: 4473328583465917896, guid: 0f005cf5fa105d54f94fa6145a1e5970, type: 3}
+  mouseRightSkillForward: 1
+  qSkillPrefab: {fileID: 2617214393580885018, guid: c4b26879af8085e40af215da7d76f2ed, type: 3}
+  qSkillForward: 1.2
+  fSkillPrefab: {fileID: 4132376122746102564, guid: c08a9b8253772594db3790b558bf57b3, type: 3}
+  fSkillForward: 2.3
 --- !u!114 &8285264019283815069
 MonoBehaviour:
   m_ObjectHideFlags: 0
