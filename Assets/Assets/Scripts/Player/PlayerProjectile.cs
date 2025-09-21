@@ -22,9 +22,11 @@ public class PlayerProjectile : NetworkBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!IsOwner) return;
         EnemyController enemyController = other.gameObject.GetComponent<EnemyController>();
         if(enemyController != null)
         {
+            Physics.IgnoreCollision(GetComponent<Collider>(), other);
             enemyController.ReceiveDamage();
         }
     }
