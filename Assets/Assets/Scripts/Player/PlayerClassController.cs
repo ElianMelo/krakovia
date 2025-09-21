@@ -24,10 +24,14 @@ public class PlayerClassController : MonoBehaviour
     //public GameObject horseVisuals;
     //public RagdollAnimator2 horseRagdoll;
     //public Animator horseAnimator;
+
+    private PlayerClass _playerClass;
+    public PlayerClass PlayerClass => _playerClass;
     
     public Animator ChangeClassTo(PlayerClass playerClass)
     {
         DisableAll();
+        _playerClass = playerClass;
         switch (playerClass)
         {
             case PlayerClass.Fairy: SwitchFairy(true); return fairyAnimator;

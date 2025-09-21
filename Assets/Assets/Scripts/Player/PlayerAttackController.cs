@@ -1,8 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using Unity.Netcode;
 using UnityEngine;
+
+public enum SkillCommand
+{
+    MouseLeft,
+    MouseRight,
+    Q,
+    F
+}
 
 public class PlayerAttackController : NetworkBehaviour
 {
@@ -21,6 +28,8 @@ public class PlayerAttackController : NetworkBehaviour
     private float qSkillCooldown = 3f;
     private float fSkillCooldown = 5f;
 
+    private PlayerClassController playerClassController;
+
     [Header("Fairy")]
     public Transform spellPosition;
     public GameObject mouseLeftSkillPrefab;
@@ -36,6 +45,7 @@ public class PlayerAttackController : NetworkBehaviour
     {
         if (!IsOwner) return;
         animator = GetComponentInChildren<Animator>();
+        playerClassController = GetComponent<PlayerClassController>();
     }
 
     void Update()
@@ -47,9 +57,30 @@ public class PlayerAttackController : NetworkBehaviour
         FSkill();
     }
 
-    private void SpawnAttackVFX(GameObject vfxPrefab, float forwardIntensity, float upAjust = 0f)
+    private void SpawnAttackVFX(SkillCommand skillCommand, float forwardIntensity, float upAjust = 0f)
     {
-        Instantiate(vfxPrefab, spellPosition.position + transform.forward * forwardIntensity + new Vector3(0f, upAjust, 0f), spellPosition.rotation);
+        SpawnAttackProjectileRpc(skillCommand, spellPosition.position + transform.forward * forwardIntensity + new Vector3(0f, upAjust, 0f), spellPosition.rotation);
+    }
+
+    [Rpc(SendTo.Server)]
+    private void SpawnAttackProjectileRpc(SkillCommand skillCommand, Vector3 position, Quaternion rotation)
+    {
+        GameObject prefab = GetPrefabBasedOnSkill(skillCommand);
+        var instance = Instantiate(prefab, position, rotation);
+        var instanceNetworkObject = instance.GetComponent<NetworkObject>();
+        instanceNetworkObject.Spawn();
+    }
+
+    private GameObject GetPrefabBasedOnSkill(SkillCommand skillCommand)
+    {
+        switch (skillCommand)
+        {
+            case SkillCommand.MouseLeft: return mouseLeftSkillPrefab;
+            case SkillCommand.MouseRight: return mouseRightSkillPrefab;
+            case SkillCommand.Q: return qSkillPrefab;
+            case SkillCommand.F: return fSkillPrefab;
+            default: return fSkillPrefab;
+        }
     }
 
     private void MouseLeftSkill()
@@ -58,10 +89,11 @@ public class PlayerAttackController : NetworkBehaviour
         {
             InterfaceManager.Instance.UpdatePlayerSkillFirstCooldown(mouseLeftSkillCooldown);
             animator.SetTrigger("Attack1");
-            SpawnAttackVFX(mouseLeftSkillPrefab, mouseLeftSkillForward, 0.3f);
+            if(playerClassController.PlayerClass == PlayerClass.Fairy)
+                SpawnAttackVFX(SkillCommand.MouseLeft, mouseLeftSkillForward, 0.3f);
             canUseMouseLeftSkill = false;
             StartCoroutine(EnableMouseLeftSkill(mouseLeftSkillCooldown));
-            CastSearchTarget();
+            // CastSearchTarget();
         }
     }
 
@@ -71,10 +103,11 @@ public class PlayerAttackController : NetworkBehaviour
         {
             InterfaceManager.Instance.UpdatePlayerSkillSecondCooldown(mouseRightSkillCooldown);
             animator.SetTrigger("Attack2");
-            SpawnAttackVFX(mouseRightSkillPrefab, mouseRightSkillForward);
+            if (playerClassController.PlayerClass == PlayerClass.Fairy)
+                SpawnAttackVFX(SkillCommand.MouseRight, mouseRightSkillForward);
             canUseMouseRightSkill = false;
             StartCoroutine(EnableMouseRightSkill(mouseRightSkillCooldown));
-            CastSearchTarget();
+            // CastSearchTarget();
         }
     }
 
@@ -84,10 +117,11 @@ public class PlayerAttackController : NetworkBehaviour
         {
             InterfaceManager.Instance.UpdatePlayerSkillThirdCooldown(qSkillCooldown);
             animator.SetTrigger("Attack3");
-            SpawnAttackVFX(qSkillPrefab, qSkillForward);
+            if (playerClassController.PlayerClass == PlayerClass.Fairy)
+                SpawnAttackVFX(SkillCommand.Q, qSkillForward);
             canUseQSkill = false;
             StartCoroutine(EnableQSkill(qSkillCooldown));
-            CastSearchTarget();
+            // CastSearchTarget();
         }
     }
 
@@ -97,10 +131,11 @@ public class PlayerAttackController : NetworkBehaviour
         {
             InterfaceManager.Instance.UpdatePlayerSkillForthCooldown(fSkillCooldown);
             animator.SetTrigger("Attack4");
-            SpawnAttackVFX(fSkillPrefab, fSkillForward);
+            if (playerClassController.PlayerClass == PlayerClass.Fairy)
+                SpawnAttackVFX(SkillCommand.F, fSkillForward);
             canUseFSkill = false;
             StartCoroutine(EnableFSkill(fSkillCooldown));
-            CastSearchTarget();
+            // CastSearchTarget();
         }
     }
 

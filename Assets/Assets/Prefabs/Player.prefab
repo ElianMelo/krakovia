@@ -239,13 +239,13 @@ MonoBehaviour:
     m_Bits: 384
   range: 5
   spellPosition: {fileID: 601245606459656940}
-  mouseLeftSkillPrefab: {fileID: 1338476522247539718, guid: eeba6d528bac2814fa0e5afe8a5ab266, type: 3}
+  mouseLeftSkillPrefab: {fileID: 1338476522247539718, guid: 9b23bee04c2266b41b8b80c0fb6c0af5, type: 3}
   mouseLeftSkillForward: 1.1
-  mouseRightSkillPrefab: {fileID: 3627845501207778855, guid: b9a7af22fad0d5f4b9c65775deec137d, type: 3}
+  mouseRightSkillPrefab: {fileID: 3627845501207778855, guid: 24f71ea3a6411954d8f7397ac458e8f4, type: 3}
   mouseRightSkillForward: 1
-  qSkillPrefab: {fileID: 2617214393580885018, guid: c4b26879af8085e40af215da7d76f2ed, type: 3}
+  qSkillPrefab: {fileID: 2617214393580885018, guid: 80058ec34a20dfb40be7f408fbe69e8c, type: 3}
   qSkillForward: 1.2
-  fSkillPrefab: {fileID: 4132376122746102564, guid: c08a9b8253772594db3790b558bf57b3, type: 3}
+  fSkillPrefab: {fileID: 4132376122746102564, guid: fd9cbeb43591e3943ac7ddee58e19c41, type: 3}
   fSkillForward: 2.3
 --- !u!114 &8285264019283815069
 MonoBehaviour:
@@ -645,7 +645,7 @@ MonoBehaviour:
     _Editor_SelectedChain: 0
     _Editor_ChainCategory: 0
     _EditorCategory: 4
-    _EditorMainCategory: 0
+    _EditorMainCategory: 1
     _EditorMotionCategory: 0
     m_hemi: {fileID: -2508796484986968503, guid: 44d994eaad14fdf49a2dd378b4d62094, type: 3}
     m_cyli: {fileID: 2534964839176971238, guid: 2ea99bbc50a9266448416f21d645a771, type: 3}
@@ -756,7 +756,14 @@ MonoBehaviour:
         rootSpaceRotation: {x: 0.82087576, y: 0.16351132, z: -0.04228456, w: 0.54556334}
       LastBaseTransform: {fileID: 4329251983678767312}
     UseExtraFeatures: 1
-    ExtraFeatures: []
+    ExtraFeatures:
+    - CustomName: 
+      enabled: 1
+      FeatureReference: {fileID: 11400000, guid: fec516eb5421cbb4aa744a2e99ff15ef, type: 2}
+      customStringList: []
+      customObjectList: []
+      customEventsList: []
+      variables: []
     IsHumanoid: 1
     dummyContainer: {fileID: 0}
     inBetweenPreGenerateMemory: []

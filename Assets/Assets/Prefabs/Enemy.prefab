@@ -591,6 +591,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eec685fc405c81347b729958241f781e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4947161926761419523}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eec685fc405c81347b729958241f781e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5018204428219081361}
   m_SourcePrefab: {fileID: 100100000, guid: eec685fc405c81347b729958241f781e, type: 3}
 --- !u!1 &1160617717093947312 stripped
 GameObject:
@@ -612,7 +615,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -632,7 +635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 4086807136
+  GlobalObjectIdHash: 203853337
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -736,6 +739,33 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   hpBar: {fileID: 4414924759646450403}
   showDistance: 10
+--- !u!54 &5018204428219081361
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160617717093947312}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
 --- !u!4 &1968221499178913034 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: eec685fc405c81347b729958241f781e, type: 3}
