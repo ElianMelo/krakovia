@@ -146,13 +146,13 @@ public class PlayerAttackController : NetworkBehaviour
 
     private void CastSearchTarget()
     {
-        var playerControllers = SphereCastFor<PlayerController>();
-        if (playerControllers != null && playerControllers.Count > 0)
+        var playerAttributeControllers = SphereCastFor<PlayerAttributeController>();
+        if (playerAttributeControllers != null && playerAttributeControllers.Count > 0)
         {
-            foreach (var playerController in playerControllers)
+            foreach (var playerAttributeController in playerAttributeControllers)
             {
                 Debug.Log("Player Found!");
-                playerController.ReceiveDamage();
+                playerAttributeController.ReceiveDamage();
             }
         }
 

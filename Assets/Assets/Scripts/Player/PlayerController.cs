@@ -9,35 +9,6 @@ public class PlayerController : NetworkBehaviour
     private PlayerFollower playerFollower;
     private ClientNetworkAnimator clientNetworkAnimator;
 
-    private int playerHP = 10;
-    private int maxHP = 10;
-
-    public void ReceiveDamage()
-    {
-        ReceiveDamageRpc(OwnerClientId);
-    }
-
-    [Rpc(SendTo.Server)]
-    private void ReceiveDamageRpc(ulong targetOwnerClientId)
-    {
-        var rpcParams = new RpcParams
-        {
-            Send = new RpcSendParams
-            {
-                Target = NetworkManager.Singleton.RpcTarget.Single(targetOwnerClientId, RpcTargetUse.Persistent)
-            }
-        };
-        SendDamageClientRpc(rpcParams);
-    }
-
-    [Rpc(SendTo.SpecifiedInParams)]
-    private void SendDamageClientRpc(RpcParams rpcParams = default)
-    {
-        Debug.Log("Damage Received!");
-        playerHP -= 1;
-        InterfaceManager.Instance.UpdatePlayerHP(playerHP, maxHP);
-    }
-
     public override void OnNetworkSpawn()
     {
         // Visual logic for all players
