@@ -18,6 +18,14 @@ public class EnemyController : NetworkBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("AttackCollider"))
+        {
+            ReceiveDamage();
+        }
+    }
+
     public void ReceiveDamage()
     {
         ReceiveDamageRpc(NetworkObjectId);
