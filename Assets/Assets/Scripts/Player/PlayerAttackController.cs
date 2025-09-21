@@ -27,6 +27,7 @@ public class PlayerAttackController : NetworkBehaviour
     private float mouseRightSkillCooldown = 2f;
     private float qSkillCooldown = 3f;
     private float fSkillCooldown = 5f;
+    private float dashSkillCooldown = 3f;
 
     private PlayerClassController playerClassController;
 
@@ -142,6 +143,11 @@ public class PlayerAttackController : NetworkBehaviour
             StartCoroutine(EnableFSkill(fSkillCooldown));
             // CastSearchTarget();
         }
+    }
+
+    public void DashSKill()
+    {
+        InterfaceManager.Instance.UpdateDashSkillCooldown(dashSkillCooldown);
     }
 
     private void CastSearchTarget()

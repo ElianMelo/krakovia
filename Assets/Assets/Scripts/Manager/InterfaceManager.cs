@@ -41,6 +41,11 @@ public class InterfaceManager : MonoBehaviour
         playerInterfaceController.UpdatePlayerSkillForthCooldown(time);
     }
 
+    public void UpdateDashSkillCooldown(float time)
+    {
+        playerInterfaceController.UpdateDashSkillCooldown(time);
+    }
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.F1))

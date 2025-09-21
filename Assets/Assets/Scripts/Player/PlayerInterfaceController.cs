@@ -6,6 +6,7 @@ public class PlayerInterfaceController : MonoBehaviour
     public Slider playerHpSlide;
     public Slider playerExperienceSlide;
 
+    public SkillBlock playerDashSkill;
     public SkillBlock playerSkillFirst;
     public SkillBlock playerSkillSecond;
     public SkillBlock playerSkillThird;
@@ -35,5 +36,10 @@ public class PlayerInterfaceController : MonoBehaviour
     public void UpdatePlayerSkillForthCooldown(float time)
     {
         playerSkillForth.StartCooldown(time);
+    }
+
+    public void UpdateDashSkillCooldown(float time)
+    {
+        playerDashSkill.StartCooldown(time);
     }
 }

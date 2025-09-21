@@ -1,6 +1,4 @@
 using System.Collections;
-using System.ComponentModel;
-using Unity.Collections;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -58,6 +56,7 @@ public class PlayerMovementController : NetworkBehaviour
     private Vector3 moveDirection;
 
     private Animator playerAnimator;
+    private PlayerAttackController playerAttackController;
     private Rigidbody playerRb;
 
     private int maxJumps = 1;
@@ -94,8 +93,21 @@ public class PlayerMovementController : NetworkBehaviour
         airing
     }
 
-    public bool dashing;
+    public bool _dashing;
     public bool diving;
+
+    public bool Dashing
+    {
+        get => _dashing;
+        set
+        {
+            if(value == true)
+            {
+                playerAttackController.DashSKill();
+            }
+            _dashing = value;
+        }
+    }
 
     private readonly static string JumpAnim = "Jump";
     private readonly static string DashAnim = "Dash";
@@ -120,6 +132,7 @@ public class PlayerMovementController : NetworkBehaviour
     { 
         calculatedTimeRotateBack = timeRotateBack;
         // playerAnimator = GetComponentInChildren<Animator>();
+        playerAttackController = GetComponent<PlayerAttackController>();
         playerRb = GetComponent<Rigidbody>();
         playerRb.freezeRotation = true;
         jumps = maxJumps;
@@ -182,7 +195,7 @@ public class PlayerMovementController : NetworkBehaviour
     {
         if (!IsOwner) return;
         if (orientation == null) return;
-        if (dashing) return;
+        if (_dashing) return;
         if (diving) return;
         Move();
         if (moveDirection != Vector3.zero)
@@ -226,7 +239,7 @@ public class PlayerMovementController : NetworkBehaviour
     private void StateHandler()
     {
         // Mode - Dashing
-        if (dashing)
+        if (_dashing)
         {
             state = MovementState.dashing;
             desiredMoveSpeed = dashSpeed;
