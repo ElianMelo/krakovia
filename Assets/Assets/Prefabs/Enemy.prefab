@@ -728,6 +728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   ShowTopMostFoldoutHeaderGroup: 1
   maxHP: 5
+  effect: {fileID: 7780183107191031951, guid: 75cc95414f895d24a9ea78a02136df7b, type: 3}
 --- !u!114 &4947161926761419523
 MonoBehaviour:
   m_ObjectHideFlags: 0
