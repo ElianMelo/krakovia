@@ -5,11 +5,12 @@ public class PlayerAttributeController : NetworkBehaviour
 {
     private int currentHP = 10;
     private int maxHP = 10;
-    private int currentExperience = 10;
-    private int maxExperience = 10;
+    private int currentExperience = 0;
+    private int currentLevel = 1;
+    private int maxExperience = 100;
 
     [Header("Experience")]
-    public float experienceIncreaseAmount = 10;
+    public int experienceIncreaseAmount = 30;
 
     [Header("Fairy")]
     public int fairyMaxHP = 10;
@@ -55,11 +56,19 @@ public class PlayerAttributeController : NetworkBehaviour
     {
         Debug.Log("Damage Received!");
         currentHP -= 1;
-        InterfaceManager.Instance.UpdatePlayerHP(currentHP, maxHP);
+        InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerHp(currentHP, maxHP);
     }
 
     public void ReceiveExp(int experience)
     {
-        InterfaceManager.Instance.UpdatePlayerHP(currentHP, maxHP);
+        currentExperience += experience;
+        if(currentExperience >= maxExperience)
+        {
+            currentExperience = maxExperience - currentExperience;
+            currentLevel += 1;
+            maxExperience = maxExperience + experienceIncreaseAmount;
+            InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerLevel(currentLevel);
+        }
+        InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerExperience(currentExperience, maxExperience);
     }
 }

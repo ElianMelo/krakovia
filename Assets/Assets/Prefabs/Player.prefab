@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 339601554767367683}
   - component: {fileID: 4819135496217130490}
   - component: {fileID: 2516361281481648060}
+  - component: {fileID: 8047847355979524310}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -327,6 +328,35 @@ MonoBehaviour:
   dashCd: 3
   dashCdTimer: 0
   dashKey: 304
+--- !u!114 &8047847355979524310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4665702926503793426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfd7e5330e8c613418c780c11f1e6d9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttributeController
+  ShowTopMostFoldoutHeaderGroup: 1
+  experienceIncreaseAmount: 10
+  fairyMaxHP: 10
+  fairyMouseLeftSkillDamage: 10
+  fairyMouseRightSkillDamage: 10
+  fairyQSkillDamage: 10
+  fairyFSkillDamage: 10
+  skeletonMaxHP: 10
+  skeletonMouseLeftSkillDamage: 10
+  skeletonMouseRightSkillDamage: 10
+  skeletonQSkillDamage: 10
+  skeletonFSkillDamage: 10
+  horseMaxHP: 10
+  horseMouseLeftSkillDamage: 10
+  horseMouseRightSkillDamage: 10
+  horseQSkillDamage: 10
+  horseFSkillDamage: 10
 --- !u!1 &8232449897228365175
 GameObject:
   m_ObjectHideFlags: 0
@@ -6468,8 +6498,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.002
-  m_Height: 0.03
+  m_Radius: 0.005
+  m_Height: 0.045
   m_Direction: 0
   m_Center: {x: -0.01, y: 0, z: 0}
 --- !u!54 &7899246329008452446

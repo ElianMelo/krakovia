@@ -5,9 +5,16 @@ public class PlayerController : NetworkBehaviour
 {
     private PlayerMovementController playerMovementController;
     private PlayerAttackController playerAttackController;
+    private PlayerAttributeController _playerAttributeController;
     private PlayerClassController playerClassController;
     private PlayerFollower playerFollower;
     private ClientNetworkAnimator clientNetworkAnimator;
+
+    public PlayerAttributeController PlayerAttributeController
+    {
+        get => _playerAttributeController;
+        set => _playerAttributeController = value;
+    }
 
     public override void OnNetworkSpawn()
     {
@@ -16,6 +23,7 @@ public class PlayerController : NetworkBehaviour
         playerClassController = GetComponent<PlayerClassController>();
         playerMovementController = GetComponent<PlayerMovementController>();
         playerAttackController = GetComponent<PlayerAttackController>();
+        _playerAttributeController = GetComponent<PlayerAttributeController>();
 
         if (OwnerClientId == 0)
         {

@@ -5,45 +5,45 @@ public class InterfaceManager : MonoBehaviour
 {
     public static InterfaceManager Instance;
 
-    public PlayerInterfaceController playerInterfaceController;
+    public PlayerInterfaceController _playerInterfaceController;
+
+    public PlayerInterfaceController PlayerInterfaceController
+    {
+        get => _playerInterfaceController;
+        set
+        {
+            _playerInterfaceController = value;
+        }
+    }
+
     private void Awake()
     {
         Instance = this;
     }
 
-    public void UpdatePlayerHP(int currentValue, int maxValue)
-    {
-        playerInterfaceController.UpdatePlayerHp(currentValue, maxValue);
-    }
-
-    public void UpdatePlayerExperience(int currentValue, int maxValue)
-    {
-        playerInterfaceController.UpdatePlayerHp(currentValue, maxValue);
-    }
-
     public void UpdatePlayerSkillFirstCooldown(float time)
     {
-        playerInterfaceController.UpdatePlayerSkillFirstCooldown(time);
+        PlayerInterfaceController.UpdatePlayerSkillFirstCooldown(time);
     }
 
     public void UpdatePlayerSkillSecondCooldown(float time)
     {
-        playerInterfaceController.UpdatePlayerSkillSecondCooldown(time);
+        PlayerInterfaceController.UpdatePlayerSkillSecondCooldown(time);
     }
 
     public void UpdatePlayerSkillThirdCooldown(float time)
     {
-        playerInterfaceController.UpdatePlayerSkillThirdCooldown(time);
+        PlayerInterfaceController.UpdatePlayerSkillThirdCooldown(time);
     }
 
     public void UpdatePlayerSkillForthCooldown(float time)
     {
-        playerInterfaceController.UpdatePlayerSkillForthCooldown(time);
+        PlayerInterfaceController.UpdatePlayerSkillForthCooldown(time);
     }
 
     public void UpdateDashSkillCooldown(float time)
     {
-        playerInterfaceController.UpdateDashSkillCooldown(time);
+        PlayerInterfaceController.UpdateDashSkillCooldown(time);
     }
 
     void Update()

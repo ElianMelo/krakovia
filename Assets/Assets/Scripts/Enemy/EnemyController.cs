@@ -22,24 +22,34 @@ public class EnemyController : NetworkBehaviour
     {
         if (other.gameObject.CompareTag("AttackCollider"))
         {
-            ReceiveDamage();
+            ReceiveDamage(other.gameObject.GetComponentInParent<PlayerController>().NetworkObjectId);
         }
     }
 
-    public void ReceiveDamage()
+    public void ReceiveDamage(ulong sourceDamage)
     {
-        ReceiveDamageRpc(NetworkObjectId);
+        ReceiveDamageRpc(NetworkObjectId, sourceDamage);
     }
 
     [Rpc(SendTo.Server)]
-    private void ReceiveDamageRpc(ulong enemyNetworkObjectId)
+    private void ReceiveDamageRpc(ulong enemyNetworkObjectId, ulong sourceDamage)
     {
+        bool isEnemyDead = false;
         if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(enemyNetworkObjectId, out var enemyObj))
         {
             var enemy = enemyObj.GetComponent<EnemyController>();
             if (enemy != null)
             {
-                enemy.ApplyDamage();
+                isEnemyDead = enemy.ApplyDamage();
+            }
+        }
+
+        if (isEnemyDead && NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(sourceDamage, out var playerObj))
+        {
+            var player = playerObj.GetComponent<PlayerController>();
+            if (player != null)
+            {
+                player.PlayerAttributeController.ReceiveExp(30);
             }
         }
 
@@ -53,15 +63,17 @@ public class EnemyController : NetworkBehaviour
         // Could trigger hit flash, particles, etc.
     }
 
-    private void ApplyDamage()
+    private bool ApplyDamage()
     {
-        if (!IsServer) return;
+        if (!IsServer) return false;
 
         currentHP.Value -= 1;
 
         if (currentHP.Value <= 0)
         {
             NetworkObject.Despawn();
+            return true;
         }
+        return false;
     }
 }

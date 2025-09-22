@@ -27,7 +27,7 @@ public class PlayerProjectile : NetworkBehaviour
         if(enemyController != null)
         {
             Physics.IgnoreCollision(GetComponent<Collider>(), other);
-            enemyController.ReceiveDamage();
+            enemyController.ReceiveDamage(0);
         }
     }
 }

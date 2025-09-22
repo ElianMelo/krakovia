@@ -168,7 +168,7 @@ public class PlayerAttackController : NetworkBehaviour
             foreach (var enemyController in enemyControllers)
             {
                 Debug.Log("Enemy Found!");
-                enemyController.ReceiveDamage();
+                enemyController.ReceiveDamage(0);
             }
         }
     }

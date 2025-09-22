@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,6 +6,7 @@ public class PlayerInterfaceController : MonoBehaviour
 {
     public Slider playerHpSlide;
     public Slider playerExperienceSlide;
+    public TextMeshProUGUI playerLevel;
 
     public SkillBlock playerDashSkill;
     public SkillBlock playerSkillFirst;
@@ -18,7 +20,16 @@ public class PlayerInterfaceController : MonoBehaviour
     }
     public void UpdatePlayerExperience(int currentValue, int maxValue)
     {
-        playerHpSlide.value = (float)currentValue / maxValue;
+        playerExperienceSlide.value = (float)currentValue / maxValue;
+    }
+    public void UpdatePlayerLevel(int level)
+    {
+        string levelText = level.ToString();
+        if(level < 11)
+        {
+            levelText = "0" + levelText;
+        }
+        playerLevel.text = levelText;
     }
 
     public void UpdatePlayerSkillFirstCooldown(float time)
