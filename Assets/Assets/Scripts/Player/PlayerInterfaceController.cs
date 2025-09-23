@@ -25,7 +25,7 @@ public class PlayerInterfaceController : MonoBehaviour
     public void UpdatePlayerLevel(int level)
     {
         string levelText = level.ToString();
-        if(level < 11)
+        if(level < 10)
         {
             levelText = "0" + levelText;
         }
