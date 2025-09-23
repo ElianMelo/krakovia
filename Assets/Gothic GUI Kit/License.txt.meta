@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 38c1c5e20e574114bbc902e5f5e4f077
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 209880
+  packageName: Gothic GUI Kit
+  packageVersion: 1.2
+  assetPath: Assets/Gothic GUI Kit/License.txt
+  uploadId: 527521
