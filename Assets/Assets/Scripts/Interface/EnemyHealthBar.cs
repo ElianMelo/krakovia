@@ -46,7 +46,7 @@ public class EnemyHealthBar : NetworkBehaviour
     private void CheckShowDistance()
     {
         float distance = Vector3.Distance(Camera.main.transform.position, transform.position);
-        SwitchHpBarVisuals(distance <= showDistance && enemy.CurrentHP.Value < enemy.MaxHP);
+        SwitchHpBarVisuals(distance <= showDistance && enemy.CurrentHP.Value < enemy.MaxHP && enemy.CurrentHP.Value > 0);
     }
 
     private void SwitchHpBarVisuals(bool toggle)
