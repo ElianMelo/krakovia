@@ -4,8 +4,8 @@ using UnityEngine.UI;
 
 public class PlayerInterfaceController : MonoBehaviour
 {
-    public Slider playerHpSlide;
-    public Slider playerExperienceSlide;
+    public Image playerHpSlide;
+    public Image playerExperienceSlide;
     public TextMeshProUGUI playerLevel;
 
     public SkillBlock playerDashSkill;
@@ -16,11 +16,11 @@ public class PlayerInterfaceController : MonoBehaviour
 
     public void UpdatePlayerHp(int currentValue, int maxValue)
     {
-        playerHpSlide.value = (float) currentValue / maxValue;
+        playerHpSlide.fillAmount = (float) currentValue / maxValue;
     }
     public void UpdatePlayerExperience(int currentValue, int maxValue)
     {
-        playerExperienceSlide.value = (float)currentValue / maxValue;
+        playerExperienceSlide.fillAmount = (float)currentValue / maxValue;
     }
     public void UpdatePlayerLevel(int level)
     {

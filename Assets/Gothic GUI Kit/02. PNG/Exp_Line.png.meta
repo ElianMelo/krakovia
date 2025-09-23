@@ -1,12 +1,5 @@
 fileFormatVersion: 2
-guid: 8598f59fc3603ab4ea2c1dd7a31477eb
-AssetOrigin:
-  serializedVersion: 1
-  productId: 209880
-  packageName: Gothic GUI Kit
-  packageVersion: 1.2
-  assetPath: Assets/Gothic GUI Kit/02. PNG/Big_Background Variant 3.png
-  uploadId: 527521
+guid: 95630aae0cf83c441b13442c81a241fd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -89,7 +82,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
