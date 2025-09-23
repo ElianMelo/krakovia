@@ -167,8 +167,10 @@ public class PlayerAttackController : NetworkBehaviour
         {
             foreach (var enemyController in enemyControllers)
             {
+                Vector3 contactPoint = enemyController.GetComponent<Collider>().ClosestPoint(transform.position);
+
                 Debug.Log("Enemy Found!");
-                enemyController.ReceiveDamage(0);
+                enemyController.ReceiveDamage(0, contactPoint);
             }
         }
     }

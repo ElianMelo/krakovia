@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b620a73abcc269b4ea10f8a744053577
+guid: d8ced23b7d5cdc443a4019d899715363
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,12 +97,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Explosion_0
+      name: Blood_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 71
+        y: 500
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -112,19 +112,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae8d7d7990411e846b467c8fad3df999
-      internalID: -1906322081
+      spriteID: d6df952355b12d0479a3611073952d62
+      internalID: -554276536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_1
+      name: Blood_1
       rect:
         serializedVersion: 2
-        x: 71
-        y: 0
-        width: 71
+        x: 100
+        y: 500
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -134,19 +134,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d18ddf31aca5d7643b318f3e2090c8d2
-      internalID: 1299342678
+      spriteID: 34d51f72538e1b44f83c1f50f61decb9
+      internalID: 1291738638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_2
+      name: Blood_2
       rect:
         serializedVersion: 2
-        x: 142
-        y: 0
-        width: 71
+        x: 200
+        y: 500
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -156,19 +156,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66756be2a4e0c1f4aa708454e6623cf7
-      internalID: -2092972600
+      spriteID: b255cfc88d6f483498df770a04e9c8e5
+      internalID: -1597290150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_3
+      name: Blood_3
       rect:
         serializedVersion: 2
-        x: 213
-        y: 0
-        width: 71
+        x: 300
+        y: 500
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -178,19 +178,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3e68477fb52b034f897657364d73878
-      internalID: 1943638315
+      spriteID: 8634899485668494dac2857c2ace8fa2
+      internalID: 252196731
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_4
+      name: Blood_4
       rect:
         serializedVersion: 2
-        x: 284
-        y: 0
-        width: 71
+        x: 400
+        y: 500
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -200,19 +200,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9db8ca3483691834d9571cd232dbe8b8
-      internalID: 1336742551
+      spriteID: 9dc6f5f9fa1164c44ad0bbf3b6574964
+      internalID: 1406644133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_5
+      name: Blood_5
       rect:
         serializedVersion: 2
-        x: 355
-        y: 0
-        width: 71
+        x: 500
+        y: 500
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -222,19 +222,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ee0f9ad579f7a64b8f0b8d17be2173a
-      internalID: -365670939
+      spriteID: ec8f37b1ab1f5b54da17a31b1c33ccd1
+      internalID: -1152538756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_6
+      name: Blood_6
       rect:
         serializedVersion: 2
-        x: 426
-        y: 0
-        width: 71
+        x: 0
+        y: 400
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -244,19 +244,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b6da34e3a0980a4eacfee26c4cd26c5
-      internalID: -1778861342
+      spriteID: 2123ef60eb5fe9f4f970930573589702
+      internalID: 1657659816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_7
+      name: Blood_7
       rect:
         serializedVersion: 2
-        x: 497
-        y: 0
-        width: 71
+        x: 100
+        y: 400
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -266,19 +266,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a518ad93106015f46816b6993e8ba6eb
-      internalID: 1981558750
+      spriteID: bccdfe6e4a69a154fb3ffbc127f235c6
+      internalID: 1769751906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_8
+      name: Blood_8
       rect:
         serializedVersion: 2
-        x: 568
-        y: 0
-        width: 71
+        x: 200
+        y: 400
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -288,19 +288,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e3711a3df5fe9d44ba015156029e749
-      internalID: 853009992
+      spriteID: 056c0cbcc8774e849a95a3dbd6e286b4
+      internalID: 1673251948
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_9
+      name: Blood_9
       rect:
         serializedVersion: 2
-        x: 639
-        y: 0
-        width: 71
+        x: 300
+        y: 400
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -310,19 +310,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8463709642e63b84e8981f1d1a2cd4f1
-      internalID: 807327179
+      spriteID: e5d11438dc3673e4eba3f69944cb5475
+      internalID: 862782009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_10
+      name: Blood_10
       rect:
         serializedVersion: 2
-        x: 710
-        y: 0
-        width: 71
+        x: 400
+        y: 400
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -332,19 +332,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2e0ee943194eb0409965580bad7a659
-      internalID: 767788849
+      spriteID: 85db8befc65f0194f8190175f861f7b9
+      internalID: 1772631808
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_11
+      name: Blood_11
       rect:
         serializedVersion: 2
-        x: 781
-        y: 0
-        width: 71
+        x: 500
+        y: 400
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -354,19 +354,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02ce6e268520ff041a5d57f79cf87ce7
-      internalID: 1428756908
+      spriteID: 53e70b0dc33a0e2408eea7f56d0d3ce0
+      internalID: -398708797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_12
+      name: Blood_12
       rect:
         serializedVersion: 2
-        x: 852
-        y: 0
-        width: 71
+        x: 0
+        y: 300
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -376,19 +376,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 544297ead222a3642bb971b6dc091726
-      internalID: 1434770171
+      spriteID: ad1cd299b8f1c194fb8c5dddbd9170ae
+      internalID: -1749975703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_13
+      name: Blood_13
       rect:
         serializedVersion: 2
-        x: 923
-        y: 0
-        width: 71
+        x: 100
+        y: 300
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -398,19 +398,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65599232590ff6143bea6594724aa882
-      internalID: 771320427
+      spriteID: 97a7e8c44d2229340b0878adce8db7e8
+      internalID: 1436073029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_14
+      name: Blood_14
       rect:
         serializedVersion: 2
-        x: 994
-        y: 0
-        width: 71
+        x: 200
+        y: 300
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -420,19 +420,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45014561ba31db145bfc8f3660da588d
-      internalID: -937427176
+      spriteID: f7e6c5be3f084414a89eb3417f607c0e
+      internalID: -1726540811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_15
+      name: Blood_15
       rect:
         serializedVersion: 2
-        x: 1065
-        y: 0
-        width: 71
+        x: 300
+        y: 300
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -442,19 +442,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd16e1ffd70f11949a13834325353a2a
-      internalID: 1242506657
+      spriteID: 8d6b8e14a2a9d9349846661a0244cb4b
+      internalID: -435006105
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_16
+      name: Blood_16
       rect:
         serializedVersion: 2
-        x: 1136
-        y: 0
-        width: 71
+        x: 400
+        y: 300
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -464,8 +464,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7645e8c433c0afc4da4f96a1546499e5
-      internalID: 1116028484
+      spriteID: 7213152ede478c04da429cb3ff8ae650
+      internalID: 744450280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_17
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2be64b883c6805847991348735e92ecc
+      internalID: 450955497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 328548f065f7efa48bd6fac0ca6416a4
+      internalID: 627618701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_19
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f44b3263a8ce74844a6a45220159842e
+      internalID: -812372083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_20
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4c569a26ea7d444b2b73a5b1fd5659
+      internalID: 1613986161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_21
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b1f541623110d4c919211b7bf07c1c
+      internalID: -1695718430
       vertices: []
       indices: 
       edges: []
@@ -474,7 +584,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 484e6c64b8b94204ca3f4150141ad988
+    spriteID: 96e72528c1520d642ae8ae6b86463250
     internalID: 0
     vertices: []
     indices: 
@@ -484,25 +594,31 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":17.0,"y":1.0},"gridSpriteSize":{"x":71.0,"y":100.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":6.0},"gridSpriteSize":{"x":100.0,"y":100.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Explosion_0: -1906322081
-      Explosion_1: 1299342678
-      Explosion_10: 767788849
-      Explosion_11: 1428756908
-      Explosion_12: 1434770171
-      Explosion_13: 771320427
-      Explosion_14: -937427176
-      Explosion_15: 1242506657
-      Explosion_16: 1116028484
-      Explosion_2: -2092972600
-      Explosion_3: 1943638315
-      Explosion_4: 1336742551
-      Explosion_5: -365670939
-      Explosion_6: -1778861342
-      Explosion_7: 1981558750
-      Explosion_8: 853009992
-      Explosion_9: 807327179
+      Blood_0: -554276536
+      Blood_1: 1291738638
+      Blood_10: 1772631808
+      Blood_11: -398708797
+      Blood_12: -1749975703
+      Blood_13: 1436073029
+      Blood_14: -1726540811
+      Blood_15: -435006105
+      Blood_16: 744450280
+      Blood_17: 450955497
+      Blood_18: 627618701
+      Blood_19: -812372083
+      Blood_2: -1597290150
+      Blood_20: 1613986161
+      Blood_21: -1695718430
+      Blood_22: -954466680
+      Blood_3: 252196731
+      Blood_4: 1406644133
+      Blood_5: -1152538756
+      Blood_6: 1657659816
+      Blood_7: 1769751906
+      Blood_8: 1673251948
+      Blood_9: 862782009
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

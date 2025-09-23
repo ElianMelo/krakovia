@@ -8,7 +8,8 @@ public class EnemyController : NetworkBehaviour
     [SerializeField] private int maxHP = 5;
     private NetworkVariable<int> currentHP = new NetworkVariable<int>();
 
-    public GameObject effect;
+    public GameObject explosionEffect;
+    public GameObject bloodEffect;
 
     private bool isDead = false;
 
@@ -27,17 +28,20 @@ public class EnemyController : NetworkBehaviour
     {
         if (other.gameObject.CompareTag("AttackCollider"))
         {
-            ReceiveDamage(other.gameObject.GetComponentInParent<PlayerController>().NetworkObjectId);
+            Vector3 contactPoint = other.ClosestPoint(transform.position);
+
+            ReceiveDamage(other.gameObject.GetComponentInParent<PlayerController>().NetworkObjectId,
+                contactPoint);
         }
     }
 
-    public void ReceiveDamage(ulong sourceDamage)
+    public void ReceiveDamage(ulong sourceDamage, Vector3 contactPoint)
     {
-        ReceiveDamageRpc(NetworkObjectId, sourceDamage);
+        ReceiveDamageRpc(NetworkObjectId, sourceDamage, contactPoint);
     }
 
     [Rpc(SendTo.Server)]
-    private void ReceiveDamageRpc(ulong enemyNetworkObjectId, ulong sourceDamage)
+    private void ReceiveDamageRpc(ulong enemyNetworkObjectId, ulong sourceDamage, Vector3 contactPoint)
     {
         bool isEnemyDead = false;
         if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(enemyNetworkObjectId, out var enemyObj))
@@ -58,16 +62,20 @@ public class EnemyController : NetworkBehaviour
             }
         }
 
-        SendDamageClientRpc(enemyNetworkObjectId, isEnemyDead);
+        SendDamageClientRpc(enemyNetworkObjectId, isEnemyDead, contactPoint);
     }
 
     [Rpc(SendTo.Everyone)]
-    private void SendDamageClientRpc(ulong enemyNetworkObjectId, bool isEnemyDead)
+    private void SendDamageClientRpc(ulong enemyNetworkObjectId, bool isEnemyDead, Vector3 contactPoint)
     {
         Debug.Log($"Enemy ({enemyNetworkObjectId}) took damage!");
+
+        var bloodEffectInstance = Instantiate(bloodEffect, contactPoint, Quaternion.identity);
+        Destroy(bloodEffectInstance, 2f);
+
         if (isEnemyDead)
         {
-            var effectInstance = Instantiate(effect, transform.position + new Vector3(0f,1f,0f), Quaternion.identity);
+            var effectInstance = Instantiate(explosionEffect, transform.position + new Vector3(0f,1f,0f), Quaternion.identity);
             Destroy(effectInstance, 2f);
         }
         // Could trigger hit flash, particles, etc.
