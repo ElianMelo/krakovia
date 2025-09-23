@@ -4895,9 +4895,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FIMSpace.FProceduralAnimation.RagdollAnimator2
   handler:
-    _Editor_SelectedChain: 3
-    _Editor_ChainCategory: 0
-    _EditorCategory: 1
+    _Editor_SelectedChain: 0
+    _Editor_ChainCategory: 2
+    _EditorCategory: 3
     _EditorMainCategory: 0
     _EditorMotionCategory: 0
     m_hemi: {fileID: -2508796484986968503, guid: 44d994eaad14fdf49a2dd378b4d62094, type: 3}
@@ -5024,7 +5024,7 @@ MonoBehaviour:
     SpringsOnFall: 0
     DampingValue: 40
     DampingValueOnFall: 0
-    HardMatching: 0.3
+    HardMatching: 1
     HardMatchPositions: 0
     HardMatchPositionsOnFall: 0
     PositionHardMatchingMultiplier: 1
