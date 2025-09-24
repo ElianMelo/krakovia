@@ -4897,7 +4897,7 @@ MonoBehaviour:
   handler:
     _Editor_SelectedChain: 0
     _Editor_ChainCategory: 2
-    _EditorCategory: 3
+    _EditorCategory: 2
     _EditorMainCategory: 0
     _EditorMotionCategory: 0
     m_hemi: {fileID: -2508796484986968503, guid: 44d994eaad14fdf49a2dd378b4d62094, type: 3}
@@ -5020,11 +5020,11 @@ MonoBehaviour:
     inBetweenPreGenerateMemory: []
     skeletonFillExtraBonesList: []
     MusclesPower: 1
-    SpringsValue: 1500
+    SpringsValue: 3000
     SpringsOnFall: 0
     DampingValue: 40
     DampingValueOnFall: 0
-    HardMatching: 1
+    HardMatching: 0.8
     HardMatchPositions: 0
     HardMatchPositionsOnFall: 0
     PositionHardMatchingMultiplier: 1
@@ -5042,7 +5042,7 @@ MonoBehaviour:
     RagdollLogic: 0
     RagdollSizeMultiplier: 1
     RagdollThicknessMultiplier: 1
-    ReferenceMass: 50
+    ReferenceMass: 100
     RigidbodiesInterpolation: 1
     RigidbodiesDetectionMode: 0
     RigidbodyDragValue: 0

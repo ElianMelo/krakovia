@@ -38,8 +38,9 @@ public class EnemyMovement : NetworkBehaviour
             while (Vector3.Distance(transform.position, targetPosition) > 0.2f)
             {
                 Vector3 direction = (targetPosition - transform.position).normalized;
-                transform.position += direction * moveSpeed * Time.deltaTime;
-                transform.forward = direction;
+                Vector3 flatDirection = new Vector3(direction.x, 0f, direction.z);
+                transform.position += flatDirection * moveSpeed * Time.deltaTime;
+                transform.forward = flatDirection;
                 yield return null;
             }
 
