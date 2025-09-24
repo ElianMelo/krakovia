@@ -4,8 +4,8 @@ using UnityEngine.UI;
 
 public class EnemyHealthBar : NetworkBehaviour
 {
-    [SerializeField] private Slider hpBar;
     [SerializeField] private Image hpBarBackground;
+    [SerializeField] private Image hpBarWhiteBackground;
     [SerializeField] private Image hpBarfront;
     [SerializeField] private float showDistance = 10f;
 
@@ -33,7 +33,7 @@ public class EnemyHealthBar : NetworkBehaviour
 
     private void OnHealthChanged(int oldValue, int newValue)
     {
-        hpBar.value = newValue / (float)enemy.MaxHP;
+        hpBarfront.fillAmount = newValue / (float)enemy.MaxHP;
         CheckShowDistance();
     }
 
@@ -52,6 +52,7 @@ public class EnemyHealthBar : NetworkBehaviour
     private void SwitchHpBarVisuals(bool toggle)
     {
         hpBarBackground.enabled = toggle;
+        hpBarWhiteBackground.enabled = toggle;
         hpBarfront.enabled = toggle;
     }
 
