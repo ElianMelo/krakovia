@@ -2285,6 +2285,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5302436803607512324, guid: bdce67bc4834f324dbc73f5b8c4a5f31, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: af810efa55882da4abfd31abaa074acb, type: 3}
     - target: {fileID: 7071180994106389453, guid: bdce67bc4834f324dbc73f5b8c4a5f31, type: 3}
       propertyPath: m_Name
       value: SkillBlock (1)
