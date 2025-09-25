@@ -106,10 +106,10 @@ MonoBehaviour:
     _EditorCategory: 2
     _EditorMainCategory: 0
     _EditorMotionCategory: 2
-    m_hemi: {fileID: 0}
-    m_cyli: {fileID: 0}
-    m_sphere: {fileID: 0}
-    m_box: {fileID: 0}
+    m_hemi: {fileID: -2508796484986968503, guid: 44d994eaad14fdf49a2dd378b4d62094, type: 3}
+    m_cyli: {fileID: 2534964839176971238, guid: 2ea99bbc50a9266448416f21d645a771, type: 3}
+    m_sphere: {fileID: 4711208715938537054, guid: b43618aedd7473a4eb1aaa5e80012a1d, type: 3}
+    m_box: {fileID: -5495902117074765545, guid: 556fd6baa0902304189e57acd1d60fa6, type: 3}
     _EditorBoneScenePreviews: []
     StoredReferenceTPose:
       BonePoses:
