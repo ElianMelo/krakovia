@@ -12,11 +12,16 @@ public class EnemyMovement : NetworkBehaviour
 
     private Vector3 startPosition;
     private Vector3 targetPosition;
-    private bool isMoving = false;
+    //private bool isMoving = false;
+
+    private Animator animator;
+
+    private const string WalkAnim = "Walking";
 
     private void Start()
     {
         startPosition = transform.position;
+        animator = GetComponentInChildren<Animator>();
 
         if (IsServer)
             StartCoroutine(WanderRoutine());
@@ -26,6 +31,8 @@ public class EnemyMovement : NetworkBehaviour
     {
         while (true)
         {
+            animator.SetBool(WalkAnim, true);
+
             Vector3 randomOffset = new Vector3(
                 Random.Range(-wanderRadius, wanderRadius),
                 0f,
@@ -33,7 +40,7 @@ public class EnemyMovement : NetworkBehaviour
             );
             targetPosition = startPosition + randomOffset;
 
-            isMoving = true;
+            // isMoving = true;
 
             while (Vector3.Distance(transform.position, targetPosition) > 0.2f)
             {
@@ -44,7 +51,8 @@ public class EnemyMovement : NetworkBehaviour
                 yield return null;
             }
 
-            isMoving = false;
+            // isMoving = false;
+            animator.SetBool(WalkAnim, false);
 
             yield return new WaitForSeconds(idleTime);
         }

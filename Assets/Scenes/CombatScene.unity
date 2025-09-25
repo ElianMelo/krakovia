@@ -16186,6 +16186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainInterfaceCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5526654019402411949, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 103.36011
+      objectReference: {fileID: 0}
     - target: {fileID: 5773347786308763962, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -16217,6 +16221,14 @@ PrefabInstance:
     - target: {fileID: 6266118832339676638, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6560557964493306369, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 103.36011
+      objectReference: {fileID: 0}
+    - target: {fileID: 6560557964493306369, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -39.400024
       objectReference: {fileID: 0}
     - target: {fileID: 6695283420685654641, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_AnchorMax.y

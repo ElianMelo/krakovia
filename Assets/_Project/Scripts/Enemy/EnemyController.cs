@@ -1,7 +1,7 @@
+using FIMSpace.FProceduralAnimation;
 using System.Collections;
 using Unity.Netcode;
 using UnityEngine;
-using UnityEngine.InputSystem.Processors;
 
 public class EnemyController : NetworkBehaviour
 {
@@ -10,8 +10,16 @@ public class EnemyController : NetworkBehaviour
 
     public GameObject explosionEffect;
     public GameObject bloodEffect;
+    public LayerMask playerMask;
 
     private bool isDead = false;
+
+    private Collider enemyCollider;
+    private Animator animator;
+    private RagdollAnimator2 ragdoll;
+
+    private const string HurtAnim = "Hurt";
+    private const string DeathAnim = "Death";
 
     public int MaxHP => maxHP;
     public NetworkVariable<int> CurrentHP => currentHP;
@@ -24,12 +32,20 @@ public class EnemyController : NetworkBehaviour
         }
     }
 
+    private void Awake()
+    {
+        enemyCollider = GetComponent<Collider>();
+        animator = GetComponentInChildren<Animator>();
+        ragdoll = GetComponentInChildren<RagdollAnimator2>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("AttackCollider"))
         {
             Vector3 contactPoint = other.ClosestPoint(transform.position);
 
+            if (isDead) return;
             ReceiveDamage(other.gameObject.GetComponentInParent<PlayerController>().NetworkObjectId,
                 contactPoint);
         }
@@ -43,6 +59,7 @@ public class EnemyController : NetworkBehaviour
     [Rpc(SendTo.Server)]
     private void ReceiveDamageRpc(ulong enemyNetworkObjectId, ulong sourceDamage, Vector3 contactPoint)
     {
+        if (isDead) return;
         bool isEnemyDead = false;
         if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(enemyNetworkObjectId, out var enemyObj))
         {
@@ -70,6 +87,9 @@ public class EnemyController : NetworkBehaviour
     {
         Debug.Log($"Enemy ({enemyNetworkObjectId}) took damage!");
 
+        if(!isEnemyDead)
+            animator.SetTrigger(HurtAnim);
+
         var bloodEffectInstance = Instantiate(bloodEffect, contactPoint, Quaternion.identity);
         Destroy(bloodEffectInstance, 2f);
 
@@ -77,6 +97,9 @@ public class EnemyController : NetworkBehaviour
         {
             var effectInstance = Instantiate(explosionEffect, transform.position + new Vector3(0f,1f,0f), Quaternion.identity);
             Destroy(effectInstance, 2f);
+            enemyCollider.excludeLayers = playerMask;
+            animator.SetTrigger(DeathAnim);
+            ragdoll.Settings.AnimatingMode = RagdollHandler.EAnimatingMode.Sleep;
         }
         // Could trigger hit flash, particles, etc.
     }
@@ -98,7 +121,7 @@ public class EnemyController : NetworkBehaviour
 
     private IEnumerator DelayedDespawn()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(6f);
         NetworkObject.Despawn();
     }
 }
