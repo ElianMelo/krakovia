@@ -29,6 +29,10 @@ public class PlayerController : NetworkBehaviour
         {
             clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Skeleton);
         }
+        else if (OwnerClientId == 1)
+        {
+            clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Skeleton);
+        }
         else if(OwnerClientId == 2)
         {
             clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Horse);
