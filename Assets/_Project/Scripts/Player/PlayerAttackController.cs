@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum SkillCommand
@@ -41,6 +42,15 @@ public class PlayerAttackController : NetworkBehaviour
     public float qSkillForward;
     public GameObject fSkillPrefab;
     public float fSkillForward;
+
+    [Header("Skeleton")]
+    public Collider skeletonSword;
+    public int skeletonMouseLeftSkillFrames;
+    public int skeletonMouseRightSkillFrames;
+    public int skeletonQSkillFrames;
+    public int skeletonFSkillFrames;
+
+    private Coroutine waitingTimerDisableColliderCoroutine;
 
     void Start()
     {
@@ -89,13 +99,28 @@ public class PlayerAttackController : NetworkBehaviour
         }
     }
 
+    private IEnumerator WaitingTimerDisableCollider(int frames)
+    {
+        skeletonSword.enabled = true;
+        yield return new WaitForSeconds(frames * ConstantsManager.FramesToSeconds);
+        skeletonSword.enabled = false;
+    }
+
+    private void SkeletonColliderHandler(int frames)
+    {
+        if (waitingTimerDisableColliderCoroutine != null) StopCoroutine(waitingTimerDisableColliderCoroutine);
+        waitingTimerDisableColliderCoroutine = StartCoroutine(WaitingTimerDisableCollider(frames));
+    }
+
     private void MouseLeftSkill()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && canUseMouseLeftSkill)
         {
             InterfaceManager.Instance.UpdatePlayerSkillFirstCooldown(mouseLeftSkillCooldown);
             animator.SetTrigger("Attack1");
-            if(playerClassController.PlayerClass == PlayerClass.Fairy)
+            if (playerClassController.PlayerClass == PlayerClass.Skeleton)
+                SkeletonColliderHandler(skeletonMouseLeftSkillFrames);
+            if (playerClassController.PlayerClass == PlayerClass.Fairy)
                 SpawnAttackVFX(SkillCommand.MouseLeft, mouseLeftSkillForward, 0.3f);
             canUseMouseLeftSkill = false;
             StartCoroutine(EnableMouseLeftSkill(mouseLeftSkillCooldown));
@@ -109,6 +134,8 @@ public class PlayerAttackController : NetworkBehaviour
         {
             InterfaceManager.Instance.UpdatePlayerSkillSecondCooldown(mouseRightSkillCooldown);
             animator.SetTrigger("Attack2");
+            if (playerClassController.PlayerClass == PlayerClass.Skeleton)
+                SkeletonColliderHandler(skeletonMouseRightSkillFrames);
             if (playerClassController.PlayerClass == PlayerClass.Fairy)
                 SpawnAttackVFX(SkillCommand.MouseRight, mouseRightSkillForward);
             canUseMouseRightSkill = false;
@@ -123,6 +150,8 @@ public class PlayerAttackController : NetworkBehaviour
         {
             InterfaceManager.Instance.UpdatePlayerSkillThirdCooldown(qSkillCooldown);
             animator.SetTrigger("Attack3");
+            if (playerClassController.PlayerClass == PlayerClass.Skeleton)
+                SkeletonColliderHandler(skeletonQSkillFrames);
             if (playerClassController.PlayerClass == PlayerClass.Fairy)
                 SpawnAttackVFX(SkillCommand.Q, qSkillForward);
             canUseQSkill = false;
@@ -137,6 +166,8 @@ public class PlayerAttackController : NetworkBehaviour
         {
             InterfaceManager.Instance.UpdatePlayerSkillForthCooldown(fSkillCooldown);
             animator.SetTrigger("Attack4");
+            if (playerClassController.PlayerClass == PlayerClass.Skeleton)
+                SkeletonColliderHandler(skeletonFSkillFrames);
             if (playerClassController.PlayerClass == PlayerClass.Fairy)
                 SpawnAttackVFX(SkillCommand.F, fSkillForward);
             canUseFSkill = false;
@@ -148,6 +179,20 @@ public class PlayerAttackController : NetworkBehaviour
     public void DashSKill()
     {
         InterfaceManager.Instance.UpdateDashSkillCooldown(dashSkillCooldown);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("AttackCollider"))
+        {
+            var playerAttributeController = GetComponent<PlayerAttributeController>();
+            if (other.GetComponentInParent<PlayerAttributeController>() == playerAttributeController)
+            {
+                Physics.IgnoreCollision(other, GetComponent<Collider>());
+                return;
+            }
+            playerAttributeController.ReceiveDamage();
+        }
     }
 
     private void CastSearchTarget()

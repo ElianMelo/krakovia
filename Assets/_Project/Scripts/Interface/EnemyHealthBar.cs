@@ -20,13 +20,14 @@ public class EnemyHealthBar : NetworkBehaviour
     public override void OnNetworkSpawn()
     {
         enemy.CurrentHP.OnValueChanged += OnHealthChanged;
-        player = NetworkManager.Singleton.LocalClient.PlayerObject.transform;
-
+        
         if (!IsOwner)
         {            
             SwitchHpBarVisuals(false);
             return;
         }
+
+        player = NetworkManager.Singleton.LocalClient.PlayerObject.transform;
 
         OnHealthChanged(enemy.CurrentHP.Value, enemy.CurrentHP.Value);
     }

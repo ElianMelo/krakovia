@@ -19,6 +19,7 @@ public class PlayerClassController : MonoBehaviour
     public SkinnedMeshRenderer skeletonVisuals;
     public RagdollAnimator2 skeletonRagdoll;
     public Animator skeletonAnimator;
+    public Collider skeletonSword;
 
     [Header("Horse")]
     public SkinnedMeshRenderer horseVisuals;
@@ -27,7 +28,7 @@ public class PlayerClassController : MonoBehaviour
 
     private PlayerClass _playerClass;
     public PlayerClass PlayerClass => _playerClass;
-    
+
     public Animator ChangeClassTo(PlayerClass playerClass)
     {
         DisableAll();
@@ -60,6 +61,7 @@ public class PlayerClassController : MonoBehaviour
         skeletonAnimator.enabled = target;
         skeletonRagdoll.enabled = target;
         skeletonVisuals.enabled = target;
+        skeletonSword.enabled = target;
     }
 
     private void SwitchHorse(bool target)
