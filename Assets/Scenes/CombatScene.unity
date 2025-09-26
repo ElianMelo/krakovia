@@ -20862,6 +20862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   player: {fileID: 0}
+  smoothTime: 0.1
 --- !u!114 &1054324077
 MonoBehaviour:
   m_ObjectHideFlags: 0

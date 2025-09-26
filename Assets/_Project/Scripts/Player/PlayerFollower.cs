@@ -3,9 +3,12 @@ using UnityEngine;
 public class PlayerFollower : MonoBehaviour
 {
     public Transform player;
-    private void LateUpdate()
+    public float smoothTime = 0.3F;
+    private Vector3 velocity = Vector3.zero;
+
+    void Update()
     {
         if (player == null) return;
-        transform.position = player.position;
+        transform.position = Vector3.SmoothDamp(transform.position, player.transform.position, ref velocity, smoothTime);
     }
 }
