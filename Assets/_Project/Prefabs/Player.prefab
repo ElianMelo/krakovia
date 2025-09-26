@@ -152,7 +152,7 @@ MonoBehaviour:
   smoothFrictionFactor: 0.1
   walkSpeed: 4
   sprintSpeed: 4
-  dashSpeed: 10
+  dashSpeed: 100
   dashSpeedChangeFactor: 100
   diveSpeed: 10
   diveSpeedChangeFactor: 100
