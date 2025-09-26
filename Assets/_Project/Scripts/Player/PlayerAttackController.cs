@@ -51,6 +51,7 @@ public class PlayerAttackController : NetworkBehaviour
     public int skeletonFSkillFrames;
 
     private Coroutine waitingTimerDisableColliderCoroutine;
+    private Coroutine handleSkeletonBasicAttackCoroutine;
 
     void Start()
     {
@@ -112,11 +113,23 @@ public class PlayerAttackController : NetworkBehaviour
         waitingTimerDisableColliderCoroutine = StartCoroutine(WaitingTimerDisableCollider(frames));
     }
 
+    private IEnumerator HandleSkeletonBasicAttack(int frames)
+    {
+        animator.SetLayerWeight(animator.GetLayerIndex("UpperBody"), 1f);
+        yield return new WaitForSeconds(frames * ConstantsManager.FramesToSeconds);
+        animator.SetLayerWeight(animator.GetLayerIndex("UpperBody"), 0f);
+    }
+
     private void MouseLeftSkill()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && canUseMouseLeftSkill)
         {
             InterfaceManager.Instance.UpdatePlayerSkillFirstCooldown(mouseLeftSkillCooldown);
+            if (playerClassController.PlayerClass == PlayerClass.Skeleton)
+            {
+                if (handleSkeletonBasicAttackCoroutine != null) StopCoroutine(handleSkeletonBasicAttackCoroutine);
+                handleSkeletonBasicAttackCoroutine = StartCoroutine(HandleSkeletonBasicAttack(skeletonMouseLeftSkillFrames));
+            }
             animator.SetTrigger("Attack1");
             if (playerClassController.PlayerClass == PlayerClass.Skeleton)
                 SkeletonColliderHandler(skeletonMouseLeftSkillFrames);
