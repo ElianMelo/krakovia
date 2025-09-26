@@ -103,7 +103,7 @@ MonoBehaviour:
   handler:
     _Editor_SelectedChain: 0
     _Editor_ChainCategory: 0
-    _EditorCategory: 2
+    _EditorCategory: 4
     _EditorMainCategory: 0
     _EditorMotionCategory: 2
     m_hemi: {fileID: -2508796484986968503, guid: 44d994eaad14fdf49a2dd378b4d62094, type: 3}
@@ -205,7 +205,14 @@ MonoBehaviour:
         rootSpaceRotation: {x: 0.5143077, y: 0.5142969, z: -0.48527145, w: -0.4852813}
       LastBaseTransform: {fileID: 4523370884405396756}
     UseExtraFeatures: 1
-    ExtraFeatures: []
+    ExtraFeatures:
+    - CustomName: 
+      enabled: 1
+      FeatureReference: {fileID: 11400000, guid: fec516eb5421cbb4aa744a2e99ff15ef, type: 2}
+      customStringList: []
+      customObjectList: []
+      customEventsList: []
+      variables: []
     IsHumanoid: 1
     dummyContainer: {fileID: 0}
     inBetweenPreGenerateMemory: []

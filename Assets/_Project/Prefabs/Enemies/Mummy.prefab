@@ -56,6 +56,50 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1916334889
       objectReference: {fileID: 0}
+    - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: handler._EditorCategory
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: handler.ExtraFeatures.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: handler.ExtraFeatures.Array.data[0].enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: handler.ExtraFeatures.Array.data[0].FeatureReference
+      value: 
+      objectReference: {fileID: 11400000, guid: fec516eb5421cbb4aa744a2e99ff15ef, type: 2}
+    - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: handler.ExtraFeatures.Array.data[0].variables.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: handler.ExtraFeatures.Array.data[0].variables.Array.data[0]._value.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: handler.ExtraFeatures.Array.data[0].variables.Array.data[0]._value.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: handler.ExtraFeatures.Array.data[0].variables.Array.data[0].VariableName
+      value: Selected
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: handler.ExtraFeatures.Array.data[0].variables.Array.data[0]._curve.m_PreInfinity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: handler.ExtraFeatures.Array.data[0].variables.Array.data[0]._curve.m_PostInfinity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: handler.ExtraFeatures.Array.data[0].variables.Array.data[0]._curve.m_RotationOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

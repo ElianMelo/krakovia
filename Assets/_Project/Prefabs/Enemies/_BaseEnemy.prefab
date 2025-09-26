@@ -149,9 +149,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   ShowTopMostFoldoutHeaderGroup: 1
-  moveSpeed: 2
-  wanderRadius: 2
-  idleTime: 2
+  moveSpeed: 5
+  wanderRadius: 5
+  idleTime: 1
 --- !u!114 &-1079369031430894768
 MonoBehaviour:
   m_ObjectHideFlags: 0
