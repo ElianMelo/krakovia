@@ -94,6 +94,8 @@ public class EnemyController : NetworkBehaviour
     {
         Debug.Log($"Enemy ({enemyNetworkObjectId}) took damage!");
 
+        NumberWorldSpacePooler.Instance.ShowNumberInWorld(1, transform.position + new Vector3(0f,1f,0f));
+
         if(!isEnemyDead)
             animator.SetTrigger(HurtAnim);
 
