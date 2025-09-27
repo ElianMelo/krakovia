@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -292,8 +292,19 @@ MonoBehaviour:
         RemapRangeFalloff: {x: 0, y: 1}
         Owner: {fileID: 8224935834601754663}
         DebugActive: 0
-        Sfx: {fileID: 8300000, guid: d998cc19da4a62543af42dfb6867d957, type: 3}
-        RandomSfx: []
+        Sfx: {fileID: 0}
+        RandomSfx:
+        - {fileID: 8300000, guid: ffe31dfc620928c479ed727c79add6b9, type: 3}
+        - {fileID: 8300000, guid: f768af85ea8d5a14c9851c13b26e0c28, type: 3}
+        - {fileID: 8300000, guid: 2e11e46ef2f3e734395288d0495c2500, type: 3}
+        - {fileID: 8300000, guid: f1b16aff331e90344a3f5f5d61f69abd, type: 3}
+        - {fileID: 8300000, guid: b776ce66623d4e24fa15ad150937e3d8, type: 3}
+        - {fileID: 8300000, guid: e5c4d44ee523e2142a7306f8bd88030e, type: 3}
+        - {fileID: 8300000, guid: 62e48b7ef2ec1314bba739d6990ae0ae, type: 3}
+        - {fileID: 8300000, guid: e4d2ffbf81e3a7f42bc21db93cc9b00c, type: 3}
+        - {fileID: 8300000, guid: 36f1304ce54291a48b682113025b930d, type: 3}
+        - {fileID: 8300000, guid: a84ae072044dc5d4db3e7611cc7a4b62, type: 3}
+        - {fileID: 8300000, guid: 9f32a965440600c458210f75b698c474, type: 3}
         TestPlayButton:
           ButtonText: Debug Play Sound
         TestStopButton:
@@ -302,8 +313,8 @@ MonoBehaviour:
         PoolSize: 10
         UseLegacyEventsMode: 0
         StopSoundOnFeedbackStop: 1
-        MinVolume: 0.1
-        MaxVolume: 0.2
+        MinVolume: 1.112
+        MaxVolume: 1.52
         MinPitch: 0.7
         MaxPitch: 1.3
         SfxAudioMixerGroup: {fileID: 0}
