@@ -27,10 +27,15 @@ public class EnemyMovement : MonoBehaviour
     private Transform aggroTarget;
     private float aggroTimer = 0f;
 
+    private Animator animator;
+
+    private const string WalkAnim = "Walking";
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true; // Avoid physics tipping the enemy over
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -50,6 +55,7 @@ public class EnemyMovement : MonoBehaviour
         if (!hasTarget)
         {
             waitTimer -= Time.deltaTime;
+            animator.SetBool(WalkAnim, false);
             if (waitTimer <= 0f)
             {
                 PickNewTarget();
@@ -57,6 +63,7 @@ public class EnemyMovement : MonoBehaviour
         }
         else
         {
+            animator.SetBool(WalkAnim, true);
             MoveTowardsTarget(moveSpeed);
         }
     }
@@ -80,6 +87,7 @@ public class EnemyMovement : MonoBehaviour
         targetPosition = targetPos;
         hasTarget = true;
 
+        animator.SetBool(WalkAnim, true);
         MoveTowardsTarget(aggroMoveSpeed);
     }
 

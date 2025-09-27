@@ -25,7 +25,7 @@ public class PlayerController : NetworkBehaviour
         playerAttackController = GetComponent<PlayerAttackController>();
         _playerAttributeController = GetComponent<PlayerAttributeController>();
 
-        transform.position = new Vector3(413.42f, 3.07f, 3f);
+        transform.position = new Vector3(325.59f, 3.07f, 27.87f);
 
         if (OwnerClientId == 0)
         {

@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class PlayerAttributeController : NetworkBehaviour
 {
-    private int currentHP = 10;
-    private int maxHP = 10;
+    private int currentHP = 50;
+    private int maxHP = 50;
     private int currentExperience = 0;
     private int currentLevel = 1;
     private int maxExperience = 100;

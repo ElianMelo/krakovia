@@ -16,6 +16,8 @@ public class EnemyController : NetworkBehaviour
 
     private Collider enemyCollider;
     private Animator animator;
+    private EnemyMovement enemyMovement;
+    private EnemyAttack enemyAttack;
     private RagdollAnimator2 ragdoll;
 
     private const string HurtAnim = "Hurt";
@@ -36,6 +38,8 @@ public class EnemyController : NetworkBehaviour
     private void Awake()
     {
         enemyCollider = GetComponent<Collider>();
+        enemyMovement = GetComponent<EnemyMovement>();
+        enemyAttack = GetComponent<EnemyAttack>();
         animator = GetComponentInChildren<Animator>();
         ragdoll = GetComponentInChildren<RagdollAnimator2>();
     }
@@ -45,9 +49,11 @@ public class EnemyController : NetworkBehaviour
         if (other.gameObject.CompareTag("AttackCollider"))
         {
             Vector3 contactPoint = other.ClosestPoint(transform.position);
-
+            PlayerController sourceDamage = other.gameObject.GetComponentInParent<PlayerController>();
+            enemyMovement.OnAttacked(sourceDamage.transform);
+            enemyAttack.StartAttackRoutine();
             if (isDead) return;
-            ReceiveDamage(other.gameObject.GetComponentInParent<PlayerController>().NetworkObjectId,
+            ReceiveDamage(sourceDamage.NetworkObjectId,
                 contactPoint);
         }
     }
@@ -113,12 +119,19 @@ public class EnemyController : NetworkBehaviour
 
         if (currentHP.Value <= 0 && !isDead)
         {
-            isDead = true;
-            GetComponent<Collider>().excludeLayers = playerMask;
-            StartCoroutine(DelayedDespawn());
+            Death();
             return true;
         }
         return false;
+    }
+
+    private void Death()
+    {
+        isDead = true;
+        enemyMovement.OnDeath();
+        GetComponent<Collider>().excludeLayers = playerMask;
+        StartCoroutine(DelayedDespawn());
+        enemyAttack.StopAttackRoutine();
     }
 
     private IEnumerator DelayedDespawn()

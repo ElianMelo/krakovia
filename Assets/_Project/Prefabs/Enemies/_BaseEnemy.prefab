@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 5018204428219081361}
   - component: {fileID: 1417282405105681180}
   - component: {fileID: 7055051934138859418}
+  - component: {fileID: 2129376309920227986}
   m_Layer: 8
   m_Name: _BaseEnemy
   m_TagString: Enemy
@@ -148,7 +149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2db3de3eae69c418b916bc54a95038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
-  ShowTopMostFoldoutHeaderGroup: 1
   wanderRadius: 8
   moveSpeed: 2
   rotationSpeed: 5
@@ -159,6 +159,8 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
+  aggroMoveSpeed: 4
+  minAggroTime: 3
 --- !u!114 &-1079369031430894768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +179,7 @@ MonoBehaviour:
   bloodEffect: {fileID: 2856443763802584437, guid: 230024bbb992cbd4f9edfb98f3a6a30c, type: 3}
   playerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!114 &4947161926761419523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,6 +256,23 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   TransitionStateInfoList: []
   m_Animator: {fileID: 1901133754909545533}
+--- !u!114 &2129376309920227986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160617717093947312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b112afa7839bbd46bb58de97030c646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
+  mask:
+    serializedVersion: 2
+    m_Bits: 128
+  range: 2
+  attackDelay: 2
 --- !u!1 &2420520010046765273
 GameObject:
   m_ObjectHideFlags: 0
