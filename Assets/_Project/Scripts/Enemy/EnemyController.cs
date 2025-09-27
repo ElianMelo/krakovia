@@ -22,6 +22,7 @@ public class EnemyController : NetworkBehaviour
     private const string DeathAnim = "Death";
 
     public int MaxHP => maxHP;
+    public bool IsDead => isDead;
     public NetworkVariable<int> CurrentHP => currentHP;
 
     public override void OnNetworkSpawn()
@@ -113,6 +114,7 @@ public class EnemyController : NetworkBehaviour
         if (currentHP.Value <= 0 && !isDead)
         {
             isDead = true;
+            GetComponent<Collider>().excludeLayers = playerMask;
             StartCoroutine(DelayedDespawn());
             return true;
         }

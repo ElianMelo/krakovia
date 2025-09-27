@@ -95,7 +95,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3859001547239481262}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 104179351ca7dd24a8f5bd7beecf8d06, type: 3}
   m_Name: 
@@ -208,11 +208,24 @@ MonoBehaviour:
     ExtraFeatures:
     - CustomName: 
       enabled: 1
-      FeatureReference: {fileID: 11400000, guid: fec516eb5421cbb4aa744a2e99ff15ef, type: 2}
+      FeatureReference: {fileID: 11400000, guid: 70318e95358caf840add7d18b7e462a9, type: 2}
       customStringList: []
       customObjectList: []
       customEventsList: []
-      variables: []
+      variables:
+      - VariableName: Selected
+        Tooltip: 
+        _value: {x: 0, y: 0, z: 0, w: 1}
+        _string: 
+        _curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        _uObject: {fileID: 0}
+        VariableType: 0
+        _rangeHelper: {x: 0, y: 0, z: 0, w: 0}
     IsHumanoid: 1
     dummyContainer: {fileID: 0}
     inBetweenPreGenerateMemory: []
@@ -1222,7 +1235,7 @@ MonoBehaviour:
         ConnectionMassOverride: 0
         DisableCollisionEvents: 0
         ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
+        ForceKinematicOnStanding: 1
         AllowConfigurablePosition: 0
         LinearSpringLimit: 10000
         LinearSpringDamping: 5
@@ -1499,7 +1512,7 @@ MonoBehaviour:
         ConnectionMassOverride: 0
         DisableCollisionEvents: 0
         ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
+        ForceKinematicOnStanding: 1
         AllowConfigurablePosition: 0
         LinearSpringLimit: 10000
         LinearSpringDamping: 5
@@ -1685,6 +1698,30 @@ PrefabInstance:
     - target: {fileID: 1968221499178913034, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066065264092073755, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: m_Height
+      value: 1.0479031
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066065264092073755, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: m_Radius
+      value: 0.52395153
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066065264092073755, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066065264092073755, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: m_Center.y
+      value: 0.49395156
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066065264092073755, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: m_Center.z
+      value: 0.09325695
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018204428219081361, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: m_LinearDamping
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5147054311580931116, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: GlobalObjectIdHash

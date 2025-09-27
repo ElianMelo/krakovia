@@ -25,6 +25,8 @@ public class PlayerController : NetworkBehaviour
         playerAttackController = GetComponent<PlayerAttackController>();
         _playerAttributeController = GetComponent<PlayerAttributeController>();
 
+        transform.position = new Vector3(413.42f, 3.07f, 3f);
+
         if (OwnerClientId == 0)
         {
             clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Skeleton);

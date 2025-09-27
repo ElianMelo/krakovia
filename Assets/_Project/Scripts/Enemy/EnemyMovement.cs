@@ -1,115 +1,164 @@
 ﻿using UnityEngine;
-using Unity.Netcode;
-using System.Collections;
-using Unity.Netcode.Components;
 
-[RequireComponent(typeof(NetworkTransform))]
-public class EnemyMovement : NetworkBehaviour
+[RequireComponent(typeof(Rigidbody), typeof(Collider))]
+public class EnemyMovement : MonoBehaviour
 {
+    [Header("Wander Settings")]
+    public float wanderRadius = 8f;
     public float moveSpeed = 2f;
-    public float wanderRadius = 10f;
-    public float idleTime = 2f;
+    public float rotationSpeed = 5f;
+    public float minWaitTime = 1f;
+    public float maxWaitTime = 3f;
 
-    private Vector3 startPosition;
+    [Header("Ground Settings")]
+    public float raycastHeight = 2f;
+    public float groundCheckDistance = 4f;
+    public LayerMask groundMask;
+
+    [Header("Aggro Settings")]
+    public float aggroMoveSpeed = 4f;        // Faster when chasing
+    public float minAggroTime = 3f;          // Must stay aggroed for at least this long
+
+    private Rigidbody rb;
     private Vector3 targetPosition;
-    //private bool isMoving = false;
+    private bool hasTarget = false;
+    private float waitTimer = 0f;
 
-    private Animator animator;
+    private Transform aggroTarget;
+    private float aggroTimer = 0f;
 
-    private const string WalkAnim = "Walking";
-
-    private void Start()
+    private void Awake()
     {
-        startPosition = transform.position;
-        animator = GetComponentInChildren<Animator>();
-
-        if (IsServer)
-            StartCoroutine(WanderRoutine());
+        rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true; // Avoid physics tipping the enemy over
     }
 
-    private IEnumerator WanderRoutine()
+    private void Update()
     {
-        while (true)
+        if (aggroTarget != null)
         {
-            animator.SetBool(WalkAnim, true);
-
-            // Pick random target
-            Vector3 randomOffset = new Vector3(
-                Random.Range(-wanderRadius, wanderRadius),
-                0f,
-                Random.Range(-wanderRadius, wanderRadius)
-            );
-            targetPosition = startPosition + randomOffset;
-
-            float stopThreshold = 0.2f;
-            float stopThresholdSqr = stopThreshold * stopThreshold;
-
-            // Safety timers
-            float maxWalkTime = 5f; // max seconds trying to reach a point
-            float stuckCheckInterval = 1f; // check every second
-            float stuckThreshold = 0.05f; // movement below this is considered "stuck"
-
-            float elapsedTime = 0f;
-            float stuckTimer = 0f;
-            Vector3 lastPosition = transform.position;
-
-            while ((transform.position - targetPosition).sqrMagnitude > stopThresholdSqr)
-            {
-                elapsedTime += Time.deltaTime;
-                stuckTimer += Time.deltaTime;
-
-                // Direction to target
-                Vector3 toTarget = targetPosition - transform.position;
-                Vector3 flatDirection = new Vector3(toTarget.x, 0f, toTarget.z).normalized;
-
-                // --- Handle slopes ---
-                Vector3 move = flatDirection * moveSpeed * Time.deltaTime;
-                if (Physics.Raycast(transform.position + Vector3.up * 0.5f, Vector3.down, out RaycastHit hit, 2f))
-                {
-                    // Project move onto ground plane
-                    move = Vector3.ProjectOnPlane(move, hit.normal);
-                }
-
-                transform.position += move;
-
-                // Smooth rotation towards movement direction
-                if (flatDirection.sqrMagnitude > 0.001f)
-                {
-                    Quaternion targetRot = Quaternion.LookRotation(flatDirection);
-                    transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * 5f);
-                }
-
-                // --- Stuck detection ---
-                if (stuckTimer >= stuckCheckInterval)
-                {
-                    float movedDistance = (transform.position - lastPosition).sqrMagnitude;
-                    if (movedDistance < stuckThreshold * stuckThreshold)
-                    {
-                        // Consider stuck → break out early
-                        break;
-                    }
-                    lastPosition = transform.position;
-                    stuckTimer = 0f;
-                }
-
-                // --- Timeout check ---
-                if (elapsedTime >= maxWalkTime)
-                {
-                    break;
-                }
-
-                yield return null;
-            }
-
-            animator.SetBool(WalkAnim, false);
-
-            yield return new WaitForSeconds(idleTime);
+            HandleAggro();
         }
+        else
+        {
+            HandleWander();
+        }
+    }
+
+    private void HandleWander()
+    {
+        if (!hasTarget)
+        {
+            waitTimer -= Time.deltaTime;
+            if (waitTimer <= 0f)
+            {
+                PickNewTarget();
+            }
+        }
+        else
+        {
+            MoveTowardsTarget(moveSpeed);
+        }
+    }
+
+    private void HandleAggro()
+    {
+        if (aggroTarget == null) return;
+
+        aggroTimer -= Time.deltaTime;
+
+        // Keep chasing the aggro target
+        Vector3 targetPos = aggroTarget.position;
+
+        // Raycast ground below target so enemy doesn’t float
+        Vector3 rayOrigin = targetPos + Vector3.up * raycastHeight;
+        if (Physics.Raycast(rayOrigin, Vector3.down, out RaycastHit hit, groundCheckDistance, groundMask))
+        {
+            targetPos = hit.point;
+        }
+
+        targetPosition = targetPos;
+        hasTarget = true;
+
+        MoveTowardsTarget(aggroMoveSpeed);
+    }
+
+    private void PickNewTarget()
+    {
+        // Pick a random point in a circle around the enemy
+        Vector2 randomCircle = Random.insideUnitCircle * wanderRadius;
+        Vector3 candidate = transform.position + new Vector3(randomCircle.x, 0, randomCircle.y);
+
+        // Raycast down to find the ground
+        Vector3 rayOrigin = candidate + Vector3.up * raycastHeight;
+        if (Physics.Raycast(rayOrigin, Vector3.down, out RaycastHit hit, groundCheckDistance, groundMask))
+        {
+            targetPosition = hit.point;
+            hasTarget = true;
+        }
+        else
+        {
+            waitTimer = 1f; // retry later
+        }
+    }
+
+    private void MoveTowardsTarget(float speed)
+    {
+        Vector3 flatCurrent = new Vector3(transform.position.x, 0, transform.position.z);
+        Vector3 flatTarget = new Vector3(targetPosition.x, 0, targetPosition.z);
+        Vector3 toTarget = flatTarget - flatCurrent;
+
+        if (toTarget.sqrMagnitude < 0.3f * 0.3f)
+        {
+            if (aggroTarget == null) // Only stop wandering if not chasing
+            {
+                hasTarget = false;
+                waitTimer = Random.Range(minWaitTime, maxWaitTime);
+            }
+            return;
+        }
+
+        Vector3 moveDir = toTarget.normalized;
+
+        if (moveDir.sqrMagnitude > 0.01f)
+        {
+            Quaternion targetRot = Quaternion.LookRotation(moveDir, Vector3.up);
+            Quaternion smoothRot = Quaternion.Slerp(transform.rotation, targetRot, rotationSpeed * Time.deltaTime);
+            rb.MoveRotation(smoothRot);
+        }
+
+        Vector3 moveStep = moveDir * speed * Time.deltaTime;
+        Vector3 newPos = rb.position + moveStep;
+        rb.MovePosition(newPos);
+    }
+
+    // Call this when enemy is attacked
+    public void OnAttacked(Transform attacker)
+    {
+        if (aggroTarget == null || aggroTimer <= 0f)
+        {
+            aggroTarget = attacker;
+            aggroTimer = minAggroTime;
+            hasTarget = true;
+        }
+    }
+
+    // Call this when enemy dies
+    public void OnDeath()
+    {
+        aggroTarget = null;
+        hasTarget = false;
     }
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(Application.isPlaying ? startPosition : transform.position, wanderRadius);
+        Gizmos.DrawWireSphere(transform.position, wanderRadius);
+
+        if (hasTarget)
+        {
+            Gizmos.color = (aggroTarget != null) ? Color.red : Color.cyan;
+            Gizmos.DrawSphere(targetPosition, 0.2f);
+        }
     }
 }
