@@ -128,10 +128,10 @@ public class EnemyController : NetworkBehaviour
     private void Death()
     {
         isDead = true;
+        enemyAttack.StopAttackRoutine();
         enemyMovement.OnDeath();
         GetComponent<Collider>().excludeLayers = playerMask;
         StartCoroutine(DelayedDespawn());
-        enemyAttack.StopAttackRoutine();
     }
 
     private IEnumerator DelayedDespawn()

@@ -9,11 +9,13 @@ public class EnemyAttack : MonoBehaviour
     public float attackDelay;
 
     private Animator animator;
+    private EnemyController enemyController;
     private const string AttackAnim = "Attack";
 
     private void Start()
     {
         animator = GetComponentInChildren<Animator>();
+        enemyController = GetComponent<EnemyController>();
     }
 
     public void StartAttackRoutine()
@@ -29,19 +31,25 @@ public class EnemyAttack : MonoBehaviour
 
     private IEnumerator AttackRoutine()
     {
-        while (true)
+        while (!enemyController.IsDead)
         {
             animator.SetTrigger(AttackAnim);
-            var playerAttributeControllers = SphereCastFor<PlayerAttributeController>();
-            if (playerAttributeControllers != null && playerAttributeControllers.Count > 0)
-            {
-                foreach (var playerAttributeController in playerAttributeControllers)
-                {
-                    Debug.Log("Player Found!");
-                    playerAttributeController.ReceiveDamage();
-                }
-            }
             yield return new WaitForSeconds(attackDelay);
+        }
+    }
+
+    // Used in animation
+    public void AnimationPerformAttack()
+    {
+        if (enemyController.IsDead) return;
+        var playerAttributeControllers = SphereCastFor<PlayerAttributeController>();
+        if (playerAttributeControllers != null && playerAttributeControllers.Count > 0)
+        {
+            foreach (var playerAttributeController in playerAttributeControllers)
+            {
+                Debug.Log("Player Found!");
+                playerAttributeController.ReceiveDamage();
+            }
         }
     }
 
@@ -63,7 +71,7 @@ public class EnemyAttack : MonoBehaviour
                 continue;
 
             var component = hit.collider?.GetComponent<T>();
-            if (component != null)
+            if (component != null && !components.Contains(component))
             {
                 components.Add(component);
             }

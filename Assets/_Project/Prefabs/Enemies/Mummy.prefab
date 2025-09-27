@@ -103,5 +103,25 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8693007809300120879, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4119702513543161315}
   m_SourcePrefab: {fileID: 100100000, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+--- !u!1 &5279636459993062903 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8693007809300120879, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+  m_PrefabInstance: {fileID: 3595787751939741912}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4119702513543161315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5279636459993062903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d1bdc59fa18324abfa1fc720a20f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttackAnimation
