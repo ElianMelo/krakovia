@@ -131312,8 +131312,8 @@ GameObject:
   - component: {fileID: 3627845501207778848}
   - component: {fileID: 3627845501207778849}
   - component: {fileID: 3627845501207778854}
-  - component: {fileID: 7720294125071325358}
   - component: {fileID: 7176921109667802079}
+  - component: {fileID: 7720294125071325358}
   - component: {fileID: 6357010515925716519}
   - component: {fileID: 6006792243617759979}
   m_Layer: 0
@@ -136143,18 +136143,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &7720294125071325358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3627845501207778855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2a8956ab4fcf1148b29c6863e30bc2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerProjectile
 --- !u!114 &7176921109667802079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136180,6 +136168,19 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
+--- !u!114 &7720294125071325358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3627845501207778855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2a8956ab4fcf1148b29c6863e30bc2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerProjectile
+  ShowTopMostFoldoutHeaderGroup: 1
 --- !u!135 &6357010515925716519
 SphereCollider:
   m_ObjectHideFlags: 0

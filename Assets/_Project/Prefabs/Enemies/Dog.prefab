@@ -2138,6 +2138,42 @@ PrefabInstance:
       propertyPath: m_Animator
       value: 
       objectReference: {fileID: 5777451264672072953}
+    - target: {fileID: 7055051934138859418, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: TransitionStateInfoList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055051934138859418, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: TransitionStateInfoList.Array.data[0].TransitionIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055051934138859418, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: TransitionStateInfoList.Array.data[0].TriggerNameHash
+      value: 1080829965
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055051934138859418, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: TransitionStateInfoList.Array.data[1].TransitionIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055051934138859418, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: TransitionStateInfoList.Array.data[1].TriggerNameHash
+      value: 646380074
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055051934138859418, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: TransitionStateInfoList.Array.data[0].DestinationState
+      value: 1080829965
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055051934138859418, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: TransitionStateInfoList.Array.data[0].OriginatingState
+      value: 2081823275
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055051934138859418, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: TransitionStateInfoList.Array.data[1].DestinationState
+      value: 646380074
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055051934138859418, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: TransitionStateInfoList.Array.data[1].OriginatingState
+      value: 765711723
+      objectReference: {fileID: 0}
     - target: {fileID: 8053839496377515357, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.987

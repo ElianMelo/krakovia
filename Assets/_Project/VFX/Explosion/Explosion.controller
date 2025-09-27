@@ -52,7 +52,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Explosion
-  m_Speed: 1
+  m_Speed: 4
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -64,7 +64,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ffc0c0c7893bb364c8206a6774da421a, type: 2}
+  m_Motion: {fileID: 7400000, guid: f9d415cbb0b6d4e4c8f137b907db2600, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
