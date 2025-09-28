@@ -1,0 +1,33 @@
+bill
+====
+  Textures:
+    - bonyari__ia8
+
+  Ambient Colors:
+    - 50, 50, 50, 0
+
+  Material Colors:
+    - 98, 171, 204, 255
+    - 98, 171, 204, 255
+
+  Steps:
+    1: RGB = (0, 0, 0), then add (vertex RGB)
+         A = 0, then add (tex #1 A)
+
+
+
+e_v_x
+=====
+  Textures:
+    - kinoko02_s3tc
+
+  Ambient Colors:
+    - 50, 50, 50, 0
+
+  Material Colors:
+    - 204, 204, 204, 255
+    - 204, 204, 204, 255
+
+  Steps:
+    1: RGB = ((tex #1 RGB) * (vertex RGB))
+         A = ((tex #1 A) * (vertex A))
