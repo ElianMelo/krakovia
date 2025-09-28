@@ -27,22 +27,24 @@ public class PlayerController : NetworkBehaviour
 
         transform.position = new Vector3(325.59f, 3.07f, 27.87f);
 
-        if (OwnerClientId == 0)
-        {
-            clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Skeleton);
-        }
-        else if (OwnerClientId == 1)
-        {
-            clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Skeleton);
-        }
-        else if(OwnerClientId == 2)
-        {
-            clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Horse);
-        }
-        else if (OwnerClientId == 3)
-        {
-            clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Fairy);
-        }
+        clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Skeleton);
+
+        //if (OwnerClientId == 0)
+        //{
+        //    clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Skeleton);
+        //}
+        //else if (OwnerClientId == 1)
+        //{
+        //    clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Skeleton);
+        //}
+        //else if(OwnerClientId == 2)
+        //{
+        //    clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Horse);
+        //}
+        //else if (OwnerClientId == 3)
+        //{
+        //    clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Fairy);
+        //}
 
         playerMovementController.SetupPlayerAnimator(clientNetworkAnimator.Animator);
         playerAttackController.SetupPlayerAnimator(clientNetworkAnimator.Animator);

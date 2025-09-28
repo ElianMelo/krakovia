@@ -32,7 +32,7 @@ public class SystemManager : MonoBehaviour
 
     public void StartHost()
     {
-        using var _ = StartHostWithRelay(3);
+        using var _ = StartHostWithRelay(6);
     }
 
     public void StartClient()
