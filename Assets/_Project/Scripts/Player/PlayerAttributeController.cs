@@ -60,6 +60,15 @@ public class PlayerAttributeController : NetworkBehaviour
         InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerHp(currentHP, maxHP);
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.K))
+        {
+            currentHP = maxHP;
+            InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerHp(currentHP, maxHP);
+        }
+    }
+
     public void ReceiveExp(int experience)
     {
         currentExperience += experience;
