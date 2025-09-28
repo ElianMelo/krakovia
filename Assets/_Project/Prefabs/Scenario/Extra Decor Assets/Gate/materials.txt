@@ -1,0 +1,47 @@
+fix2
+====
+  Textures:
+    - gate_skin_s3tc
+        Scale: 1.4453125, 1.4453125
+    - evw_light_s3tc
+        Offset: 0, -0.15000000596046448
+        Scale: 1.5, 0.7695068120956421
+
+  Ambient Colors:
+    - 50, 50, 50, 0
+
+  Color Registers:
+    - 255, 242, 214, 150
+
+  Steps:
+    1: RGB = ((255, 242, 214) * (tex #1 RGB))
+         A = ((vertex A) * (tex #1 A))
+    2: RGB = ((prev. RGB) * (vertex RGB)), multiply by 2
+         A = (vertex A)
+    3: RGB = ((tex #2 RGB) * (150, 150, 150)), then add (prev. RGB)
+         A = (vertex A)
+
+
+
+fix2(2)
+=======
+  Textures:
+    - gate_skin_s3tc
+        Scale: 2.1923828125, 1.943359375
+    - evw_light_s3tc
+        Offset: 0, -0.15000000596046448
+        Scale: 1.5, 0.7695068120956421
+
+  Ambient Colors:
+    - 50, 50, 50, 0
+
+  Color Registers:
+    - 255, 242, 214, 150
+
+  Steps:
+    1: RGB = ((255, 242, 214) * (tex #1 RGB))
+         A = ((vertex A) * (tex #1 A))
+    2: RGB = ((prev. RGB) * (vertex RGB)), multiply by 2
+         A = (vertex A)
+    3: RGB = ((tex #2 RGB) * (150, 150, 150)), then add (prev. RGB)
+         A = (vertex A)
