@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 3488955136
+  GlobalObjectIdHash: 3351929801
   InScenePlacedSourceGlobalObjectIdHash: 3351929801
   DeferredDespawnTick: 0
   Ownership: 1
@@ -72,7 +72,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2383562478013827408}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f0e8593ae47d3b75b58b7dedb5ed377, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b0682db374402b9bb3a2ce42ad70996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyPool
   enemyTypes:
