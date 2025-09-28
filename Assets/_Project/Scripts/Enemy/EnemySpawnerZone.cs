@@ -5,7 +5,7 @@ using Unity.Netcode;
 [System.Serializable]
 public class EnemySpawnData
 {
-    public GameObject enemyPrefab;
+    public EnemyType type;
     [Range(0f, 1f)]
     public float spawnChance = 1f;
 }
@@ -16,8 +16,9 @@ public class EnemySpawnerZone : NetworkBehaviour
     public int maxEnemies = 10;
     public float spawnInterval = 5f;
     public List<EnemySpawnData> enemyTypes = new List<EnemySpawnData>();
+    public EnemyPool globalPool;
 
-    private List<GameObject> spawnedEnemies = new List<GameObject>();
+    private List<(NetworkObject enemy, EnemyType type)> spawnedEnemies = new List<(NetworkObject, EnemyType)>();
     private float timer;
 
     void Update()
@@ -32,26 +33,30 @@ public class EnemySpawnerZone : NetworkBehaviour
             SpawnEnemy();
         }
 
-        spawnedEnemies.RemoveAll(e => e == null);
+        spawnedEnemies.RemoveAll(e => e.enemy == null || !e.enemy.gameObject.activeSelf);
     }
 
     private void SpawnEnemy()
     {
-        if (enemyTypes.Count == 0) return;
+        if (enemyTypes.Count == 0 || globalPool == null) return;
 
-        GameObject prefabToSpawn = ChooseEnemyType();
-        if (prefabToSpawn == null) return;
+        EnemySpawnData selectedType = ChooseEnemyType();
+        if (selectedType == null) return;
 
         Vector3 spawnPos = transform.position + Random.insideUnitSphere * spawnRadius;
         spawnPos.y = TerrainHeight(spawnPos);
 
-        GameObject enemyInstance = Instantiate(prefabToSpawn, spawnPos, Quaternion.identity);
-        enemyInstance.GetComponent<NetworkObject>().Spawn(true);
+        NetworkObject enemyInstance = globalPool.GetFromPool(selectedType.type);
+        if (enemyInstance == null) return;
 
-        spawnedEnemies.Add(enemyInstance);
+        enemyInstance.transform.position = spawnPos;
+        enemyInstance.transform.rotation = Quaternion.identity;
+        enemyInstance.Spawn(true);
+
+        spawnedEnemies.Add((enemyInstance, selectedType.type));
     }
 
-    private GameObject ChooseEnemyType()
+    private EnemySpawnData ChooseEnemyType()
     {
         float totalWeight = 0f;
         foreach (var enemy in enemyTypes)
@@ -64,18 +69,26 @@ public class EnemySpawnerZone : NetworkBehaviour
         {
             cumulative += enemy.spawnChance;
             if (roll <= cumulative)
-                return enemy.enemyPrefab;
+                return enemy;
         }
 
         return null;
     }
 
+    public void DespawnEnemy(NetworkObject enemy)
+    {
+        var entry = spawnedEnemies.Find(e => e.enemy == enemy);
+        if (entry.enemy == null) return;
+
+        enemy.Despawn(true);
+        globalPool.ReturnToPool(enemy, entry.type);
+        spawnedEnemies.Remove(entry);
+    }
+
     private float TerrainHeight(Vector3 pos)
     {
         if (Terrain.activeTerrain != null)
-        {
             pos.y = Terrain.activeTerrain.SampleHeight(pos);
-        }
         return pos.y;
     }
 
