@@ -2140,7 +2140,7 @@ PrefabInstance:
       objectReference: {fileID: 5777451264672072953}
     - target: {fileID: 7055051934138859418, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: TransitionStateInfoList.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7055051934138859418, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: TransitionStateInfoList.Array.data[0].TransitionIndex
@@ -2159,6 +2159,14 @@ PrefabInstance:
       value: 646380074
       objectReference: {fileID: 0}
     - target: {fileID: 7055051934138859418, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: TransitionStateInfoList.Array.data[2].TransitionIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055051934138859418, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: TransitionStateInfoList.Array.data[2].TriggerNameHash
+      value: 1080829965
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055051934138859418, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: TransitionStateInfoList.Array.data[0].DestinationState
       value: 1080829965
       objectReference: {fileID: 0}
@@ -2172,6 +2180,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7055051934138859418, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: TransitionStateInfoList.Array.data[1].OriginatingState
+      value: 765711723
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055051934138859418, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: TransitionStateInfoList.Array.data[2].DestinationState
+      value: 1080829965
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055051934138859418, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: TransitionStateInfoList.Array.data[2].OriginatingState
       value: 765711723
       objectReference: {fileID: 0}
     - target: {fileID: 8053839496377515357, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}

@@ -32,7 +32,9 @@ public class NumberWorldSpacePooler : MonoBehaviour
             if (poolNumbers[i].activeSelf) continue;
             poolNumbers[i].transform.position = position;
             poolNumbers[i].SetActive(true);
-            poolNumbers[i].GetComponent<NumberText>().ChangeTextValue(number.ToString());
+            NumberText numberText = poolNumbers[i].GetComponent<NumberText>();
+            numberText.ChangeTextValue(number.ToString());
+            numberText.SmoothFadeOut(duration);
             StartCoroutine(HidePoolNumber(poolNumbers[i], duration));
             return;
         }

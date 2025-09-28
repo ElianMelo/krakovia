@@ -204,7 +204,7 @@ public class PlayerAttackController : NetworkBehaviour
                 Physics.IgnoreCollision(other, GetComponent<Collider>());
                 return;
             }
-            playerAttributeController.ReceiveDamage();
+            playerAttributeController.ReceiveDamage(1);
         }
     }
 
@@ -216,7 +216,7 @@ public class PlayerAttackController : NetworkBehaviour
             foreach (var playerAttributeController in playerAttributeControllers)
             {
                 Debug.Log("Player Found!");
-                playerAttributeController.ReceiveDamage();
+                playerAttributeController.ReceiveDamage(1);
             }
         }
 

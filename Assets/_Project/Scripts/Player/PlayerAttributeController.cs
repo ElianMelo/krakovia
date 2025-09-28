@@ -33,13 +33,13 @@ public class PlayerAttributeController : NetworkBehaviour
     public int horseQSkillDamage = 10;
     public int horseFSkillDamage = 10;
 
-    public void ReceiveDamage()
+    public void ReceiveDamage(int damage)
     {
-        ReceiveDamageRpc(OwnerClientId);
+        ReceiveDamageRpc(OwnerClientId, damage);
     }
 
     [Rpc(SendTo.Server)]
-    private void ReceiveDamageRpc(ulong targetOwnerClientId)
+    private void ReceiveDamageRpc(ulong targetOwnerClientId, int damage)
     {
         var rpcParams = new RpcParams
         {
@@ -48,14 +48,15 @@ public class PlayerAttributeController : NetworkBehaviour
                 Target = NetworkManager.Singleton.RpcTarget.Single(targetOwnerClientId, RpcTargetUse.Persistent)
             }
         };
-        SendDamageClientRpc(rpcParams);
+        SendDamageClientRpc(damage, rpcParams);
     }
 
     [Rpc(SendTo.SpecifiedInParams)]
-    private void SendDamageClientRpc(RpcParams rpcParams = default)
+    private void SendDamageClientRpc(int damage, RpcParams rpcParams = default)
     {
-        Debug.Log("Damage Received!");
-        currentHP -= 1;
+        Debug.Log("Damage Received! " + damage);
+        currentHP -= damage;
+        NumberWorldSpacePooler.Instance.ShowNumberInWorld(damage, transform.position + new Vector3(0f,1f,0f));
         InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerHp(currentHP, maxHP);
     }
 

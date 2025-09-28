@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     public LayerMask mask;
+    public int damage;
     public float range;
     public float attackDelay;
 
@@ -48,7 +49,7 @@ public class EnemyAttack : MonoBehaviour
             foreach (var playerAttributeController in playerAttributeControllers)
             {
                 Debug.Log("Player Found!");
-                playerAttributeController.ReceiveDamage();
+                playerAttributeController.ReceiveDamage(damage);
             }
         }
     }
