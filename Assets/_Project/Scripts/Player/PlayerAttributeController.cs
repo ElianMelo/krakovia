@@ -83,10 +83,23 @@ public class PlayerAttributeController : NetworkBehaviour
     private void Update()
     {
         if (!IsOwner) return;
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K) && IsServer)
         {
-            CurrentHP.Value = skeletonMaxHP;
-            InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerHp(CurrentHP.Value, skeletonMaxHP);
+            //CurrentHP.Value = skeletonMaxHP;
+            //InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerHp(CurrentHP.Value, skeletonMaxHP);
+            HealEverybody();
+        }
+    }
+
+    private void HealEverybody()
+    {
+        foreach (var item in NetworkManager.Singleton.SpawnManager.SpawnedObjects)
+        {
+            PlayerAttributeController playerAttributeController = item.Value.GetComponent<PlayerAttributeController>();
+            if (playerAttributeController != null)
+            {
+                playerAttributeController.CurrentHP.Value = skeletonMaxHP;
+            }
         }
     }
 

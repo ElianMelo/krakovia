@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5031533597982606769}
   - component: {fileID: 3336088376183343715}
-  - component: {fileID: 6942934245173819872}
+  - component: {fileID: 379584633189090901}
   m_Layer: 0
   m_Name: Spawners
   m_TagString: Untagged
@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 3351929801
+  GlobalObjectIdHash: 3488955136
   InScenePlacedSourceGlobalObjectIdHash: 3351929801
   DeferredDespawnTick: 0
   Ownership: 1
@@ -63,7 +63,7 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
---- !u!114 &6942934245173819872
+--- !u!114 &379584633189090901
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,7 +72,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2383562478013827408}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b0682db374402b9bb3a2ce42ad70996, type: 3}
+  m_Script: {fileID: 11500000, guid: f67e8f6c9f29eae468c9afcac70dc172, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyPool
   enemyTypes:
@@ -130,7 +130,7 @@ MonoBehaviour:
   enemyTypes:
   - type: 0
     spawnChance: 1
-  globalPool: {fileID: 6942934245173819872}
+  globalPool: {fileID: 379584633189090901}
 --- !u!1 &3491526500964282536
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,7 +182,7 @@ MonoBehaviour:
   enemyTypes:
   - type: 0
     spawnChance: 1
-  globalPool: {fileID: 6942934245173819872}
+  globalPool: {fileID: 379584633189090901}
 --- !u!1 &4258643467569184135
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,7 +234,7 @@ MonoBehaviour:
   enemyTypes:
   - type: 0
     spawnChance: 1
-  globalPool: {fileID: 6942934245173819872}
+  globalPool: {fileID: 379584633189090901}
 --- !u!1 &5828800762876703045
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,7 +286,7 @@ MonoBehaviour:
   enemyTypes:
   - type: 0
     spawnChance: 1
-  globalPool: {fileID: 6942934245173819872}
+  globalPool: {fileID: 379584633189090901}
 --- !u!1 &8938439020654074281
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,4 +338,4 @@ MonoBehaviour:
   enemyTypes:
   - type: 0
     spawnChance: 1
-  globalPool: {fileID: 6942934245173819872}
+  globalPool: {fileID: 379584633189090901}

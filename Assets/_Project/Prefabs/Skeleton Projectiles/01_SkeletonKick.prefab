@@ -14716,7 +14716,7 @@ MonoBehaviour:
   DebugActive: 0
   FeedbacksList:
   - rid: 2350307887745073245
-  KeepPlayModeChanges: 0
+  KeepPlayModeChanges: 1
   PerformanceMode: 0
   StopFeedbacksOnDisable: 0
   PlayCount: 0
@@ -14808,7 +14808,7 @@ MonoBehaviour:
         SfxAudioMixerGroup: {fileID: 0}
         Priority: 128
         PanStereo: 0
-        SpatialBlend: 0
+        SpatialBlend: 1
         DopplerLevel: 1
         Spread: 0
         RolloffMode: 0

@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.48393556, g: 0.5061663, b: 0.7075472, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.004
@@ -11715,7 +11715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6960e84d07fb87f47956e7a81d71c4e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.Transports.UTP.UnityTransport
-  m_ProtocolType: 1
+  m_ProtocolType: 0
   m_UseWebSockets: 0
   m_UseEncryption: 0
   m_MaxPacketQueueSize: 128
@@ -53394,6 +53394,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 379584633189090901, guid: 4854a3959dc6bb741ae4d9966a199aec, type: 3}
+      propertyPath: enemyTypes.Array.data[0].initialPoolSize
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 464662662288597932, guid: 4854a3959dc6bb741ae4d9966a199aec, type: 3}
+      propertyPath: maxEnemies
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 464662662288597932, guid: 4854a3959dc6bb741ae4d9966a199aec, type: 3}
       propertyPath: enemyTypes.Array.data[0].enemyPrefab
       value: 
@@ -53403,9 +53411,17 @@ PrefabInstance:
       value: Spawners
       objectReference: {fileID: 0}
     - target: {fileID: 3023415277732333775, guid: 4854a3959dc6bb741ae4d9966a199aec, type: 3}
+      propertyPath: maxEnemies
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023415277732333775, guid: 4854a3959dc6bb741ae4d9966a199aec, type: 3}
       propertyPath: enemyTypes.Array.data[0].enemyPrefab
       value: 
       objectReference: {fileID: 4779095418874959237, guid: c3a364eb883da6343b5d64fe52b54bee, type: 3}
+    - target: {fileID: 3168424462403207743, guid: 4854a3959dc6bb741ae4d9966a199aec, type: 3}
+      propertyPath: maxEnemies
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3168424462403207743, guid: 4854a3959dc6bb741ae4d9966a199aec, type: 3}
       propertyPath: enemyTypes.Array.data[0].enemyPrefab
       value: 
@@ -53415,24 +53431,32 @@ PrefabInstance:
       value: 3488955136
       objectReference: {fileID: 0}
     - target: {fileID: 3754902201129930323, guid: 4854a3959dc6bb741ae4d9966a199aec, type: 3}
+      propertyPath: maxEnemies
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754902201129930323, guid: 4854a3959dc6bb741ae4d9966a199aec, type: 3}
       propertyPath: enemyTypes.Array.data[0].enemyPrefab
       value: 
       objectReference: {fileID: 4779095418874959237, guid: c3a364eb883da6343b5d64fe52b54bee, type: 3}
+    - target: {fileID: 4189595709514344479, guid: 4854a3959dc6bb741ae4d9966a199aec, type: 3}
+      propertyPath: maxEnemies
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4189595709514344479, guid: 4854a3959dc6bb741ae4d9966a199aec, type: 3}
       propertyPath: enemyTypes.Array.data[0].enemyPrefab
       value: 
       objectReference: {fileID: 4779095418874959237, guid: c3a364eb883da6343b5d64fe52b54bee, type: 3}
     - target: {fileID: 5031533597982606769, guid: 4854a3959dc6bb741ae4d9966a199aec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 341.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5031533597982606769, guid: 4854a3959dc6bb741ae4d9966a199aec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.93
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5031533597982606769, guid: 4854a3959dc6bb741ae4d9966a199aec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.44
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5031533597982606769, guid: 4854a3959dc6bb741ae4d9966a199aec, type: 3}
       propertyPath: m_LocalRotation.w
@@ -53462,7 +53486,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6942934245173819872, guid: 4854a3959dc6bb741ae4d9966a199aec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
