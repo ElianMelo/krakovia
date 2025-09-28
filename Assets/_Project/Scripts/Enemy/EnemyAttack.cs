@@ -48,7 +48,6 @@ public class EnemyAttack : MonoBehaviour
         {
             foreach (var playerAttributeController in playerAttributeControllers)
             {
-                Debug.Log("Player Found!");
                 playerAttributeController.ReceiveDamage(damage);
             }
         }

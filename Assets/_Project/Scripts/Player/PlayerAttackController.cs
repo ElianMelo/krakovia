@@ -215,7 +215,6 @@ public class PlayerAttackController : NetworkBehaviour
         {
             foreach (var playerAttributeController in playerAttributeControllers)
             {
-                Debug.Log("Player Found!");
                 playerAttributeController.ReceiveDamage(1);
             }
         }
@@ -227,7 +226,6 @@ public class PlayerAttackController : NetworkBehaviour
             {
                 Vector3 contactPoint = enemyController.GetComponent<Collider>().ClosestPoint(transform.position);
 
-                Debug.Log("Enemy Found!");
                 enemyController.ReceiveDamage(0, contactPoint);
             }
         }

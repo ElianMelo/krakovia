@@ -77,12 +77,15 @@ public class EnemyController : NetworkBehaviour
             }
         }
 
+        isDead = isEnemyDead;
+
         if (isEnemyDead && NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(sourceDamage, out var playerObj))
         {
             var player = playerObj.GetComponent<PlayerController>();
             if (player != null)
             {
-                player.PlayerAttributeController.ReceiveExp(30);
+                Debug.Log("Send EXP!");
+                player.PlayerAttributeController.ReceiveExp(player.PlayerAttributeController.OwnerClientId, 30);
             }
         }
 
@@ -92,8 +95,6 @@ public class EnemyController : NetworkBehaviour
     [Rpc(SendTo.Everyone)]
     private void SendDamageClientRpc(ulong enemyNetworkObjectId, bool isEnemyDead, Vector3 contactPoint)
     {
-        Debug.Log($"Enemy ({enemyNetworkObjectId}) took damage!");
-
         NumberWorldSpacePooler.Instance.ShowNumberInWorld(1, transform.position + new Vector3(0f,1f,0f));
 
         if(!isEnemyDead)
