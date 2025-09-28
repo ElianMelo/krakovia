@@ -590,14 +590,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttributeController
   ShowTopMostFoldoutHeaderGroup: 1
+  CurrentHP:
+    m_InternalValue: 0
   healthBar: {fileID: 4232635217904834670}
+  healthBarImage: {fileID: 8185518219744564520}
   experienceIncreaseAmount: 10
   fairyMaxHP: 10
   fairyMouseLeftSkillDamage: 10
   fairyMouseRightSkillDamage: 10
   fairyQSkillDamage: 10
   fairyFSkillDamage: 10
-  skeletonMaxHP: 10
+  skeletonMaxHP: 50
   skeletonMouseLeftSkillDamage: 10
   skeletonMouseRightSkillDamage: 50
   skeletonQSkillDamage: 10
@@ -4834,6 +4837,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8654468710473906241, guid: c886f88fcd7790b4fbdeafd19c2aac4f, type: 3}
   m_PrefabInstance: {fileID: 4802963926507659311}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8185518219744564520 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3692744220862182663, guid: c886f88fcd7790b4fbdeafd19c2aac4f, type: 3}
+  m_PrefabInstance: {fileID: 4802963926507659311}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!224 &8425884193398906346 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3911744846550793669, guid: c886f88fcd7790b4fbdeafd19c2aac4f, type: 3}

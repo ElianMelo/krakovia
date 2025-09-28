@@ -1,15 +1,17 @@
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerAttributeController : NetworkBehaviour
 {
-    private int currentHP = 50;
-    private int maxHP = 50;
     private int currentExperience = 0;
     private int currentLevel = 1;
     private int maxExperience = 100;
 
+    public NetworkVariable<int> CurrentHP = new NetworkVariable<int>();
+
     public GameObject healthBar;
+    public Image healthBarImage;
 
     [Header("Experience")]
     public int experienceIncreaseAmount = 30;
@@ -40,31 +42,42 @@ public class PlayerAttributeController : NetworkBehaviour
         healthBar.SetActive(target);
     }
 
+    public void OnHealthValueChanged(int previous, int current)
+    {
+        NumberWorldSpacePooler.Instance.ShowNumberInWorld(current - previous, transform.position + new Vector3(0f, 1f, 0f));
+        healthBarImage.fillAmount = (float) current / skeletonMaxHP;
+        if(IsOwner)
+            InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerHp(CurrentHP.Value, skeletonMaxHP);
+    }
+
     public void ReceiveDamage(int damage)
     {
         if (IsOwner) return;
-        ReceiveDamageRpc(OwnerClientId, damage);
+        ReceiveDamageRpc(NetworkObjectId, damage);
     }
 
     [Rpc(SendTo.Server)]
-    private void ReceiveDamageRpc(ulong targetOwnerClientId, int damage)
+    private void ReceiveDamageRpc(ulong targetNetworkObjectId, int damage)
     {
-        var rpcParams = new RpcParams
+        if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(targetNetworkObjectId, out var playerObj))
         {
-            Send = new RpcSendParams
+            var player = playerObj.GetComponent<PlayerAttributeController>();
+            if (player != null)
             {
-                Target = NetworkManager.Singleton.RpcTarget.Single(targetOwnerClientId, RpcTargetUse.Persistent)
+                player.CurrentHP.Value -= damage;
             }
-        };
-        SendDamageClientRpc(damage, rpcParams);
+        }
+
+        // CurrentHP
+        //SendDamageClientRpc(damage, rpcParams);
     }
 
-    [Rpc(SendTo.SpecifiedInParams)]
+    [Rpc(SendTo.ClientsAndHost)]
     private void SendDamageClientRpc(int damage, RpcParams rpcParams = default)
     {
-        currentHP -= damage;
+        //currentHP -= damage;
         NumberWorldSpacePooler.Instance.ShowNumberInWorld(damage, transform.position + new Vector3(0f,1f,0f));
-        InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerHp(currentHP, maxHP);
+        InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerHp(CurrentHP.Value, skeletonMaxHP);
     }
 
     private void Update()
@@ -72,8 +85,8 @@ public class PlayerAttributeController : NetworkBehaviour
         if (!IsOwner) return;
         if (Input.GetKeyDown(KeyCode.K))
         {
-            currentHP = maxHP;
-            InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerHp(currentHP, maxHP);
+            CurrentHP.Value = skeletonMaxHP;
+            InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerHp(CurrentHP.Value, skeletonMaxHP);
         }
     }
 

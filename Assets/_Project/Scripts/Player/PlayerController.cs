@@ -5,15 +5,15 @@ public class PlayerController : NetworkBehaviour
 {
     private PlayerMovementController playerMovementController;
     private PlayerAttackController playerAttackController;
-    private PlayerAttributeController _playerAttributeController;
+    private PlayerAttributeController playerAttributeController;
     private PlayerClassController playerClassController;
     private PlayerFollower playerFollower;
     private ClientNetworkAnimator clientNetworkAnimator;
 
     public PlayerAttributeController PlayerAttributeController
     {
-        get => _playerAttributeController;
-        set => _playerAttributeController = value;
+        get => playerAttributeController;
+        set => playerAttributeController = value;
     }
 
     public override void OnNetworkSpawn()
@@ -23,7 +23,7 @@ public class PlayerController : NetworkBehaviour
         playerClassController = GetComponent<PlayerClassController>();
         playerMovementController = GetComponent<PlayerMovementController>();
         playerAttackController = GetComponent<PlayerAttackController>();
-        _playerAttributeController = GetComponent<PlayerAttributeController>();
+        playerAttributeController = GetComponent<PlayerAttributeController>();
 
         transform.position = new Vector3(325.59f, 3.07f, 27.87f);
 
@@ -47,15 +47,17 @@ public class PlayerController : NetworkBehaviour
         playerMovementController.SetupPlayerAnimator(clientNetworkAnimator.Animator);
         playerAttackController.SetupPlayerAnimator(clientNetworkAnimator.Animator);
 
-        //if (!IsServer)
-        //{
-        //    playerClassController.DisableColliders();
-        //}
+        if(IsServer)
+        {
+            playerAttributeController.CurrentHP.Value = playerAttributeController.skeletonMaxHP;
+        }
+        
+        playerAttributeController.CurrentHP.OnValueChanged += playerAttributeController.OnHealthValueChanged;
 
         // Logic strict to the owner
         if (!IsOwner) return;
 
-        _playerAttributeController.SwitchHealthBar(false);
+        playerAttributeController.SwitchHealthBar(false);
 
         playerFollower = FindFirstObjectByType<PlayerFollower>();
 
