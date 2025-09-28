@@ -29,6 +29,11 @@ public class PlayerClassController : MonoBehaviour
     private PlayerClass _playerClass;
     public PlayerClass PlayerClass => _playerClass;
 
+    public void DisableColliders()
+    {
+        skeletonSword.enabled = false;
+    }
+
     public Animator ChangeClassTo(PlayerClass playerClass)
     {
         DisableAll();

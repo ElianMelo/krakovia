@@ -9,6 +9,8 @@ public class PlayerAttributeController : NetworkBehaviour
     private int currentLevel = 1;
     private int maxExperience = 100;
 
+    public GameObject healthBar;
+
     [Header("Experience")]
     public int experienceIncreaseAmount = 30;
 
@@ -33,9 +35,14 @@ public class PlayerAttributeController : NetworkBehaviour
     public int horseQSkillDamage = 10;
     public int horseFSkillDamage = 10;
 
+    public void SwitchHealthBar(bool target)
+    {
+        healthBar.SetActive(target);
+    }
+
     public void ReceiveDamage(int damage)
     {
-        if (!IsOwner) return;
+        if (IsOwner) return;
         ReceiveDamageRpc(OwnerClientId, damage);
     }
 

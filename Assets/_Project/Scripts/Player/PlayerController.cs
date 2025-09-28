@@ -47,13 +47,25 @@ public class PlayerController : NetworkBehaviour
         playerMovementController.SetupPlayerAnimator(clientNetworkAnimator.Animator);
         playerAttackController.SetupPlayerAnimator(clientNetworkAnimator.Animator);
 
+        //if (!IsServer)
+        //{
+        //    playerClassController.DisableColliders();
+        //}
+
         // Logic strict to the owner
         if (!IsOwner) return;
-               
+
+        _playerAttributeController.SwitchHealthBar(false);
+
         playerFollower = FindFirstObjectByType<PlayerFollower>();
 
         playerFollower.player = transform;
         playerMovementController.SetupFollower(playerFollower.transform);
+    }
+
+    private void Start()
+    {
+        playerClassController.DisableColliders();
     }
 
     private void Update()
