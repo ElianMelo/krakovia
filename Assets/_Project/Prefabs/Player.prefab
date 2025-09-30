@@ -552,6 +552,8 @@ MonoBehaviour:
   horseVisuals: {fileID: 344590139456553175}
   horseRagdoll: {fileID: 6627748663905623718}
   horseAnimator: {fileID: 3200726180384472797}
+  horseLeftHand: {fileID: 7702235991289829304}
+  horseRightHand: {fileID: 491619892002004468}
 --- !u!114 &2516361281481648060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3146,9 +3148,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2617442436533568473, guid: af26da025f2b4ef488bed1699a1a8ed4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7702235991289829304}
+    - targetCorrespondingSourceObject: {fileID: 2617442436533568473, guid: af26da025f2b4ef488bed1699a1a8ed4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3002056231842062362}
     - targetCorrespondingSourceObject: {fileID: 2144126785266173346, guid: af26da025f2b4ef488bed1699a1a8ed4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 491619892002004468}
+    - targetCorrespondingSourceObject: {fileID: 2144126785266173346, guid: af26da025f2b4ef488bed1699a1a8ed4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2062380683057506873}
   m_SourcePrefab: {fileID: 100100000, guid: af26da025f2b4ef488bed1699a1a8ed4, type: 3}
 --- !u!137 &344590139456553175 stripped
 SkinnedMeshRenderer:
@@ -3424,6 +3432,18 @@ CapsuleCollider:
   m_Height: 0.002
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3002056231842062362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818480454848586982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d573e7466295794b983edc7c21dad2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerWeaponTrigger
 --- !u!4 &2222253636435009662 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2573960815726495553, guid: af26da025f2b4ef488bed1699a1a8ed4, type: 3}
@@ -3457,6 +3477,18 @@ CapsuleCollider:
   m_Height: 0.002
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2062380683057506873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2355096330555138717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d573e7466295794b983edc7c21dad2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerWeaponTrigger
 --- !u!4 &2525575123409228107 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7033732698917128588, guid: af26da025f2b4ef488bed1699a1a8ed4, type: 3}
@@ -6275,6 +6307,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8044539921733741713, guid: 00ae94e5dd1f99e4e9894910f136a4a3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3723714435160498637}
+    - targetCorrespondingSourceObject: {fileID: -8044539921733741713, guid: 00ae94e5dd1f99e4e9894910f136a4a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 419992563317769465}
   m_SourcePrefab: {fileID: 100100000, guid: 00ae94e5dd1f99e4e9894910f136a4a3, type: 3}
 --- !u!4 &110589299214439013 stripped
 Transform:
@@ -8372,6 +8407,18 @@ MonoBehaviour:
   CreateObjectPool: 1
   ObjectPoolSize: 100
   MutualizePools: 0
+--- !u!114 &419992563317769465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8581809133700611208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d573e7466295794b983edc7c21dad2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerWeaponTrigger
 --- !u!4 &8730105832472009107 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7033732698917128588, guid: 00ae94e5dd1f99e4e9894910f136a4a3, type: 3}

@@ -46,7 +46,8 @@ public class EnemyController : NetworkBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("AttackCollider"))
+        if (other.gameObject.CompareTag("AttackCollider")
+            && other.gameObject.GetComponent<PlayerWeaponTrigger>() != null)
         {
             Vector3 contactPoint = other.ClosestPoint(transform.position);
             PlayerController sourceDamage = other.gameObject.GetComponentInParent<PlayerController>();
@@ -84,7 +85,6 @@ public class EnemyController : NetworkBehaviour
             var player = playerObj.GetComponent<PlayerController>();
             if (player != null)
             {
-                Debug.Log("Send EXP!");
                 player.PlayerAttributeController.ReceiveExp(player.PlayerAttributeController.OwnerClientId, 30);
             }
         }

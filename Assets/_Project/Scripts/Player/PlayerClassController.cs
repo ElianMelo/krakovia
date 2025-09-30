@@ -25,6 +25,8 @@ public class PlayerClassController : MonoBehaviour
     public SkinnedMeshRenderer horseVisuals;
     public RagdollAnimator2 horseRagdoll;
     public Animator horseAnimator;
+    public Collider horseLeftHand;
+    public Collider horseRightHand;
 
     private PlayerClass _playerClass;
     public PlayerClass PlayerClass => _playerClass;
@@ -32,6 +34,8 @@ public class PlayerClassController : MonoBehaviour
     public void DisableColliders()
     {
         skeletonSword.enabled = false;
+        horseLeftHand.enabled = false;
+        horseRightHand.enabled = false;
     }
 
     public Animator ChangeClassTo(PlayerClass playerClass)
@@ -74,5 +78,7 @@ public class PlayerClassController : MonoBehaviour
         horseAnimator.enabled = target;
         horseRagdoll.enabled = target;
         horseVisuals.enabled = target;
+        horseLeftHand.enabled = target;
+        horseRightHand.enabled = target;
     }
 }

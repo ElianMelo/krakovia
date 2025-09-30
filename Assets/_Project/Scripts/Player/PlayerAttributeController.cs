@@ -118,7 +118,6 @@ public class PlayerAttributeController : NetworkBehaviour
     [Rpc(SendTo.SpecifiedInParams)]
     private void SendExpClientRpc(int experience, RpcParams rpcParams = default)
     {
-        Debug.Log("Receive EXP!");
         currentExperience += experience;
         if (currentExperience >= maxExperience)
         {

@@ -196,7 +196,8 @@ public class PlayerAttackController : NetworkBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("AttackCollider"))
+        if (other.gameObject.CompareTag("AttackCollider")
+            && other.gameObject.GetComponent<PlayerWeaponTrigger>() != null)
         {
             var playerAttributeController = GetComponent<PlayerAttributeController>();
             if (other.GetComponentInParent<PlayerAttributeController>() == playerAttributeController)
