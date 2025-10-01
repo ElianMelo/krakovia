@@ -7,12 +7,20 @@ public class PlayerAttributeController : NetworkBehaviour
     [HideInInspector] public int currentExperience = 0;
     [HideInInspector] public int currentLevel = 1;
     [HideInInspector] public int maxExperience = 100;
-    [HideInInspector] public int criticalChance;
-    [HideInInspector] public int health;
-    [HideInInspector] public int healthRegen;
-    [HideInInspector] public int cooldown;
-    [HideInInspector] public int damage;
-    [HideInInspector] public int speed;
+
+    private float criticalChance = 0;
+    private float health = 0;
+    private float healthRegen = 0;
+    private float cooldown = 0;
+    private float damage = 0;
+    private float speed = 0;
+
+    public float CriticalChance => criticalChance;
+    public float Health => health;
+    public float HealthRegen => healthRegen;
+    public float Cooldown => cooldown;
+    public float Damage => damage;
+    public float Speed => speed;
 
     public NetworkVariable<int> CurrentHP = new NetworkVariable<int>();
 
@@ -23,6 +31,8 @@ public class PlayerAttributeController : NetworkBehaviour
     public ClassLevelUPDataSO fairyData;
     public ClassLevelUPDataSO skeletonData;
     public ClassLevelUPDataSO horseData;
+
+    private LevelUpData levelUpData;
 
     [Header("Experience")]
     public int experienceIncreaseAmount = 30;
@@ -50,12 +60,55 @@ public class PlayerAttributeController : NetworkBehaviour
         healthBar.SetActive(target);
     }
 
+    public void SetupClassLevelUp(PlayerClass playerClass)
+    {
+        ClassLevelUPDataSO classLevelUPDataSO = GetDataBasedOnClass(playerClass);
+        levelUpData = classLevelUPDataSO.levelUpData;
+        foreach (var attributeData in classLevelUPDataSO.initialLevelData.attributeDatas)
+        {
+            UpdateAttributeData(attributeData.attribute, attributeData.flatAmount);
+        }
+    }
+
+    private ClassLevelUPDataSO GetDataBasedOnClass(PlayerClass playerClass)
+    {
+        switch (playerClass)
+        {
+            case PlayerClass.Fairy: return fairyData;
+            case PlayerClass.Skeleton: return skeletonData;
+            case PlayerClass.Horse: return horseData;
+            default: return skeletonData;
+        }
+    }
+
+    private void UpdateAttributeData(Attribute attribute, float value)
+    {
+        switch (attribute)
+        {
+            case Attribute.CriticalChance: criticalChance += value; return;
+            case Attribute.Health: health += value; return;
+            case Attribute.HealthRegen: healthRegen += value; return;
+            case Attribute.Cooldown: cooldown += value; return;
+            case Attribute.Damage: damage += value; return;
+            case Attribute.Speed: speed += value; return;
+            default: return;
+        }
+    }
+
+    private void LevelUp()
+    {
+        foreach (var attributeData in levelUpData.attributeDatas)
+        {
+            UpdateAttributeData(attributeData.attribute, attributeData.flatAmount);
+        }
+    }
+
     public void OnHealthValueChanged(int previous, int current)
     {
         NumberWorldSpacePooler.Instance.ShowNumberInWorld(current - previous, transform.position + new Vector3(0f, 1f, 0f));
         healthBarImage.fillAmount = (float) current / health;
         if(IsOwner)
-            InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerHp(CurrentHP.Value, health);
+            InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerHp(CurrentHP.Value, (int) health);
     }
 
     public void ReceiveDamage(int damage)
@@ -93,7 +146,7 @@ public class PlayerAttributeController : NetworkBehaviour
             PlayerAttributeController playerAttributeController = item.Value.GetComponent<PlayerAttributeController>();
             if (playerAttributeController != null)
             {
-                playerAttributeController.CurrentHP.Value = health;
+                playerAttributeController.CurrentHP.Value = (int) health;
             }
         }
     }
@@ -120,6 +173,7 @@ public class PlayerAttributeController : NetworkBehaviour
             currentLevel += 1;
             maxExperience = maxExperience + experienceIncreaseAmount;
             InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerLevel(currentLevel);
+            LevelUp();
         }
         InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerExperience(currentExperience, maxExperience);
     }

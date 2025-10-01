@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class EnemyController : NetworkBehaviour
 {
-    [SerializeField] private int maxHP = 5;
-    private NetworkVariable<int> currentHP = new NetworkVariable<int>();
+    [SerializeField] private float maxHP = 5;
+    private NetworkVariable<float> currentHP = new NetworkVariable<float>();
 
     public GameObject explosionEffect;
     public GameObject bloodEffect;
@@ -23,9 +23,9 @@ public class EnemyController : NetworkBehaviour
     private const string HurtAnim = "Hurt";
     private const string DeathAnim = "Death";
 
-    public int MaxHP => maxHP;
+    public float MaxHP => maxHP;
     public bool IsDead => isDead;
-    public NetworkVariable<int> CurrentHP => currentHP;
+    public NetworkVariable<float> CurrentHP => currentHP;
 
     public override void OnNetworkSpawn()
     {
@@ -51,21 +51,22 @@ public class EnemyController : NetworkBehaviour
         {
             Vector3 contactPoint = other.ClosestPoint(transform.position);
             PlayerController sourceDamage = other.gameObject.GetComponentInParent<PlayerController>();
+            float damage = other.gameObject.GetComponentInParent<PlayerAttributeController>().Damage;
             enemyMovement.OnAttacked(sourceDamage.transform);
             enemyAttack.StartAttackRoutine();
             if (isDead) return;
             ReceiveDamage(sourceDamage.NetworkObjectId,
-                contactPoint);
+                contactPoint, damage);
         }
     }
 
-    public void ReceiveDamage(ulong sourceDamage, Vector3 contactPoint)
+    public void ReceiveDamage(ulong sourceDamage, Vector3 contactPoint, float damage)
     {
-        ReceiveDamageRpc(NetworkObjectId, sourceDamage, contactPoint);
+        ReceiveDamageRpc(NetworkObjectId, sourceDamage, contactPoint, damage);
     }
 
     [Rpc(SendTo.Server)]
-    private void ReceiveDamageRpc(ulong enemyNetworkObjectId, ulong sourceDamage, Vector3 contactPoint)
+    private void ReceiveDamageRpc(ulong enemyNetworkObjectId, ulong sourceDamage, Vector3 contactPoint, float damage)
     {
         if (isDead) return;
         bool isEnemyDead = false;
@@ -74,7 +75,7 @@ public class EnemyController : NetworkBehaviour
             var enemy = enemyObj.GetComponent<EnemyController>();
             if (enemy != null)
             {
-                isEnemyDead = enemy.ApplyDamage();
+                isEnemyDead = enemy.ApplyDamage(damage);
             }
         }
 
@@ -89,13 +90,13 @@ public class EnemyController : NetworkBehaviour
             }
         }
 
-        SendDamageClientRpc(enemyNetworkObjectId, isEnemyDead, contactPoint);
+        SendDamageClientRpc(enemyNetworkObjectId, isEnemyDead, contactPoint, damage);
     }
 
     [Rpc(SendTo.Everyone)]
-    private void SendDamageClientRpc(ulong enemyNetworkObjectId, bool isEnemyDead, Vector3 contactPoint)
+    private void SendDamageClientRpc(ulong enemyNetworkObjectId, bool isEnemyDead, Vector3 contactPoint, float damage)
     {
-        NumberWorldSpacePooler.Instance.ShowNumberInWorld(1, transform.position + new Vector3(0f,1f,0f));
+        NumberWorldSpacePooler.Instance.ShowNumberInWorld((int)damage, transform.position + new Vector3(0f,1f,0f));
 
         if(!isEnemyDead)
             animator.SetTrigger(HurtAnim);
@@ -114,11 +115,11 @@ public class EnemyController : NetworkBehaviour
         // Could trigger hit flash, particles, etc.
     }
 
-    private bool ApplyDamage()
+    private bool ApplyDamage(float damage)
     {
         if (!IsServer) return false;
 
-        currentHP.Value -= 1;
+        currentHP.Value -= damage;
 
         if (currentHP.Value <= 0 && !isDead)
         {

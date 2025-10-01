@@ -227,7 +227,7 @@ public class PlayerAttackController : NetworkBehaviour
             {
                 Vector3 contactPoint = enemyController.GetComponent<Collider>().ClosestPoint(transform.position);
 
-                enemyController.ReceiveDamage(0, contactPoint);
+                enemyController.ReceiveDamage(0, contactPoint, GetComponent<PlayerAttributeController>().Damage);
             }
         }
     }

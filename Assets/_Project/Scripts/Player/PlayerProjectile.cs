@@ -28,7 +28,7 @@ public class PlayerProjectile : NetworkBehaviour
         {
             Physics.IgnoreCollision(GetComponent<Collider>(), other);
             Vector3 contactPoint = other.ClosestPoint(transform.position);
-            enemyController.ReceiveDamage(0, contactPoint);
+            enemyController.ReceiveDamage(0, contactPoint, 1f);
         }
     }
 }

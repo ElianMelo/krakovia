@@ -32,7 +32,7 @@ public class EnemyHealthBar : NetworkBehaviour
         OnHealthChanged(enemy.CurrentHP.Value, enemy.CurrentHP.Value);
     }
 
-    private void OnHealthChanged(int oldValue, int newValue)
+    private void OnHealthChanged(float oldValue, float newValue)
     {
         hpBarfront.fillAmount = newValue / (float)enemy.MaxHP;
         CheckShowDistance();

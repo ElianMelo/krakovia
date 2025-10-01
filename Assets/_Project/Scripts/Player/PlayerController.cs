@@ -51,10 +51,12 @@ public class PlayerController : NetworkBehaviour
 
         if(IsServer)
         {
-            playerAttributeController.CurrentHP.Value = playerAttributeController.health;
+            playerAttributeController.CurrentHP.Value = (int) playerAttributeController.Health;
         }
         
         playerAttributeController.CurrentHP.OnValueChanged += playerAttributeController.OnHealthValueChanged;
+
+        playerAttributeController.SetupClassLevelUp(PlayerClass.Skeleton);
 
         // Logic strict to the owner
         if (!IsOwner) return;
