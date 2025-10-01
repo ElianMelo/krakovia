@@ -51,7 +51,7 @@ public class PlayerController : NetworkBehaviour
 
         if(IsServer)
         {
-            playerAttributeController.CurrentHP.Value = playerAttributeController.skeletonMaxHP;
+            playerAttributeController.CurrentHP.Value = playerAttributeController.health;
         }
         
         playerAttributeController.CurrentHP.OnValueChanged += playerAttributeController.OnHealthValueChanged;

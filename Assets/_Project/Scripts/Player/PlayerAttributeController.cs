@@ -4,38 +4,46 @@ using UnityEngine.UI;
 
 public class PlayerAttributeController : NetworkBehaviour
 {
-    private int currentExperience = 0;
-    private int currentLevel = 1;
-    private int maxExperience = 100;
+    [HideInInspector] public int currentExperience = 0;
+    [HideInInspector] public int currentLevel = 1;
+    [HideInInspector] public int maxExperience = 100;
+    [HideInInspector] public int criticalChance;
+    [HideInInspector] public int health;
+    [HideInInspector] public int healthRegen;
+    [HideInInspector] public int cooldown;
+    [HideInInspector] public int damage;
+    [HideInInspector] public int speed;
 
     public NetworkVariable<int> CurrentHP = new NetworkVariable<int>();
 
     public GameObject healthBar;
     public Image healthBarImage;
 
+    [Header("Level Up Data")]
+    public ClassLevelUPDataSO fairyData;
+    public ClassLevelUPDataSO skeletonData;
+    public ClassLevelUPDataSO horseData;
+
     [Header("Experience")]
     public int experienceIncreaseAmount = 30;
 
     [Header("Fairy")]
-    public int fairyMaxHP = 10;
-    public int fairyMouseLeftSkillDamage = 10;
-    public int fairyMouseRightSkillDamage = 10;
-    public int fairyQSkillDamage = 10;
-    public int fairyFSkillDamage = 10;
+    public int fairyMouseLeftSkillPercentage = 10;
+    public int fairyMouseRightSkillPercentage = 10;
+    public int fairyQSkillPercentage = 10;
+    public int fairyFSkillPercentage = 10;
 
     [Header("Skeleton")]
-    public int skeletonMaxHP = 10;
-    public int skeletonMouseLeftSkillDamage = 10;
-    public int skeletonMouseRightSkillDamage = 10;
-    public int skeletonQSkillDamage = 10;
-    public int skeletonFSkillDamage = 10;
+    public int skeletonMouseLeftSkillPercentage = 10;
+    public int skeletonMouseRightSkillPercentage = 10;
+    public int skeletonQSkillPercentage = 10;
+    public int skeletonFSkillPercentage = 10;
 
     [Header("Horse")]
-    public int horseMaxHP = 10;
-    public int horseMouseLeftSkillDamage = 10;
-    public int horseMouseRightSkillDamage = 10;
-    public int horseQSkillDamage = 10;
-    public int horseFSkillDamage = 10;
+    public int horseMouseLeftSkillPercentage = 10;
+    public int horseMouseRightSkillPercentage = 10;
+    public int horseQSkillPercentage = 10;
+    public int horseFSkillPercentage = 10;
 
     public void SwitchHealthBar(bool target)
     {
@@ -45,9 +53,9 @@ public class PlayerAttributeController : NetworkBehaviour
     public void OnHealthValueChanged(int previous, int current)
     {
         NumberWorldSpacePooler.Instance.ShowNumberInWorld(current - previous, transform.position + new Vector3(0f, 1f, 0f));
-        healthBarImage.fillAmount = (float) current / skeletonMaxHP;
+        healthBarImage.fillAmount = (float) current / health;
         if(IsOwner)
-            InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerHp(CurrentHP.Value, skeletonMaxHP);
+            InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerHp(CurrentHP.Value, health);
     }
 
     public void ReceiveDamage(int damage)
@@ -67,17 +75,6 @@ public class PlayerAttributeController : NetworkBehaviour
                 player.CurrentHP.Value -= damage;
             }
         }
-
-        // CurrentHP
-        //SendDamageClientRpc(damage, rpcParams);
-    }
-
-    [Rpc(SendTo.ClientsAndHost)]
-    private void SendDamageClientRpc(int damage, RpcParams rpcParams = default)
-    {
-        //currentHP -= damage;
-        NumberWorldSpacePooler.Instance.ShowNumberInWorld(damage, transform.position + new Vector3(0f,1f,0f));
-        InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerHp(CurrentHP.Value, skeletonMaxHP);
     }
 
     private void Update()
@@ -85,8 +82,6 @@ public class PlayerAttributeController : NetworkBehaviour
         if (!IsOwner) return;
         if (Input.GetKeyDown(KeyCode.K) && IsServer)
         {
-            //CurrentHP.Value = skeletonMaxHP;
-            //InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerHp(CurrentHP.Value, skeletonMaxHP);
             HealEverybody();
         }
     }
@@ -98,7 +93,7 @@ public class PlayerAttributeController : NetworkBehaviour
             PlayerAttributeController playerAttributeController = item.Value.GetComponent<PlayerAttributeController>();
             if (playerAttributeController != null)
             {
-                playerAttributeController.CurrentHP.Value = skeletonMaxHP;
+                playerAttributeController.CurrentHP.Value = health;
             }
         }
     }

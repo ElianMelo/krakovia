@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c510bc5fd856b4b448afac92c348e569, type: 3}
+  m_Name: Fairy_ClassLevelUPDataSO
+  m_EditorClassIdentifier: Assembly-CSharp::ClassLevelUPDataSO
+  initialLevelData:
+    name: Initial Data
+    attributeDatas:
+    - attribute: 0
+      flatAmount: 0
+    - attribute: 1
+      flatAmount: 50
+    - attribute: 2
+      flatAmount: 0
+    - attribute: 3
+      flatAmount: 5
+    - attribute: 4
+      flatAmount: 1
+    - attribute: 5
+      flatAmount: 7
+  levelUpData:
+    name: Upgrade Data Per Level
+    attributeDatas:
+    - attribute: 3
+      flatAmount: 1
+    - attribute: 1
+      flatAmount: 20
+    - attribute: 4
+      flatAmount: 10

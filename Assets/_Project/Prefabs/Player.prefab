@@ -592,26 +592,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttributeController
   ShowTopMostFoldoutHeaderGroup: 1
+  currentExperience: 0
+  currentLevel: 1
+  maxExperience: 100
+  criticalChance: 0
+  health: 0
+  healthRegen: 0
+  cooldown: 0
+  damage: 0
+  speed: 0
   CurrentHP:
-    m_InternalValue: 0
+    m_InternalValue: 50
   healthBar: {fileID: 4232635217904834670}
   healthBarImage: {fileID: 8185518219744564520}
+  fairyData: {fileID: 11400000, guid: a43d63ec606d2004cbb87a0f7b7929e7, type: 2}
+  skeletonData: {fileID: 11400000, guid: 93d6f6fb5828ac44c92c6c10d26cb435, type: 2}
+  horseData: {fileID: 11400000, guid: ebe444d9b1671d1469a85a309c4f008f, type: 2}
   experienceIncreaseAmount: 10
-  fairyMaxHP: 10
-  fairyMouseLeftSkillDamage: 10
-  fairyMouseRightSkillDamage: 10
-  fairyQSkillDamage: 10
-  fairyFSkillDamage: 10
-  skeletonMaxHP: 50
-  skeletonMouseLeftSkillDamage: 10
-  skeletonMouseRightSkillDamage: 50
-  skeletonQSkillDamage: 10
-  skeletonFSkillDamage: 10
-  horseMaxHP: 10
-  horseMouseLeftSkillDamage: 10
-  horseMouseRightSkillDamage: 10
-  horseQSkillDamage: 10
-  horseFSkillDamage: 10
+  fairyMouseLeftSkillPercentage: 100
+  fairyMouseRightSkillPercentage: 100
+  fairyQSkillPercentage: 100
+  fairyFSkillPercentage: 100
+  skeletonMouseLeftSkillPercentage: 100
+  skeletonMouseRightSkillPercentage: 100
+  skeletonQSkillPercentage: 100
+  skeletonFSkillPercentage: 100
+  horseMouseLeftSkillPercentage: 100
+  horseMouseRightSkillPercentage: 100
+  horseQSkillPercentage: 100
+  horseFSkillPercentage: 100
 --- !u!1 &8201004048388190410
 GameObject:
   m_ObjectHideFlags: 0
