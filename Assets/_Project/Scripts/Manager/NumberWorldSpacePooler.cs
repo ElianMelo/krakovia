@@ -25,7 +25,7 @@ public class NumberWorldSpacePooler : MonoBehaviour
         }
     }
 
-    public void ShowNumberInWorld(int number, Vector3 position, float duration = 3f, Color color = new())
+    public void ShowNumberInWorld(int number, Vector3 position, bool isCritical, float duration = 3f, Color color = new())
     {
         for (int i = 0; i < poolNumbers.Count; i++)
         {

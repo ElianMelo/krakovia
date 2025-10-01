@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,23 +7,22 @@ public class PlayerAttributeController : NetworkBehaviour
 {
     [HideInInspector] public int currentExperience = 0;
     [HideInInspector] public int currentLevel = 1;
-    [HideInInspector] public int maxExperience = 100;
+    [HideInInspector] public int maxExperience = 1000;
 
     private float criticalChance = 0;
-    private float health = 0;
     private float healthRegen = 0;
     private float cooldown = 0;
     private float damage = 0;
     private float speed = 0;
 
-    public float CriticalChance => criticalChance;
-    public float Health => health;
+    public float CriticalChance => criticalChance / 100;
     public float HealthRegen => healthRegen;
     public float Cooldown => cooldown;
     public float Damage => damage;
     public float Speed => speed;
 
-    public NetworkVariable<int> CurrentHP = new NetworkVariable<int>();
+    public NetworkVariable<float> CurrentHP = new NetworkVariable<float>();
+    public NetworkVariable<float> MaxHP = new NetworkVariable<float>();
 
     public GameObject healthBar;
     public Image healthBarImage;
@@ -55,6 +55,39 @@ public class PlayerAttributeController : NetworkBehaviour
     public int horseQSkillPercentage = 10;
     public int horseFSkillPercentage = 10;
 
+    private void Start()
+    {
+        if (!IsOwner) return;
+        StartCoroutine(LifeRegenCoroutine());
+    }
+
+    private IEnumerator LifeRegenCoroutine()
+    {
+        while (true) {
+            // todo: change this if its consuming too much latency
+            yield return new WaitForSeconds(1f);
+            if(healthRegen != 0 && CurrentHP.Value != MaxHP.Value) SendLifeRegenerationRpc(healthRegen, NetworkObjectId);
+        }
+    }
+
+    [Rpc(SendTo.Server)]
+    private void SendLifeRegenerationRpc(float value, ulong playerNetworkObjectId)
+    {
+        if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(playerNetworkObjectId, out var playerObj))
+        {
+            var player = playerObj.GetComponent<PlayerAttributeController>();
+            if (player == null) return;
+            
+            if(CurrentHP.Value + value >= MaxHP.Value)
+            {
+                CurrentHP.Value = MaxHP.Value;
+            } else
+            {
+                CurrentHP.Value += value;
+            }
+        }
+    }
+
     public void SwitchHealthBar(bool target)
     {
         healthBar.SetActive(target);
@@ -86,12 +119,31 @@ public class PlayerAttributeController : NetworkBehaviour
         switch (attribute)
         {
             case Attribute.CriticalChance: criticalChance += value; return;
-            case Attribute.Health: health += value; return;
+            case Attribute.Health: UpdateHealth(value); return;
             case Attribute.HealthRegen: healthRegen += value; return;
             case Attribute.Cooldown: cooldown += value; return;
             case Attribute.Damage: damage += value; return;
             case Attribute.Speed: speed += value; return;
             default: return;
+        }
+    }
+
+    private void UpdateHealth(float value)
+    {
+        UpdateHealthRpc(NetworkObjectId, value);
+    }
+
+    [Rpc(SendTo.Server)]
+    private void UpdateHealthRpc(ulong playerNetworkObjectId, float value)
+    {
+        if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(playerNetworkObjectId, out var playerObj))
+        {
+            var player = playerObj.GetComponent<PlayerAttributeController>();
+            if (player != null)
+            {
+                MaxHP.Value += value;
+                CurrentHP.Value = MaxHP.Value;
+            }
         }
     }
 
@@ -103,31 +155,42 @@ public class PlayerAttributeController : NetworkBehaviour
         }
     }
 
-    public void OnHealthValueChanged(int previous, int current)
+    public void OnHealthValueChanged(float previous, float current)
     {
-        NumberWorldSpacePooler.Instance.ShowNumberInWorld(current - previous, transform.position + new Vector3(0f, 1f, 0f));
-        healthBarImage.fillAmount = (float) current / health;
+        healthBarImage.fillAmount = current / MaxHP.Value;
         if(IsOwner)
-            InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerHp(CurrentHP.Value, (int) health);
+            InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerHp(CurrentHP.Value, MaxHP.Value);
     }
 
-    public void ReceiveDamage(int damage)
+    public void ReceiveDamageEnemy(int damage, bool isCritical)
+    {
+        ReceiveDamageRpc(NetworkObjectId, damage, isCritical);
+    }
+
+    public void ReceivePlayerDamage(int damage, bool isCritical)
     {
         if (IsOwner) return;
-        ReceiveDamageRpc(NetworkObjectId, damage);
+        ReceiveDamageRpc(NetworkObjectId, damage, isCritical);
     }
 
     [Rpc(SendTo.Server)]
-    private void ReceiveDamageRpc(ulong targetNetworkObjectId, int damage)
+    private void ReceiveDamageRpc(ulong targetNetworkObjectId, int damage, bool isCritical)
     {
         if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(targetNetworkObjectId, out var playerObj))
         {
             var player = playerObj.GetComponent<PlayerAttributeController>();
             if (player != null)
             {
-                player.CurrentHP.Value -= damage;
+                player.CurrentHP.Value -= damage; 
+                SendDamageClientRpc(player.transform.position, damage, isCritical);
             }
         }
+    }
+
+    [Rpc(SendTo.Everyone)]
+    private void SendDamageClientRpc(Vector3 contactPoint, float damage, bool isCritical)
+    {
+        NumberWorldSpacePooler.Instance.ShowNumberInWorld((int)damage, transform.position + new Vector3(0f, 1f, 0f), isCritical);
     }
 
     private void Update()
@@ -146,7 +209,7 @@ public class PlayerAttributeController : NetworkBehaviour
             PlayerAttributeController playerAttributeController = item.Value.GetComponent<PlayerAttributeController>();
             if (playerAttributeController != null)
             {
-                playerAttributeController.CurrentHP.Value = (int) health;
+                playerAttributeController.CurrentHP.Value = playerAttributeController.MaxHP.Value;
             }
         }
     }

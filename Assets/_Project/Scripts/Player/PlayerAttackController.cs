@@ -199,13 +199,17 @@ public class PlayerAttackController : NetworkBehaviour
         if (other.gameObject.CompareTag("AttackCollider")
             && other.gameObject.GetComponent<PlayerWeaponTrigger>() != null)
         {
-            var playerAttributeController = GetComponent<PlayerAttributeController>();
-            if (other.GetComponentInParent<PlayerAttributeController>() == playerAttributeController)
+            PlayerAttributeController playerAttributeController = GetComponent<PlayerAttributeController>();
+            PlayerAttributeController otherPlayerAttributeController = other.GetComponentInParent<PlayerAttributeController>();
+            if (otherPlayerAttributeController == playerAttributeController)
             {
                 Physics.IgnoreCollision(other, GetComponent<Collider>());
                 return;
             }
-            playerAttributeController.ReceiveDamage(1);
+            float damage = otherPlayerAttributeController.Damage;
+            bool isCritical = Random.Range(0f, 1f) <= otherPlayerAttributeController.CriticalChance;
+            if (isCritical) damage *= 2;
+            playerAttributeController.ReceivePlayerDamage((int) damage, isCritical);
         }
     }
 
@@ -216,7 +220,11 @@ public class PlayerAttackController : NetworkBehaviour
         {
             foreach (var playerAttributeController in playerAttributeControllers)
             {
-                playerAttributeController.ReceiveDamage(1);
+                PlayerAttributeController thisPlayerAttributeController = GetComponent<PlayerAttributeController>();
+                float damage = thisPlayerAttributeController.Damage;
+                bool isCritical = Random.Range(0f, 1f) <= thisPlayerAttributeController.CriticalChance;
+                if (isCritical) damage *= 2;
+                playerAttributeController.ReceivePlayerDamage((int) damage, isCritical);
             }
         }
 
@@ -227,7 +235,12 @@ public class PlayerAttackController : NetworkBehaviour
             {
                 Vector3 contactPoint = enemyController.GetComponent<Collider>().ClosestPoint(transform.position);
 
-                enemyController.ReceiveDamage(0, contactPoint, GetComponent<PlayerAttributeController>().Damage);
+                var playerAttributeController = GetComponent<PlayerAttributeController>();
+
+                bool isCritical = Random.Range(0f, 1f) <= playerAttributeController.CriticalChance;
+                float damage = playerAttributeController.Damage;
+                if (isCritical) damage *= 2;
+                enemyController.ReceiveDamage(0, contactPoint, damage, isCritical);
             }
         }
     }

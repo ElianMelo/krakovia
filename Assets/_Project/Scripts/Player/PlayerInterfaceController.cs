@@ -14,9 +14,9 @@ public class PlayerInterfaceController : MonoBehaviour
     public SkillBlock playerSkillThird;
     public SkillBlock playerSkillForth;
 
-    public void UpdatePlayerHp(int currentValue, int maxValue)
+    public void UpdatePlayerHp(float currentValue, float maxValue)
     {
-        playerHpSlide.fillAmount = (float) currentValue / maxValue;
+        playerHpSlide.fillAmount = currentValue / maxValue;
     }
     public void UpdatePlayerExperience(int currentValue, int maxValue)
     {

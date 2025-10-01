@@ -51,22 +51,25 @@ public class EnemyController : NetworkBehaviour
         {
             Vector3 contactPoint = other.ClosestPoint(transform.position);
             PlayerController sourceDamage = other.gameObject.GetComponentInParent<PlayerController>();
-            float damage = other.gameObject.GetComponentInParent<PlayerAttributeController>().Damage;
+            PlayerAttributeController playerAttributeController = other.gameObject.GetComponentInParent<PlayerAttributeController>();
+            float damage = playerAttributeController.Damage;
+            bool isCritical = Random.Range(0f, 1f) <= playerAttributeController.CriticalChance;
+            if(isCritical) damage *= 2;
             enemyMovement.OnAttacked(sourceDamage.transform);
             enemyAttack.StartAttackRoutine();
             if (isDead) return;
             ReceiveDamage(sourceDamage.NetworkObjectId,
-                contactPoint, damage);
+                contactPoint, damage, isCritical);
         }
     }
 
-    public void ReceiveDamage(ulong sourceDamage, Vector3 contactPoint, float damage)
+    public void ReceiveDamage(ulong sourceDamage, Vector3 contactPoint, float damage, bool isCritical)
     {
-        ReceiveDamageRpc(NetworkObjectId, sourceDamage, contactPoint, damage);
+        ReceiveDamageRpc(NetworkObjectId, sourceDamage, contactPoint, damage, isCritical);
     }
 
     [Rpc(SendTo.Server)]
-    private void ReceiveDamageRpc(ulong enemyNetworkObjectId, ulong sourceDamage, Vector3 contactPoint, float damage)
+    private void ReceiveDamageRpc(ulong enemyNetworkObjectId, ulong sourceDamage, Vector3 contactPoint, float damage, bool isCritical)
     {
         if (isDead) return;
         bool isEnemyDead = false;
@@ -90,13 +93,13 @@ public class EnemyController : NetworkBehaviour
             }
         }
 
-        SendDamageClientRpc(enemyNetworkObjectId, isEnemyDead, contactPoint, damage);
+        SendDamageClientRpc(enemyNetworkObjectId, isEnemyDead, contactPoint, damage, isCritical);
     }
 
     [Rpc(SendTo.Everyone)]
-    private void SendDamageClientRpc(ulong enemyNetworkObjectId, bool isEnemyDead, Vector3 contactPoint, float damage)
+    private void SendDamageClientRpc(ulong enemyNetworkObjectId, bool isEnemyDead, Vector3 contactPoint, float damage, bool isCritical)
     {
-        NumberWorldSpacePooler.Instance.ShowNumberInWorld((int)damage, transform.position + new Vector3(0f,1f,0f));
+        NumberWorldSpacePooler.Instance.ShowNumberInWorld((int)damage, transform.position + new Vector3(0f,1f,0f), isCritical);
 
         if(!isEnemyDead)
             animator.SetTrigger(HurtAnim);

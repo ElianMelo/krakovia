@@ -48,7 +48,7 @@ public class EnemyAttack : MonoBehaviour
         {
             foreach (var playerAttributeController in playerAttributeControllers)
             {
-                playerAttributeController.ReceiveDamage(damage);
+                playerAttributeController.ReceiveDamageEnemy(damage, false);
             }
         }
     }

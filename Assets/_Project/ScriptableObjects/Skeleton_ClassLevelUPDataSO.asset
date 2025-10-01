@@ -16,11 +16,11 @@ MonoBehaviour:
     name: Initial Data
     attributeDatas:
     - attribute: 0
-      flatAmount: 0
+      flatAmount: 20
     - attribute: 1
-      flatAmount: 50
+      flatAmount: 55
     - attribute: 2
-      flatAmount: 0
+      flatAmount: 1
     - attribute: 3
       flatAmount: 5
     - attribute: 4
@@ -33,6 +33,8 @@ MonoBehaviour:
     - attribute: 3
       flatAmount: 1
     - attribute: 1
-      flatAmount: 20
+      flatAmount: 22
     - attribute: 4
       flatAmount: 1
+    - attribute: 0
+      flatAmount: 0

@@ -28,7 +28,8 @@ public class PlayerProjectile : NetworkBehaviour
         {
             Physics.IgnoreCollision(GetComponent<Collider>(), other);
             Vector3 contactPoint = other.ClosestPoint(transform.position);
-            enemyController.ReceiveDamage(0, contactPoint, 1f);
+            // todo: fix fairy projectile to deal attribute damage
+            enemyController.ReceiveDamage(0, contactPoint, 1f, false);
         }
     }
 }

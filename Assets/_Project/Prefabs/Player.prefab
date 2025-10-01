@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 3515468744
+  GlobalObjectIdHash: 3886245546
   InScenePlacedSourceGlobalObjectIdHash: 3886245546
   DeferredDespawnTick: 0
   Ownership: 1
@@ -595,12 +595,6 @@ MonoBehaviour:
   currentExperience: 0
   currentLevel: 1
   maxExperience: 100
-  criticalChance: 0
-  health: 0
-  healthRegen: 0
-  cooldown: 0
-  damage: 0
-  speed: 0
   CurrentHP:
     m_InternalValue: 50
   healthBar: {fileID: 4232635217904834670}
@@ -608,7 +602,7 @@ MonoBehaviour:
   fairyData: {fileID: 11400000, guid: a43d63ec606d2004cbb87a0f7b7929e7, type: 2}
   skeletonData: {fileID: 11400000, guid: 93d6f6fb5828ac44c92c6c10d26cb435, type: 2}
   horseData: {fileID: 11400000, guid: ebe444d9b1671d1469a85a309c4f008f, type: 2}
-  experienceIncreaseAmount: 10
+  experienceIncreaseAmount: 1000
   fairyMouseLeftSkillPercentage: 100
   fairyMouseRightSkillPercentage: 100
   fairyQSkillPercentage: 100
