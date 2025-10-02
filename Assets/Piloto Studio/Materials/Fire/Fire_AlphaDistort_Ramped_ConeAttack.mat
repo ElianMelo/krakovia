@@ -104,7 +104,7 @@ Material:
     - _AlphaSrcBlend: 1
     - _AlphaToMask: 0
     - _AlphaToMaskInspectorValue: 0
-    - _Alpha_Clip_Threshold: 0.5
+    - _Alpha_Clip_Threshold: 29.22
     - _BUILTIN_AlphaClip: 0
     - _BUILTIN_Blend: 0
     - _BUILTIN_CullMode: 0
@@ -141,7 +141,7 @@ Material:
     - _DissolveSmoothness: 0.202
     - _DistanceFadeout: 0
     - _DistortionEnable: 0
-    - _DistortionIntensity: 0.1
+    - _DistortionIntensity: 2.19
     - _DistortionOnly: 0
     - _DoubleSidedEnable: 1
     - _DoubleSidedGIMode: 0
