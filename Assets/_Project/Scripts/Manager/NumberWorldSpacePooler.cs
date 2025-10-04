@@ -10,6 +10,12 @@ public class NumberWorldSpacePooler : MonoBehaviour
     public static NumberWorldSpacePooler Instance;
     private List<GameObject> poolNumbers = new();
 
+    private float offsetRange = 0.5f;
+    private NumberText currentNumberText;
+    private float xRandomOffset;
+    private float yRandomOffset;
+    private float zRandomOffset;
+
     private void Awake()
     {
         Instance = this;
@@ -30,11 +36,15 @@ public class NumberWorldSpacePooler : MonoBehaviour
         for (int i = 0; i < poolNumbers.Count; i++)
         {
             if (poolNumbers[i].activeSelf) continue;
-            poolNumbers[i].transform.position = position;
+            xRandomOffset = Random.Range(-offsetRange, offsetRange);
+            yRandomOffset = Random.Range(-offsetRange, offsetRange);
+            zRandomOffset = Random.Range(-offsetRange, offsetRange);
+            poolNumbers[i].transform.position = position + new Vector3(xRandomOffset, yRandomOffset, zRandomOffset);
             poolNumbers[i].SetActive(true);
-            NumberText numberText = poolNumbers[i].GetComponent<NumberText>();
-            numberText.ChangeTextValue(number.ToString());
-            numberText.SmoothFadeOut(duration);
+            currentNumberText = poolNumbers[i].GetComponent<NumberText>();
+            currentNumberText.SetupForCritical(isCritical);
+            currentNumberText.ChangeTextValue(number.ToString());
+            currentNumberText.SmoothFadeOut(duration);
             StartCoroutine(HidePoolNumber(poolNumbers[i], duration));
             return;
         }

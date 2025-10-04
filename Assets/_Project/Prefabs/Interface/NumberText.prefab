@@ -175,7 +175,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 1.9959717}
-  m_SizeDelta: {x: 46, y: 30}
+  m_SizeDelta: {x: 51, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &124892320060383457
 Canvas:
@@ -264,3 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9522edcb9df506c4aa131f7da345a236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NumberText
+  baseColor: {r: 1, g: 0.9372549, b: 0.80784315, a: 1}
+  criticalColor: {r: 0.9528302, g: 0.7400302, b: 0.30113026, a: 1}
+  baseSize: 36
+  criticalSize: 46

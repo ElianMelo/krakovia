@@ -1,5 +1,57 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &949113563392017299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2108667803354797877}
+  - component: {fileID: 4238918698696103627}
+  m_Layer: 0
+  m_Name: GameObject (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2108667803354797877
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949113563392017299}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13, y: 1.13, z: 7.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5031533597982606769}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4238918698696103627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949113563392017299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cefa7114e02e149aac56ff8cc00746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
+  ShowTopMostFoldoutHeaderGroup: 1
+  spawnRadius: 10
+  maxEnemies: 10
+  spawnInterval: 1
+  enemyTypes:
+  - type: 1
+    spawnChance: 1
+  globalPool: {fileID: 379584633189090901}
 --- !u!1 &2383562478013827408
 GameObject:
   m_ObjectHideFlags: 0
@@ -36,6 +88,8 @@ Transform:
   - {fileID: 8181457053810330531}
   - {fileID: 3915837748159350560}
   - {fileID: 2581242588434821424}
+  - {fileID: 8491133998754627727}
+  - {fileID: 2108667803354797877}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3336088376183343715
@@ -78,7 +132,10 @@ MonoBehaviour:
   enemyTypes:
   - type: 0
     prefab: {fileID: 4779095418874959237, guid: c3a364eb883da6343b5d64fe52b54bee, type: 3}
-    initialPoolSize: 250
+    initialPoolSize: 100
+  - type: 1
+    prefab: {fileID: 2449283383327018856, guid: 1eb604c8746182f44ace2bcc2394ef0d, type: 3}
+    initialPoolSize: 100
 --- !u!1 &3290925670695503460
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +162,7 @@ Transform:
   m_GameObject: {fileID: 3290925670695503460}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 299.09003, y: 0, z: 10.659996}
+  m_LocalPosition: {x: 10.8, y: 1.13, z: 21.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -125,10 +182,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 50
+  maxEnemies: 10
   spawnInterval: 1
   enemyTypes:
-  - type: 0
+  - type: 1
     spawnChance: 1
   globalPool: {fileID: 379584633189090901}
 --- !u!1 &3491526500964282536
@@ -177,7 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 50
+  maxEnemies: 10
   spawnInterval: 1
   enemyTypes:
   - type: 0
@@ -229,7 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 50
+  maxEnemies: 10
   spawnInterval: 1
   enemyTypes:
   - type: 0
@@ -281,10 +338,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 50
+  maxEnemies: 10
   spawnInterval: 1
   enemyTypes:
   - type: 0
+    spawnChance: 1
+  globalPool: {fileID: 379584633189090901}
+--- !u!1 &6568853044816868253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8491133998754627727}
+  - component: {fileID: 6463573201450903716}
+  m_Layer: 0
+  m_Name: GameObject (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8491133998754627727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6568853044816868253}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.4, y: 1.13, z: 19}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5031533597982606769}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6463573201450903716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6568853044816868253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cefa7114e02e149aac56ff8cc00746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
+  ShowTopMostFoldoutHeaderGroup: 1
+  spawnRadius: 10
+  maxEnemies: 10
+  spawnInterval: 1
+  enemyTypes:
+  - type: 1
     spawnChance: 1
   globalPool: {fileID: 379584633189090901}
 --- !u!1 &8938439020654074281
@@ -333,7 +442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 50
+  maxEnemies: 10
   spawnInterval: 1
   enemyTypes:
   - type: 0

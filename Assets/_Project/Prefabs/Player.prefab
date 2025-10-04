@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 3515468744
+  GlobalObjectIdHash: 3886245546
   InScenePlacedSourceGlobalObjectIdHash: 3886245546
   DeferredDespawnTick: 0
   Ownership: 1
@@ -407,6 +407,13 @@ MonoBehaviour:
   skeletonMouseRightSkillFrames: 8
   skeletonQSkillFrames: 16
   skeletonFSkillFrames: 90
+  horseColliders:
+  - {fileID: 7702235991289829304}
+  - {fileID: 491619892002004468}
+  horseMouseLeftSkillFrames: 5
+  horseMouseRightSkillFrames: 5
+  horseQSkillFrames: 16
+  horseFSkillFrames: 90
 --- !u!114 &8285264019283815069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3457,8 +3464,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.002
-  m_Height: 0.002
+  m_Radius: 0.004
+  m_Height: 0.004
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3002056231842062362
@@ -3502,8 +3509,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.002
-  m_Height: 0.002
+  m_Radius: 0.004
+  m_Height: 0.004
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2062380683057506873

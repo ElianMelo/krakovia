@@ -27,7 +27,7 @@ public class PlayerController : NetworkBehaviour
 
         transform.position = new Vector3(325.59f, 3.07f, 27.87f);
 
-        clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Skeleton);
+        clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Horse);
 
         //if (OwnerClientId == 0)
         //{

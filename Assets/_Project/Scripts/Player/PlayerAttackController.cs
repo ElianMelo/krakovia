@@ -46,7 +46,15 @@ public class PlayerAttackController : NetworkBehaviour
     public int skeletonQSkillFrames;
     public int skeletonFSkillFrames;
 
-    private Coroutine waitingTimerDisableColliderCoroutine;
+    [Header("Horse")]
+    public List<Collider> horseColliders = new();
+    public int horseMouseLeftSkillFrames;
+    public int horseMouseRightSkillFrames;
+    public int horseQSkillFrames;
+    public int horseFSkillFrames;
+
+    private Coroutine waitingTimerDisableColliderSkeletonCoroutine;
+    private Coroutine waitingTimerDisableColliderHorseCoroutine;
     private Coroutine handleSkeletonBasicAttackCoroutine;
 
     void Start()
@@ -97,7 +105,7 @@ public class PlayerAttackController : NetworkBehaviour
         }
     }
 
-    private IEnumerator WaitingTimerDisableCollider(int frames)
+    private IEnumerator WaitingTimerDisableColliderSkeleton(int frames)
     {
         skeletonSword.enabled = true;
         yield return new WaitForSeconds(frames * ConstantsManager.FramesToSeconds);
@@ -106,8 +114,21 @@ public class PlayerAttackController : NetworkBehaviour
 
     private void SkeletonColliderHandler(int frames)
     {
-        if (waitingTimerDisableColliderCoroutine != null) StopCoroutine(waitingTimerDisableColliderCoroutine);
-        waitingTimerDisableColliderCoroutine = StartCoroutine(WaitingTimerDisableCollider(frames));
+        if (waitingTimerDisableColliderSkeletonCoroutine != null) StopCoroutine(waitingTimerDisableColliderSkeletonCoroutine);
+        waitingTimerDisableColliderSkeletonCoroutine = StartCoroutine(WaitingTimerDisableColliderSkeleton(frames));
+    }
+
+    private IEnumerator WaitingTimerDisableColliderHorse(int frames)
+    {
+        foreach (var horseCollider in horseColliders) horseCollider.enabled = true;
+        yield return new WaitForSeconds(frames * ConstantsManager.FramesToSeconds);
+        foreach (var horseCollider in horseColliders) horseCollider.enabled = false;
+    }
+
+    private void HorseColliderHandler(int frames)
+    {
+        if (waitingTimerDisableColliderHorseCoroutine != null) StopCoroutine(waitingTimerDisableColliderHorseCoroutine);
+        waitingTimerDisableColliderHorseCoroutine = StartCoroutine(WaitingTimerDisableColliderHorse(frames));
     }
 
     private IEnumerator HandleSkeletonBasicAttack(int frames)
@@ -131,6 +152,8 @@ public class PlayerAttackController : NetworkBehaviour
             animator.SetTrigger("Attack1");
             if (playerClassController.ActivePlayerClass == PlayerClass.Skeleton)
                 SkeletonColliderHandler(skeletonMouseLeftSkillFrames);
+            if (playerClassController.ActivePlayerClass == PlayerClass.Horse)
+                HorseColliderHandler(horseMouseLeftSkillFrames);
             if (playerClassController.ActivePlayerClass == PlayerClass.Fairy)
                 SpawnAttackVFX(SkillCommand.MouseLeft, mouseLeftSkillForward, 0.3f);
             canUseMouseLeftSkill = false;
@@ -148,6 +171,8 @@ public class PlayerAttackController : NetworkBehaviour
             animator.SetTrigger("Attack2");
             if (playerClassController.ActivePlayerClass == PlayerClass.Skeleton)
                 SkeletonColliderHandler(skeletonMouseRightSkillFrames);
+            if (playerClassController.ActivePlayerClass == PlayerClass.Horse)
+                HorseColliderHandler(horseMouseRightSkillFrames);
             if (playerClassController.ActivePlayerClass == PlayerClass.Fairy)
                 SpawnAttackVFX(SkillCommand.MouseRight, mouseRightSkillForward);
             canUseMouseRightSkill = false;
@@ -165,6 +190,8 @@ public class PlayerAttackController : NetworkBehaviour
             animator.SetTrigger("Attack3");
             if (playerClassController.ActivePlayerClass == PlayerClass.Skeleton)
                 SkeletonColliderHandler(skeletonQSkillFrames);
+            if (playerClassController.ActivePlayerClass == PlayerClass.Horse)
+                HorseColliderHandler(horseQSkillFrames);
             if (playerClassController.ActivePlayerClass == PlayerClass.Fairy)
                 SpawnAttackVFX(SkillCommand.Q, qSkillForward);
             canUseQSkill = false;
@@ -182,6 +209,8 @@ public class PlayerAttackController : NetworkBehaviour
             animator.SetTrigger("Attack4");
             if (playerClassController.ActivePlayerClass == PlayerClass.Skeleton)
                 SkeletonColliderHandler(skeletonFSkillFrames);
+            if (playerClassController.ActivePlayerClass == PlayerClass.Horse)
+                HorseColliderHandler(horseFSkillFrames);
             if (playerClassController.ActivePlayerClass == PlayerClass.Fairy)
                 SpawnAttackVFX(SkillCommand.F, fSkillForward);
             canUseFSkill = false;

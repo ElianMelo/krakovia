@@ -5,6 +5,7 @@ using Unity.Netcode;
 public enum EnemyType
 {
     Dog,
+    Mummy,
     EnemyA,
     EnemyB,
     EnemyC,

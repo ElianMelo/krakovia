@@ -4,11 +4,29 @@ using UnityEngine;
 
 public class NumberText : MonoBehaviour
 {
+    [SerializeField] private Color baseColor;
+    [SerializeField] private Color criticalColor;
+    [SerializeField] private float baseSize;
+    [SerializeField] private float criticalSize;
+
     private TextMeshProUGUI textMesh;
 
     private void Awake()
     {
         textMesh = GetComponentInChildren<TextMeshProUGUI>();
+    }
+
+    public void SetupForCritical(bool isCritical)
+    {
+        if(isCritical)
+        {
+            ChangeTextColor(criticalColor);
+            ChangeTextSize(criticalSize);
+        } else
+        {
+            ChangeTextColor(baseColor);
+            ChangeTextSize(baseSize);
+        }
     }
 
     public void ChangeTextValue(string text)
@@ -44,5 +62,10 @@ public class NumberText : MonoBehaviour
     public void ChangeTextColor(Color color)
     {
         textMesh.color = color;
+    }
+
+    public void ChangeTextSize(float size)
+    {
+        textMesh.fontSize = size;
     }
 }
