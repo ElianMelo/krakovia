@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 3886245546
+  GlobalObjectIdHash: 3515468744
   InScenePlacedSourceGlobalObjectIdHash: 3886245546
   DeferredDespawnTick: 0
   Ownership: 1
@@ -302,8 +302,8 @@ MonoBehaviour:
   diveExitForce: 20
   smoothFollowMoveDirectionFactor: 0.01
   smoothFrictionFactor: 0.1
-  walkSpeed: 4
-  sprintSpeed: 4
+  walkSpeed: 3
+  sprintSpeed: 3
   dashSpeed: 10
   dashSpeedChangeFactor: 10
   diveSpeed: 10
@@ -605,18 +605,30 @@ MonoBehaviour:
   skeletonData: {fileID: 11400000, guid: 93d6f6fb5828ac44c92c6c10d26cb435, type: 2}
   horseData: {fileID: 11400000, guid: ebe444d9b1671d1469a85a309c4f008f, type: 2}
   experienceIncreaseAmount: 1000
-  fairyMouseLeftSkillPercentage: 100
-  fairyMouseRightSkillPercentage: 100
-  fairyQSkillPercentage: 100
-  fairyFSkillPercentage: 100
-  skeletonMouseLeftSkillPercentage: 100
-  skeletonMouseRightSkillPercentage: 100
-  skeletonQSkillPercentage: 100
-  skeletonFSkillPercentage: 100
-  horseMouseLeftSkillPercentage: 100
-  horseMouseRightSkillPercentage: 100
-  horseQSkillPercentage: 100
-  horseFSkillPercentage: 100
+  fairyMouseLeftSkillDamagePercentage: 100
+  fairyMouseRightSkillDamagePercentage: 100
+  fairyQSkillDamagePercentage: 100
+  fairyFSkillDamagePercentage: 100
+  fairyMouseLeftSkillCooldownSeconds: 1
+  fairyMouseRightSkillCooldownSeconds: 2
+  fairyQSkillCooldownSeconds: 3
+  fairyFSkillCooldownSeconds: 4
+  skeletonMouseLeftSkillDamagePercentage: 100
+  skeletonMouseRightSkillDamagePercentage: 100
+  skeletonQSkillDamagePercentage: 100
+  skeletonFSkillDamagePercentage: 100
+  skeletonMouseLeftSkillCooldownSeconds: 1
+  skeletonMouseRightSkillCooldownSeconds: 2
+  skeletonQSkillCooldownSeconds: 3
+  skeletonFSkillCooldownSeconds: 4
+  horseMouseLeftSkillDamagePercentage: 100
+  horseMouseRightSkillDamagePercentage: 100
+  horseQSkillDamagePercentage: 100
+  horseFSkillDamagePercentage: 100
+  horseMouseLeftSkillCooldownSeconds: 1
+  horseMouseRightSkillCooldownSeconds: 2
+  horseQSkillCooldownSeconds: 3
+  horseFSkillCooldownSeconds: 4
 --- !u!1 &8201004048388190410
 GameObject:
   m_ObjectHideFlags: 0

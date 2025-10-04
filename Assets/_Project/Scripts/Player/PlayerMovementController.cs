@@ -128,6 +128,12 @@ public class PlayerMovementController : NetworkBehaviour
         playerAnimator = animator;
     }
 
+    public void SetupSpeed(float speed)
+    {
+        walkSpeed = speed;
+        sprintSpeed = speed;
+    }
+
     private void Start()
     { 
         calculatedTimeRotateBack = timeRotateBack;

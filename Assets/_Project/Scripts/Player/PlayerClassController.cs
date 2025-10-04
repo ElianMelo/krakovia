@@ -1,4 +1,5 @@
 using FIMSpace.FProceduralAnimation;
+using Unity.Netcode;
 using UnityEngine;
 
 public enum PlayerClass
@@ -29,7 +30,7 @@ public class PlayerClassController : MonoBehaviour
     public Collider horseRightHand;
 
     private PlayerClass _playerClass;
-    public PlayerClass PlayerClass => _playerClass;
+    public PlayerClass ActivePlayerClass => _playerClass;
 
     public void DisableColliders()
     {

@@ -9,6 +9,8 @@ public class PlayerAttributeController : NetworkBehaviour
     [HideInInspector] public int currentLevel = 1;
     [HideInInspector] public int maxExperience = 1000;
 
+    private PlayerMovementController playerMovementController;
+
     private float criticalChance = 0;
     private float healthRegen = 0;
     private float cooldown = 0;
@@ -38,26 +40,87 @@ public class PlayerAttributeController : NetworkBehaviour
     public int experienceIncreaseAmount = 30;
 
     [Header("Fairy")]
-    public int fairyMouseLeftSkillPercentage = 10;
-    public int fairyMouseRightSkillPercentage = 10;
-    public int fairyQSkillPercentage = 10;
-    public int fairyFSkillPercentage = 10;
+    [Header("Skill Damage Percentage")]
+    public float fairyMouseLeftSkillDamagePercentage = 10;
+    public float fairyMouseRightSkillDamagePercentage = 10;
+    public float fairyQSkillDamagePercentage = 10;
+    public float fairyFSkillDamagePercentage = 10;
+    [Header("Sill Cooldown Percentage")]
+    public float fairyMouseLeftSkillCooldownSeconds = 10;
+    public float fairyMouseRightSkillCooldownSeconds = 10;
+    public float fairyQSkillCooldownSeconds = 10;
+    public float fairyFSkillCooldownSeconds = 10;
 
     [Header("Skeleton")]
-    public int skeletonMouseLeftSkillPercentage = 10;
-    public int skeletonMouseRightSkillPercentage = 10;
-    public int skeletonQSkillPercentage = 10;
-    public int skeletonFSkillPercentage = 10;
+    [Header("Skill Damage Percentage")]
+    public float skeletonMouseLeftSkillDamagePercentage = 10;
+    public float skeletonMouseRightSkillDamagePercentage = 10;
+    public float skeletonQSkillDamagePercentage = 10;
+    public float skeletonFSkillDamagePercentage = 10;
+    [Header("Skill Cooldown Percentage")]
+    public float skeletonMouseLeftSkillCooldownSeconds = 10;
+    public float skeletonMouseRightSkillCooldownSeconds = 10;
+    public float skeletonQSkillCooldownSeconds = 10;
+    public float skeletonFSkillCooldownSeconds = 10;
 
     [Header("Horse")]
-    public int horseMouseLeftSkillPercentage = 10;
-    public int horseMouseRightSkillPercentage = 10;
-    public int horseQSkillPercentage = 10;
-    public int horseFSkillPercentage = 10;
+    [Header("Skill Damage Percentage")]
+    public float horseMouseLeftSkillDamagePercentage = 10;
+    public float horseMouseRightSkillDamagePercentage = 10;
+    public float horseQSkillDamagePercentage = 10;
+    public float horseFSkillDamagePercentage = 10;
+    [Header("Skill Cooldown Percentage")]
+    public float horseMouseLeftSkillCooldownSeconds = 10;
+    public float horseMouseRightSkillCooldownSeconds = 10;
+    public float horseQSkillCooldownSeconds = 10;
+    public float horseFSkillCooldownSeconds = 10;
+
+    public float GetSkillCalculatedCooldown(PlayerClass playerClass, SkillCommand skillCommand)
+    {
+        return GetSkillCooldownBasedOnClassAndCommands(playerClass, skillCommand) * (1 - (cooldown / 100));
+    }
+
+    private float GetSkillCooldownBasedOnClassAndCommands(PlayerClass playerClass, SkillCommand skillCommand)
+    {
+        switch (playerClass)
+        {
+            case PlayerClass.Fairy:
+                switch (skillCommand)
+                {
+                    case SkillCommand.MouseLeft: return fairyMouseLeftSkillCooldownSeconds;
+                    case SkillCommand.MouseRight: return fairyMouseRightSkillCooldownSeconds;
+                    case SkillCommand.Q: return fairyQSkillCooldownSeconds;
+                    case SkillCommand.F: return fairyFSkillCooldownSeconds;
+                }
+                break;
+            case PlayerClass.Skeleton:
+                switch (skillCommand)
+                {
+                    case SkillCommand.MouseLeft: return skeletonMouseLeftSkillCooldownSeconds;
+                    case SkillCommand.MouseRight: return skeletonMouseRightSkillCooldownSeconds;
+                    case SkillCommand.Q: return skeletonQSkillCooldownSeconds;
+                    case SkillCommand.F: return skeletonFSkillCooldownSeconds;
+                }
+                break;
+            case PlayerClass.Horse:
+                switch (skillCommand)
+                {
+                    case SkillCommand.MouseLeft: return horseMouseLeftSkillCooldownSeconds;
+                    case SkillCommand.MouseRight: return horseMouseRightSkillCooldownSeconds;
+                    case SkillCommand.Q: return horseQSkillCooldownSeconds;
+                    case SkillCommand.F: return horseFSkillCooldownSeconds;
+                }
+                break;
+            default:
+                break;
+        }
+        return 1f;
+    }
 
     private void Start()
     {
         if (!IsOwner) return;
+        playerMovementController = GetComponent<PlayerMovementController>();
         StartCoroutine(LifeRegenCoroutine());
     }
 
@@ -123,9 +186,16 @@ public class PlayerAttributeController : NetworkBehaviour
             case Attribute.HealthRegen: healthRegen += value; return;
             case Attribute.Cooldown: cooldown += value; return;
             case Attribute.Damage: damage += value; return;
-            case Attribute.Speed: speed += value; return;
+            case Attribute.Speed: UpdateSpeed(value); return;
             default: return;
         }
+    }
+
+    private void UpdateSpeed(float value)
+    {
+        speed += value;
+        if(playerMovementController == null) playerMovementController = GetComponent<PlayerMovementController>();
+        playerMovementController.SetupSpeed(speed);
     }
 
     private void UpdateHealth(float value)

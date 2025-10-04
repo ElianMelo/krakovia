@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public enum SkillCommand
@@ -24,13 +23,10 @@ public class PlayerAttackController : NetworkBehaviour
     private bool canUseQSkill = true;
     private bool canUseFSkill = true;
 
-    private float mouseLeftSkillCooldown = 0.5f;
-    private float mouseRightSkillCooldown = 2f;
-    private float qSkillCooldown = 3f;
-    private float fSkillCooldown = 5f;
     private float dashSkillCooldown = 3f;
 
     private PlayerClassController playerClassController;
+    private PlayerAttributeController playerAttributeController;
 
     [Header("Fairy")]
     public Transform spellPosition;
@@ -58,6 +54,7 @@ public class PlayerAttackController : NetworkBehaviour
         if (!IsOwner) return;
         // animator = GetComponentInChildren<Animator>();
         playerClassController = GetComponent<PlayerClassController>();
+        playerAttributeController = GetComponent<PlayerAttributeController>();
     }
 
     void Update()
@@ -124,19 +121,20 @@ public class PlayerAttackController : NetworkBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && canUseMouseLeftSkill)
         {
-            InterfaceManager.Instance.UpdatePlayerSkillFirstCooldown(mouseLeftSkillCooldown);
+            float mouseLeftCooldown = playerAttributeController.GetSkillCalculatedCooldown(playerClassController.ActivePlayerClass, SkillCommand.MouseLeft);
+            InterfaceManager.Instance.UpdatePlayerSkillFirstCooldown(mouseLeftCooldown);
             //if (playerClassController.PlayerClass == PlayerClass.Skeleton)
             //{
             //    if (handleSkeletonBasicAttackCoroutine != null) StopCoroutine(handleSkeletonBasicAttackCoroutine);
             //    handleSkeletonBasicAttackCoroutine = StartCoroutine(HandleSkeletonBasicAttack(skeletonMouseLeftSkillFrames));
             //}
             animator.SetTrigger("Attack1");
-            if (playerClassController.PlayerClass == PlayerClass.Skeleton)
+            if (playerClassController.ActivePlayerClass == PlayerClass.Skeleton)
                 SkeletonColliderHandler(skeletonMouseLeftSkillFrames);
-            if (playerClassController.PlayerClass == PlayerClass.Fairy)
+            if (playerClassController.ActivePlayerClass == PlayerClass.Fairy)
                 SpawnAttackVFX(SkillCommand.MouseLeft, mouseLeftSkillForward, 0.3f);
             canUseMouseLeftSkill = false;
-            StartCoroutine(EnableMouseLeftSkill(mouseLeftSkillCooldown));
+            StartCoroutine(EnableMouseLeftSkill(mouseLeftCooldown));
             // CastSearchTarget();
         }
     }
@@ -145,14 +143,15 @@ public class PlayerAttackController : NetworkBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse1) && canUseMouseRightSkill)
         {
-            InterfaceManager.Instance.UpdatePlayerSkillSecondCooldown(mouseRightSkillCooldown);
+            float mouseRightCooldown = playerAttributeController.GetSkillCalculatedCooldown(playerClassController.ActivePlayerClass, SkillCommand.MouseRight);
+            InterfaceManager.Instance.UpdatePlayerSkillSecondCooldown(mouseRightCooldown);
             animator.SetTrigger("Attack2");
-            if (playerClassController.PlayerClass == PlayerClass.Skeleton)
+            if (playerClassController.ActivePlayerClass == PlayerClass.Skeleton)
                 SkeletonColliderHandler(skeletonMouseRightSkillFrames);
-            if (playerClassController.PlayerClass == PlayerClass.Fairy)
+            if (playerClassController.ActivePlayerClass == PlayerClass.Fairy)
                 SpawnAttackVFX(SkillCommand.MouseRight, mouseRightSkillForward);
             canUseMouseRightSkill = false;
-            StartCoroutine(EnableMouseRightSkill(mouseRightSkillCooldown));
+            StartCoroutine(EnableMouseRightSkill(mouseRightCooldown));
             // CastSearchTarget();
         }
     }
@@ -161,11 +160,12 @@ public class PlayerAttackController : NetworkBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q) && canUseQSkill)
         {
+            float qSkillCooldown = playerAttributeController.GetSkillCalculatedCooldown(playerClassController.ActivePlayerClass, SkillCommand.Q);
             InterfaceManager.Instance.UpdatePlayerSkillThirdCooldown(qSkillCooldown);
             animator.SetTrigger("Attack3");
-            if (playerClassController.PlayerClass == PlayerClass.Skeleton)
+            if (playerClassController.ActivePlayerClass == PlayerClass.Skeleton)
                 SkeletonColliderHandler(skeletonQSkillFrames);
-            if (playerClassController.PlayerClass == PlayerClass.Fairy)
+            if (playerClassController.ActivePlayerClass == PlayerClass.Fairy)
                 SpawnAttackVFX(SkillCommand.Q, qSkillForward);
             canUseQSkill = false;
             StartCoroutine(EnableQSkill(qSkillCooldown));
@@ -177,11 +177,12 @@ public class PlayerAttackController : NetworkBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && canUseFSkill)
         {
+            float fSkillCooldown = playerAttributeController.GetSkillCalculatedCooldown(playerClassController.ActivePlayerClass, SkillCommand.F);
             InterfaceManager.Instance.UpdatePlayerSkillForthCooldown(fSkillCooldown);
             animator.SetTrigger("Attack4");
-            if (playerClassController.PlayerClass == PlayerClass.Skeleton)
+            if (playerClassController.ActivePlayerClass == PlayerClass.Skeleton)
                 SkeletonColliderHandler(skeletonFSkillFrames);
-            if (playerClassController.PlayerClass == PlayerClass.Fairy)
+            if (playerClassController.ActivePlayerClass == PlayerClass.Fairy)
                 SpawnAttackVFX(SkillCommand.F, fSkillForward);
             canUseFSkill = false;
             StartCoroutine(EnableFSkill(fSkillCooldown));
