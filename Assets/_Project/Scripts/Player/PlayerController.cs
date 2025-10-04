@@ -27,24 +27,15 @@ public class PlayerController : NetworkBehaviour
 
         transform.position = new Vector3(325.59f, 3.07f, 27.87f);
 
-        clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Horse);
+        // clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Horse);
 
-        //if (OwnerClientId == 0)
-        //{
-        //    clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Skeleton);
-        //}
-        //else if (OwnerClientId == 1)
-        //{
-        //    clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Skeleton);
-        //}
-        //else if(OwnerClientId == 2)
-        //{
-        //    clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Horse);
-        //}
-        //else if (OwnerClientId == 3)
-        //{
-        //    clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Fairy);
-        //}
+        // Working with classes
+        if (IsOwner)
+        {
+            SwapPlayerTo(InterfaceManager.Instance.GetSelectedClass());
+            playerClassController.RequestChangePlayerClassRpc(
+                NetworkObjectId, InterfaceManager.Instance.GetSelectedClass());
+        }
 
         playerMovementController.SetupPlayerAnimator(clientNetworkAnimator.Animator);
         playerAttackController.SetupPlayerAnimator(clientNetworkAnimator.Animator);
@@ -74,23 +65,7 @@ public class PlayerController : NetworkBehaviour
         playerClassController.DisableColliders();
     }
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.F5))
-        {
-            SwapPlayerTo(PlayerClass.Fairy);
-        }
-        if (Input.GetKeyDown(KeyCode.F6))
-        {
-            SwapPlayerTo(PlayerClass.Skeleton);
-        }
-        if (Input.GetKeyDown(KeyCode.F7))
-        {
-            SwapPlayerTo(PlayerClass.Horse);
-        }
-    }
-
-    private void SwapPlayerTo(PlayerClass playerClass)
+    public void SwapPlayerTo(PlayerClass playerClass)
     {
         clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(playerClass);
         playerMovementController.SetupPlayerAnimator(clientNetworkAnimator.Animator);

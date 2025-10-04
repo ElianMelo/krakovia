@@ -1,4 +1,5 @@
 using FIMSpace.FProceduralAnimation;
+using MoreMountains.Tools;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -9,7 +10,7 @@ public enum PlayerClass
     Horse
 }
 
-public class PlayerClassController : MonoBehaviour
+public class PlayerClassController : NetworkBehaviour
 {
     [Header("Fairy")]
     public SkinnedMeshRenderer fairyVisuals;
@@ -32,11 +33,30 @@ public class PlayerClassController : MonoBehaviour
     private PlayerClass _playerClass;
     public PlayerClass ActivePlayerClass => _playerClass;
 
+    private NetworkVariable<PlayerClass> _playerNetworkClass = new NetworkVariable<PlayerClass>();
+
+    private PlayerController playerController;
+
     public void DisableColliders()
     {
         skeletonSword.enabled = false;
         horseLeftHand.enabled = false;
         horseRightHand.enabled = false;
+    }
+
+    public override void OnNetworkSpawn()
+    {
+        playerController = GetComponent<PlayerController>();
+        if(!IsOwner)
+        {
+            playerController.SwapPlayerTo(_playerNetworkClass.Value);
+        }
+        _playerNetworkClass.OnValueChanged += OnNetworkClassChanged;
+    }
+
+    private void OnNetworkClassChanged(PlayerClass previous, PlayerClass next)
+    {
+        playerController.SwapPlayerTo(next);
     }
 
     public Animator ChangeClassTo(PlayerClass playerClass)
@@ -49,6 +69,19 @@ public class PlayerClassController : MonoBehaviour
             case PlayerClass.Skeleton: SwitchSkeleton(true); return skeletonAnimator;
             case PlayerClass.Horse: SwitchHorse(true); return horseAnimator;
             default: return fairyAnimator;
+        }
+    }
+
+    [Rpc(SendTo.Server)]
+    public void RequestChangePlayerClassRpc(ulong networkObjectIdSearch, PlayerClass playerClass)
+    {
+        if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(networkObjectIdSearch, out var classObj))
+        {
+            var player = classObj.GetComponent<PlayerClassController>();
+            if (player != null)
+            {
+                player._playerNetworkClass.Value = playerClass;
+            }
         }
     }
 
