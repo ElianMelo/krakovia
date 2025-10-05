@@ -65,6 +65,23 @@ public class PlayerController : NetworkBehaviour
         playerClassController.DisableColliders();
     }
 
+    // todo: Remove this
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F5))
+        {
+            SwapPlayerTo(PlayerClass.Fairy);
+        }
+        if (Input.GetKeyDown(KeyCode.F6))
+        {
+            SwapPlayerTo(PlayerClass.Skeleton);
+        }
+        if (Input.GetKeyDown(KeyCode.F7))
+        {
+            SwapPlayerTo(PlayerClass.Horse);
+        }
+    }
+
     public void SwapPlayerTo(PlayerClass playerClass)
     {
         clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(playerClass);
