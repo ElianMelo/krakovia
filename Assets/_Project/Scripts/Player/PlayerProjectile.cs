@@ -10,6 +10,7 @@ public class PlayerProjectile : NetworkBehaviour
     private float damage;
     private bool isCritical;
     private ulong playerSource;
+    private Transform playerSourceTransform;
 
     public override void OnNetworkSpawn()
     {
@@ -20,11 +21,12 @@ public class PlayerProjectile : NetworkBehaviour
         }
     }
 
-    public void SetupProjectile(float damage, bool isCritical, ulong playerSource)
+    public void SetupProjectile(float damage, bool isCritical, ulong playerSource, Transform playerSourceTransform)
     {
         this.damage = damage;
         this.isCritical = isCritical;
         this.playerSource = playerSource;
+        this.playerSourceTransform = playerSourceTransform;
     }
 
     private IEnumerator playbackTimeToActivate()
@@ -47,7 +49,11 @@ public class PlayerProjectile : NetworkBehaviour
         if(enemyController != null)
         {
             Physics.IgnoreCollision(GetComponent<Collider>(), other);
+            var enemyMovement = enemyController.GetComponent<EnemyMovement>();
+            var enemyAttack = enemyController.GetComponent<EnemyAttack>();
             Vector3 contactPoint = other.ClosestPoint(transform.position);
+            enemyMovement.OnAttacked(playerSourceTransform);
+            enemyAttack.StartAttackRoutine();
             enemyController.ReceiveDamage(playerSource, contactPoint, damage, isCritical);
         }
     }

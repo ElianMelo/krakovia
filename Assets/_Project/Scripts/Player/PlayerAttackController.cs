@@ -94,7 +94,7 @@ public class PlayerAttackController : NetworkBehaviour
         float damage = playerAttributeController.Damage * (skillDamageMultiplier / 100);
         bool isCritical = Random.Range(0f, 1f) <= playerAttributeController.CriticalChance;
         if (isCritical) damage *= 2;
-        playerProjectile.SetupProjectile(damage, isCritical, NetworkObjectId);
+        playerProjectile.SetupProjectile(damage, isCritical, NetworkObjectId, transform);
         var instanceNetworkObject = instance.GetComponent<NetworkObject>();
         instanceNetworkObject.Spawn();
     }
