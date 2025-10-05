@@ -1,3 +1,4 @@
+using FIMSpace.FProceduralAnimation;
 using System.Collections;
 using Unity.Netcode;
 using UnityEngine;
@@ -9,7 +10,8 @@ public class PlayerAttributeController : NetworkBehaviour
     [HideInInspector] public int currentLevel = 1;
     [HideInInspector] public int maxExperience = 1000;
 
-    private PlayerMovementController playerMovementController;
+    private PlayerMovementController playerMovementController; 
+    private PlayerClassController playerClassController;
 
     private float criticalChance = 0;
     private float healthRegen = 0;
@@ -121,6 +123,7 @@ public class PlayerAttributeController : NetworkBehaviour
     {
         if (!IsOwner) return;
         playerMovementController = GetComponent<PlayerMovementController>();
+        playerClassController = GetComponent<PlayerClassController>();
         StartCoroutine(LifeRegenCoroutine());
     }
 
@@ -252,6 +255,18 @@ public class PlayerAttributeController : NetworkBehaviour
             if (player != null)
             {
                 player.CurrentHP.Value -= damage; 
+                if(player.CurrentHP.Value - damage <= 0)
+                {
+                    player.CurrentHP.Value = player.MaxHP.Value;
+                    var rpcParams = new RpcParams
+                    {
+                        Send = new RpcSendParams
+                        {
+                            Target = NetworkManager.Singleton.RpcTarget.Single(player.OwnerClientId, RpcTargetUse.Persistent)
+                        }
+                    };
+                    DeathRpc(rpcParams);
+                }
                 SendDamageClientRpc(player.transform.position, damage, isCritical);
             }
         }
@@ -261,6 +276,21 @@ public class PlayerAttributeController : NetworkBehaviour
     private void SendDamageClientRpc(Vector3 contactPoint, float damage, bool isCritical)
     {
         NumberWorldSpacePooler.Instance.ShowNumberInWorld((int)damage, transform.position + new Vector3(0f, 1f, 0f), isCritical);
+    }
+
+    [Rpc(SendTo.SpecifiedInParams)]
+    public void DeathRpc(RpcParams rpcParams = default)
+    {
+        StartCoroutine(DeathRoutine());
+    }
+
+    IEnumerator DeathRoutine()
+    {
+        playerClassController.GetRagdollByClass().Settings.AnimatingMode = RagdollHandler.EAnimatingMode.Sleep;
+        yield return new WaitForSeconds(3f);
+        transform.position = SystemManager.Instance.CurrentSavePoint.GetRandomPositionAround();
+        playerClassController.GetRagdollByClass().Settings.AnimatingMode = RagdollHandler.EAnimatingMode.Standing;
+        yield return null;
     }
 
     private void Update()

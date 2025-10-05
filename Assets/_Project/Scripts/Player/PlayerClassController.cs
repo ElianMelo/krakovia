@@ -92,6 +92,17 @@ public class PlayerClassController : NetworkBehaviour
         SwitchHorse(false);
     }
 
+    public RagdollAnimator2 GetRagdollByClass()
+    {
+        switch (_playerNetworkClass.Value)
+        {   
+            case PlayerClass.Fairy: return fairyRagdoll;
+            case PlayerClass.Skeleton: return skeletonRagdoll;
+            case PlayerClass.Horse: return horseRagdoll;
+            default: return skeletonRagdoll;
+        }
+    }
+
     private void SwitchFairy(bool target)
     {
         fairyAnimator.enabled = target;

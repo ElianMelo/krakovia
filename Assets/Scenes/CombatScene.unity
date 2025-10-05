@@ -5205,6 +5205,68 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8132094900755639583, guid: e5db84cf7262e52418a0fdf133438896, type: 3}
+--- !u!1001 &178211773
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1877451617}
+    m_Modifications:
+    - target: {fileID: 430518243464084640, guid: 66d7d8834f777b0439c719705ebbdf6c, type: 3}
+      propertyPath: m_Name
+      value: Save (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1058999722983826970, guid: 66d7d8834f777b0439c719705ebbdf6c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1058999722983826970, guid: 66d7d8834f777b0439c719705ebbdf6c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1058999722983826970, guid: 66d7d8834f777b0439c719705ebbdf6c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 1058999722983826970, guid: 66d7d8834f777b0439c719705ebbdf6c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99873173
+      objectReference: {fileID: 0}
+    - target: {fileID: 1058999722983826970, guid: 66d7d8834f777b0439c719705ebbdf6c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.050347693
+      objectReference: {fileID: 0}
+    - target: {fileID: 1058999722983826970, guid: 66d7d8834f777b0439c719705ebbdf6c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1058999722983826970, guid: 66d7d8834f777b0439c719705ebbdf6c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1058999722983826970, guid: 66d7d8834f777b0439c719705ebbdf6c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -5.772
+      objectReference: {fileID: 0}
+    - target: {fileID: 1058999722983826970, guid: 66d7d8834f777b0439c719705ebbdf6c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1058999722983826970, guid: 66d7d8834f777b0439c719705ebbdf6c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66d7d8834f777b0439c719705ebbdf6c, type: 3}
+--- !u!4 &178211774 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1058999722983826970, guid: 66d7d8834f777b0439c719705ebbdf6c, type: 3}
+  m_PrefabInstance: {fileID: 178211773}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &183149504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47627,6 +47689,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6380508617103632255}
+  - {fileID: 178211774}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1877660963
@@ -54516,6 +54579,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 151
       objectReference: {fileID: 0}
+    - target: {fileID: 5631859557102737457, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: currentSavePoint
+      value: 
+      objectReference: {fileID: 6380508617103632256}
     - target: {fileID: 5773347786308763962, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -54916,6 +54983,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1058999722983826970, guid: 66d7d8834f777b0439c719705ebbdf6c, type: 3}
   m_PrefabInstance: {fileID: 6380508617103632254}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6380508617103632256 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6941340076610832987, guid: 66d7d8834f777b0439c719705ebbdf6c, type: 3}
+  m_PrefabInstance: {fileID: 6380508617103632254}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af11c781bd2a507499de8f2b01ea95d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SavePoint
 --- !u!1001 &8312310341388982297
 PrefabInstance:
   m_ObjectHideFlags: 0

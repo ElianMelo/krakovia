@@ -15,6 +15,8 @@ public class PlayerController : NetworkBehaviour
     public TMP_Text playerNameText;
     private NetworkVariable<FixedString64Bytes> playerName = new NetworkVariable<FixedString64Bytes>();
 
+    private SavePoint currentSavePoint;
+
     public PlayerAttributeController PlayerAttributeController
     {
         get => playerAttributeController;
@@ -85,6 +87,10 @@ public class PlayerController : NetworkBehaviour
     // todo: Remove this
     private void Update()
     {
+        if(Input.GetKeyDown(KeyCode.E) && currentSavePoint != null)
+        {
+            currentSavePoint.SelectThisSavePoint();
+        }
         if (Input.GetKeyDown(KeyCode.F5))
         {
             SwapPlayerTo(PlayerClass.Fairy);
@@ -128,5 +134,24 @@ public class PlayerController : NetworkBehaviour
         clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(playerClass);
         playerMovementController.SetupPlayerAnimator(clientNetworkAnimator.Animator);
         playerAttackController.SetupPlayerAnimator(clientNetworkAnimator.Animator);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!IsOwner) return;
+        if (!other.CompareTag("SavePoint")) return;
+        currentSavePoint = other.GetComponent<SavePoint>();
+        if (currentSavePoint == null) return;
+        currentSavePoint.ShowButton();
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (!IsOwner) return;
+        if (!other.CompareTag("SavePoint")) return;
+        currentSavePoint = other.GetComponent<SavePoint>();
+        if (currentSavePoint == null) return;
+        currentSavePoint.HideButton();
+        currentSavePoint = null;
     }
 }

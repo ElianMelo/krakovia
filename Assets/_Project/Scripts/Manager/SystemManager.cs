@@ -14,6 +14,22 @@ public class SystemManager : MonoBehaviour
 {
     public TMP_InputField inputField;
 
+    [SerializeField] private SavePoint currentSavePoint;
+
+    public SavePoint CurrentSavePoint { get { return currentSavePoint; } set { currentSavePoint = value; } }
+
+    public static SystemManager Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    public void SwapSavePoint(SavePoint savePoint)
+    {
+        currentSavePoint = savePoint;
+    }
+
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.LeftControl))
@@ -45,7 +61,7 @@ public class SystemManager : MonoBehaviour
     /// </summary>
     /// <param name="maxConnections">The maximum amount of clients that can connect to the relay</param>
     /// <returns>The join code</returns>
-    public async Task<string> StartHostWithRelay(int maxConnections = 5)
+    public async Task<string> StartHostWithRelay(int maxConnections = 21)
     {
         //Initialize the Unity Services engine
         await UnityServices.InitializeAsync();
