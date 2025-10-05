@@ -551,7 +551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerClassController
   ShowTopMostFoldoutHeaderGroup: 1
   fairyVisuals: {fileID: 918729702595114992}
-  fairyRagdoll: {fileID: 7986257370727441110}
+  fairyRagdoll: {fileID: 7821704149667457153}
   fairyAnimator: {fileID: 2887041706749027303}
   skeletonVisuals: {fileID: 2602807066036072098}
   skeletonRagdoll: {fileID: 8106033007968019721}
@@ -2031,8 +2031,8 @@ MonoBehaviour:
   handler:
     _Editor_SelectedChain: 0
     _Editor_ChainCategory: 0
-    _EditorCategory: 3
-    _EditorMainCategory: 1
+    _EditorCategory: 2
+    _EditorMainCategory: 0
     _EditorMotionCategory: 0
     m_hemi: {fileID: -2508796484986968503, guid: 44d994eaad14fdf49a2dd378b4d62094, type: 3}
     m_cyli: {fileID: 2534964839176971238, guid: 2ea99bbc50a9266448416f21d645a771, type: 3}
@@ -5658,7 +5658,7 @@ MonoBehaviour:
   handler:
     _Editor_SelectedChain: 0
     _Editor_ChainCategory: 2
-    _EditorCategory: 3
+    _EditorCategory: 2
     _EditorMainCategory: 0
     _EditorMotionCategory: 0
     m_hemi: {fileID: -2508796484986968503, guid: 44d994eaad14fdf49a2dd378b4d62094, type: 3}
@@ -7677,7 +7677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4b58ded2eb75c684b973b4e8807020ce, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.416
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4b58ded2eb75c684b973b4e8807020ce, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8257,7 +8257,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4b58ded2eb75c684b973b4e8807020ce, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7986257370727441110}
+      addedObject: {fileID: 7821704149667457153}
   m_SourcePrefab: {fileID: 100100000, guid: 4b58ded2eb75c684b973b4e8807020ce, type: 3}
 --- !u!4 &147687689119556075 stripped
 Transform:
@@ -8344,7 +8344,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4b58ded2eb75c684b973b4e8807020ce, type: 3}
   m_PrefabInstance: {fileID: 8753379792252034678}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7986257370727441110
+--- !u!114 &7821704149667457153
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8357,7 +8357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FIMSpace.FProceduralAnimation.RagdollAnimator2
   handler:
-    _Editor_SelectedChain: -1
+    _Editor_SelectedChain: 4
     _Editor_ChainCategory: 1
     _EditorCategory: 2
     _EditorMainCategory: 0
@@ -8371,119 +8371,112 @@ MonoBehaviour:
       BonePoses:
       - SourceBone: {fileID: 6990844475484928203}
         localPosition: {x: -0, y: 0, z: 0}
-        rootSpacePosition: {x: 0, y: 0.0051795766, z: 0}
+        rootSpacePosition: {x: 0, y: 0.010349999, z: 0}
         localRotation: {x: -0.57363975, y: 0.3746409, z: 0.5094227, w: 0.520644}
         rootSpaceRotation: {x: -0.6737783, y: 0.42366552, z: 0.53937984, w: -0.27495417}
       - SourceBone: {fileID: 8493956438473074405}
         localPosition: {x: -0.0005437171, y: -0.000120781064, z: 0.00003408499}
-        rootSpacePosition: {x: -0.00003174782, y: 0.0057133725, z: 0.00015947342}
+        rootSpacePosition: {x: -0.00003174782, y: 0.010883796, z: 0.00015947342}
         localRotation: {x: 0.044091735, y: 0.02235996, z: 0.32901302, w: 0.9430305}
         rootSpaceRotation: {x: -0.5201857, y: 0.63884556, z: 0.38444236, w: -0.41651827}
       - SourceBone: {fileID: 8716873197891915686}
         localPosition: {x: -0.0006675196, y: -0.00000052325424, z: 0.00000007169321}
-        rootSpacePosition: {x: 0.00004302025, y: 0.0063707256, z: 0.00007070541}
+        rootSpacePosition: {x: 0.00004302025, y: 0.01154115, z: 0.00007070541}
         localRotation: {x: -0.05442679, y: 0.016532132, z: 0.10645006, w: 0.99268967}
         rootSpaceRotation: {x: -0.4320637, y: 0.6617393, z: 0.36346412, w: -0.49327075}
       - SourceBone: {fileID: 1419800849841268176}
         localPosition: {x: -0.0006675702, y: -0.00000027924776, z: 0.000000028572975}
-        rootSpacePosition: {x: 0.00013651847, y: 0.0069917324, z: -0.00015569806}
+        rootSpacePosition: {x: 0.00013651847, y: 0.0121621555, z: -0.00015569746}
         localRotation: {x: -0.054426804, y: 0.016532138, z: 0.10644971, w: 0.9926897}
         rootSpaceRotation: {x: -0.33762494, y: 0.6749579, z: 0.33717194, w: -0.5628113}
       - SourceBone: {fileID: 3783864563965683635}
         localPosition: {x: -0.0003629398, y: -0.00000011265278, z: 0.00000034783034}
-        rootSpacePosition: {x: 0.00018645286, y: 0.0072948597, z: -0.00034895062}
+        rootSpacePosition: {x: 0.00018645286, y: 0.012465283, z: -0.00034895}
         localRotation: {x: -0.54325414, y: 0.24347994, z: -0.19754693, w: 0.77882457}
         rootSpaceRotation: {x: -0.17263149, y: 0.13877368, z: 0.6582481, w: -0.71947885}
       - SourceBone: {fileID: 8371249560506218311}
         localPosition: {x: -0.00047599492, y: -0.0000000043585895, z: -0.0000000035762786}
-        rootSpacePosition: {x: 0.00014127731, y: 0.0077685234, z: -0.00033582805}
+        rootSpacePosition: {x: 0.00014127731, y: 0.012938947, z: -0.00033582747}
         localRotation: {x: 0.52139854, y: 0.107379064, z: -0.23689803, w: 0.81270707}
         rootSpaceRotation: {x: -0.6189914, y: 0.33783895, z: 0.61451274, w: -0.35367942}
       - SourceBone: {fileID: 4855047172080786877}
         localPosition: {x: 0.00050748885, y: -0.0002930095, z: -0.00048654934}
-        rootSpacePosition: {x: 0.00046593664, y: 0.005137572, z: 0.00012958526}
+        rootSpacePosition: {x: 0.00046593664, y: 0.010307995, z: 0.00012958526}
         localRotation: {x: -0.015279119, y: 0.9982941, z: -0.040701777, w: 0.038970955}
         rootSpaceRotation: {x: -0.4236967, y: -0.41795772, z: -0.47760215, w: -0.6462884}
       - SourceBone: {fileID: 8598802075570819601}
         localPosition: {x: -0.002427184, y: -0.000000004470348, z: 0.0000000016391277}
-        rootSpacePosition: {x: -0.000005941391, y: 0.002779532, z: 0.0004585266}
+        rootSpacePosition: {x: -0.000005941391, y: 0.007949955, z: 0.00045852602}
         localRotation: {x: -0.000000014313321, y: 0.00000001871471, z: 0.3251459, w: 0.94566387}
         rootSpaceRotation: {x: -0.536572, y: -0.25748423, z: -0.66178924, w: -0.45588112}
       - SourceBone: {fileID: 4375561690625153587}
         localPosition: {x: 0.00049471494, y: -0.00019799075, z: 0.00047958762}
-        rootSpacePosition: {x: -0.00046593664, y: 0.0052215676, z: -0.00012958526}
+        rootSpacePosition: {x: -0.00046593664, y: 0.010391991, z: -0.00012958526}
         localRotation: {x: -0.13030453, y: 0.9731047, z: -0.17201427, w: -0.08061685}
         rootSpaceRotation: {x: -0.38778332, y: -0.59639156, z: -0.38229612, w: -0.5897382}
       - SourceBone: {fileID: 147687689119556075}
         localPosition: {x: -0.002427184, y: -0.000000001490116, z: -8.5681673e-10}
-        rootSpacePosition: {x: -0.00045703887, y: 0.003004454, z: 0.00085811614}
+        rootSpacePosition: {x: -0.00045703887, y: 0.008174878, z: 0.0008581167}
         localRotation: {x: 6.3003447e-10, y: -0.000000009408749, z: 0.77253205, w: 0.6349758}
         rootSpaceRotation: {x: -0.7069646, y: -0.07911919, z: -0.69834054, w: -0.07913354}
       - SourceBone: {fileID: 594393649013076721}
         localPosition: {x: 0.00004233718, y: 0.00024274293, z: -0.00007489398}
-        rootSpacePosition: {x: 0.00044074058, y: 0.0072755693, z: -0.00031301618}
+        rootSpacePosition: {x: 0.00044074058, y: 0.012445992, z: -0.00031301557}
         localRotation: {x: -0.3762739, y: 0.24920589, z: -0.7118888, w: 0.53807884}
         rootSpaceRotation: {x: -0.08499907, y: -0.4752033, z: 0.87557447, w: -0.018076703}
       - SourceBone: {fileID: 3005075060560683893}
         localPosition: {x: -0.00047547405, y: -0.0000000035762786, z: 0.0000000023841857}
-        rootSpacePosition: {x: 0.0009090328, y: 0.007252209, z: -0.000234071}
+        rootSpacePosition: {x: 0.0009090328, y: 0.0124226315, z: -0.00023407041}
         localRotation: {x: -0.52519107, y: 0.4143349, z: -0.35001856, w: 0.65573466}
         rootSpaceRotation: {x: -0.24269411, y: -0.8086922, z: 0.29568115, w: 0.44686633}
       - SourceBone: {fileID: 8630797733531375033}
         localPosition: {x: -0.0014563092, y: -5.9604643e-10, z: 8.9406965e-10}
-        rootSpacePosition: {x: 0.0016121685, y: 0.00629572, z: -0.001077615}
+        rootSpacePosition: {x: 0.0016121685, y: 0.011466143, z: -0.0010776144}
         localRotation: {x: -0.00000002376375, y: 0.00000004069066, z: 0.751498, w: 0.65973544}
         rootSpaceRotation: {x: -0.76784444, y: -0.35113883, z: 0.53089046, w: 0.07260981}
       - SourceBone: {fileID: 8483838646182135202}
         localPosition: {x: -0.00084840116, y: 0.000000004470348, z: 2.9802322e-10}
-        rootSpacePosition: {x: 0.0014512169, y: 0.005772817, z: -0.00042919276}
+        rootSpacePosition: {x: 0.0014512169, y: 0.01094324, z: -0.00042919218}
         localRotation: {x: 0.4955976, y: 0.11730411, z: 0.5459244, w: 0.66527385}
         rootSpaceRotation: {x: -0.72881246, y: 0.45720702, z: 0.4767791, w: 0.18021128}
       - SourceBone: {fileID: 2999001784478063770}
         localPosition: {x: -1.36125, y: -0.098, z: 0.97369}
-        rootSpacePosition: {x: 0, y: 0, z: -0.00894}
+        rootSpacePosition: {x: 0, y: 0.00416, z: 0}
         localRotation: {x: 0, y: 0, z: 0, w: 1}
         rootSpaceRotation: {x: 0, y: 0, z: 0, w: 1}
       - SourceBone: {fileID: 9147085679555951005}
-        localPosition: {x: 0, y: 0, z: 0.894}
+        localPosition: {x: 0, y: -0.416, z: 0}
         rootSpacePosition: {x: 0, y: 0, z: 0}
         localRotation: {x: 0, y: 0, z: 0, w: 1}
         rootSpaceRotation: {x: 0, y: 0, z: 0, w: 1}
       - SourceBone: {fileID: 8215491053157420203}
-        localPosition: {x: -0, y: 0.0051795766, z: 0}
-        rootSpacePosition: {x: 0, y: 0.0051795766, z: 0}
+        localPosition: {x: -0, y: 0.01035, z: 0}
+        rootSpacePosition: {x: 0, y: 0.010349999, z: 0}
         localRotation: {x: -0.5222743, y: 0.28975976, z: 0.4302863, w: 0.6768475}
         rootSpaceRotation: {x: -0.5222743, y: 0.28975976, z: 0.4302863, w: 0.6768475}
       - SourceBone: {fileID: 4474645591996740169}
         localPosition: {x: -0.000042337775, y: -0.00024200689, z: 0.000074880496}
-        rootSpacePosition: {x: -0.00006716728, y: 0.007314205, z: -0.00038457988}
+        rootSpacePosition: {x: -0.00006716728, y: 0.012484629, z: -0.0003845793}
         localRotation: {x: 0.7047995, y: 0.5255092, z: -0.43165764, w: -0.20191453}
         rootSpaceRotation: {x: -0.8780496, y: -0.016697884, z: -0.010868341, w: 0.47815478}
       - SourceBone: {fileID: 564065934454613584}
         localPosition: {x: -0.00063106103, y: 0.0000000032782554, z: 0.000000002980232}
-        rootSpacePosition: {x: -0.00069772836, y: 0.0073022596, z: -0.00040670513}
+        rootSpacePosition: {x: -0.00069772836, y: 0.012472683, z: -0.00040670513}
         localRotation: {x: -0.15426719, y: -0.12467903, z: -0.6989297, w: 0.6871346}
         rootSpaceRotation: {x: -0.6667863, y: -0.68310785, z: -0.23476622, w: 0.18342435}
       - SourceBone: {fileID: 208414797917235760}
         localPosition: {x: -0.0014563107, y: -0.0000000012665987, z: -0.000000001490116}
-        rootSpacePosition: {x: -0.0006343746, y: 0.0061010206, z: -0.0012275898}
+        rootSpacePosition: {x: -0.0006343746, y: 0.011271444, z: -0.0012275904}
         localRotation: {x: -0.000000038751967, y: 0.000000016572312, z: 0.37211287, w: 0.9281875}
         rootSpaceRotation: {x: -0.87309605, y: -0.38593245, z: -0.14965254, w: 0.25761175}
       - SourceBone: {fileID: 2432522809975286978}
         localPosition: {x: -0.00095796183, y: 0.000000006556511, z: 0.000000006556511}
-        rootSpacePosition: {x: -0.0012640583, y: 0.0055293012, z: -0.0016684162}
+        rootSpacePosition: {x: -0.0012640583, y: 0.010699725, z: -0.0016684168}
         localRotation: {x: -0.650062, y: 0.2536707, z: 0.21435872, w: 0.68346244}
         rootSpaceRotation: {x: -0.80895764, y: 0.08601732, z: -0.51941943, w: -0.2615195}
       LastBaseTransform: {fileID: 9147085679555951005}
     UseExtraFeatures: 1
-    ExtraFeatures:
-    - CustomName: 
-      enabled: 1
-      FeatureReference: {fileID: 11400000, guid: fec516eb5421cbb4aa744a2e99ff15ef, type: 2}
-      customStringList: []
-      customObjectList: []
-      customEventsList: []
-      variables: []
+    ExtraFeatures: []
     IsHumanoid: 1
     dummyContainer: {fileID: 0}
     inBetweenPreGenerateMemory: []
@@ -8558,145 +8551,15 @@ MonoBehaviour:
       - SourceBone: {fileID: 6990844475484928203}
         PhysicalDummyBone: {fileID: 0}
         BoundedIgnoreScale: 1
-        BoneID: 7
+        BoneID: 0
         colliders:
         - ColliderType: 2
-          ColliderCenter: {x: -0.00033375988, y: -0.00000026153066, z: 0.00000003583045}
+          ColliderCenter: {x: -0.00033378514, y: -0.00000014002238, z: 0.000000014471878}
           ColliderSizeMultiply: 1
           CapsuleDirection: 0
-          ColliderRadius: 0.0006675199
-          ColliderLength: 0.0013350399
-          ColliderBoxSize: {x: 0.0006675199, y: 0.002774999, z: 0.002774999}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.06
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 2
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 0
-        MainAxisLowLimit: -5.5
-        MainAxisHighLimit: 17.5
-        SecondaryAxis: 0
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 1
-        SecondaryAxisAngleLimit: 30
-        ThirdAxisAngleLimit: 20
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      - SourceBone: {fileID: 8493956438473074405}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 7
-        colliders:
-        - ColliderType: 2
-          ColliderCenter: {x: -0.00033375988, y: -0.00000026153066, z: 0.00000003583045}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 0
-          ColliderRadius: 0.00066752045
-          ColliderLength: 0.0013350409
-          ColliderBoxSize: {x: 0.00066752045, y: 0.002774999, z: 0.002774999}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.03
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 0
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 0
-        MainAxisLowLimit: -60
-        MainAxisHighLimit: 60
-        SecondaryAxis: 1
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 0
-        SecondaryAxisAngleLimit: 30
-        ThirdAxisAngleLimit: 40
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      - SourceBone: {fileID: 8716873197891915686}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 8
-        colliders:
-        - ColliderType: 2
-          ColliderCenter: {x: -0.00033378578, y: -0.0000001403673, z: 0.000000014562827}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 0
-          ColliderRadius: 0.00066757045
-          ColliderLength: 0.0013351409
-          ColliderBoxSize: {x: 0.00066757045, y: 0.0027749985, z: 0.0027749985}
+          ColliderRadius: 0.00066756963
+          ColliderLength: 0.0013351393
+          ColliderBoxSize: {x: 0.00066756963, y: 0.0027749985, z: 0.0027749985}
           ColliderMesh: {fileID: 0}
           OtherReference: {fileID: 0}
           RotationCorrection: {x: 0, y: 0, z: 0}
@@ -8756,12 +8619,12 @@ MonoBehaviour:
         BoneID: 54
         colliders:
         - ColliderType: 2
-          ColliderCenter: {x: -0.0001814707, y: -0.000000056723536, z: 0.00000017404999}
+          ColliderCenter: {x: -0.00018147059, y: -0.00000005616141, z: 0.00000017400997}
           ColliderSizeMultiply: 1
           CapsuleDirection: 0
-          ColliderRadius: 0.00036294095
-          ColliderLength: 0.0007258819
-          ColliderBoxSize: {x: 0.00036294095, y: 0.002774999, z: 0.002774999}
+          ColliderRadius: 0.0003629414
+          ColliderLength: 0.0007258828
+          ColliderBoxSize: {x: 0.0003629414, y: 0.002774999, z: 0.002774999}
           ColliderMesh: {fileID: 0}
           OtherReference: {fileID: 0}
           RotationCorrection: {x: 0, y: 0, z: 0}
@@ -8818,10 +8681,10 @@ MonoBehaviour:
       - SourceBone: {fileID: 3783864563965683635}
         PhysicalDummyBone: {fileID: 0}
         BoundedIgnoreScale: 1
-        BoneID: -1
+        BoneID: 9
         colliders:
         - ColliderType: 2
-          ColliderCenter: {x: -0.00023799844, y: -0.0000000025756888, z: -0.0000000024301698}
+          ColliderCenter: {x: -0.00023799881, y: -0.0000000022992024, z: -0.0000000019281288}
           ColliderSizeMultiply: 1
           CapsuleDirection: 0
           ColliderRadius: 0.0004759942
@@ -8886,7 +8749,7 @@ MonoBehaviour:
         BoneID: 10
         colliders:
         - ColliderType: 0
-          ColliderCenter: {x: -0.00020579412, y: -0.00011829507, z: 0.000017256309}
+          ColliderCenter: {x: -0.00020579442, y: -0.000118294534, z: 0.000017256474}
           ColliderSizeMultiply: 1
           CapsuleDirection: 0
           ColliderRadius: 0.00047599414
@@ -8945,7 +8808,7 @@ MonoBehaviour:
           LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
           RootSpacePosition: {x: 0, y: 0, z: 0}
           RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      ChainThicknessMultiplier: 0.505
+      ChainThicknessMultiplier: 1
       ChainScaleMultiplier: 1
       MassMultiplier: 0.5
       MusclesForce: 1
@@ -8968,7 +8831,7 @@ MonoBehaviour:
         BoneID: 2
         colliders:
         - ColliderType: 0
-          ColliderCenter: {x: -0.0011562686, y: 0.00003320466, z: -0.00006837889}
+          ColliderCenter: {x: -0.0011562683, y: 0.000033204, z: -0.00006837918}
           ColliderSizeMultiply: 1
           CapsuleDirection: 0
           ColliderRadius: 0.00084999984
@@ -9033,12 +8896,12 @@ MonoBehaviour:
         BoneID: 4
         colliders:
         - ColliderType: 0
-          ColliderCenter: {x: -0.0008638124, y: 0.000000003026798, z: -0.0000000012120818}
+          ColliderCenter: {x: -0.0008638125, y: 0.0000000025174811, z: -0.0000000013867049}
           ColliderSizeMultiply: 1
           CapsuleDirection: 0
           ColliderRadius: 0.0008499998
-          ColliderLength: 0.0017276247
-          ColliderBoxSize: {x: 0.0017276247, y: 0.0012749997, z: 0.0012749997}
+          ColliderLength: 0.0017276236
+          ColliderBoxSize: {x: 0.0017276236, y: 0.0012749997, z: 0.0012749997}
           ColliderMesh: {fileID: 0}
           OtherReference: {fileID: 0}
           RotationCorrection: {x: 0, y: 0, z: 0}
@@ -9092,7 +8955,7 @@ MonoBehaviour:
           LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
           RootSpacePosition: {x: 0, y: 0, z: 0}
           RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      ChainThicknessMultiplier: 0.745
+      ChainThicknessMultiplier: 1
       ChainScaleMultiplier: 1
       MassMultiplier: 0.5
       MusclesForce: 1
@@ -9115,12 +8978,12 @@ MonoBehaviour:
         BoneID: 1
         colliders:
         - ColliderType: 0
-          ColliderCenter: {x: -0.0011723404, y: 0.000058650432, z: 0.00005374622}
+          ColliderCenter: {x: -0.0011723401, y: 0.00005865121, z: 0.000053746277}
           ColliderSizeMultiply: 1
           CapsuleDirection: 0
           ColliderRadius: 0.0008499996
-          ColliderLength: 0.0025147293
-          ColliderBoxSize: {x: 0.0025147293, y: 0.0012749995, z: 0.0012749995}
+          ColliderLength: 0.0025147295
+          ColliderBoxSize: {x: 0.0025147295, y: 0.0012749995, z: 0.0012749995}
           ColliderMesh: {fileID: 0}
           OtherReference: {fileID: 0}
           RotationCorrection: {x: 0, y: 0, z: 0}
@@ -9180,7 +9043,7 @@ MonoBehaviour:
         BoneID: 3
         colliders:
         - ColliderType: 0
-          ColliderCenter: {x: -0.0008638118, y: 0.0000000017462296, z: -4.4169338e-10}
+          ColliderCenter: {x: -0.0008638111, y: 0.0000000026775522, z: -2.6707037e-10}
           ColliderSizeMultiply: 1
           CapsuleDirection: 0
           ColliderRadius: 0.0008499996
@@ -9239,7 +9102,7 @@ MonoBehaviour:
           LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
           RootSpacePosition: {x: 0, y: 0, z: 0}
           RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      ChainThicknessMultiplier: 0.76
+      ChainThicknessMultiplier: 1
       ChainScaleMultiplier: 1
       MassMultiplier: 0.5
       MusclesForce: 1
@@ -9259,10 +9122,10 @@ MonoBehaviour:
       - SourceBone: {fileID: 594393649013076721}
         PhysicalDummyBone: {fileID: 0}
         BoundedIgnoreScale: 1
-        BoneID: 14
+        BoneID: 12
         colliders:
         - ColliderType: 0
-          ColliderCenter: {x: -0.00020556663, y: -0.0000011717638, z: -0.0000002261695}
+          ColliderCenter: {x: -0.0002055666, y: -0.0000011720111, z: -0.00000022584936}
           ColliderSizeMultiply: 1
           CapsuleDirection: 0
           ColliderRadius: 0.0005398195
@@ -9324,10 +9187,10 @@ MonoBehaviour:
       - SourceBone: {fileID: 3005075060560683893}
         PhysicalDummyBone: {fileID: 0}
         BoundedIgnoreScale: 1
-        BoneID: 16
+        BoneID: 14
         colliders:
         - ColliderType: 0
-          ColliderCenter: {x: -0.0007281557, y: -1.1641531e-10, z: 5.820766e-11}
+          ColliderCenter: {x: -0.0007281559, y: -8.731148e-10, z: 1.1641532e-10}
           ColliderSizeMultiply: 1
           CapsuleDirection: 0
           ColliderRadius: 0.00059999933
@@ -9389,10 +9252,10 @@ MonoBehaviour:
       - SourceBone: {fileID: 8630797733531375033}
         PhysicalDummyBone: {fileID: 0}
         BoundedIgnoreScale: 1
-        BoneID: 18
+        BoneID: 16
         colliders:
         - ColliderType: 0
-          ColliderCenter: {x: -0.00042419994, y: 0.000000003259629, z: -1.1708892e-10}
+          ColliderCenter: {x: -0.00042420128, y: 0.000000003929017, z: -2.9777566e-11}
           ColliderSizeMultiply: 1
           CapsuleDirection: 0
           ColliderRadius: 0.00059999945
@@ -9457,7 +9320,7 @@ MonoBehaviour:
         BoneID: 18
         colliders:
         - ColliderType: 2
-          ColliderCenter: {x: -0.00045697385, y: -0.0000000030850065, z: -0.0000000013678801}
+          ColliderCenter: {x: -0.00045697385, y: -0.0000000020372684, z: -0.0000000029394873}
           ColliderSizeMultiply: 1
           CapsuleDirection: 0
           ColliderRadius: 0.0004999996
@@ -9536,10 +9399,10 @@ MonoBehaviour:
       - SourceBone: {fileID: 4474645591996740169}
         PhysicalDummyBone: {fileID: 0}
         BoundedIgnoreScale: 1
-        BoneID: 13
+        BoneID: 11
         colliders:
         - ColliderType: 0
-          ColliderCenter: {x: -0.00028374363, y: -0.0000011661031, z: -0.0000043465984}
+          ColliderCenter: {x: -0.00028374375, y: -0.0000011663941, z: -0.0000043471805}
           ColliderSizeMultiply: 1
           CapsuleDirection: 0
           ColliderRadius: 0.00059999956
@@ -9601,15 +9464,15 @@ MonoBehaviour:
       - SourceBone: {fileID: 564065934454613584}
         PhysicalDummyBone: {fileID: 0}
         BoundedIgnoreScale: 1
-        BoneID: 15
+        BoneID: 13
         colliders:
         - ColliderType: 0
-          ColliderCenter: {x: -0.0007281552, y: -0.0000000012805685, z: -3.7834974e-10}
+          ColliderCenter: {x: -0.00072815607, y: -0.0000000015716068, z: -3.201421e-10}
           ColliderSizeMultiply: 1
           CapsuleDirection: 0
           ColliderRadius: 0.00059999985
-          ColliderLength: 0.0014563105
-          ColliderBoxSize: {x: 0.0014563105, y: 0.00089999975, z: 0.00089999975}
+          ColliderLength: 0.0014563104
+          ColliderBoxSize: {x: 0.0014563104, y: 0.00089999975, z: 0.00089999975}
           ColliderMesh: {fileID: 0}
           OtherReference: {fileID: 0}
           RotationCorrection: {x: 0, y: 0, z: 0}
@@ -9666,10 +9529,10 @@ MonoBehaviour:
       - SourceBone: {fileID: 208414797917235760}
         PhysicalDummyBone: {fileID: 0}
         BoundedIgnoreScale: 1
-        BoneID: 17
+        BoneID: 15
         colliders:
         - ColliderType: 0
-          ColliderCenter: {x: -0.00047898066, y: 0.0000000026557243, z: 0.0000000029167582}
+          ColliderCenter: {x: -0.0004789817, y: 0.0000000032887324, z: 0.0000000033824195}
           ColliderSizeMultiply: 1
           CapsuleDirection: 0
           ColliderRadius: 0.0005999996
@@ -9734,12 +9597,12 @@ MonoBehaviour:
         BoneID: 17
         colliders:
         - ColliderType: 2
-          ColliderCenter: {x: -0.00045697176, y: 0.0000000025611373, z: -0.0000000016589183}
+          ColliderCenter: {x: -0.0004569727, y: 0.0000000023574105, z: -0.0000000014842954}
           ColliderSizeMultiply: 1
           CapsuleDirection: 0
           ColliderRadius: 0.0004999996
           ColliderLength: 0.0009999992
-          ColliderBoxSize: {x: 0.00091394596, y: 0.0007499994, z: 0.0007499994}
+          ColliderBoxSize: {x: 0.00091394526, y: 0.0007499994, z: 0.0007499994}
           ColliderMesh: {fileID: 0}
           OtherReference: {fileID: 0}
           RotationCorrection: {x: 0, y: 0, z: 0}
