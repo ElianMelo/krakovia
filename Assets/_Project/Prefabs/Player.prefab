@@ -615,15 +615,15 @@ MonoBehaviour:
   skeletonData: {fileID: 11400000, guid: 93d6f6fb5828ac44c92c6c10d26cb435, type: 2}
   horseData: {fileID: 11400000, guid: ebe444d9b1671d1469a85a309c4f008f, type: 2}
   experienceIncreaseAmount: 300
-  fairyMouseLeftSkillDamagePercentage: 100
-  fairyMouseRightSkillDamagePercentage: 100
-  fairyQSkillDamagePercentage: 100
-  fairyFSkillDamagePercentage: 100
+  fairyMouseLeftSkillDamagePercentage: 400
+  fairyMouseRightSkillDamagePercentage: 400
+  fairyQSkillDamagePercentage: 400
+  fairyFSkillDamagePercentage: 400
   fairyMouseLeftSkillCooldownSeconds: 1
   fairyMouseRightSkillCooldownSeconds: 2
   fairyQSkillCooldownSeconds: 3
   fairyFSkillCooldownSeconds: 4
-  skeletonMouseLeftSkillDamagePercentage: 100
+  skeletonMouseLeftSkillDamagePercentage: 4
   skeletonMouseRightSkillDamagePercentage: 100
   skeletonQSkillDamagePercentage: 100
   skeletonFSkillDamagePercentage: 100
@@ -7731,7 +7731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8276319491741831388, guid: 2a2251aed5f4ae94d90f6deba83b71d2, type: 3}
       propertyPath: m_text
-      value: Professor Liher
+      value: Abluble bu
       objectReference: {fileID: 0}
     - target: {fileID: 8276319491741831388, guid: 2a2251aed5f4ae94d90f6deba83b71d2, type: 3}
       propertyPath: m_Enabled

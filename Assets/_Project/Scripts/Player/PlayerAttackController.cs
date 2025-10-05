@@ -91,7 +91,7 @@ public class PlayerAttackController : NetworkBehaviour
         float skillDamageMultiplier = GetMultiplierBasedOnSkill(skillCommand);
         var instance = Instantiate(prefab, position, rotation);
         PlayerProjectile playerProjectile = instance.GetComponent<PlayerProjectile>();
-        float damage = playerAttributeController.Damage * skillDamageMultiplier;
+        float damage = playerAttributeController.Damage * (skillDamageMultiplier / 100);
         bool isCritical = Random.Range(0f, 1f) <= playerAttributeController.CriticalChance;
         if (isCritical) damage *= 2;
         playerProjectile.SetupProjectile(damage, isCritical, NetworkObjectId);

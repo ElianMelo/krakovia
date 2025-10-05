@@ -14514,6 +14514,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a8956ab4fcf1148b29c6863e30bc2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerProjectile
+  ShowTopMostFoldoutHeaderGroup: 1
+  playbackTime: 0.15
+  projectileCollider: {fileID: 5363168993046598359}
 --- !u!65 &5363168993046598359
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14531,7 +14534,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 5.486416, y: 0.7148941, z: 5.2392826}
   m_Center: {x: 0.019010544, y: 0.14255294, z: 0.028515339}

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerProjectile : NetworkBehaviour
 {
+    public float playbackTime;
+    public Collider projectileCollider;
+
     private float damage;
     private bool isCritical;
     private ulong playerSource;
@@ -12,6 +15,7 @@ public class PlayerProjectile : NetworkBehaviour
     {
         if (IsHost)
         {
+            StartCoroutine(playbackTimeToActivate());
             StartCoroutine(destroySelf());
         }
     }
@@ -21,6 +25,12 @@ public class PlayerProjectile : NetworkBehaviour
         this.damage = damage;
         this.isCritical = isCritical;
         this.playerSource = playerSource;
+    }
+
+    private IEnumerator playbackTimeToActivate()
+    {
+        yield return new WaitForSeconds(playbackTime);
+        projectileCollider.enabled = true;
     }
 
     private IEnumerator destroySelf()
