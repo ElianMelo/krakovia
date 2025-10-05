@@ -6,6 +6,7 @@ public enum EnemyType
 {
     Dog,
     Mummy,
+    Yeti,
     EnemyA,
     EnemyB,
     EnemyC,
