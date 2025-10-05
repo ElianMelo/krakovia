@@ -246,6 +246,11 @@ public class PlayerAttributeController : NetworkBehaviour
         ReceiveDamageRpc(NetworkObjectId, damage, isCritical);
     }
 
+    public void ReceivePlayerDamageFairy(int damage, bool isCritical)
+    {
+        ReceiveDamageRpc(NetworkObjectId, damage, isCritical);
+    }
+
     [Rpc(SendTo.Server)]
     private void ReceiveDamageRpc(ulong targetNetworkObjectId, int damage, bool isCritical)
     {
@@ -287,7 +292,7 @@ public class PlayerAttributeController : NetworkBehaviour
     IEnumerator DeathRoutine()
     {
         playerClassController.GetRagdollByClass().Settings.AnimatingMode = RagdollHandler.EAnimatingMode.Sleep;
-        yield return new WaitForSeconds(3f);
+        // yield return new WaitForSeconds(3f);
         transform.position = SystemManager.Instance.CurrentSavePoint.GetRandomPositionAround();
         playerClassController.GetRagdollByClass().Settings.AnimatingMode = RagdollHandler.EAnimatingMode.Standing;
         yield return null;

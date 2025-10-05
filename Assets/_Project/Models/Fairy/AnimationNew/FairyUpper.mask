@@ -38,43 +38,43 @@ AvatarMask:
       R Foot/Bip001 R Toe0
     m_Weight: 0
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
       Neck
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
       Neck/Bip001 Head
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
       Neck/Bip001 Head/Bip001 Xtra02
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
       Neck/Bip001 Head/Bip001 Xtra02/Bip001 Xtra0202
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
       Neck/Bip001 Head/Bip001 Xtra02/Bip001 Xtra0202/Bip001 Xtra0203
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
       Neck/Bip001 Head/Bip001 Xtra02/Bip001 Xtra0202/Bip001 Xtra0203/Bip001 Xtra0204
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
       Neck/Bip001 Head/Bip001 Xtra02/Bip001 Xtra0202/Bip001 Xtra0203/Bip001 Xtra0204/Bip001
       Xtra0205
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
       Neck/Bip001 Head/Bip001 Xtra02/Bip001 Xtra0202/Bip001 Xtra0203/Bip001 Xtra0204/Bip001
       Xtra0205/Bip001 Xtra0206
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
       Neck/Bip001 Head/Bip001 Xtra02/Bip001 Xtra0202/Bip001 Xtra0203/Bip001 Xtra0204/Bip001
       Xtra0205/Bip001 Xtra0206/Bip001 Xtra0207
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
       Neck/Bip001 Head/Bip001 Xtra02/Bip001 Xtra0202/Bip001 Xtra0203/Bip001 Xtra0204/Bip001
       Xtra0205/Bip001 Xtra0206/Bip001 Xtra0207/Bip001 Xtra0208
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
       Neck/Bip001 L Clavicle
     m_Weight: 1

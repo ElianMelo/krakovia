@@ -59,10 +59,10 @@ public class PlayerAttackController : NetworkBehaviour
 
     void Start()
     {
-        if (!IsOwner) return;
-        // animator = GetComponentInChildren<Animator>();
         playerClassController = GetComponent<PlayerClassController>();
         playerAttributeController = GetComponent<PlayerAttributeController>();
+        if (!IsOwner) return;
+        // animator = GetComponentInChildren<Animator>();
     }
 
     void Update()

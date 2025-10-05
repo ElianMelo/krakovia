@@ -56,5 +56,15 @@ public class PlayerProjectile : NetworkBehaviour
             enemyAttack.StartAttackRoutine();
             enemyController.ReceiveDamage(playerSource, contactPoint, damage, isCritical);
         }
+
+        // Source dont take damage
+        if (playerSourceTransform == other.transform) return;
+
+        PlayerAttributeController playerAttributeController = other.gameObject.GetComponent<PlayerAttributeController>();
+        if (playerAttributeController != null)
+        {
+            Physics.IgnoreCollision(GetComponent<Collider>(), other);
+            playerAttributeController.ReceivePlayerDamageFairy((int)damage, isCritical);
+        }
     }
 }
