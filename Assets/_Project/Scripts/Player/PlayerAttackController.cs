@@ -88,7 +88,13 @@ public class PlayerAttackController : NetworkBehaviour
     private void SpawnAttackProjectileRpc(SkillCommand skillCommand, Vector3 position, Quaternion rotation)
     {
         GameObject prefab = GetPrefabBasedOnSkill(skillCommand);
+        float skillDamageMultiplier = GetMultiplierBasedOnSkill(skillCommand);
         var instance = Instantiate(prefab, position, rotation);
+        PlayerProjectile playerProjectile = instance.GetComponent<PlayerProjectile>();
+        float damage = playerAttributeController.Damage * skillDamageMultiplier;
+        bool isCritical = Random.Range(0f, 1f) <= playerAttributeController.CriticalChance;
+        if (isCritical) damage *= 2;
+        playerProjectile.SetupProjectile(damage, isCritical, NetworkObjectId);
         var instanceNetworkObject = instance.GetComponent<NetworkObject>();
         instanceNetworkObject.Spawn();
     }
@@ -102,6 +108,18 @@ public class PlayerAttackController : NetworkBehaviour
             case SkillCommand.Q: return qSkillPrefab;
             case SkillCommand.F: return fSkillPrefab;
             default: return fSkillPrefab;
+        }
+    }
+
+    private float GetMultiplierBasedOnSkill(SkillCommand skillCommand)
+    {
+        switch (skillCommand)
+        {
+            case SkillCommand.MouseLeft: return playerAttributeController.fairyMouseLeftSkillDamagePercentage;
+            case SkillCommand.MouseRight: return playerAttributeController.fairyMouseRightSkillDamagePercentage;
+            case SkillCommand.Q: return playerAttributeController.fairyQSkillDamagePercentage;
+            case SkillCommand.F: return playerAttributeController.fairyFSkillDamagePercentage;
+            default: return playerAttributeController.fairyMouseLeftSkillDamagePercentage;
         }
     }
 

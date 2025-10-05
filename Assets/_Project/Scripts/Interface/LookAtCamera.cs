@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class LookAtCamera : MonoBehaviour
 {
-    void Update()
+    void LateUpdate()
     {
         transform.LookAt(Camera.main.transform);
     }

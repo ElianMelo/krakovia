@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerProjectile : NetworkBehaviour
 {
+    private float damage;
+    private bool isCritical;
+    private ulong playerSource;
 
     public override void OnNetworkSpawn()
     {
@@ -11,6 +14,13 @@ public class PlayerProjectile : NetworkBehaviour
         {
             StartCoroutine(destroySelf());
         }
+    }
+
+    public void SetupProjectile(float damage, bool isCritical, ulong playerSource)
+    {
+        this.damage = damage;
+        this.isCritical = isCritical;
+        this.playerSource = playerSource;
     }
 
     private IEnumerator destroySelf()
@@ -28,8 +38,7 @@ public class PlayerProjectile : NetworkBehaviour
         {
             Physics.IgnoreCollision(GetComponent<Collider>(), other);
             Vector3 contactPoint = other.ClosestPoint(transform.position);
-            // todo: fix fairy projectile to deal attribute damage
-            enemyController.ReceiveDamage(0, contactPoint, 1f, false);
+            enemyController.ReceiveDamage(playerSource, contactPoint, damage, isCritical);
         }
     }
 }

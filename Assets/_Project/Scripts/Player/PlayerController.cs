@@ -1,3 +1,5 @@
+using TMPro;
+using Unity.Collections;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -9,6 +11,9 @@ public class PlayerController : NetworkBehaviour
     private PlayerClassController playerClassController;
     private PlayerFollower playerFollower;
     private ClientNetworkAnimator clientNetworkAnimator;
+
+    public TMP_Text playerNameText;
+    private NetworkVariable<FixedString64Bytes> playerName = new NetworkVariable<FixedString64Bytes>();
 
     public PlayerAttributeController PlayerAttributeController
     {
@@ -27,14 +32,26 @@ public class PlayerController : NetworkBehaviour
 
         transform.position = new Vector3(325.59f, 3.07f, 27.87f);
 
+
         // clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Horse);
 
         // Working with classes
         if (IsOwner)
         {
+            playerNameText.enabled = false;
+            playerNameText.text = InterfaceManager.Instance.GetPlayerName();
+            RequestChangePlayerNameRpc(
+                NetworkObjectId, InterfaceManager.Instance.GetPlayerName());
+
             SwapPlayerTo(InterfaceManager.Instance.GetSelectedClass());
             playerClassController.RequestChangePlayerClassRpc(
                 NetworkObjectId, InterfaceManager.Instance.GetSelectedClass());
+        }
+
+        if(!IsOwner)
+        {
+            playerName.OnValueChanged += OnNetworkNameChanged;
+            playerNameText.text = playerName.Value.ToString();
         }
 
         playerMovementController.SetupPlayerAnimator(clientNetworkAnimator.Animator);
@@ -71,14 +88,38 @@ public class PlayerController : NetworkBehaviour
         if (Input.GetKeyDown(KeyCode.F5))
         {
             SwapPlayerTo(PlayerClass.Fairy);
+            playerClassController.RequestChangePlayerClassRpc(
+                NetworkObjectId, PlayerClass.Fairy);
         }
         if (Input.GetKeyDown(KeyCode.F6))
         {
             SwapPlayerTo(PlayerClass.Skeleton);
+            playerClassController.RequestChangePlayerClassRpc(
+                NetworkObjectId, PlayerClass.Skeleton);
         }
         if (Input.GetKeyDown(KeyCode.F7))
         {
             SwapPlayerTo(PlayerClass.Horse);
+            playerClassController.RequestChangePlayerClassRpc(
+                NetworkObjectId, PlayerClass.Horse);
+        }
+    }
+
+    private void OnNetworkNameChanged(FixedString64Bytes previous, FixedString64Bytes next)
+    {
+        playerNameText.text = next.ToString();
+    }
+
+    [Rpc(SendTo.Server)]
+    public void RequestChangePlayerNameRpc(ulong networkObjectIdSearch, string name)
+    {
+        if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(networkObjectIdSearch, out var classObj))
+        {
+            var player = classObj.GetComponent<PlayerController>();
+            if (player != null)
+            {
+                player.playerName.Value = new FixedString64Bytes(name);
+            }
         }
     }
 

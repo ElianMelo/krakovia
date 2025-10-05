@@ -175,6 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   ShowTopMostFoldoutHeaderGroup: 1
   maxHP: 5
+  xpAmount: 5
   explosionEffect: {fileID: 7780183107191031951, guid: 75cc95414f895d24a9ea78a02136df7b, type: 3}
   bloodEffect: {fileID: 2856443763802584437, guid: 230024bbb992cbd4f9edfb98f3a6a30c, type: 3}
   playerMask:

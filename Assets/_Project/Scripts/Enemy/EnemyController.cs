@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnemyController : NetworkBehaviour
 {
     [SerializeField] private float maxHP = 5;
+    [SerializeField] private int xpAmount = 5;
     private NetworkVariable<float> currentHP = new NetworkVariable<float>();
 
     public GameObject explosionEffect;
@@ -23,6 +24,7 @@ public class EnemyController : NetworkBehaviour
     private const string HurtAnim = "Hurt";
     private const string DeathAnim = "Death";
 
+    public int XpAmount => xpAmount;
     public float MaxHP => maxHP;
     public bool IsDead => isDead;
     public NetworkVariable<float> CurrentHP => currentHP;
@@ -89,7 +91,7 @@ public class EnemyController : NetworkBehaviour
             var player = playerObj.GetComponent<PlayerController>();
             if (player != null)
             {
-                player.PlayerAttributeController.ReceiveExp(player.PlayerAttributeController.OwnerClientId, 30);
+                player.PlayerAttributeController.ReceiveExp(player.PlayerAttributeController.OwnerClientId, xpAmount);
             }
         }
 

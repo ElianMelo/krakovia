@@ -6,7 +6,8 @@ public class InterfaceManager : MonoBehaviour
 {
     public static InterfaceManager Instance;
 
-    public TMP_Dropdown dropdown;
+    public TMP_InputField playerNameInputField;
+    public TMP_Dropdown classSelectionDropdown;
 
     public PlayerInterfaceController _playerInterfaceController;
 
@@ -26,7 +27,18 @@ public class InterfaceManager : MonoBehaviour
 
     public PlayerClass GetSelectedClass()
     {
-        return (PlayerClass) dropdown.value;
+        return (PlayerClass) classSelectionDropdown.value;
+    }
+
+    public string GetPlayerName()
+    {
+        if(playerNameInputField.text.Length > 15)
+        {
+            return playerNameInputField.text.Substring(0, 14) + ".";
+        } else
+        {
+            return playerNameInputField.text;
+        }
     }
 
     public void UpdatePlayerSkillFirstCooldown(float time)
