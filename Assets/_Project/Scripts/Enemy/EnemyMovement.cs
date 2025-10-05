@@ -84,6 +84,11 @@ public class EnemyMovement : MonoBehaviour
             targetPos = hit.point;
         }
 
+        // Apply offset so enemy stops a bit before reaching the target
+        Vector3 dir = (targetPos - transform.position).normalized;
+        float offset = 1.0f; // adjust this value as needed
+        targetPos -= dir * offset;
+
         targetPosition = targetPos;
         hasTarget = true;
 
