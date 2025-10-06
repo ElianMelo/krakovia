@@ -81,19 +81,21 @@ public class PlayerAttackController : NetworkBehaviour
 
     private void SpawnAttackVFX(SkillCommand skillCommand, float forwardIntensity, float upAjust = 0f)
     {
-        SpawnAttackProjectileRpc(skillCommand, spellPosition.position + transform.forward * forwardIntensity + new Vector3(0f, upAjust, 0f), spellPosition.rotation);
-    }
-
-    [Rpc(SendTo.Server)]
-    private void SpawnAttackProjectileRpc(SkillCommand skillCommand, Vector3 position, Quaternion rotation)
-    {
-        GameObject prefab = GetPrefabBasedOnSkill(skillCommand);
         float skillDamageMultiplier = GetMultiplierBasedOnSkill(skillCommand);
-        var instance = Instantiate(prefab, position, rotation);
-        PlayerProjectile playerProjectile = instance.GetComponent<PlayerProjectile>();
         float damage = playerAttributeController.Damage * (skillDamageMultiplier / 100);
         bool isCritical = Random.Range(0f, 1f) <= playerAttributeController.CriticalChance;
         if (isCritical) damage *= 2;
+        SpawnAttackProjectileRpc(skillCommand, spellPosition.position + transform.forward * forwardIntensity + new Vector3(0f, upAjust, 0f), 
+            spellPosition.rotation, damage, isCritical);
+    }
+
+    [Rpc(SendTo.Server)]
+    private void SpawnAttackProjectileRpc(SkillCommand skillCommand, Vector3 position, Quaternion rotation,
+        float damage, bool isCritical)
+    {
+        GameObject prefab = GetPrefabBasedOnSkill(skillCommand);
+        var instance = Instantiate(prefab, position, rotation);
+        PlayerProjectile playerProjectile = instance.GetComponent<PlayerProjectile>();
         playerProjectile.SetupProjectile(damage, isCritical, NetworkObjectId, transform);
         var instanceNetworkObject = instance.GetComponent<NetworkObject>();
         instanceNetworkObject.Spawn();

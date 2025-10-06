@@ -2308,7 +2308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1079369031430894768, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: xpAmount
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 1160617717093947312, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: m_Name
