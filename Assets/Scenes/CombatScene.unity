@@ -54535,10 +54535,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1405970763312508333, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
-      propertyPath: m_text
-      value: Player Name
-      objectReference: {fileID: 0}
     - target: {fileID: 1888588719768776590, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -54574,10 +54570,6 @@ PrefabInstance:
     - target: {fileID: 3278841965205759229, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_Name
       value: MainInterfaceCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 5284841464725017090, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 151
       objectReference: {fileID: 0}
     - target: {fileID: 5631859557102737457, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: currentSavePoint

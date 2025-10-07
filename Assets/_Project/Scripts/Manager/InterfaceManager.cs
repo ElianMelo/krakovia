@@ -10,6 +10,7 @@ public class InterfaceManager : MonoBehaviour
     public TMP_Dropdown classSelectionDropdown;
 
     public PlayerInterfaceController _playerInterfaceController;
+    public PvPInterfaceController _pvPInterfaceController;
 
     public PlayerInterfaceController PlayerInterfaceController
     {
@@ -19,6 +20,8 @@ public class InterfaceManager : MonoBehaviour
             _playerInterfaceController = value;
         }
     }
+
+    public PvPInterfaceController PvPInterfaceController => _pvPInterfaceController;
 
     private void Awake()
     {

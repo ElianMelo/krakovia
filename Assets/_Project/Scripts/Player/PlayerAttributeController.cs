@@ -256,13 +256,15 @@ public class PlayerAttributeController : NetworkBehaviour
     {
         if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(targetNetworkObjectId, out var playerObj))
         {
-            var player = playerObj.GetComponent<PlayerAttributeController>();
+            PlayerAttributeController player = playerObj.GetComponent<PlayerAttributeController>();
+            PlayerController playerController = playerObj.GetComponent<PlayerController>();
             if (player != null)
             {
                 player.CurrentHP.Value -= damage; 
                 if(player.CurrentHP.Value - damage <= 0)
                 {
                     player.CurrentHP.Value = player.MaxHP.Value;
+                    playerController.isPvPActive.Value = false;
                     var rpcParams = new RpcParams
                     {
                         Send = new RpcSendParams

@@ -15,6 +15,7 @@ public class PlayerController : NetworkBehaviour
 
     public TMP_Text playerNameText;
     private NetworkVariable<FixedString64Bytes> playerName = new NetworkVariable<FixedString64Bytes>();
+    public NetworkVariable<bool> isPvPActive = new NetworkVariable<bool>();
 
     private SavePoint currentSavePoint;
 
@@ -33,10 +34,9 @@ public class PlayerController : NetworkBehaviour
         playerAttackController = GetComponent<PlayerAttackController>();
         playerAttributeController = GetComponent<PlayerAttributeController>();
 
-        
-
-
         // clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Horse);
+
+        isPvPActive.OnValueChanged += OnPvPActiveChanged;
 
         // Working with classes
         if (IsOwner)
@@ -100,9 +100,15 @@ public class PlayerController : NetworkBehaviour
     // todo: Remove this
     private void Update()
     {
+        if (!IsOwner) return;
         if (Input.GetKeyDown(KeyCode.E) && currentSavePoint != null)
         {
             currentSavePoint.SelectThisSavePoint();
+        }
+        if(Input.GetKeyDown(KeyCode.P) && isPvPActive.Value == false)
+        {
+            RequestEnablePvPRpc(NetworkObjectId);
+            
         }
         //if (Input.GetKeyDown(KeyCode.F5))
         //{
@@ -124,9 +130,48 @@ public class PlayerController : NetworkBehaviour
         //}
     }
 
+    private void OnPvPActiveChanged(bool previous, bool currentValue)
+    {
+        if(IsOwner)
+        {
+            if (currentValue)
+            {
+                InterfaceManager.Instance.PvPInterfaceController.EnablePvPInterface();
+            }
+            else
+            {
+                InterfaceManager.Instance.PvPInterfaceController.DisablePvPInterface();
+            }
+        } else
+        {
+            if (currentValue)
+            {
+                InterfaceManager.Instance.PvPInterfaceController.EnablePvPInterface();
+            }
+            else
+            {
+                InterfaceManager.Instance.PvPInterfaceController.DisablePvPInterface();
+            }
+        }
+        
+    }
+
     private void OnNetworkNameChanged(FixedString64Bytes previous, FixedString64Bytes next)
     {
         playerNameText.text = next.ToString();
+    }
+
+    [Rpc(SendTo.Server)]
+    public void RequestEnablePvPRpc(ulong networkObjectIdSearch)
+    {
+        if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(networkObjectIdSearch, out var classObj))
+        {
+            var player = classObj.GetComponent<PlayerController>();
+            if (player != null)
+            {
+                player.isPvPActive.Value = true;
+            }
+        }
     }
 
     [Rpc(SendTo.Server)]
