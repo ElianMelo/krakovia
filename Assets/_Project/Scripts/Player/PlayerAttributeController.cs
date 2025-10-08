@@ -237,22 +237,22 @@ public class PlayerAttributeController : NetworkBehaviour
 
     public void ReceiveDamageEnemy(int damage, bool isCritical)
     {
-        ReceiveDamageRpc(NetworkObjectId, damage, isCritical);
+        ReceiveDamageRpc(NetworkObjectId, damage, isCritical, true);
     }
 
     public void ReceivePlayerDamage(int damage, bool isCritical)
     {
         if (IsOwner) return;
-        ReceiveDamageRpc(NetworkObjectId, damage, isCritical);
+        ReceiveDamageRpc(NetworkObjectId, damage, isCritical, false);
     }
 
     public void ReceivePlayerDamageFairy(int damage, bool isCritical)
     {
-        ReceiveDamageRpc(NetworkObjectId, damage, isCritical);
+        ReceiveDamageRpc(NetworkObjectId, damage, isCritical, false);
     }
 
     [Rpc(SendTo.Server)]
-    private void ReceiveDamageRpc(ulong targetNetworkObjectId, int damage, bool isCritical)
+    private void ReceiveDamageRpc(ulong targetNetworkObjectId, int damage, bool isCritical, bool isEnemy)
     {
         if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(targetNetworkObjectId, out var playerObj))
         {
@@ -260,7 +260,8 @@ public class PlayerAttributeController : NetworkBehaviour
             PlayerController playerController = playerObj.GetComponent<PlayerController>();
             if (player != null)
             {
-                player.CurrentHP.Value -= damage; 
+                if (!isEnemy && !playerController.isPvPActive.Value) return;
+                player.CurrentHP.Value -= damage;
                 if(player.CurrentHP.Value - damage <= 0)
                 {
                     player.CurrentHP.Value = player.MaxHP.Value;

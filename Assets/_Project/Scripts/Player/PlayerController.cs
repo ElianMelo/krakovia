@@ -3,6 +3,7 @@ using TMPro;
 using Unity.Collections;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : NetworkBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerController : NetworkBehaviour
     private ClientNetworkAnimator clientNetworkAnimator;
 
     public TMP_Text playerNameText;
+    public Image playerIsPvP;
+
     private NetworkVariable<FixedString64Bytes> playerName = new NetworkVariable<FixedString64Bytes>();
     public NetworkVariable<bool> isPvPActive = new NetworkVariable<bool>();
 
@@ -134,6 +137,7 @@ public class PlayerController : NetworkBehaviour
     {
         if(IsOwner)
         {
+            playerIsPvP.enabled = false;
             if (currentValue)
             {
                 InterfaceManager.Instance.PvPInterfaceController.EnablePvPInterface();
@@ -144,14 +148,7 @@ public class PlayerController : NetworkBehaviour
             }
         } else
         {
-            if (currentValue)
-            {
-                InterfaceManager.Instance.PvPInterfaceController.EnablePvPInterface();
-            }
-            else
-            {
-                InterfaceManager.Instance.PvPInterfaceController.DisablePvPInterface();
-            }
+            playerIsPvP.enabled = currentValue;
         }
         
     }
