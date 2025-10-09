@@ -1,5 +1,6 @@
 using System.Collections;
 using Unity.Netcode;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerProjectile : NetworkBehaviour
@@ -55,6 +56,18 @@ public class PlayerProjectile : NetworkBehaviour
             enemyMovement.OnAttacked(playerSourceTransform);
             enemyAttack.StartAttackRoutine();
             enemyController.ReceiveDamage(playerSource, contactPoint, damage, isCritical);
+        }
+
+        BossWeakPoint bossWeakPoint = other.gameObject.GetComponent<BossWeakPoint>();
+        if (bossWeakPoint != null)
+        {
+            BossController bossController = other.gameObject.GetComponentInParent<BossController>();
+            Physics.IgnoreCollision(GetComponent<Collider>(), other);
+            //var enemyAttack = bossController.GetComponent<EnemyAttack>();
+            Vector3 contactPoint = other.ClosestPoint(transform.position);
+            //enemyMovement.OnAttacked(playerSourceTransform);
+            //enemyAttack.StartAttackRoutine();
+            bossController.ReceiveDamage(playerSource, contactPoint, damage, isCritical);
         }
 
         // Source dont take damage

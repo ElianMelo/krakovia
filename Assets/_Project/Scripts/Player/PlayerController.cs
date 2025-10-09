@@ -95,7 +95,9 @@ public class PlayerController : NetworkBehaviour
         while(count <= 1)
         {
             yield return new WaitForSeconds(1f);
-            transform.position = new Vector3(325.59f, 3.07f, 27.87f);
+            // Dog Position
+            // transform.position = new Vector3(325.59f, 3.07f, 27.87f);
+            transform.position = new Vector3(7.2f, -0.24f, 68.9f);
             count++;
         }
     }

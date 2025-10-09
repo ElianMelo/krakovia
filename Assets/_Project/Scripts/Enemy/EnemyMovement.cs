@@ -163,15 +163,15 @@ public class EnemyMovement : MonoBehaviour
         hasTarget = false;
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, wanderRadius);
+    //private void OnDrawGizmosSelected()
+    //{
+    //    Gizmos.color = Color.yellow;
+    //    Gizmos.DrawWireSphere(transform.position, wanderRadius);
 
-        if (hasTarget)
-        {
-            Gizmos.color = (aggroTarget != null) ? Color.red : Color.cyan;
-            Gizmos.DrawSphere(targetPosition, 0.2f);
-        }
-    }
+    //    if (hasTarget)
+    //    {
+    //        Gizmos.color = (aggroTarget != null) ? Color.red : Color.cyan;
+    //        Gizmos.DrawSphere(targetPosition, 0.2f);
+    //    }
+    //}
 }

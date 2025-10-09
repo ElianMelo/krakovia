@@ -265,34 +265,34 @@ public class PlayerAttackController : NetworkBehaviour
 
     private void CastSearchTarget()
     {
-        var playerAttributeControllers = SphereCastFor<PlayerAttributeController>();
-        if (playerAttributeControllers != null && playerAttributeControllers.Count > 0)
-        {
-            foreach (var playerAttributeController in playerAttributeControllers)
-            {
-                PlayerAttributeController thisPlayerAttributeController = GetComponent<PlayerAttributeController>();
-                float damage = thisPlayerAttributeController.Damage;
-                bool isCritical = Random.Range(0f, 1f) <= thisPlayerAttributeController.CriticalChance;
-                if (isCritical) damage *= 2;
-                playerAttributeController.ReceivePlayerDamage((int) damage, isCritical);
-            }
-        }
+        //var playerAttributeControllers = SphereCastFor<PlayerAttributeController>();
+        //if (playerAttributeControllers != null && playerAttributeControllers.Count > 0)
+        //{
+        //    foreach (var playerAttributeController in playerAttributeControllers)
+        //    {
+        //        PlayerAttributeController thisPlayerAttributeController = GetComponent<PlayerAttributeController>();
+        //        float damage = thisPlayerAttributeController.Damage;
+        //        bool isCritical = Random.Range(0f, 1f) <= thisPlayerAttributeController.CriticalChance;
+        //        if (isCritical) damage *= 2;
+        //        playerAttributeController.ReceivePlayerDamage((int) damage, isCritical);
+        //    }
+        //}
 
-        var enemyControllers = SphereCastFor<EnemyController>();
-        if (enemyControllers != null && enemyControllers.Count > 0)
-        {
-            foreach (var enemyController in enemyControllers)
-            {
-                Vector3 contactPoint = enemyController.GetComponent<Collider>().ClosestPoint(transform.position);
+        //var enemyControllers = SphereCastFor<EnemyController>();
+        //if (enemyControllers != null && enemyControllers.Count > 0)
+        //{
+        //    foreach (var enemyController in enemyControllers)
+        //    {
+        //        Vector3 contactPoint = enemyController.GetComponent<Collider>().ClosestPoint(transform.position);
 
-                var playerAttributeController = GetComponent<PlayerAttributeController>();
+        //        var playerAttributeController = GetComponent<PlayerAttributeController>();
 
-                bool isCritical = Random.Range(0f, 1f) <= playerAttributeController.CriticalChance;
-                float damage = playerAttributeController.Damage;
-                if (isCritical) damage *= 2;
-                enemyController.ReceiveDamage(0, contactPoint, damage, isCritical);
-            }
-        }
+        //        bool isCritical = Random.Range(0f, 1f) <= playerAttributeController.CriticalChance;
+        //        float damage = playerAttributeController.Damage;
+        //        if (isCritical) damage *= 2;
+        //        enemyController.ReceiveDamage(0, contactPoint, damage, isCritical);
+        //    }
+        //}
     }
 
     private IEnumerator EnableMouseLeftSkill(float duration)
