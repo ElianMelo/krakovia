@@ -1,6 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+[Serializable]
+public class AttackConfig
+{
+    public GameObject attackBox;
+    public GameObject attackFill;
+    public float duration;
+    public float damage;
+    public float finalScale;
+}
 
 public class BossAttack : MonoBehaviour
 {
@@ -12,6 +23,12 @@ public class BossAttack : MonoBehaviour
     private Animator animator;
     private BossController bossController;
     private const string AttackAnim = "Attack";
+    private bool attackRoutineRunning;
+
+    private Coroutine attackRoutine;
+
+    [SerializeField]
+    public List<AttackConfig> attackConfigs = new();
 
     private void Start()
     {
@@ -21,7 +38,9 @@ public class BossAttack : MonoBehaviour
 
     public void StartAttackRoutine()
     {
-        StartCoroutine(AttackRoutine());
+        if (attackRoutineRunning) return;
+        if(attackRoutine != null) StopCoroutine(attackRoutine);
+        attackRoutine = StartCoroutine(AttackRoutine());
     }
 
     public void StopAttackRoutine()
@@ -32,10 +51,40 @@ public class BossAttack : MonoBehaviour
 
     private IEnumerator AttackRoutine()
     {
+        attackRoutineRunning = true;
+        bool isAttacking = true;
+        float currentScale = 0f;
+        float currentDuration = 0;
+        AttackConfig attackConfig = attackConfigs[0];
+        Collider attackFillCollider = attackConfig.attackFill.GetComponent<Collider>();
+        MeshRenderer attackFillMesh = attackConfig.attackFill.GetComponent<MeshRenderer>();
+        MeshRenderer attackBoxMesh = attackConfig.attackBox.GetComponent<MeshRenderer>();
+        attackFillCollider.enabled = false;
+        attackFillMesh.enabled = true;
+        attackBoxMesh.enabled = true;
+        // animator.SetTrigger(AttackAnim);
         while (!bossController.IsDead)
         {
-            animator.SetTrigger(AttackAnim);
-            yield return new WaitForSeconds(attackDelay);
+            if(isAttacking && currentDuration < attackConfig.duration)
+            {
+                currentDuration += Time.deltaTime;
+                currentScale = attackConfig.finalScale * (currentDuration / attackConfig.duration);
+                attackConfig.attackFill.transform.localScale = new Vector3(currentScale, currentScale, currentScale);
+                yield return null;
+            } else
+            {
+                currentScale = 0f;
+                currentDuration = 0f;
+                attackConfig.attackFill.GetComponent<BossColliderAttack>().SetupDamage(attackConfig.damage);
+                attackFillCollider.enabled = true;
+                yield return new WaitForSeconds(2f);
+                attackFillCollider.enabled = false;
+                attackFillMesh.enabled = false;
+                attackBoxMesh.enabled = false;
+                yield return new WaitForSeconds(attackDelay);
+                attackFillMesh.enabled = true;
+                attackBoxMesh.enabled = true;
+            }
         }
     }
 

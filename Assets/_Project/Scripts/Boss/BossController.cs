@@ -61,6 +61,8 @@ public class BossController : NetworkBehaviour
 
     public void ReceiveDamage(ulong sourceDamage, Vector3 contactPoint, float damage, bool isCritical)
     {
+        bossAttack.StartAttackRoutine();
+        if (isDead) return;
         ReceiveDamageRpc(NetworkObjectId, sourceDamage, contactPoint, damage, isCritical);
     }
 
