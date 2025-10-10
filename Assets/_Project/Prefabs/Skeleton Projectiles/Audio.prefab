@@ -216,7 +216,7 @@ MonoBehaviour:
         SfxAudioMixerGroup: {fileID: 0}
         Priority: 128
         PanStereo: 0
-        SpatialBlend: 0
+        SpatialBlend: 1
         DopplerLevel: 1
         Spread: 0
         RolloffMode: 0

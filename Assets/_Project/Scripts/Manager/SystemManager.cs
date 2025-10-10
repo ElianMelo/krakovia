@@ -18,11 +18,19 @@ public class SystemManager : MonoBehaviour
 
     public SavePoint CurrentSavePoint { get { return currentSavePoint; } set { currentSavePoint = value; } }
 
+    public bool GameStarted { get; private set; }
+
     public static SystemManager Instance;
 
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void SwapSavePoint(SavePoint savePoint)
@@ -46,14 +54,28 @@ public class SystemManager : MonoBehaviour
         }
     }
 
+    public void StartHostLocal()
+    {
+        NetworkManager.Singleton.StartHost();
+        GameStarted = true;
+    }
+
+    public void StartClientLocal()
+    {
+        NetworkManager.Singleton.StartClient();
+        GameStarted = true;
+    }
+
     public void StartHost()
     {
         using var _ = StartHostWithRelay(6);
+        GameStarted = true;
     }
 
     public void StartClient()
     {
         _ = StartClientWithRelay("asd");
+        GameStarted = true;
     }
 
     /// <summary>

@@ -1,13 +1,30 @@
 using TMPro;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InterfaceManager : MonoBehaviour
 {
     public static InterfaceManager Instance;
 
+    public Canvas thisCanvas;
+    public Canvas otherCanvas;
     public TMP_InputField playerNameInputField;
+
+    [Header("Class Selection")]
     public TMP_Dropdown classSelectionDropdown;
+    public TMP_Text firstDescription;
+    public TMP_Text secondDescription;
+    public GameObject horseModel;
+    public GameObject fairyModel;
+    public GameObject skeletonModel;
+
+    [TextArea] public string horseFirstDescription;
+    [TextArea] public string horseSecondDescription;
+    [TextArea] public string fairyFirstDescription;
+    [TextArea] public string fairySecondDescription;
+    [TextArea] public string skeletonFirstDescription;
+    [TextArea] public string skeletonSecondDescription;
 
     public PlayerInterfaceController _playerInterfaceController;
     public PvPInterfaceController _pvPInterfaceController;
@@ -25,11 +42,50 @@ public class InterfaceManager : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        Instance = this;   
+    }
+
+    private void Start()
+    {
+        classSelectionDropdown.onValueChanged.AddListener(delegate { DropdownValueChanged(classSelectionDropdown); });
+    }
+
+    void DropdownValueChanged(TMP_Dropdown change)
+    {
+        PlayerClass playerClass = (PlayerClass) change.value;
+
+        switch (playerClass)
+        {
+            case PlayerClass.Fairy:
+                firstDescription.text = fairyFirstDescription;
+                secondDescription.text = fairySecondDescription;
+                horseModel.SetActive(false);
+                fairyModel.SetActive(true);
+                skeletonModel.SetActive(false);
+                break;
+            case PlayerClass.Skeleton:
+                firstDescription.text = skeletonFirstDescription;
+                secondDescription.text = skeletonSecondDescription;
+                horseModel.SetActive(false);
+                fairyModel.SetActive(false);
+                skeletonModel.SetActive(true);
+                break;
+            case PlayerClass.Horse:
+                firstDescription.text = horseFirstDescription;
+                secondDescription.text = horseSecondDescription;
+                horseModel.SetActive(true);
+                fairyModel.SetActive(false);
+                skeletonModel.SetActive(false);
+                break;
+            default:
+                break;
+        }
     }
 
     public PlayerClass GetSelectedClass()
     {
+        thisCanvas.enabled = true;
+        otherCanvas.enabled = false;
         return (PlayerClass) classSelectionDropdown.value;
     }
 

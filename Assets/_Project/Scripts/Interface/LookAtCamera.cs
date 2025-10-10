@@ -4,6 +4,7 @@ public class LookAtCamera : MonoBehaviour
 {
     void LateUpdate()
     {
+        if (Camera.main == null) return;
         transform.LookAt(Camera.main.transform);
     }
 }

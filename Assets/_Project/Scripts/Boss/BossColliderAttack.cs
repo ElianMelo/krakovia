@@ -17,7 +17,6 @@ public class BossColliderAttack : NetworkBehaviour
         PlayerAttributeController playerAttributeController = other.gameObject.GetComponent<PlayerAttributeController>();
         if (playerAttributeController != null)
         {            
-            Physics.IgnoreCollision(GetComponent<Collider>(), other);
             playerAttributeController.ReceiveDamageEnemy((int) damage, false);
         }
     }
