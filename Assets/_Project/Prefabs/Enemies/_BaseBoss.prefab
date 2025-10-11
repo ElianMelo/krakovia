@@ -251,11 +251,12 @@ MonoBehaviour:
     m_Bits: 128
   damage: 2
   range: 2
+  frameSeconds: 0.0333
   attackDelay: 2
   attackConfigs:
   - attackBox: {fileID: 5289331656967506617}
     attackFill: {fileID: 6721721824884716520}
-    duration: 5
+    frames: 24
     damage: 20
     finalScale: 10
 --- !u!1 &5289331656967506617

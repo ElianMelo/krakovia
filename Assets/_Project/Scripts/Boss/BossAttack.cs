@@ -8,9 +8,15 @@ public class AttackConfig
 {
     public GameObject attackBox;
     public GameObject attackFill;
-    public float duration;
+    public float frames;
     public float damage;
     public float finalScale;
+    public AttackAnim attackAnim;
+}
+
+public enum AttackAnim
+{
+    Attack1, Attack2, Attack3, Attack4,
 }
 
 public class BossAttack : MonoBehaviour
@@ -18,6 +24,7 @@ public class BossAttack : MonoBehaviour
     public LayerMask mask;
     public int damage;
     public float range;
+    public float frameSeconds;
     public float attackDelay;
 
     private Animator animator;
@@ -62,13 +69,18 @@ public class BossAttack : MonoBehaviour
         attackFillCollider.enabled = false;
         attackFillMesh.enabled = true;
         attackBoxMesh.enabled = true;
+        float maxDuration = attackConfig.frames * frameSeconds;
         // animator.SetTrigger(AttackAnim);
         while (!bossController.IsDead)
         {
-            if(isAttacking && currentDuration < attackConfig.duration)
+            if(currentDuration == 0)
+            {
+                animator.SetTrigger(attackConfig.attackAnim.ToString());
+            }
+            if(isAttacking && currentDuration < maxDuration)
             {
                 currentDuration += Time.deltaTime;
-                currentScale = attackConfig.finalScale * (currentDuration / attackConfig.duration);
+                currentScale = attackConfig.finalScale * (currentDuration / maxDuration);
                 attackConfig.attackFill.transform.localScale = new Vector3(currentScale, currentScale, currentScale);
                 yield return null;
             } else

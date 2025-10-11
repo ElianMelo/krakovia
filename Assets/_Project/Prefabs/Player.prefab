@@ -608,7 +608,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   currentExperience: 0
   currentLevel: 1
-  maxExperience: 100
+  maxExperience: 300
   CurrentHP:
     m_InternalValue: 50
   MaxHP:
@@ -619,7 +619,7 @@ MonoBehaviour:
   skeletonData: {fileID: 11400000, guid: 93d6f6fb5828ac44c92c6c10d26cb435, type: 2}
   horseData: {fileID: 11400000, guid: ebe444d9b1671d1469a85a309c4f008f, type: 2}
   experienceIncreaseAmount: 300
-  fairyMouseLeftSkillDamagePercentage: 400
+  fairyMouseLeftSkillDamagePercentage: 4000
   fairyMouseRightSkillDamagePercentage: 400
   fairyQSkillDamagePercentage: 400
   fairyFSkillDamagePercentage: 400

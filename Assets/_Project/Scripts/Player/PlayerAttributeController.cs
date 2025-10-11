@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class PlayerAttributeController : NetworkBehaviour
 {
-    [HideInInspector] public int currentExperience = 0;
-    [HideInInspector] public int currentLevel = 1;
-    [HideInInspector] public int maxExperience = 1000;
+    public int currentExperience = 0;
+    public int currentLevel = 1;
+    public int maxExperience = 1000;
 
     private PlayerMovementController playerMovementController; 
     private PlayerClassController playerClassController;
@@ -18,6 +18,8 @@ public class PlayerAttributeController : NetworkBehaviour
     private float cooldown = 0;
     private float damage = 0;
     private float speed = 0;
+
+    private const int MaxLevel = 20;
 
     public float CriticalChance => criticalChance / 100;
     public float HealthRegen => healthRegen;
@@ -337,15 +339,28 @@ public class PlayerAttributeController : NetworkBehaviour
     [Rpc(SendTo.SpecifiedInParams)]
     private void SendExpClientRpc(int experience, RpcParams rpcParams = default)
     {
+        if (currentLevel == MaxLevel) return;
         currentExperience += experience;
-        if (currentExperience >= maxExperience)
+
+        while (currentExperience > maxExperience)
         {
-            currentExperience = maxExperience - currentExperience;
+            currentExperience -= maxExperience;
             currentLevel += 1;
-            maxExperience = maxExperience + experienceIncreaseAmount;
-            InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerLevel(currentLevel);
+            if (MaxLevelCheck()) return;
+            maxExperience += experienceIncreaseAmount;
             LevelUp();
         }
+        InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerLevel(currentLevel);
         InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerExperience(currentExperience, maxExperience);
+    }
+
+    private bool MaxLevelCheck()
+    {
+        bool isMaxLevel = currentLevel == MaxLevel;
+        if (isMaxLevel) {
+            InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerLevel(MaxLevel);
+            InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerExperience(0, maxExperience);
+        }
+        return isMaxLevel;
     }
 }

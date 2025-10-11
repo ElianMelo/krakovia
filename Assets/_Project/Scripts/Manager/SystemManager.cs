@@ -54,28 +54,35 @@ public class SystemManager : MonoBehaviour
         }
     }
 
+    private void StartGame()
+    {
+        GameStarted = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
     public void StartHostLocal()
     {
         NetworkManager.Singleton.StartHost();
-        GameStarted = true;
+        StartGame();
     }
 
     public void StartClientLocal()
     {
         NetworkManager.Singleton.StartClient();
-        GameStarted = true;
+        StartGame();
     }
 
     public void StartHost()
     {
         using var _ = StartHostWithRelay(6);
-        GameStarted = true;
+        StartGame();
     }
 
     public void StartClient()
     {
         _ = StartClientWithRelay("asd");
-        GameStarted = true;
+        StartGame();
     }
 
     /// <summary>
