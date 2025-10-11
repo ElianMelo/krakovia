@@ -44,3 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 917bd7085e795cc42b15dc5f94c22b77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossEffectPooler
+  onHitEffect: {fileID: 7780183107191031951, guid: 75cc95414f895d24a9ea78a02136df7b, type: 3}
+  hitEffectPool: 10
+  onDeathEffect: {fileID: 2856443763802584437, guid: 230024bbb992cbd4f9edfb98f3a6a30c, type: 3}
+  deathEffectPool: 10

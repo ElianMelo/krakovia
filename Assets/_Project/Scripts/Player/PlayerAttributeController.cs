@@ -277,14 +277,19 @@ public class PlayerAttributeController : NetworkBehaviour
                     };
                     DeathRpc(rpcParams);
                 }
-                SendDamageClientRpc(player.transform.position, damage, isCritical);
+                SendDamageClientRpc(player.transform.position, damage, isCritical, player.CurrentHP.Value - damage <= 0);
             }
         }
     }
 
     [Rpc(SendTo.Everyone)]
-    private void SendDamageClientRpc(Vector3 contactPoint, float damage, bool isCritical)
+    private void SendDamageClientRpc(Vector3 contactPoint, float damage, bool isCritical, bool isDead)
     {
+        PlayerEffectPooler.Instance.ShowHitEffect(transform.position + new Vector3(0f, 1f, 0f), Quaternion.identity, 3f);
+        if (isDead)
+        {
+            PlayerEffectPooler.Instance.ShowDeathEffect(transform.position + new Vector3(0f, 1f, 0f), Quaternion.identity, 3f);
+        }
         NumberWorldSpacePooler.Instance.ShowNumberInWorld((int)damage, transform.position + new Vector3(0f, 1f, 0f), isCritical);
     }
 

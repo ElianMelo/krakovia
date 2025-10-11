@@ -107,14 +107,9 @@ public class EnemyController : NetworkBehaviour
             animator.SetTrigger(HurtAnim);
 
         EnemyEffectPooler.Instance.ShowHitEffect(contactPoint, Quaternion.identity, 2f);
-        //var bloodEffectInstance = Instantiate(bloodEffect, contactPoint, Quaternion.identity);
-        //Destroy(bloodEffectInstance, 2f);
 
         if (isEnemyDead)
         {
-            //var effectInstance = Instantiate(explosionEffect, transform.position + new Vector3(0f,1f,0f), Quaternion.identity);
-            //Destroy(effectInstance, 2f);
-
             EnemyEffectPooler.Instance.ShowDeathEffect(transform.position + new Vector3(0f, 1f, 0f), Quaternion.identity, 2f);
 
             enemyCollider.excludeLayers = playerMask;
