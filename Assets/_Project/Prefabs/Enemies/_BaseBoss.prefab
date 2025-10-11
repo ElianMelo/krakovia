@@ -254,18 +254,18 @@ MonoBehaviour:
   damage: 2
   range: 2
   frameSeconds: 0.0333
-  stayAttackActive: 1
+  stayAttackActive: 0.5
   attackDelay: 2
   attackConfigs:
   - attackBox: {fileID: 5289331656967506617}
     attackFill: {fileID: 6721721824884716520}
-    frames: 24
+    frames: 20
     damage: 5
     finalScale: 10
     attackAnim: 0
   - attackBox: {fileID: 2197061264549864210}
     attackFill: {fileID: 8275096111065682773}
-    frames: 54
+    frames: 50
     damage: 5
     finalScale: 18
     attackAnim: 3

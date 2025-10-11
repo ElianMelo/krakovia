@@ -39915,71 +39915,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6267631536864588588, guid: 730ed7ec7ac4811489d3abfe2cbc37b4, type: 3}
   m_PrefabInstance: {fileID: 1358407006}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1358519667
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1160617717093947312, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
-      propertyPath: m_Name
-      value: _BaseBoss
-      objectReference: {fileID: 0}
-    - target: {fileID: 1160617717093947312, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1968221499178913034, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -13.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1968221499178913034, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1968221499178913034, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 69.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1968221499178913034, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7027225
-      objectReference: {fileID: 0}
-    - target: {fileID: 1968221499178913034, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1968221499178913034, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.71146417
-      objectReference: {fileID: 0}
-    - target: {fileID: 1968221499178913034, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1968221499178913034, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1968221499178913034, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90.708
-      objectReference: {fileID: 0}
-    - target: {fileID: 1968221499178913034, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5147054311580931116, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
-      propertyPath: GlobalObjectIdHash
-      value: 1089772995
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
 --- !u!1001 &1360863965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41636,7 +41571,7 @@ GameObject:
   - component: {fileID: 1420360795}
   - component: {fileID: 1420360794}
   m_Layer: 0
-  m_Name: BossSpawner
+  m_Name: WormBossSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65433,6 +65368,5 @@ SceneRoots:
   - {fileID: 726361177}
   - {fileID: 955188096}
   - {fileID: 1420360793}
-  - {fileID: 1358519667}
   - {fileID: 556642168}
   - {fileID: 569271568}
