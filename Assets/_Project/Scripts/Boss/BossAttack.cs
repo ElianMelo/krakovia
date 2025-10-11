@@ -46,6 +46,7 @@ public class BossAttack : MonoBehaviour
 
     public void StartAttackRoutine()
     {
+        if (bossController.IsDead) return;
         if (attackRoutineRunning) return;
         if(attackRoutine != null) StopCoroutine(attackRoutine);
         attackRoutine = StartCoroutine(AttackRoutine());

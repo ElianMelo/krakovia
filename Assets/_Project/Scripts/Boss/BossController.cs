@@ -1,5 +1,6 @@
 using FIMSpace.FProceduralAnimation;
 using System.Collections;
+using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -19,6 +20,7 @@ public class BossController : NetworkBehaviour
     private Animator animator;
     private BossAttack bossAttack;
     private RagdollAnimator2 ragdoll;
+    private BossSpawner bossSpawner;
 
     private const string HurtAnim = "Hurt";
     private const string DeathAnim = "Death";
@@ -28,6 +30,8 @@ public class BossController : NetworkBehaviour
     public bool IsDead => isDead;
     public NetworkVariable<float> CurrentHP => currentHP;
 
+    private HashSet<ulong> playersToReceiveExperience = new();
+
     public override void OnNetworkSpawn()
     {
         if (IsServer)
@@ -35,6 +39,11 @@ public class BossController : NetworkBehaviour
             currentHP.Value = maxHP;
         }
     }
+
+    public void SetupBossSpawner(BossSpawner bossSpawner)
+    {
+        this.bossSpawner = bossSpawner;
+    } 
 
     private void Awake()
     {
@@ -71,6 +80,9 @@ public class BossController : NetworkBehaviour
     {
         if (isDead) return;
         bool isEnemyDead = false;
+
+        playersToReceiveExperience.Add(sourceDamage);
+
         if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(enemyNetworkObjectId, out var enemyObj))
         {
             var enemy = enemyObj.GetComponent<BossController>();
@@ -82,16 +94,28 @@ public class BossController : NetworkBehaviour
 
         isDead = isEnemyDead;
 
-        if (isEnemyDead && NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(sourceDamage, out var playerObj))
+        if (isEnemyDead)
         {
-            var player = playerObj.GetComponent<PlayerController>();
-            if (player != null)
-            {
-                player.PlayerAttributeController.ReceiveExp(player.PlayerAttributeController.OwnerClientId, xpAmount);
-            }
+            ApplyExperienceListPlays();
+            playersToReceiveExperience.Clear();
         }
 
         SendDamageClientRpc(enemyNetworkObjectId, isEnemyDead, contactPoint, damage, isCritical);
+    }
+
+    private void ApplyExperienceListPlays()
+    {
+        foreach (var playerReceiver in playersToReceiveExperience)
+        {
+            if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(playerReceiver, out var playerObj))
+            {
+                var player = playerObj.GetComponent<PlayerController>();
+                if (player != null)
+                {
+                    player.PlayerAttributeController.ReceiveExp(player.PlayerAttributeController.OwnerClientId, xpAmount);
+                }
+            }
+        }
     }
 
     [Rpc(SendTo.Everyone)]
@@ -142,5 +166,6 @@ public class BossController : NetworkBehaviour
     {
         yield return new WaitForSeconds(6f);
         NetworkObject.Despawn();
+        bossSpawner.Death();
     }
 }
