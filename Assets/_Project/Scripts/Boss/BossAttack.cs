@@ -25,6 +25,7 @@ public class BossAttack : MonoBehaviour
     public int damage;
     public float range;
     public float frameSeconds;
+    public float stayAttackActive;
     public float attackDelay;
 
     private Animator animator;
@@ -62,7 +63,7 @@ public class BossAttack : MonoBehaviour
         bool isAttacking = true;
         float currentScale = 0f;
         float currentDuration = 0;
-        AttackConfig attackConfig = attackConfigs[0];
+        AttackConfig attackConfig = attackConfigs[UnityEngine.Random.Range(0, attackConfigs.Count)];
         Collider attackFillCollider = attackConfig.attackFill.GetComponent<Collider>();
         MeshRenderer attackFillMesh = attackConfig.attackFill.GetComponent<MeshRenderer>();
         MeshRenderer attackBoxMesh = attackConfig.attackBox.GetComponent<MeshRenderer>();
@@ -89,13 +90,21 @@ public class BossAttack : MonoBehaviour
                 currentDuration = 0f;
                 attackConfig.attackFill.GetComponent<BossColliderAttack>().SetupDamage(attackConfig.damage);
                 attackFillCollider.enabled = true;
-                yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(stayAttackActive);
                 attackFillCollider.enabled = false;
                 attackFillMesh.enabled = false;
                 attackBoxMesh.enabled = false;
                 yield return new WaitForSeconds(attackDelay);
+
+                // Reset
+                attackConfig = attackConfigs[UnityEngine.Random.Range(0, attackConfigs.Count)];
+                attackFillCollider = attackConfig.attackFill.GetComponent<Collider>();
+                attackFillMesh = attackConfig.attackFill.GetComponent<MeshRenderer>();
+                attackBoxMesh = attackConfig.attackBox.GetComponent<MeshRenderer>();
+                attackFillCollider.enabled = false;
                 attackFillMesh.enabled = true;
                 attackBoxMesh.enabled = true;
+                maxDuration = attackConfig.frames * frameSeconds;
             }
         }
     }
