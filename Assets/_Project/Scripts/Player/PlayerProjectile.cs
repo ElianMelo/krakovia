@@ -15,7 +15,7 @@ public class PlayerProjectile : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
-        if (IsHost)
+        if (IsServer)
         {
             StartCoroutine(playbackTimeToActivate());
             StartCoroutine(destroySelf());
