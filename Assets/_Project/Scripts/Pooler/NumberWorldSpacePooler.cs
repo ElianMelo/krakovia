@@ -23,9 +23,10 @@ public class NumberWorldSpacePooler : MonoBehaviour
 
     private void Start()
     {
+        GameObject obj;
         for (int i = 0; i < amountToPool; i++)
         {
-            GameObject obj = Instantiate(numberTemplatePrefab, transform);
+            obj = Instantiate(numberTemplatePrefab, transform);
             obj.SetActive(false);
             poolNumbers.Add(obj);
         }

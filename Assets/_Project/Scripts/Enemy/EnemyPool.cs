@@ -59,6 +59,7 @@ public class EnemyPool : MonoBehaviour
         }
         else
         {
+            Debug.Log("Instatiate New?");
             var typeData = enemyTypes.Find(t => t.type == type);
             if (typeData != null)
             {

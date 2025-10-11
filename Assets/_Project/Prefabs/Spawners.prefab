@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 10
-  spawnInterval: 1
+  maxEnemies: 5
+  spawnInterval: 3
   enemyTypes:
   - type: 1
     spawnChance: 1
@@ -83,7 +83,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4755812283587966178}
   - {fileID: 6949164730598649632}
   - {fileID: 8181457053810330531}
   - {fileID: 3915837748159350560}
@@ -135,13 +134,13 @@ MonoBehaviour:
   enemyTypes:
   - type: 0
     prefab: {fileID: 4779095418874959237, guid: c3a364eb883da6343b5d64fe52b54bee, type: 3}
-    initialPoolSize: 100
+    initialPoolSize: 30
   - type: 1
     prefab: {fileID: 2449283383327018856, guid: 1eb604c8746182f44ace2bcc2394ef0d, type: 3}
-    initialPoolSize: 100
+    initialPoolSize: 30
   - type: 2
     prefab: {fileID: 2449283383327018856, guid: 47373e81fd2adb54c9a03c5e38940af0, type: 3}
-    initialPoolSize: 100
+    initialPoolSize: 30
 --- !u!1 &3290925670695503460
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,62 +187,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 10
-  spawnInterval: 1
+  maxEnemies: 5
+  spawnInterval: 3
   enemyTypes:
   - type: 1
-    spawnChance: 1
-  globalPool: {fileID: 379584633189090901}
---- !u!1 &3491526500964282536
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4755812283587966178}
-  - component: {fileID: 464662662288597932}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4755812283587966178
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3491526500964282536}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 320.91, y: 0, z: 14.35}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5031533597982606769}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &464662662288597932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3491526500964282536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3cefa7114e02e149aac56ff8cc00746, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
-  ShowTopMostFoldoutHeaderGroup: 1
-  spawnRadius: 10
-  maxEnemies: 10
-  spawnInterval: 1
-  enemyTypes:
-  - type: 0
     spawnChance: 1
   globalPool: {fileID: 379584633189090901}
 --- !u!1 &4258643467569184135
@@ -292,8 +239,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 10
-  spawnInterval: 1
+  maxEnemies: 5
+  spawnInterval: 3
   enemyTypes:
   - type: 0
     spawnChance: 1
@@ -344,8 +291,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 10
-  spawnInterval: 1
+  maxEnemies: 5
+  spawnInterval: 3
   enemyTypes:
   - type: 0
     spawnChance: 1
@@ -396,8 +343,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 10
-  spawnInterval: 1
+  maxEnemies: 5
+  spawnInterval: 3
   enemyTypes:
   - type: 2
     spawnChance: 1
@@ -448,8 +395,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 10
-  spawnInterval: 1
+  maxEnemies: 5
+  spawnInterval: 3
   enemyTypes:
   - type: 1
     spawnChance: 1
@@ -500,8 +447,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 10
-  spawnInterval: 1
+  maxEnemies: 5
+  spawnInterval: 3
   enemyTypes:
   - type: 2
     spawnChance: 1
@@ -552,8 +499,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 10
-  spawnInterval: 1
+  maxEnemies: 5
+  spawnInterval: 3
   enemyTypes:
   - type: 2
     spawnChance: 1
@@ -604,8 +551,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 10
-  spawnInterval: 1
+  maxEnemies: 5
+  spawnInterval: 3
   enemyTypes:
   - type: 0
     spawnChance: 1

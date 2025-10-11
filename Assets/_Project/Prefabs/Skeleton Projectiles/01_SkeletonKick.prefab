@@ -9645,7 +9645,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &366416039583125182
 Transform:
   m_ObjectHideFlags: 0
@@ -14576,6 +14576,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerProjectile
   ShowTopMostFoldoutHeaderGroup: 1
+  playbackTime: 0
+  projectileCollider: {fileID: 0}
 --- !u!136 &2918299792864389873
 CapsuleCollider:
   m_ObjectHideFlags: 0
