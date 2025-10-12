@@ -17402,17 +17402,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3264585318791520829, guid: 718d9ce0c32cce54cbcac49ef82d3e8f, type: 3}
   m_PrefabInstance: {fileID: 559917422}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &561277808 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5631859557102737457, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
-  m_PrefabInstance: {fileID: 3333463021292240860}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1df25f8afece387499c1b14baa8282e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SystemManager
 --- !u!1001 &564736269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34599,6 +34588,23 @@ Transform:
   - {fileID: 1510467293}
   m_Father: {fileID: 290918396}
   m_LocalEulerAnglesHint: {x: 0, y: 40.978, z: 0}
+--- !u!1 &1178368514 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3278841965205759229, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+  m_PrefabInstance: {fileID: 3333463021292240860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1178368520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178368514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0cb4e8702a94742841ac8e7695317e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MainGameLobby
 --- !u!1001 &1182234237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62719,7 +62725,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3278841965205759229, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1178368520}
   m_SourcePrefab: {fileID: 100100000, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
 --- !u!224 &3351280768534510258
 RectTransform:
@@ -63250,9 +63259,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 561277808}
-        m_TargetAssemblyTypeName: SystemManager, Assembly-CSharp
-        m_MethodName: StartClientLocal
+      - m_Target: {fileID: 1178368520}
+        m_TargetAssemblyTypeName: SessionManager, Assembly-CSharp
+        m_MethodName: ConnectMainServer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -64557,9 +64566,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 561277808}
-        m_TargetAssemblyTypeName: SystemManager, Assembly-CSharp
-        m_MethodName: StartHostLocal
+      - m_Target: {fileID: 1178368520}
+        m_TargetAssemblyTypeName: SessionManager, Assembly-CSharp
+        m_MethodName: CreateMainServer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

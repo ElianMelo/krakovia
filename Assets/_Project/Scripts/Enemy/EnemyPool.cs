@@ -20,12 +20,13 @@ public class PooledEnemyData
     public int initialPoolSize = 10;
 }
 
-public class EnemyPool : MonoBehaviour
+public class EnemyPool : NetworkBehaviour
 {
     public List<PooledEnemyData> enemyTypes = new List<PooledEnemyData>();
 
-    private void Awake()
+    public override void OnNetworkSpawn()
     {
+        if (!IsServer) return;
         foreach (var type in enemyTypes)
         {
             var handler = new EnemyPoolHandler(type.prefab, type.initialPoolSize);

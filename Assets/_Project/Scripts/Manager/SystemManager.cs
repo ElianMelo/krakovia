@@ -75,13 +75,15 @@ public class SystemManager : MonoBehaviour
 
     public void StartHost()
     {
-        using var _ = StartHostWithRelay(6);
+        // using var _ = StartHostWithRelay(6);
+        SessionManager.Instance.CreateMainServer();
         StartGame();
     }
 
     public void StartClient()
     {
-        _ = StartClientWithRelay("asd");
+        // _ = StartClientWithRelay("asd");
+        SessionManager.Instance.ConnectMainServer();
         StartGame();
     }
 
