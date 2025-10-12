@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31350ac75dc62e04786627811e1b1312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerEffectPooler
-  onHitEffect: {fileID: 7780183107191031951, guid: 75cc95414f895d24a9ea78a02136df7b, type: 3}
+  onHitEffect: {fileID: 7780183107191031951, guid: 7a110eb2775102140bb251e0964b9796, type: 3}
   hitEffectPool: 50
-  onDeathEffect: {fileID: 2856443763802584437, guid: 230024bbb992cbd4f9edfb98f3a6a30c, type: 3}
+  onDeathEffect: {fileID: 7780183107191031951, guid: 75cc95414f895d24a9ea78a02136df7b, type: 3}
   deathEffectPool: 50
