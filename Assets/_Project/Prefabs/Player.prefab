@@ -591,7 +591,7 @@ MonoBehaviour:
   allowAllDirections: 0
   disableGravity: 0
   resetVel: 1
-  dashCd: 3
+  dashCd: 2
   dashCdTimer: 0
   dashKey: 304
 --- !u!114 &8047847355979524310
@@ -620,30 +620,30 @@ MonoBehaviour:
   skeletonData: {fileID: 11400000, guid: 93d6f6fb5828ac44c92c6c10d26cb435, type: 2}
   horseData: {fileID: 11400000, guid: ebe444d9b1671d1469a85a309c4f008f, type: 2}
   experienceIncreaseAmount: 300
-  fairyMouseLeftSkillDamagePercentage: 100
-  fairyMouseRightSkillDamagePercentage: 200
-  fairyQSkillDamagePercentage: 300
-  fairyFSkillDamagePercentage: 400
-  fairyMouseLeftSkillCooldownSeconds: 1
-  fairyMouseRightSkillCooldownSeconds: 2
+  fairyMouseLeftSkillDamagePercentage: 200
+  fairyMouseRightSkillDamagePercentage: 100
+  fairyQSkillDamagePercentage: 500
+  fairyFSkillDamagePercentage: 2000
+  fairyMouseLeftSkillCooldownSeconds: 1.5
+  fairyMouseRightSkillCooldownSeconds: 1.5
   fairyQSkillCooldownSeconds: 3
-  fairyFSkillCooldownSeconds: 4
-  skeletonMouseLeftSkillDamagePercentage: 100
-  skeletonMouseRightSkillDamagePercentage: 200
-  skeletonQSkillDamagePercentage: 300
-  skeletonFSkillDamagePercentage: 400
-  skeletonMouseLeftSkillCooldownSeconds: 1
-  skeletonMouseRightSkillCooldownSeconds: 2
+  fairyFSkillCooldownSeconds: 5
+  skeletonMouseLeftSkillDamagePercentage: 80
+  skeletonMouseRightSkillDamagePercentage: 250
+  skeletonQSkillDamagePercentage: 150
+  skeletonFSkillDamagePercentage: 100
+  skeletonMouseLeftSkillCooldownSeconds: 0.3
+  skeletonMouseRightSkillCooldownSeconds: 3
   skeletonQSkillCooldownSeconds: 3
-  skeletonFSkillCooldownSeconds: 4
-  horseMouseLeftSkillDamagePercentage: 100
-  horseMouseRightSkillDamagePercentage: 200
-  horseQSkillDamagePercentage: 300
-  horseFSkillDamagePercentage: 400
+  skeletonFSkillCooldownSeconds: 8
+  horseMouseLeftSkillDamagePercentage: 80
+  horseMouseRightSkillDamagePercentage: 100
+  horseQSkillDamagePercentage: 150
+  horseFSkillDamagePercentage: 300
   horseMouseLeftSkillCooldownSeconds: 0.2
   horseMouseRightSkillCooldownSeconds: 1
-  horseQSkillCooldownSeconds: 5
-  horseFSkillCooldownSeconds: 8
+  horseQSkillCooldownSeconds: 3
+  horseFSkillCooldownSeconds: 12
 --- !u!1 &8201004048388190410
 GameObject:
   m_ObjectHideFlags: 0
@@ -1846,7 +1846,7 @@ MonoBehaviour:
         SfxAudioMixerGroup: {fileID: 0}
         Priority: 128
         PanStereo: 0
-        SpatialBlend: 0
+        SpatialBlend: 1
         DopplerLevel: 1
         Spread: 0
         RolloffMode: 0
