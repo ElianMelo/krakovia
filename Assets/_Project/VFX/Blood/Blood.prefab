@@ -309,8 +309,8 @@ MonoBehaviour:
           ButtonText: Debug Play Sound
         TestStopButton:
           ButtonText: Debug Stop Sound
-        PlayMethod: 2
-        PoolSize: 10
+        PlayMethod: 3
+        PoolSize: 1
         UseLegacyEventsMode: 0
         StopSoundOnFeedbackStop: 1
         MinVolume: 1.112

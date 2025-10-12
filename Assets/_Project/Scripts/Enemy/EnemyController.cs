@@ -9,8 +9,6 @@ public class EnemyController : NetworkBehaviour
     [SerializeField] private int xpAmount = 5;
     private NetworkVariable<float> currentHP = new NetworkVariable<float>();
 
-    public GameObject explosionEffect;
-    public GameObject bloodEffect;
     public LayerMask playerMask;
 
     private bool isDead = false;
@@ -20,6 +18,7 @@ public class EnemyController : NetworkBehaviour
     private EnemyMovement enemyMovement;
     private EnemyAttack enemyAttack;
     private RagdollAnimator2 ragdoll;
+    public EnemySpawnerZone enemySpawnerZone;
 
     private const string HurtAnim = "Hurt";
     private const string DeathAnim = "Death";
@@ -112,7 +111,7 @@ public class EnemyController : NetworkBehaviour
         {
             EnemyEffectPooler.Instance.ShowDeathEffect(transform.position + new Vector3(0f, 1f, 0f), Quaternion.identity, 2f);
 
-            enemyCollider.excludeLayers = playerMask;
+            // enemyCollider.excludeLayers = playerMask;
             animator.SetTrigger(DeathAnim);
             ragdoll.Settings.AnimatingMode = RagdollHandler.EAnimatingMode.Sleep;
         }
@@ -138,13 +137,23 @@ public class EnemyController : NetworkBehaviour
         isDead = true;
         enemyAttack.StopAttackRoutine();
         enemyMovement.OnDeath();
-        GetComponent<Collider>().excludeLayers = playerMask;
+        //GetComponent<Collider>().excludeLayers = playerMask;
         StartCoroutine(DelayedDespawn());
+    }
+
+    public void ResetEnemyState()
+    {
+        ragdoll.Settings.AnimatingMode = RagdollHandler.EAnimatingMode.Standing;
+        isDead = false;
+        currentHP.Value = maxHP;
+        //GetComponent<Collider>().excludeLayers = LayerMask.non;
     }
 
     private IEnumerator DelayedDespawn()
     {
-        yield return new WaitForSeconds(6f);
-        NetworkObject.Despawn();
+        yield return new WaitForSeconds(5f);
+        ragdoll.Settings.AnimatingMode = RagdollHandler.EAnimatingMode.Off;
+        enemySpawnerZone.DespawnEnemy(NetworkObject);
+        // NetworkObject.Despawn();
     }
 }

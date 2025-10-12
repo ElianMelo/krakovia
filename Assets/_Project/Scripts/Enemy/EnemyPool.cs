@@ -24,67 +24,38 @@ public class EnemyPool : MonoBehaviour
 {
     public List<PooledEnemyData> enemyTypes = new List<PooledEnemyData>();
 
-    private Dictionary<EnemyType, Queue<NetworkObject>> poolDictionary = new Dictionary<EnemyType, Queue<NetworkObject>>();
-
-    void Awake()
+    private void Awake()
     {
         foreach (var type in enemyTypes)
         {
-            var queue = new Queue<NetworkObject>();
-            for (int i = 0; i < type.initialPoolSize; i++)
-            {
-                var obj = Instantiate(type.prefab).GetComponent<NetworkObject>();
-                obj.gameObject.SetActive(false);
-                queue.Enqueue(obj);
-            }
-            poolDictionary[type.type] = queue;
+            var handler = new EnemyPoolHandler(type.prefab, type.initialPoolSize);
+            NetworkManager.Singleton.PrefabHandler.AddHandler(type.prefab, handler);
         }
     }
 
-    public NetworkObject GetFromPool(EnemyType type)
+    public NetworkObject SpawnEnemy(EnemyType type, Vector3 position, Quaternion rotation)
     {
-        if (!poolDictionary.ContainsKey(type))
+        var typeData = enemyTypes.Find(t => t.type == type);
+        if (typeData == null)
         {
-            Debug.LogError($"No pool found for enemy type: {type}");
+            Debug.LogError($"Enemy type {type} not found!");
             return null;
         }
 
-        var queue = poolDictionary[type];
-        NetworkObject obj;
+        var obj = NetworkManager.Singleton.SpawnManager.InstantiateAndSpawn(
+            typeData.prefab.GetComponent<NetworkObject>(),
+            // Server owns it
+            ownerClientId: 0,
+            position: position,
+            rotation: rotation);
 
-        if (queue.Count > 0)
-        {
-            obj = queue.Dequeue();
-            obj.gameObject.SetActive(true);
-        }
-        else
-        {
-            Debug.Log("Instatiate New?");
-            var typeData = enemyTypes.Find(t => t.type == type);
-            if (typeData != null)
-            {
-                obj = Instantiate(typeData.prefab).GetComponent<NetworkObject>();
-            }
-            else
-            {
-                Debug.LogError($"Could not find prefab for enemy type: {type}");
-                return null;
-            }
-        }
+        obj.GetComponent<EnemyController>().ResetEnemyState();
 
         return obj;
     }
 
-    public void ReturnToPool(NetworkObject obj, EnemyType type)
+    public void DespawnEnemy(NetworkObject enemy)
     {
-        obj.gameObject.SetActive(false);
-        if (!poolDictionary.ContainsKey(type))
-        {
-            Debug.LogError($"No pool to return object with type: {type}");
-            Destroy(obj.gameObject);
-            return;
-        }
-
-        poolDictionary[type].Enqueue(obj);
+        enemy.Despawn();
     }
 }

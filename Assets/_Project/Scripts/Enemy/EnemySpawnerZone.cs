@@ -46,12 +46,14 @@ public class EnemySpawnerZone : NetworkBehaviour
         Vector3 spawnPos = transform.position + Random.insideUnitSphere * spawnRadius;
         spawnPos.y = TerrainHeight(spawnPos);
 
-        NetworkObject enemyInstance = globalPool.GetFromPool(selectedType.type);
+        Debug.Log("Spawn!!!! With new Pool!!!!!");
+        NetworkObject enemyInstance = globalPool.SpawnEnemy(selectedType.type, spawnPos, Quaternion.identity);
+        enemyInstance.GetComponent<EnemyController>().enemySpawnerZone = this;
         if (enemyInstance == null) return;
 
-        enemyInstance.transform.position = spawnPos;
-        enemyInstance.transform.rotation = Quaternion.identity;
-        enemyInstance.Spawn(true);
+        //enemyInstance.transform.position = spawnPos;
+        //enemyInstance.transform.rotation = Quaternion.identity;
+        //enemyInstance.Spawn(true);
 
         spawnedEnemies.Add((enemyInstance, selectedType.type));
     }
@@ -80,8 +82,8 @@ public class EnemySpawnerZone : NetworkBehaviour
         var entry = spawnedEnemies.Find(e => e.enemy == enemy);
         if (entry.enemy == null) return;
 
-        enemy.Despawn(true);
-        globalPool.ReturnToPool(enemy, entry.type);
+        //enemy.Despawn(true);
+        globalPool.DespawnEnemy(enemy);
         spawnedEnemies.Remove(entry);
     }
 

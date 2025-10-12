@@ -1497,8 +1497,8 @@ MonoBehaviour:
           ButtonText: Debug Play Sound
         TestStopButton:
           ButtonText: Debug Stop Sound
-        PlayMethod: 1
-        PoolSize: 10
+        PlayMethod: 3
+        PoolSize: 5
         UseLegacyEventsMode: 0
         StopSoundOnFeedbackStop: 1
         MinVolume: 0.527
@@ -1834,8 +1834,8 @@ MonoBehaviour:
           ButtonText: Debug Play Sound
         TestStopButton:
           ButtonText: Debug Stop Sound
-        PlayMethod: 0
-        PoolSize: 10
+        PlayMethod: 3
+        PoolSize: 5
         UseLegacyEventsMode: 0
         StopSoundOnFeedbackStop: 1
         MinVolume: 0.303
@@ -1953,8 +1953,8 @@ MonoBehaviour:
           ButtonText: Debug Play Sound
         TestStopButton:
           ButtonText: Debug Stop Sound
-        PlayMethod: 1
-        PoolSize: 10
+        PlayMethod: 3
+        PoolSize: 5
         UseLegacyEventsMode: 0
         StopSoundOnFeedbackStop: 1
         MinVolume: 0.598
@@ -3421,7 +3421,7 @@ MonoBehaviour:
         TestStopButton:
           ButtonText: Debug Stop Sound
         PlayMethod: 3
-        PoolSize: 10
+        PoolSize: 5
         UseLegacyEventsMode: 0
         StopSoundOnFeedbackStop: 0
         MinVolume: 0.277
@@ -3650,7 +3650,7 @@ MonoBehaviour:
         TestStopButton:
           ButtonText: Debug Stop Sound
         PlayMethod: 3
-        PoolSize: 30
+        PoolSize: 5
         UseLegacyEventsMode: 0
         StopSoundOnFeedbackStop: 1
         MinVolume: 0.365
@@ -3899,7 +3899,7 @@ MonoBehaviour:
         TestStopButton:
           ButtonText: Debug Stop Sound
         PlayMethod: 3
-        PoolSize: 10
+        PoolSize: 5
         UseLegacyEventsMode: 0
         StopSoundOnFeedbackStop: 1
         MinVolume: 0.25
@@ -4360,8 +4360,8 @@ MonoBehaviour:
           ButtonText: Debug Play Sound
         TestStopButton:
           ButtonText: Debug Stop Sound
-        PlayMethod: 1
-        PoolSize: 10
+        PlayMethod: 3
+        PoolSize: 5
         UseLegacyEventsMode: 0
         StopSoundOnFeedbackStop: 1
         MinVolume: 0.25
@@ -4479,8 +4479,8 @@ MonoBehaviour:
           ButtonText: Debug Play Sound
         TestStopButton:
           ButtonText: Debug Stop Sound
-        PlayMethod: 1
-        PoolSize: 10
+        PlayMethod: 3
+        PoolSize: 5
         UseLegacyEventsMode: 0
         StopSoundOnFeedbackStop: 1
         MinVolume: 0.25
@@ -4706,7 +4706,7 @@ MonoBehaviour:
         TestStopButton:
           ButtonText: Debug Stop Sound
         PlayMethod: 3
-        PoolSize: 10
+        PoolSize: 5
         UseLegacyEventsMode: 0
         StopSoundOnFeedbackStop: 1
         MinVolume: 0.365
@@ -5785,7 +5785,7 @@ MonoBehaviour:
         TestStopButton:
           ButtonText: Debug Stop Sound
         PlayMethod: 3
-        PoolSize: 10
+        PoolSize: 5
         UseLegacyEventsMode: 0
         StopSoundOnFeedbackStop: 0
         MinVolume: 0.036
@@ -7647,7 +7647,7 @@ MonoBehaviour:
         RandomizedPositionMax: {x: 1, y: 1, z: 1}
         ParentTransform: {fileID: 0}
         CreateObjectPool: 1
-        ObjectPoolSize: 20
+        ObjectPoolSize: 5
         MutualizePools: 0
         PoolParentTransform: {fileID: 0}
 --- !u!4 &7772756160736024436 stripped
@@ -8949,7 +8949,7 @@ MonoBehaviour:
         TestStopButton:
           ButtonText: Debug Stop Sound
         PlayMethod: 3
-        PoolSize: 15
+        PoolSize: 5
         UseLegacyEventsMode: 0
         StopSoundOnFeedbackStop: 1
         MinVolume: 0.982
@@ -9200,8 +9200,8 @@ MonoBehaviour:
           ButtonText: Debug Play Sound
         TestStopButton:
           ButtonText: Debug Stop Sound
-        PlayMethod: 1
-        PoolSize: 10
+        PlayMethod: 3
+        PoolSize: 5
         UseLegacyEventsMode: 0
         StopSoundOnFeedbackStop: 1
         MinVolume: 0.161
@@ -9319,8 +9319,8 @@ MonoBehaviour:
           ButtonText: Debug Play Sound
         TestStopButton:
           ButtonText: Debug Stop Sound
-        PlayMethod: 1
-        PoolSize: 10
+        PlayMethod: 3
+        PoolSize: 5
         UseLegacyEventsMode: 0
         StopSoundOnFeedbackStop: 1
         MinVolume: 0.598
@@ -9551,7 +9551,7 @@ MonoBehaviour:
         TestStopButton:
           ButtonText: Debug Stop Sound
         PlayMethod: 3
-        PoolSize: 15
+        PoolSize: 5
         UseLegacyEventsMode: 0
         StopSoundOnFeedbackStop: 1
         MinVolume: 0.598
@@ -11109,8 +11109,8 @@ MonoBehaviour:
           ButtonText: Debug Play Sound
         TestStopButton:
           ButtonText: Debug Stop Sound
-        PlayMethod: 1
-        PoolSize: 10
+        PlayMethod: 3
+        PoolSize: 5
         UseLegacyEventsMode: 0
         StopSoundOnFeedbackStop: 1
         MinVolume: 0.625
@@ -11228,8 +11228,8 @@ MonoBehaviour:
           ButtonText: Debug Play Sound
         TestStopButton:
           ButtonText: Debug Stop Sound
-        PlayMethod: 1
-        PoolSize: 10
+        PlayMethod: 3
+        PoolSize: 5
         UseLegacyEventsMode: 0
         StopSoundOnFeedbackStop: 1
         MinVolume: 0.598
