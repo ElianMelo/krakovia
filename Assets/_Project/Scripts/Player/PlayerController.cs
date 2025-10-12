@@ -113,7 +113,10 @@ public class PlayerController : NetworkBehaviour
         if(Input.GetKeyDown(KeyCode.P) && isPvPActive.Value == false)
         {
             RequestEnablePvPRpc(NetworkObjectId);
-            
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            RequestExperienceRpc(playerAttributeController.NetworkObjectId);
         }
         //if (Input.GetKeyDown(KeyCode.F5))
         //{
@@ -172,6 +175,20 @@ public class PlayerController : NetworkBehaviour
             }
         }
     }
+
+    [Rpc(SendTo.Server)]
+    public void RequestExperienceRpc(ulong networkObjectIdSearch)
+    {
+        if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(networkObjectIdSearch, out var classObj))
+        {
+            var player = classObj.GetComponent<PlayerAttributeController>();
+            if (player != null)
+            {
+                player.ReceiveExp(player.OwnerClientId, 1000);
+            }
+        }
+    }
+
 
     [Rpc(SendTo.Server)]
     public void RequestChangePlayerNameRpc(ulong networkObjectIdSearch, string name)
