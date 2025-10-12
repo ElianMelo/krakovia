@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class BossColliderAttack : NetworkBehaviour
 {
-    private float damage = 20;
+    private float damage = 2000;
 
     public void SetupDamage(float damage)
     {

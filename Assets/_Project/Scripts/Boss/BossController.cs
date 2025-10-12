@@ -1,4 +1,5 @@
 using FIMSpace.FProceduralAnimation;
+using NUnit.Framework.Internal.Commands;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
@@ -58,8 +59,12 @@ public class BossController : NetworkBehaviour
         Debug.Log("Receive Damage!");
         Vector3 contactPoint = other.ClosestPoint(transform.position);
         PlayerController sourceDamage = other.gameObject.GetComponentInParent<PlayerController>();
-        PlayerAttributeController playerAttributeController = other.gameObject.GetComponentInParent<PlayerAttributeController>();
-        float damage = playerAttributeController.Damage;
+        PlayerAttributeController playerAttributeController = sourceDamage.GetComponent<PlayerAttributeController>();
+        PlayerClassController playerClassController = sourceDamage.GetComponent<PlayerClassController>();
+        PlayerAttackController playerAttackController = sourceDamage.GetComponent<PlayerAttackController>();
+        float skillDamageMultiplier = playerAttributeController.GetMultiplierBasedOnSkill(playerAttackController.CurrentActiveSkillCommand,
+                playerClassController.ActivePlayerClass);
+        float damage = playerAttributeController.Damage * (skillDamageMultiplier / 100);
         bool isCritical = Random.Range(0f, 1f) <= playerAttributeController.CriticalChance;
         if (isCritical) damage *= 2;
         bossAttack.StartAttackRoutine();

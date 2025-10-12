@@ -8,7 +8,8 @@ public enum SkillCommand
     MouseLeft,
     MouseRight,
     Q,
-    F
+    F, 
+    None
 }
 
 public class PlayerAttackController : NetworkBehaviour
@@ -27,6 +28,8 @@ public class PlayerAttackController : NetworkBehaviour
 
     private PlayerClassController playerClassController;
     private PlayerAttributeController playerAttributeController;
+
+    public SkillCommand CurrentActiveSkillCommand;
 
     [Header("Fairy")]
     public Transform spellPosition;
@@ -81,7 +84,7 @@ public class PlayerAttackController : NetworkBehaviour
 
     private void SpawnAttackVFX(SkillCommand skillCommand, float forwardIntensity, float upAjust = 0f)
     {
-        float skillDamageMultiplier = GetMultiplierBasedOnSkill(skillCommand);
+        float skillDamageMultiplier = playerAttributeController.GetMultiplierBasedOnSkill(skillCommand, PlayerClass.Fairy);
         float damage = playerAttributeController.Damage * (skillDamageMultiplier / 100);
         bool isCritical = Random.Range(0f, 1f) <= playerAttributeController.CriticalChance;
         if (isCritical) damage *= 2;
@@ -113,18 +116,6 @@ public class PlayerAttackController : NetworkBehaviour
         }
     }
 
-    private float GetMultiplierBasedOnSkill(SkillCommand skillCommand)
-    {
-        switch (skillCommand)
-        {
-            case SkillCommand.MouseLeft: return playerAttributeController.fairyMouseLeftSkillDamagePercentage;
-            case SkillCommand.MouseRight: return playerAttributeController.fairyMouseRightSkillDamagePercentage;
-            case SkillCommand.Q: return playerAttributeController.fairyQSkillDamagePercentage;
-            case SkillCommand.F: return playerAttributeController.fairyFSkillDamagePercentage;
-            default: return playerAttributeController.fairyMouseLeftSkillDamagePercentage;
-        }
-    }
-
     private IEnumerator WaitingTimerDisableColliderSkeleton(int frames)
     {
         skeletonSword.enabled = true;
@@ -142,6 +133,7 @@ public class PlayerAttackController : NetworkBehaviour
     {
         foreach (var horseCollider in horseColliders) horseCollider.enabled = true;
         yield return new WaitForSeconds(frames * ConstantsManager.FramesToSeconds);
+        CurrentActiveSkillCommand = SkillCommand.MouseLeft;
         foreach (var horseCollider in horseColliders) horseCollider.enabled = false;
     }
 
@@ -162,6 +154,7 @@ public class PlayerAttackController : NetworkBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && canUseMouseLeftSkill)
         {
+            CurrentActiveSkillCommand = SkillCommand.MouseLeft;
             float mouseLeftCooldown = playerAttributeController.GetSkillCalculatedCooldown(playerClassController.ActivePlayerClass, SkillCommand.MouseLeft);
             InterfaceManager.Instance.UpdatePlayerSkillFirstCooldown(mouseLeftCooldown);
             //if (playerClassController.PlayerClass == PlayerClass.Skeleton)
@@ -186,6 +179,7 @@ public class PlayerAttackController : NetworkBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse1) && canUseMouseRightSkill)
         {
+            CurrentActiveSkillCommand = SkillCommand.MouseRight;
             float mouseRightCooldown = playerAttributeController.GetSkillCalculatedCooldown(playerClassController.ActivePlayerClass, SkillCommand.MouseRight);
             InterfaceManager.Instance.UpdatePlayerSkillSecondCooldown(mouseRightCooldown);
             animator.SetTrigger("Attack2");
@@ -205,6 +199,7 @@ public class PlayerAttackController : NetworkBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q) && canUseQSkill)
         {
+            CurrentActiveSkillCommand = SkillCommand.Q;
             float qSkillCooldown = playerAttributeController.GetSkillCalculatedCooldown(playerClassController.ActivePlayerClass, SkillCommand.Q);
             InterfaceManager.Instance.UpdatePlayerSkillThirdCooldown(qSkillCooldown);
             animator.SetTrigger("Attack3");
@@ -224,6 +219,7 @@ public class PlayerAttackController : NetworkBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && canUseFSkill)
         {
+            CurrentActiveSkillCommand = SkillCommand.F;
             float fSkillCooldown = playerAttributeController.GetSkillCalculatedCooldown(playerClassController.ActivePlayerClass, SkillCommand.F);
             InterfaceManager.Instance.UpdatePlayerSkillForthCooldown(fSkillCooldown);
             animator.SetTrigger("Attack4");
@@ -256,7 +252,11 @@ public class PlayerAttackController : NetworkBehaviour
                 Physics.IgnoreCollision(other, GetComponent<Collider>());
                 return;
             }
-            float damage = otherPlayerAttributeController.Damage;
+            PlayerClassController playerClassController = otherPlayerAttributeController.GetComponent<PlayerClassController>();
+            PlayerAttackController playerAttackController = otherPlayerAttributeController.GetComponent<PlayerAttackController>();
+            float skillDamageMultiplier = playerAttributeController.GetMultiplierBasedOnSkill(playerAttackController.CurrentActiveSkillCommand,
+                    playerClassController.ActivePlayerClass);
+            float damage = otherPlayerAttributeController.Damage * (skillDamageMultiplier / 100);
             bool isCritical = Random.Range(0f, 1f) <= otherPlayerAttributeController.CriticalChance;
             if (isCritical) damage *= 2;
             playerAttributeController.ReceivePlayerDamage((int) damage, isCritical);

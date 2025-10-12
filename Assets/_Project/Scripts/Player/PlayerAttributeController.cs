@@ -121,6 +121,41 @@ public class PlayerAttributeController : NetworkBehaviour
         return 1f;
     }
 
+    public float GetMultiplierBasedOnSkill(SkillCommand skillCommand, PlayerClass playerClass)
+    {
+        switch (playerClass)
+        {
+            case PlayerClass.Fairy:
+                switch (skillCommand)
+                {
+                    case SkillCommand.MouseLeft: return fairyMouseLeftSkillDamagePercentage;
+                    case SkillCommand.MouseRight: return fairyMouseRightSkillDamagePercentage;
+                    case SkillCommand.Q: return fairyQSkillDamagePercentage;
+                    case SkillCommand.F: return fairyFSkillDamagePercentage;
+                    default: return fairyMouseLeftSkillDamagePercentage;
+                }
+            case PlayerClass.Skeleton:
+                switch (skillCommand)
+                {
+                    case SkillCommand.MouseLeft: return skeletonMouseLeftSkillDamagePercentage;
+                    case SkillCommand.MouseRight: return skeletonMouseRightSkillDamagePercentage;
+                    case SkillCommand.Q: return skeletonQSkillDamagePercentage;
+                    case SkillCommand.F: return skeletonFSkillDamagePercentage;
+                    default: return skeletonMouseLeftSkillDamagePercentage;
+                }
+            case PlayerClass.Horse:
+                switch (skillCommand)
+                {
+                    case SkillCommand.MouseLeft: return horseMouseLeftSkillDamagePercentage;
+                    case SkillCommand.MouseRight: return horseMouseRightSkillDamagePercentage;
+                    case SkillCommand.Q: return horseQSkillDamagePercentage;
+                    case SkillCommand.F: return horseFSkillDamagePercentage;
+                    default: return horseMouseLeftSkillDamagePercentage;
+                }
+            default: return 100;
+        }
+    }
+
     private void Start()
     {
         if (!IsOwner) return;
@@ -353,6 +388,7 @@ public class PlayerAttributeController : NetworkBehaviour
             currentLevel += 1;
             if (MaxLevelCheck()) return;
             maxExperience += experienceIncreaseAmount;
+            PlayerEffectPooler.Instance.ShowLevelUpEffect(transform.position, Quaternion.identity, 3f);
             LevelUp();
         }
         InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerLevel(currentLevel);

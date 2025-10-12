@@ -399,6 +399,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 384
   range: 5
+  CurrentActiveSkillCommand: 0
   spellPosition: {fileID: 601245606459656940}
   mouseLeftSkillPrefab: {fileID: 1338476522247539718, guid: 9b23bee04c2266b41b8b80c0fb6c0af5, type: 3}
   mouseLeftSkillForward: 1.1
@@ -619,26 +620,26 @@ MonoBehaviour:
   skeletonData: {fileID: 11400000, guid: 93d6f6fb5828ac44c92c6c10d26cb435, type: 2}
   horseData: {fileID: 11400000, guid: ebe444d9b1671d1469a85a309c4f008f, type: 2}
   experienceIncreaseAmount: 300
-  fairyMouseLeftSkillDamagePercentage: 4000
-  fairyMouseRightSkillDamagePercentage: 400
-  fairyQSkillDamagePercentage: 400
+  fairyMouseLeftSkillDamagePercentage: 100
+  fairyMouseRightSkillDamagePercentage: 200
+  fairyQSkillDamagePercentage: 300
   fairyFSkillDamagePercentage: 400
   fairyMouseLeftSkillCooldownSeconds: 1
   fairyMouseRightSkillCooldownSeconds: 2
   fairyQSkillCooldownSeconds: 3
   fairyFSkillCooldownSeconds: 4
-  skeletonMouseLeftSkillDamagePercentage: 4
-  skeletonMouseRightSkillDamagePercentage: 100
-  skeletonQSkillDamagePercentage: 100
-  skeletonFSkillDamagePercentage: 100
+  skeletonMouseLeftSkillDamagePercentage: 100
+  skeletonMouseRightSkillDamagePercentage: 200
+  skeletonQSkillDamagePercentage: 300
+  skeletonFSkillDamagePercentage: 400
   skeletonMouseLeftSkillCooldownSeconds: 1
   skeletonMouseRightSkillCooldownSeconds: 2
   skeletonQSkillCooldownSeconds: 3
   skeletonFSkillCooldownSeconds: 4
   horseMouseLeftSkillDamagePercentage: 100
-  horseMouseRightSkillDamagePercentage: 100
-  horseQSkillDamagePercentage: 100
-  horseFSkillDamagePercentage: 100
+  horseMouseRightSkillDamagePercentage: 200
+  horseQSkillDamagePercentage: 300
+  horseFSkillDamagePercentage: 400
   horseMouseLeftSkillCooldownSeconds: 0.2
   horseMouseRightSkillCooldownSeconds: 1
   horseQSkillCooldownSeconds: 5

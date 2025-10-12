@@ -46,5 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerEffectPooler
   onHitEffect: {fileID: 7780183107191031951, guid: 7a110eb2775102140bb251e0964b9796, type: 3}
   hitEffectPool: 50
+  onLevelUpEffect: {fileID: 7780183107191031951, guid: 0fc9b80ce4aaffe458945595f9366d7d, type: 3}
+  levelUPEffectPool: 5
   onDeathEffect: {fileID: 7780183107191031951, guid: 75cc95414f895d24a9ea78a02136df7b, type: 3}
   deathEffectPool: 50

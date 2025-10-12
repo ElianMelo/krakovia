@@ -6,10 +6,13 @@ public class PlayerEffectPooler : MonoBehaviour
 {
     [SerializeField] private GameObject onHitEffect;
     [SerializeField] private float hitEffectPool;
+    [SerializeField] private GameObject onLevelUpEffect;
+    [SerializeField] private float levelUPEffectPool;
     [SerializeField] private GameObject onDeathEffect;
     [SerializeField] private float deathEffectPool;
 
     private List<GameObject> onHitEffects = new();
+    private List<GameObject> onLevelUpEffects = new();
     private List<GameObject> onDeathEffects = new();
 
     public static PlayerEffectPooler Instance;
@@ -28,6 +31,12 @@ public class PlayerEffectPooler : MonoBehaviour
             instance.SetActive(false);
             onHitEffects.Add(instance);
         }
+        for (int i = 0; i < levelUPEffectPool; i++)
+        {
+            instance = Instantiate(onLevelUpEffect, transform);
+            instance.SetActive(false);
+            onLevelUpEffects.Add(instance);
+        }
         for (int i = 0; i < deathEffectPool; i++)
         {
             instance = Instantiate(onDeathEffect, transform);
@@ -45,6 +54,19 @@ public class PlayerEffectPooler : MonoBehaviour
             onHitEffects[i].transform.position = position;
             onHitEffects[i].transform.rotation = rotation;
             StartCoroutine(HideEffect(onHitEffects[i], duration));
+            return;
+        }
+    }
+
+    public void ShowLevelUpEffect(Vector3 position, Quaternion rotation, float duration = 3f)
+    {
+        for (int i = 0; i < onLevelUpEffects.Count; i++)
+        {
+            if (onLevelUpEffects[i].activeSelf) continue;
+            onLevelUpEffects[i].SetActive(true);
+            onLevelUpEffects[i].transform.position = position;
+            onLevelUpEffects[i].transform.rotation = rotation;
+            StartCoroutine(HideEffect(onLevelUpEffects[i], duration));
             return;
         }
     }
