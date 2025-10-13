@@ -50,7 +50,7 @@ public class LobbyManager : MonoBehaviour
             _ = QueryLobbies();
             canRefresh = false;
             refreshList.interactable = false;
-            ResetCanRefresh();
+            StartCoroutine(ResetCanRefresh());
         }
     }
 
