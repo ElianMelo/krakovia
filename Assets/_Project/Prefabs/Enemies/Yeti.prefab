@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1079369031430894768, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: maxHP
-      value: 200
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: -1079369031430894768, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: xpAmount
-      value: 240
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 1160617717093947312, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: m_Name
