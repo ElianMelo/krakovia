@@ -14,6 +14,7 @@ public class LobbyList : MonoBehaviour
         {
             Destroy(lobbies[i]);
         }
+        lobbies.Clear();
     }
 
     public void AddLobby(string lobbyName, string lobbyAmount, string lobbyId)

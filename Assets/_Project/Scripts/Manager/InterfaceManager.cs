@@ -14,17 +14,17 @@ public class InterfaceManager : MonoBehaviour
     [Header("Class Selection")]
     public TMP_Dropdown classSelectionDropdown;
     public TMP_Text firstDescription;
-    public TMP_Text secondDescription;
+    public Image iamgeField;
     public GameObject horseModel;
     public GameObject fairyModel;
     public GameObject skeletonModel;
 
     [TextArea] public string horseFirstDescription;
-    [TextArea] public string horseSecondDescription;
+    public Sprite horseImage;
     [TextArea] public string fairyFirstDescription;
-    [TextArea] public string fairySecondDescription;
+    public Sprite fairyImage;
     [TextArea] public string skeletonFirstDescription;
-    [TextArea] public string skeletonSecondDescription;
+    public Sprite skeletonImage;
 
     public PlayerInterfaceController _playerInterfaceController;
     public PvPInterfaceController _pvPInterfaceController;
@@ -58,21 +58,21 @@ public class InterfaceManager : MonoBehaviour
         {
             case PlayerClass.Fairy:
                 firstDescription.text = fairyFirstDescription;
-                secondDescription.text = fairySecondDescription;
+                iamgeField.sprite = fairyImage;
                 horseModel.SetActive(false);
                 fairyModel.SetActive(true);
                 skeletonModel.SetActive(false);
                 break;
             case PlayerClass.Skeleton:
                 firstDescription.text = skeletonFirstDescription;
-                secondDescription.text = skeletonSecondDescription;
+                iamgeField.sprite = skeletonImage;
                 horseModel.SetActive(false);
                 fairyModel.SetActive(false);
                 skeletonModel.SetActive(true);
                 break;
             case PlayerClass.Horse:
                 firstDescription.text = horseFirstDescription;
-                secondDescription.text = horseSecondDescription;
+                iamgeField.sprite = horseImage;
                 horseModel.SetActive(true);
                 fairyModel.SetActive(false);
                 skeletonModel.SetActive(false);
@@ -127,13 +127,13 @@ public class InterfaceManager : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F1))
-        {
-            NetworkManager.Singleton.StartHost();
-        }
-        if (Input.GetKeyDown(KeyCode.F2))
-        {
-            NetworkManager.Singleton.StartClient();
-        }
+        //if(Input.GetKeyDown(KeyCode.F1))
+        //{
+        //    NetworkManager.Singleton.StartHost();
+        //}
+        //if (Input.GetKeyDown(KeyCode.F2))
+        //{
+        //    NetworkManager.Singleton.StartClient();
+        //}
     }
 }

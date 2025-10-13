@@ -1009,16 +1009,20 @@ MonoBehaviour:
   playerNameInputField: {fileID: 0}
   classSelectionDropdown: {fileID: 0}
   firstDescription: {fileID: 0}
-  secondDescription: {fileID: 0}
+  iamgeField: {fileID: 0}
   horseModel: {fileID: 0}
   fairyModel: {fileID: 0}
   skeletonModel: {fileID: 0}
-  horseFirstDescription: Cavalo burro broxa fudido arrombado
-  horseSecondDescription: Bate com o casco igual um idiota
-  fairyFirstDescription: Fada relaxa arrombada, so fica de longe muito covarde
-  fairySecondDescription: Bate com agua
-  skeletonFirstDescription: "Esqueleto descolado, classe de macho mesmo\t"
-  skeletonSecondDescription: Bate com a espada mais sinistra de krakovia
+  horseFirstDescription: Juan o centauro reverso apos seu exilio encontrou um proposito
+    no monasterio de krakovia, com monges aprendeu a lutar e busca restaurar a ordem
+    na base da porrada
+  horseImage: {fileID: 21300000, guid: b41d825f99c61a343bed24ecba8a2352, type: 3}
+  fairyFirstDescription: O ser mais inteligente de krakovia so perde para os outros
+    dois, fada relaxada muito covarde fica de lonte e bate com agua
+  fairyImage: {fileID: 21300000, guid: b5d8dae6f01346b4c96dde8999f5ea44, type: 3}
+  skeletonFirstDescription: Esqueleto descolado, classe de macho mesmo bate com a
+    espada mais sinistra de krakovia
+  skeletonImage: {fileID: 21300000, guid: 950f24438b24f414ba38a9291ec3e631, type: 3}
   _playerInterfaceController: {fileID: 4826037418665383553}
   _pvPInterfaceController: {fileID: 2630157146938587367}
 --- !u!114 &5631859557102737457
@@ -1059,6 +1063,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6842b54a5e35a00419cba75a17837cd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LobbyManager
+  lobbyList: {fileID: 0}
+  refreshList: {fileID: 0}
+  lobbyUIText: {fileID: 0}
+  maxPlayersUI: {fileID: 0}
+  createLobby: {fileID: 0}
 --- !u!1 &4126170146932311002
 GameObject:
   m_ObjectHideFlags: 0

@@ -153,6 +153,7 @@ public class LobbyManager : MonoBehaviour
 
     private async Task QueryLobbies()
     {
+        lobbyList.Clear();
         try
         {
             QueryLobbiesOptions options = new QueryLobbiesOptions();
