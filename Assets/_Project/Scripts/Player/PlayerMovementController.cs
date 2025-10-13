@@ -116,6 +116,8 @@ public class PlayerMovementController : NetworkBehaviour
     private readonly static string FallingAnim = "Falling";
     // private readonly static string VerticalVelocityAnim = "VerticalVelocity";
     private readonly static string DashingAnim = "Dashing";
+    private readonly static string DanceAnim = "Dance";
+    private readonly static string SurfAnim = "Surf";
 
     private readonly static string TakeDamageAnim = "TakeDamage";
     private readonly static string DeathAnim = "Death";
@@ -171,6 +173,12 @@ public class PlayerMovementController : NetworkBehaviour
         //if (!_canMove) return;
         if (!IsOwner) return;
         if (orientation == null) return;
+
+        if(Input.GetKeyDown(KeyCode.V))
+        {
+            playerAnimator.SetTrigger(DanceAnim);
+        }
+
         CheckAnimation();
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
         if (grounded && !jumping)

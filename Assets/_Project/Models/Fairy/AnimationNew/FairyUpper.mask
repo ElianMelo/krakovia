@@ -109,33 +109,33 @@ AvatarMask:
     m_Weight: 1
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
       Xtra01
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
       Xtra01/Bip001 Xtra0102
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
       Xtra01/Bip001 Xtra0102/Bip001 Xtra0103
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
       Xtra01/Bip001 Xtra0102/Bip001 Xtra0103/Bip001 Xtra0104
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
       Xtra01/Bip001 Xtra0102/Bip001 Xtra0103/Bip001 Xtra0104/Bip001 Xtra0105
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
       Xtra01Opp
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
       Xtra01Opp/Bip001 Xtra01Opp02
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
       Xtra01Opp/Bip001 Xtra01Opp02/Bip001 Xtra01Opp03
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
       Xtra01Opp/Bip001 Xtra01Opp02/Bip001 Xtra01Opp03/Bip001 Xtra01Opp04
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
       Xtra01Opp/Bip001 Xtra01Opp02/Bip001 Xtra01Opp03/Bip001 Xtra01Opp04/Bip001 Xtra01Opp05
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Fairy
-    m_Weight: 0
+    m_Weight: 1
