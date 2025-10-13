@@ -54,7 +54,7 @@ public class SystemManager : MonoBehaviour
         }
     }
 
-    private void StartGame()
+    public void StartGame()
     {
         GameStarted = true;
         Cursor.lockState = CursorLockMode.Locked;

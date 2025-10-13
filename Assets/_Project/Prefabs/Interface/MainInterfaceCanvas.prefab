@@ -897,6 +897,8 @@ GameObject:
   - component: {fileID: 3912881394886931224}
   - component: {fileID: 3009385276039095715}
   - component: {fileID: 5631859557102737457}
+  - component: {fileID: 1162850241841291439}
+  - component: {fileID: 2092021441356469836}
   m_Layer: 5
   m_Name: MainInterfaceCanvas
   m_TagString: Untagged
@@ -1033,6 +1035,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SystemManager
   inputField: {fileID: 0}
   currentSavePoint: {fileID: 0}
+--- !u!114 &1162850241841291439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3278841965205759229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0cb4e8702a94742841ac8e7695317e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MainGameLobby
+--- !u!114 &2092021441356469836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3278841965205759229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6842b54a5e35a00419cba75a17837cd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LobbyManager
 --- !u!1 &4126170146932311002
 GameObject:
   m_ObjectHideFlags: 0
