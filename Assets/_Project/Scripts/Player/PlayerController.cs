@@ -70,7 +70,7 @@ public class PlayerController : NetworkBehaviour
         
         playerAttributeController.CurrentHP.OnValueChanged += playerAttributeController.OnHealthValueChanged;
 
-        playerAttributeController.SetupClassLevelUp(PlayerClass.Skeleton);
+        playerAttributeController.SetupClassLevelUp(InterfaceManager.Instance.GetSelectedClass());
 
         // Logic strict to the owner
         if (!IsOwner) return;
