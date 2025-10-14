@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2108667803354797877}
   - component: {fileID: 4238918698696103627}
   m_Layer: 0
-  m_Name: GameObject (6)
+  m_Name: MummySpawn
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -92,6 +92,7 @@ Transform:
   - {fileID: 4639107368498454054}
   - {fileID: 6024518242680756550}
   - {fileID: 7889500107075972972}
+  - {fileID: 5856227309166995426}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3336088376183343715
@@ -131,6 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f67e8f6c9f29eae468c9afcac70dc172, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyPool
+  ShowTopMostFoldoutHeaderGroup: 1
   enemyTypes:
   - type: 0
     prefab: {fileID: 4779095418874959237, guid: c3a364eb883da6343b5d64fe52b54bee, type: 3}
@@ -141,6 +143,61 @@ MonoBehaviour:
   - type: 2
     prefab: {fileID: 2449283383327018856, guid: 47373e81fd2adb54c9a03c5e38940af0, type: 3}
     initialPoolSize: 30
+  - type: 3
+    prefab: {fileID: 337973077901493834, guid: 8f8cbb372c42e8445a569f025efe2e3e, type: 3}
+    initialPoolSize: 30
+--- !u!1 &3277839161969445583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5856227309166995426}
+  - component: {fileID: 154381946870546665}
+  m_Layer: 0
+  m_Name: IceDoggoSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5856227309166995426
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3277839161969445583}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 44.4, y: 4.2, z: 292.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5031533597982606769}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &154381946870546665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3277839161969445583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cefa7114e02e149aac56ff8cc00746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
+  ShowTopMostFoldoutHeaderGroup: 1
+  spawnRadius: 10
+  maxEnemies: 5
+  spawnInterval: 3
+  enemyTypes:
+  - type: 3
+    spawnChance: 1
+  globalPool: {fileID: 379584633189090901}
 --- !u!1 &3290925670695503460
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +209,7 @@ GameObject:
   - component: {fileID: 2581242588434821424}
   - component: {fileID: 4189595709514344479}
   m_Layer: 0
-  m_Name: GameObject (4)
+  m_Name: MummySpawn
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -204,7 +261,7 @@ GameObject:
   - component: {fileID: 8181457053810330531}
   - component: {fileID: 3168424462403207743}
   m_Layer: 0
-  m_Name: GameObject (2)
+  m_Name: DogSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -256,7 +313,7 @@ GameObject:
   - component: {fileID: 3915837748159350560}
   - component: {fileID: 3023415277732333775}
   m_Layer: 0
-  m_Name: GameObject (3)
+  m_Name: DogSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -308,7 +365,7 @@ GameObject:
   - component: {fileID: 7889500107075972972}
   - component: {fileID: 2449660665128776629}
   m_Layer: 0
-  m_Name: GameObject (9)
+  m_Name: YetiSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -360,7 +417,7 @@ GameObject:
   - component: {fileID: 8491133998754627727}
   - component: {fileID: 6463573201450903716}
   m_Layer: 0
-  m_Name: GameObject (5)
+  m_Name: MummySpawn
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -412,7 +469,7 @@ GameObject:
   - component: {fileID: 6024518242680756550}
   - component: {fileID: 3354767126453230269}
   m_Layer: 0
-  m_Name: GameObject (8)
+  m_Name: YetiSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -464,7 +521,7 @@ GameObject:
   - component: {fileID: 4639107368498454054}
   - component: {fileID: 7126785141491066332}
   m_Layer: 0
-  m_Name: GameObject (7)
+  m_Name: YetiSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -516,7 +573,7 @@ GameObject:
   - component: {fileID: 6949164730598649632}
   - component: {fileID: 3754902201129930323}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: DogSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

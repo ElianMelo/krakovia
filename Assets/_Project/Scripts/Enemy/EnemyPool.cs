@@ -7,6 +7,7 @@ public enum EnemyType
     Dog,
     Mummy,
     Yeti,
+    IceDoggo,
     EnemyA,
     EnemyB,
     EnemyC,
