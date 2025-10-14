@@ -60,9 +60,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -12.684
       objectReference: {fileID: 0}
+    - target: {fileID: -7503165405792909010, guid: be2536168f11c804e9c6475e644f2684, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -3939610477662828432, guid: be2536168f11c804e9c6475e644f2684, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -1807970279642858887, guid: be2536168f11c804e9c6475e644f2684, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 769520972199551575, guid: be2536168f11c804e9c6475e644f2684, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: be2536168f11c804e9c6475e644f2684, type: 3}
       propertyPath: m_Name
       value: PalastAssetCollection
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be2536168f11c804e9c6475e644f2684, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be2536168f11c804e9c6475e644f2684, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920683388451816878, guid: be2536168f11c804e9c6475e644f2684, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
