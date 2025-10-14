@@ -18,21 +18,25 @@ MonoBehaviour:
     - attribute: 0
       flatAmount: 0
     - attribute: 1
-      flatAmount: 50
+      flatAmount: 100
     - attribute: 2
-      flatAmount: 0
+      flatAmount: 0.1
     - attribute: 3
       flatAmount: 5
     - attribute: 4
       flatAmount: 1
     - attribute: 5
-      flatAmount: 7
+      flatAmount: 6
   levelUpData:
     name: Upgrade Data Per Level
     attributeDatas:
     - attribute: 3
-      flatAmount: 1
+      flatAmount: 0
     - attribute: 1
-      flatAmount: 20
+      flatAmount: 35
     - attribute: 4
-      flatAmount: 1
+      flatAmount: 1.5
+    - attribute: 2
+      flatAmount: 0.3
+    - attribute: 0
+      flatAmount: 0.2

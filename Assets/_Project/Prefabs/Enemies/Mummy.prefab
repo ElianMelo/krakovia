@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1079369031430894768, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: maxHP
-      value: 120
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: -1079369031430894768, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: xpAmount
-      value: 110
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 120700573897180661, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -119,6 +119,10 @@ PrefabInstance:
     - target: {fileID: 1968221499178913034, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2129376309920227986, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: damage
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2210362007681434584, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
