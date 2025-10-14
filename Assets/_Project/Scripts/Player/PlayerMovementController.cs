@@ -40,6 +40,7 @@ public class PlayerMovementController : NetworkBehaviour
     public float playerHeight;
     public LayerMask whatIsGround;
     private bool grounded;
+    private bool hittingGround;
 
     [Header("Slope Handling")]
     public float maxSlopeAngle;
@@ -67,6 +68,7 @@ public class PlayerMovementController : NetworkBehaviour
     public MovementState state;
 
     private IEnumerator SmoothlyLerpMoveSpeedCoroutine;
+    private Coroutine delayedSurfingResetCoroutine;
 
     private bool _canMove;
 
@@ -117,7 +119,7 @@ public class PlayerMovementController : NetworkBehaviour
     // private readonly static string VerticalVelocityAnim = "VerticalVelocity";
     private readonly static string DashingAnim = "Dashing";
     private readonly static string DanceAnim = "Dance";
-    private readonly static string SurfAnim = "Surf";
+    private readonly static string SurfingAnim = "Surfing";
 
     private readonly static string TakeDamageAnim = "TakeDamage";
     private readonly static string DeathAnim = "Death";
@@ -373,11 +375,31 @@ public class PlayerMovementController : NetworkBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             grounded = true;
+            hittingGround = false;
+        }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            hittingGround = true;
         }
     }
 
     private void OnCollisionExit(Collision collision)
     {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            if(delayedSurfingResetCoroutine != null) StopCoroutine(delayedSurfingResetCoroutine);
+            delayedSurfingResetCoroutine = StartCoroutine(DelayedSurfingReset());
+        }
+    }
+
+    private IEnumerator DelayedSurfingReset()
+    {
+        yield return new WaitForSeconds(0.2f);
+        hittingGround = false;
     }
 
     private void SpeedControl()
@@ -452,6 +474,7 @@ public class PlayerMovementController : NetworkBehaviour
         playerAnimator.SetBool(RunningAnim, isRunning);
         playerAnimator.SetBool(DashingAnim, state == MovementState.dashing);
         playerAnimator.SetBool(FallingAnim, state == MovementState.airing);
+        playerAnimator.SetBool(SurfingAnim, state == MovementState.airing && hittingGround);
         // playerAnimator.SetFloat(VerticalVelocityAnim, Mathf.Lerp(0, 1, Mathf.Abs(playerRb.linearVelocity.y) / 20));
     }
 
