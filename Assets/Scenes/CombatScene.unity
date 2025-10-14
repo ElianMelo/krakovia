@@ -1230,6 +1230,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Column
       objectReference: {fileID: 0}
+    - target: {fileID: 7929183892630010165, guid: 836a5c98f96bec54e9708149cc11068f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929183892630010165, guid: 836a5c98f96bec54e9708149cc11068f, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9996,6 +10004,14 @@ PrefabInstance:
     - target: {fileID: 2135921375995395460, guid: 1764a74cbba52f84b8cc918d4498054b, type: 3}
       propertyPath: m_Name
       value: ColumnPaintDamaged (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135921375995395460, guid: 1764a74cbba52f84b8cc918d4498054b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135921375995395460, guid: 1764a74cbba52f84b8cc918d4498054b, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19855,9 +19871,9 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: e88cbc5b2a1a722458918666d229cdfc, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.516
+  m_Volume: 0.449
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -25187,6 +25203,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ColumnPaintDamaged
       objectReference: {fileID: 0}
+    - target: {fileID: 2135921375995395460, guid: 1764a74cbba52f84b8cc918d4498054b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135921375995395460, guid: 1764a74cbba52f84b8cc918d4498054b, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26845,9 +26869,9 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 860d2d21c6076bb45b61c87bb68db715, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.516
+  m_Volume: 0.449
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -33131,6 +33155,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ColumnWood (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2739863823609919623, guid: 718d9ce0c32cce54cbcac49ef82d3e8f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739863823609919623, guid: 718d9ce0c32cce54cbcac49ef82d3e8f, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 3264585318791520829, guid: 718d9ce0c32cce54cbcac49ef82d3e8f, type: 3}
       propertyPath: m_LocalScale.x
       value: 16.42
@@ -35967,6 +35999,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ColumnPaintDamaged (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2135921375995395460, guid: 1764a74cbba52f84b8cc918d4498054b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135921375995395460, guid: 1764a74cbba52f84b8cc918d4498054b, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36353,6 +36393,14 @@ PrefabInstance:
     - target: {fileID: 2739863823609919623, guid: 718d9ce0c32cce54cbcac49ef82d3e8f, type: 3}
       propertyPath: m_Name
       value: ColumnWood
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739863823609919623, guid: 718d9ce0c32cce54cbcac49ef82d3e8f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739863823609919623, guid: 718d9ce0c32cce54cbcac49ef82d3e8f, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 3264585318791520829, guid: 718d9ce0c32cce54cbcac49ef82d3e8f, type: 3}
       propertyPath: m_LocalScale.x
@@ -49897,9 +49945,9 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 06bcea88bdac6624585f0eee7733a968, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.516
+  m_Volume: 0.449
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -50106,6 +50154,14 @@ PrefabInstance:
     - target: {fileID: 2135921375995395460, guid: 1764a74cbba52f84b8cc918d4498054b, type: 3}
       propertyPath: m_Name
       value: ColumnPaintDamaged (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135921375995395460, guid: 1764a74cbba52f84b8cc918d4498054b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135921375995395460, guid: 1764a74cbba52f84b8cc918d4498054b, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -61842,6 +61898,14 @@ PrefabInstance:
     - target: {fileID: 7929183892630010165, guid: 836a5c98f96bec54e9708149cc11068f, type: 3}
       propertyPath: m_Name
       value: Column (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929183892630010165, guid: 836a5c98f96bec54e9708149cc11068f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929183892630010165, guid: 836a5c98f96bec54e9708149cc11068f, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
