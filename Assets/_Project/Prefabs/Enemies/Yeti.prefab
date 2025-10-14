@@ -1007,7 +1007,7 @@ MonoBehaviour:
   handler:
     _Editor_SelectedChain: 0
     _Editor_ChainCategory: 0
-    _EditorCategory: 3
+    _EditorCategory: 4
     _EditorMainCategory: 0
     _EditorMotionCategory: 0
     m_hemi: {fileID: -2508796484986968503, guid: 44d994eaad14fdf49a2dd378b4d62094, type: 3}
@@ -1114,7 +1114,284 @@ MonoBehaviour:
         rootSpaceRotation: {x: -0.8190618, y: -0.19528747, z: 0.5389269, w: 0.023637004}
       LastBaseTransform: {fileID: 8598150961444343608}
     UseExtraFeatures: 1
-    ExtraFeatures: []
+    ExtraFeatures:
+    - CustomName: 
+      enabled: 1
+      FeatureReference: {fileID: 11400000, guid: 2c895a7f3adf55d4aa2244330feb7ed6, type: 2}
+      customStringList: []
+      customObjectList: []
+      customEventsList: []
+      variables:
+      - VariableName: Dist1
+        Tooltip: 
+        _value: {x: 10, y: 0, z: 0, w: 0}
+        _string: 
+        _curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        _uObject: {fileID: 0}
+        VariableType: 0
+        _rangeHelper: {x: 0, y: 0, z: 0, w: 0}
+      - VariableName: Hard1
+        Tooltip: 
+        _value: {x: 0, y: 0, z: 0, w: 0}
+        _string: 
+        _curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        _uObject: {fileID: 0}
+        VariableType: 1
+        _rangeHelper: {x: 0, y: 0, z: 0, w: 0}
+      - VariableName: Iter1
+        Tooltip: 
+        _value: {x: 9, y: 0, z: 0, w: 1}
+        _string: 
+        _curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        _uObject: {fileID: 0}
+        VariableType: 0
+        _rangeHelper: {x: 0, y: 0, z: 0, w: 0}
+      - VariableName: Interp1
+        Tooltip: 
+        _value: {x: 0, y: 0, z: 0, w: 0}
+        _string: 
+        _curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        _uObject: {fileID: 0}
+        VariableType: 1
+        _rangeHelper: {x: 0, y: 0, z: 0, w: 0}
+      - VariableName: Discr1
+        Tooltip: 
+        _value: {x: 0, y: 0, z: 0, w: 0}
+        _string: 
+        _curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        _uObject: {fileID: 0}
+        VariableType: 1
+        _rangeHelper: {x: 0, y: 0, z: 0, w: 0}
+      - VariableName: Dist2
+        Tooltip: 
+        _value: {x: 20, y: 0, z: 0, w: 0}
+        _string: 
+        _curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        _uObject: {fileID: 0}
+        VariableType: 0
+        _rangeHelper: {x: 0, y: 0, z: 0, w: 0}
+      - VariableName: Hard2
+        Tooltip: 
+        _value: {x: 0, y: 0, z: 0, w: 0}
+        _string: 
+        _curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        _uObject: {fileID: 0}
+        VariableType: 1
+        _rangeHelper: {x: 0, y: 0, z: 0, w: 0}
+      - VariableName: Iter2
+        Tooltip: 
+        _value: {x: 5, y: 0, z: 0, w: 1}
+        _string: 
+        _curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        _uObject: {fileID: 0}
+        VariableType: 0
+        _rangeHelper: {x: 0, y: 0, z: 0, w: 0}
+      - VariableName: Interp2
+        Tooltip: 
+        _value: {x: 0, y: 0, z: 0, w: 0}
+        _string: 
+        _curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        _uObject: {fileID: 0}
+        VariableType: 1
+        _rangeHelper: {x: 0, y: 0, z: 0, w: 0}
+      - VariableName: Discr2
+        Tooltip: 
+        _value: {x: 0, y: 0, z: 0, w: 0}
+        _string: 
+        _curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        _uObject: {fileID: 0}
+        VariableType: 1
+        _rangeHelper: {x: 0, y: 0, z: 0, w: 0}
+      - VariableName: Dist3
+        Tooltip: 
+        _value: {x: 30, y: 0, z: 0, w: 0}
+        _string: 
+        _curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        _uObject: {fileID: 0}
+        VariableType: 0
+        _rangeHelper: {x: 0, y: 0, z: 0, w: 0}
+      - VariableName: Hard3
+        Tooltip: 
+        _value: {x: 1, y: 0, z: 0, w: 0}
+        _string: 
+        _curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        _uObject: {fileID: 0}
+        VariableType: 1
+        _rangeHelper: {x: 0, y: 0, z: 0, w: 0}
+      - VariableName: Iter3
+        Tooltip: 
+        _value: {x: 1, y: 0, z: 0, w: 1}
+        _string: 
+        _curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        _uObject: {fileID: 0}
+        VariableType: 0
+        _rangeHelper: {x: 0, y: 0, z: 0, w: 0}
+      - VariableName: Interp3
+        Tooltip: 
+        _value: {x: 1, y: 0, z: 0, w: 0}
+        _string: 
+        _curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        _uObject: {fileID: 0}
+        VariableType: 1
+        _rangeHelper: {x: 0, y: 0, z: 0, w: 0}
+      - VariableName: Discr3
+        Tooltip: 
+        _value: {x: 1, y: 0, z: 0, w: 0}
+        _string: 
+        _curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        _uObject: {fileID: 0}
+        VariableType: 1
+        _rangeHelper: {x: 0, y: 0, z: 0, w: 0}
+    - CustomName: 
+      enabled: 1
+      FeatureReference: {fileID: 11400000, guid: 7c6cce75d05d30d4590ad52f05b280f5, type: 2}
+      customStringList: []
+      customObjectList: []
+      customEventsList: []
+      variables:
+      - VariableName: Fade Speed
+        Tooltip: How fast should happen transition from disabled/enabled state
+        _value: {x: 1, y: 0, z: 0, w: 0}
+        _string: 
+        _curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        _uObject: {fileID: 0}
+        VariableType: 0
+        _rangeHelper: {x: 0.5, y: 10, z: 0, w: 0}
+      - VariableName: 'Max Distance:'
+        Tooltip: 
+        _value: {x: 30, y: 0, z: 0, w: 0}
+        _string: 
+        _curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        _uObject: {fileID: 0}
+        VariableType: 0
+        _rangeHelper: {x: 0, y: 0, z: 0, w: 0}
+      - VariableName: Visibility Debug
+        Tooltip: 
+        _value: {x: 0, y: 0, z: 0, w: 0}
+        _string: 
+        _curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        _uObject: {fileID: 0}
+        VariableType: 1
+        _rangeHelper: {x: 0, y: 0, z: 0, w: 0}
+      - VariableName: Store Pose
+        Tooltip: Storing animation pose if animator is visible, to prevent offscreen
+          pose calibration issues
+        _value: {x: 0, y: 0, z: 0, w: 0}
+        _string: 
+        _curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        _uObject: {fileID: 0}
+        VariableType: 1
+        _rangeHelper: {x: 0, y: 0, z: 0, w: 0}
+      - VariableName: 'Enter Threshold:'
+        Tooltip: When character entered min distance range, it needs to go out for
+          max distance + this threshold value in order to be in 'far away' range.
+          Preventing sudden On/Off when character is roaming around max distance.
+        _value: {x: 2, y: 0, z: 0, w: 0}
+        _string: 
+        _curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        _uObject: {fileID: 0}
+        VariableType: 0
+        _rangeHelper: {x: 0, y: 0, z: 0, w: 0}
     IsHumanoid: 1
     dummyContainer: {fileID: 0}
     inBetweenPreGenerateMemory: []

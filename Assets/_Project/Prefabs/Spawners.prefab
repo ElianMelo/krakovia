@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 949113563392017299}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13, y: 1.13, z: 7.1}
+  m_LocalPosition: {x: 39.8, y: 1.13, z: 69.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46,10 +46,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 5
+  maxEnemies: 15
   spawnInterval: 3
   enemyTypes:
   - type: 1
+    spawnChance: 1
+  globalPool: {fileID: 379584633189090901}
+--- !u!1 &1178592543926274120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3530337742014886778}
+  - component: {fileID: 71001769369523172}
+  m_Layer: 0
+  m_Name: YetiSpawn (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3530337742014886778
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178592543926274120}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 46.5, y: 4.2, z: 278.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5031533597982606769}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &71001769369523172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178592543926274120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cefa7114e02e149aac56ff8cc00746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
+  ShowTopMostFoldoutHeaderGroup: 1
+  spawnRadius: 10
+  maxEnemies: 15
+  spawnInterval: 3
+  enemyTypes:
+  - type: 2
     spawnChance: 1
   globalPool: {fileID: 379584633189090901}
 --- !u!1 &2383562478013827408
@@ -84,15 +136,23 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6949164730598649632}
+  - {fileID: 2315916304820927368}
   - {fileID: 8181457053810330531}
   - {fileID: 3915837748159350560}
+  - {fileID: 6573555283699050052}
   - {fileID: 2581242588434821424}
   - {fileID: 8491133998754627727}
   - {fileID: 2108667803354797877}
+  - {fileID: 8965837538392921675}
+  - {fileID: 5279571170147504096}
   - {fileID: 4639107368498454054}
   - {fileID: 6024518242680756550}
   - {fileID: 7889500107075972972}
+  - {fileID: 3530337742014886778}
   - {fileID: 5856227309166995426}
+  - {fileID: 6839388864308819237}
+  - {fileID: 6401822300693256454}
+  - {fileID: 7551823654898867607}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3336088376183343715
@@ -136,16 +196,68 @@ MonoBehaviour:
   enemyTypes:
   - type: 0
     prefab: {fileID: 4779095418874959237, guid: c3a364eb883da6343b5d64fe52b54bee, type: 3}
-    initialPoolSize: 30
+    initialPoolSize: 100
   - type: 1
     prefab: {fileID: 2449283383327018856, guid: 1eb604c8746182f44ace2bcc2394ef0d, type: 3}
-    initialPoolSize: 30
+    initialPoolSize: 100
   - type: 2
     prefab: {fileID: 2449283383327018856, guid: 47373e81fd2adb54c9a03c5e38940af0, type: 3}
-    initialPoolSize: 30
+    initialPoolSize: 100
   - type: 3
     prefab: {fileID: 337973077901493834, guid: 8f8cbb372c42e8445a569f025efe2e3e, type: 3}
-    initialPoolSize: 30
+    initialPoolSize: 100
+--- !u!1 &2861385035299579294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7551823654898867607}
+  - component: {fileID: 6802898424700327124}
+  m_Layer: 0
+  m_Name: IceDoggoSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7551823654898867607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2861385035299579294}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 183, y: 4.2, z: 580.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5031533597982606769}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6802898424700327124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2861385035299579294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cefa7114e02e149aac56ff8cc00746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
+  ShowTopMostFoldoutHeaderGroup: 1
+  spawnRadius: 10
+  maxEnemies: 15
+  spawnInterval: 3
+  enemyTypes:
+  - type: 3
+    spawnChance: 1
+  globalPool: {fileID: 379584633189090901}
 --- !u!1 &3277839161969445583
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,7 +284,7 @@ Transform:
   m_GameObject: {fileID: 3277839161969445583}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 44.4, y: 4.2, z: 292.8}
+  m_LocalPosition: {x: 122.3, y: 4.2, z: 558.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -192,7 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 5
+  maxEnemies: 15
   spawnInterval: 3
   enemyTypes:
   - type: 3
@@ -244,10 +356,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 5
+  maxEnemies: 15
   spawnInterval: 3
   enemyTypes:
   - type: 1
+    spawnChance: 1
+  globalPool: {fileID: 379584633189090901}
+--- !u!1 &3292013100895268488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2315916304820927368}
+  - component: {fileID: 4017131021461430320}
+  m_Layer: 0
+  m_Name: DogSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2315916304820927368
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3292013100895268488}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 362.3, y: 0, z: 3.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5031533597982606769}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4017131021461430320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3292013100895268488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cefa7114e02e149aac56ff8cc00746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
+  ShowTopMostFoldoutHeaderGroup: 1
+  spawnRadius: 10
+  maxEnemies: 15
+  spawnInterval: 3
+  enemyTypes:
+  - type: 0
     spawnChance: 1
   globalPool: {fileID: 379584633189090901}
 --- !u!1 &4258643467569184135
@@ -276,7 +440,7 @@ Transform:
   m_GameObject: {fileID: 4258643467569184135}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 319.02002, y: 0, z: 39.649994}
+  m_LocalPosition: {x: 319.02002, y: 3.6, z: 34.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -296,10 +460,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 5
+  maxEnemies: 15
   spawnInterval: 3
   enemyTypes:
   - type: 0
+    spawnChance: 1
+  globalPool: {fileID: 379584633189090901}
+--- !u!1 &4620737278209091502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6401822300693256454}
+  - component: {fileID: 1323807411772833185}
+  m_Layer: 0
+  m_Name: IceDoggoSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6401822300693256454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4620737278209091502}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 142.3, y: 4.2, z: 547.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5031533597982606769}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1323807411772833185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4620737278209091502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cefa7114e02e149aac56ff8cc00746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
+  ShowTopMostFoldoutHeaderGroup: 1
+  spawnRadius: 10
+  maxEnemies: 15
+  spawnInterval: 3
+  enemyTypes:
+  - type: 3
     spawnChance: 1
   globalPool: {fileID: 379584633189090901}
 --- !u!1 &5828800762876703045
@@ -328,7 +544,7 @@ Transform:
   m_GameObject: {fileID: 5828800762876703045}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 339.97, y: 0, z: 28.589996}
+  m_LocalPosition: {x: 339.97, y: 3.6, z: 28.589996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -348,10 +564,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 5
+  maxEnemies: 15
   spawnInterval: 3
   enemyTypes:
   - type: 0
+    spawnChance: 1
+  globalPool: {fileID: 379584633189090901}
+--- !u!1 &5893360784213283859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8965837538392921675}
+  - component: {fileID: 8031412059498954694}
+  m_Layer: 0
+  m_Name: MummySpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8965837538392921675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5893360784213283859}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 26.6, y: 1.13, z: 67.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5031533597982606769}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8031412059498954694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5893360784213283859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cefa7114e02e149aac56ff8cc00746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
+  ShowTopMostFoldoutHeaderGroup: 1
+  spawnRadius: 10
+  maxEnemies: 15
+  spawnInterval: 3
+  enemyTypes:
+  - type: 1
     spawnChance: 1
   globalPool: {fileID: 379584633189090901}
 --- !u!1 &6084242554958541692
@@ -400,10 +668,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 5
+  maxEnemies: 15
   spawnInterval: 3
   enemyTypes:
   - type: 2
+    spawnChance: 1
+  globalPool: {fileID: 379584633189090901}
+--- !u!1 &6317946576799087040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5279571170147504096}
+  - component: {fileID: 8847945077876641419}
+  m_Layer: 0
+  m_Name: MummySpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5279571170147504096
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6317946576799087040}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 77.5, y: 1.13, z: 74.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5031533597982606769}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8847945077876641419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6317946576799087040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cefa7114e02e149aac56ff8cc00746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
+  ShowTopMostFoldoutHeaderGroup: 1
+  spawnRadius: 10
+  maxEnemies: 15
+  spawnInterval: 3
+  enemyTypes:
+  - type: 1
     spawnChance: 1
   globalPool: {fileID: 379584633189090901}
 --- !u!1 &6568853044816868253
@@ -432,7 +752,7 @@ Transform:
   m_GameObject: {fileID: 6568853044816868253}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.4, y: 1.13, z: 19}
+  m_LocalPosition: {x: 40.98, y: 1.13, z: 24.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -452,10 +772,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 5
+  maxEnemies: 15
   spawnInterval: 3
   enemyTypes:
   - type: 1
+    spawnChance: 1
+  globalPool: {fileID: 379584633189090901}
+--- !u!1 &6969414393246731347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6573555283699050052}
+  - component: {fileID: 7960043442674441503}
+  m_Layer: 0
+  m_Name: DogSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6573555283699050052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6969414393246731347}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 300.8, y: 3.6, z: 5.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5031533597982606769}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7960043442674441503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6969414393246731347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cefa7114e02e149aac56ff8cc00746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
+  ShowTopMostFoldoutHeaderGroup: 1
+  spawnRadius: 10
+  maxEnemies: 15
+  spawnInterval: 3
+  enemyTypes:
+  - type: 0
     spawnChance: 1
   globalPool: {fileID: 379584633189090901}
 --- !u!1 &7416784367127566979
@@ -504,10 +876,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 5
+  maxEnemies: 15
   spawnInterval: 3
   enemyTypes:
   - type: 2
+    spawnChance: 1
+  globalPool: {fileID: 379584633189090901}
+--- !u!1 &7725507542814200402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6839388864308819237}
+  - component: {fileID: 2786393193881067357}
+  m_Layer: 0
+  m_Name: IceDoggoSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6839388864308819237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7725507542814200402}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 136.6, y: 4.2, z: 580.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5031533597982606769}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2786393193881067357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7725507542814200402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cefa7114e02e149aac56ff8cc00746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
+  ShowTopMostFoldoutHeaderGroup: 1
+  spawnRadius: 10
+  maxEnemies: 15
+  spawnInterval: 3
+  enemyTypes:
+  - type: 3
     spawnChance: 1
   globalPool: {fileID: 379584633189090901}
 --- !u!1 &8899664542293563364
@@ -556,7 +980,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 5
+  maxEnemies: 15
   spawnInterval: 3
   enemyTypes:
   - type: 2
@@ -608,7 +1032,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerZone
   ShowTopMostFoldoutHeaderGroup: 1
   spawnRadius: 10
-  maxEnemies: 5
+  maxEnemies: 15
   spawnInterval: 3
   enemyTypes:
   - type: 0
