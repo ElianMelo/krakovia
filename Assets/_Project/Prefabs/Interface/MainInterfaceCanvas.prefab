@@ -2933,6 +2933,9 @@ MonoBehaviour:
   playerSkillSecond: {fileID: 7153662180781169741}
   playerSkillThird: {fileID: 1400630392044545800}
   playerSkillForth: {fileID: 7326332965164593321}
+  lockedMouseRightSKill: {fileID: 5296281708183712926}
+  lockedQSkill: {fileID: 4158735703691595739}
+  lockedFSkill: {fileID: 5722554497393580154}
 --- !u!1 &8335055724829920575
 GameObject:
   m_ObjectHideFlags: 0
@@ -3468,6 +3471,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3169567739339037961, guid: bdce67bc4834f324dbc73f5b8c4a5f31, type: 3}
+      propertyPath: m_text
+      value: LV 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521783274140568985, guid: bdce67bc4834f324dbc73f5b8c4a5f31, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5302436803607512324, guid: bdce67bc4834f324dbc73f5b8c4a5f31, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3495,6 +3506,11 @@ MonoBehaviour:
 --- !u!224 &2793174949324920475 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2428860947645732057, guid: bdce67bc4834f324dbc73f5b8c4a5f31, type: 3}
+  m_PrefabInstance: {fileID: 537711731358958146}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4158735703691595739 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4521783274140568985, guid: bdce67bc4834f324dbc73f5b8c4a5f31, type: 3}
   m_PrefabInstance: {fileID: 537711731358958146}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4287586579144162135
@@ -3730,6 +3746,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4521783274140568985, guid: bdce67bc4834f324dbc73f5b8c4a5f31, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7071180994106389453, guid: bdce67bc4834f324dbc73f5b8c4a5f31, type: 3}
       propertyPath: m_Name
       value: SkillBlock (3)
@@ -3739,6 +3759,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdce67bc4834f324dbc73f5b8c4a5f31, type: 3}
+--- !u!1 &5722554497393580154 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4521783274140568985, guid: bdce67bc4834f324dbc73f5b8c4a5f31, type: 3}
+  m_PrefabInstance: {fileID: 8190360044156933603}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5773347786308763962 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2428860947645732057, guid: bdce67bc4834f324dbc73f5b8c4a5f31, type: 3}
@@ -3859,6 +3884,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3169567739339037961, guid: bdce67bc4834f324dbc73f5b8c4a5f31, type: 3}
+      propertyPath: m_text
+      value: LV 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521783274140568985, guid: bdce67bc4834f324dbc73f5b8c4a5f31, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5302436803607512324, guid: bdce67bc4834f324dbc73f5b8c4a5f31, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3872,6 +3905,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdce67bc4834f324dbc73f5b8c4a5f31, type: 3}
+--- !u!1 &5296281708183712926 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4521783274140568985, guid: bdce67bc4834f324dbc73f5b8c4a5f31, type: 3}
+  m_PrefabInstance: {fileID: 8593067964868327687}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6266118832339676638 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2428860947645732057, guid: bdce67bc4834f324dbc73f5b8c4a5f31, type: 3}

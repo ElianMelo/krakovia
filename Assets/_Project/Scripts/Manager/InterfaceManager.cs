@@ -100,6 +100,21 @@ public class InterfaceManager : MonoBehaviour
         }
     }
 
+    public void UnlockMouseRightSkill()
+    {
+        PlayerInterfaceController.UnlockMouseRightSkill();
+    }
+
+    public void UnlockQSkill()
+    {
+        PlayerInterfaceController.UnlockQSkill();
+    }
+
+    public void UnlockFSkill()
+    {
+        PlayerInterfaceController.UnlockFSkill();
+    }
+
     public void UpdatePlayerSkillFirstCooldown(float time)
     {
         PlayerInterfaceController.UpdatePlayerSkillFirstCooldown(time);
@@ -127,13 +142,15 @@ public class InterfaceManager : MonoBehaviour
 
     void Update()
     {
-        //if(Input.GetKeyDown(KeyCode.F1))
-        //{
-        //    NetworkManager.Singleton.StartHost();
-        //}
-        //if (Input.GetKeyDown(KeyCode.F2))
-        //{
-        //    NetworkManager.Singleton.StartClient();
-        //}
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            NetworkManager.Singleton.StartHost();
+            SystemManager.Instance.StartGame();
+        }
+        if (Input.GetKeyDown(KeyCode.F2))
+        {
+            NetworkManager.Singleton.StartClient();
+            SystemManager.Instance.StartGame();
+        }
     }
 }

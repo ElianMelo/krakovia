@@ -259,6 +259,7 @@ public class PlayerAttributeController : NetworkBehaviour
 
     private void LevelUp()
     {
+        GetComponent<PlayerAttackController>().CheckUnlockSkill(currentLevel);
         foreach (var attributeData in levelUpData.attributeDatas)
         {
             UpdateAttributeData(attributeData.attribute, attributeData.flatAmount);

@@ -20,9 +20,9 @@ public class PlayerAttackController : NetworkBehaviour
     private Animator animator;
 
     private bool canUseMouseLeftSkill = true;
-    private bool canUseMouseRightSkill = true;
-    private bool canUseQSkill = true;
-    private bool canUseFSkill = true;
+    private bool canUseMouseRightSkill = false;
+    private bool canUseQSkill = false;
+    private bool canUseFSkill = false;
 
     private float dashSkillCooldown = 3f;
 
@@ -148,6 +148,23 @@ public class PlayerAttackController : NetworkBehaviour
         animator.SetLayerWeight(animator.GetLayerIndex("UpperBody"), 1f);
         yield return new WaitForSeconds(frames * ConstantsManager.FramesToSeconds);
         animator.SetLayerWeight(animator.GetLayerIndex("UpperBody"), 0f);
+    }
+
+    public void CheckUnlockSkill(int level)
+    {
+        if(level == 5)
+        {
+            InterfaceManager.Instance.UnlockMouseRightSkill();
+            canUseMouseRightSkill = true;
+        } else if(level == 10)
+        {
+            InterfaceManager.Instance.UnlockQSkill();
+            canUseQSkill = true;
+        } else if(level == 15)
+        {
+            InterfaceManager.Instance.UnlockFSkill();
+            canUseFSkill = true;
+        }
     }
 
     private void MouseLeftSkill()

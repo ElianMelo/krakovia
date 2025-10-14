@@ -14,6 +14,10 @@ public class PlayerInterfaceController : MonoBehaviour
     public SkillBlock playerSkillThird;
     public SkillBlock playerSkillForth;
 
+    public GameObject lockedMouseRightSKill;
+    public GameObject lockedQSkill;
+    public GameObject lockedFSkill;
+
     public void UpdatePlayerHp(float currentValue, float maxValue)
     {
         playerHpSlide.fillAmount = currentValue / maxValue;
@@ -32,6 +36,18 @@ public class PlayerInterfaceController : MonoBehaviour
         playerLevel.text = levelText;
     }
 
+    public void UnlockMouseRightSkill()
+    {
+        lockedMouseRightSKill.SetActive(false);
+    }
+    public void UnlockQSkill()
+    {
+        lockedQSkill.SetActive(false);
+    }
+    public void UnlockFSkill()
+    {
+        lockedFSkill.SetActive(false);
+    }
     public void UpdatePlayerSkillFirstCooldown(float time)
     {
         playerSkillFirst.StartCooldown(time);
