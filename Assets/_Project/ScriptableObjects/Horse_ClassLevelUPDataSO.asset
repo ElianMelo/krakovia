@@ -16,11 +16,11 @@ MonoBehaviour:
     name: Initial Data
     attributeDatas:
     - attribute: 0
-      flatAmount: 0
+      flatAmount: 1
     - attribute: 1
-      flatAmount: 500
+      flatAmount: 200
     - attribute: 2
-      flatAmount: 0.5
+      flatAmount: 1
     - attribute: 3
       flatAmount: 5
     - attribute: 4
@@ -31,12 +31,12 @@ MonoBehaviour:
     name: Upgrade Data Per Level
     attributeDatas:
     - attribute: 3
-      flatAmount: 0
+      flatAmount: 0.1
     - attribute: 1
-      flatAmount: 350
+      flatAmount: 200
     - attribute: 4
-      flatAmount: 1.5
-    - attribute: 2
       flatAmount: 3
+    - attribute: 2
+      flatAmount: 2
     - attribute: 0
-      flatAmount: 1
+      flatAmount: 0.8

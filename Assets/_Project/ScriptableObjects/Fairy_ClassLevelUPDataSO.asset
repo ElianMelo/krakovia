@@ -20,7 +20,7 @@ MonoBehaviour:
     - attribute: 1
       flatAmount: 100
     - attribute: 2
-      flatAmount: 3
+      flatAmount: 2
     - attribute: 3
       flatAmount: 5
     - attribute: 4
@@ -37,8 +37,8 @@ MonoBehaviour:
     - attribute: 4
       flatAmount: 1
     - attribute: 5
-      flatAmount: 0.15
+      flatAmount: 0.1
     - attribute: 0
       flatAmount: 0.1
     - attribute: 2
-      flatAmount: 0.25
+      flatAmount: 1

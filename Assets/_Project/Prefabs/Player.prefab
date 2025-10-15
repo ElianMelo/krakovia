@@ -930,7 +930,7 @@ MonoBehaviour:
   fairyMouseRightSkillCooldownSeconds: 2
   fairyQSkillCooldownSeconds: 8
   fairyFSkillCooldownSeconds: 15
-  skeletonMouseLeftSkillDamagePercentage: 80
+  skeletonMouseLeftSkillDamagePercentage: 100
   skeletonMouseRightSkillDamagePercentage: 250
   skeletonQSkillDamagePercentage: 250
   skeletonFSkillDamagePercentage: 500
@@ -938,14 +938,14 @@ MonoBehaviour:
   skeletonMouseRightSkillCooldownSeconds: 3
   skeletonQSkillCooldownSeconds: 22
   skeletonFSkillCooldownSeconds: 45
-  horseMouseLeftSkillDamagePercentage: 80
+  horseMouseLeftSkillDamagePercentage: 100
   horseMouseRightSkillDamagePercentage: 200
-  horseQSkillDamagePercentage: 200
-  horseFSkillDamagePercentage: 300
+  horseQSkillDamagePercentage: 230
+  horseFSkillDamagePercentage: 700
   horseMouseLeftSkillCooldownSeconds: 0.2
   horseMouseRightSkillCooldownSeconds: 1
   horseQSkillCooldownSeconds: 3
-  horseFSkillCooldownSeconds: 12
+  horseFSkillCooldownSeconds: 20
 --- !u!1 &4906314732877314724
 GameObject:
   m_ObjectHideFlags: 0
