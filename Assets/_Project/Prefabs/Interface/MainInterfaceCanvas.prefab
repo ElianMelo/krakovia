@@ -412,7 +412,7 @@ GameObject:
   - component: {fileID: 7561273922683383345}
   - component: {fileID: 1148980051569554299}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Objectives
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -819,6 +819,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8913182987350543380}
+  - component: {fileID: 7226220589892473441}
   m_Layer: 5
   m_Name: ObjectiveBox
   m_TagString: Untagged
@@ -847,6 +848,43 @@ RectTransform:
   m_AnchoredPosition: {x: 40.86, y: -139.40002}
   m_SizeDelta: {x: 703.36, y: 136.093}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &7226220589892473441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2235429384777421583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b53d66cc3fcae774783b73e2ac960fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectiveInterfaceController
+  headerTextMesh: {fileID: 2047451607308037104}
+  contentTextMesh: {fileID: 1148980051569554299}
+  headerObjectiveToLevelFive: Objetivo do Level 1 - 5 (Floresta)
+  contentObjectiveToLevelFive: '- Matar cachorro da floresta
+
+    - Matar arvore
+    do mal'
+  headerObjectiveToLevelTen: Objetivo do Level 6 - 10 (Deserto)
+  contentObjectiveToLevelTen: '- Matar mumia do deserto
+
+    - Matar minhoca gigante'
+  headerObjectiveToLevelFifteen: Objetivo do Level 11 - 15 (Gelo)
+  contentObjectiveToLevelFifteen: '- Matar yeti da neve'
+  headerObjectiveToLevelTwenty: Objetivo do Level 16 - 20 (Gelo)
+  contentObjectiveToLevelTwenty: '- Mater cachorro da neve
+
+    - Matar entidade
+    da neve'
+  headerObjectiveToLevelTwentyPos: Objetivo do Level 20
+  contentObjectiveToLevelTwentyPos: '- Farmar aura + ego
+
+    - Surfar pelo mapa
+    e se divertir
+
+    -  Desafie os amigos pra um PvP na arena'
 --- !u!1 &2386143026227685032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,7 +1149,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3278841965205759229}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -1200,6 +1238,7 @@ MonoBehaviour:
   skeletonImage: {fileID: 21300000, guid: 950f24438b24f414ba38a9291ec3e631, type: 3}
   _playerInterfaceController: {fileID: 4826037418665383553}
   _pvPInterfaceController: {fileID: 2630157146938587367}
+  _objectiveInterfaceController: {fileID: 7226220589892473441}
 --- !u!114 &5631859557102737457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1663,7 +1702,7 @@ GameObject:
   - component: {fileID: 7637346410647201773}
   - component: {fileID: 2047451607308037104}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Header
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1716,7 +1755,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Objetivo do Level 1 - 5
+  m_text: Objetivo do Level 1 - 5 (Floresta)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}

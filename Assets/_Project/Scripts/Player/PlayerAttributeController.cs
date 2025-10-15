@@ -260,6 +260,19 @@ public class PlayerAttributeController : NetworkBehaviour
     private void LevelUp()
     {
         GetComponent<PlayerAttackController>().CheckUnlockSkill(currentLevel);
+        if(currentLevel == 5)
+        {
+            InterfaceManager.Instance.ObjectiveInterfaceController.ChangeObjectiveToLevelTen();
+        } else if(currentLevel == 10)
+        {
+            InterfaceManager.Instance.ObjectiveInterfaceController.ChangeObjectiveToLevelFifteen();
+        } else if (currentLevel == 15)
+        {
+            InterfaceManager.Instance.ObjectiveInterfaceController.ChangeObjectiveToLevelTwenty();
+        } else if (currentLevel == 20)
+        {
+            InterfaceManager.Instance.ObjectiveInterfaceController.ChangeObjectiveToLevelTwentyPos();
+        }
         foreach (var attributeData in levelUpData.attributeDatas)
         {
             UpdateAttributeData(attributeData.attribute, attributeData.flatAmount);
@@ -387,10 +400,10 @@ public class PlayerAttributeController : NetworkBehaviour
         {
             currentExperience -= maxExperience;
             currentLevel += 1;
-            if (MaxLevelCheck()) return;
             maxExperience += experienceIncreaseAmount;
             PlayerEffectPooler.Instance.ShowLevelUpEffect(transform.position, Quaternion.identity, 3f);
             LevelUp();
+            if (MaxLevelCheck()) return;
         }
         InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerLevel(currentLevel);
         InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerExperience(currentExperience, maxExperience);

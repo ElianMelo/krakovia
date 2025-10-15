@@ -28,6 +28,7 @@ public class InterfaceManager : MonoBehaviour
 
     public PlayerInterfaceController _playerInterfaceController;
     public PvPInterfaceController _pvPInterfaceController;
+    public ObjectiveInterfaceController _objectiveInterfaceController;
 
     public PlayerInterfaceController PlayerInterfaceController
     {
@@ -35,6 +36,15 @@ public class InterfaceManager : MonoBehaviour
         set
         {
             _playerInterfaceController = value;
+        }
+    }
+
+    public ObjectiveInterfaceController ObjectiveInterfaceController
+    {
+        get => _objectiveInterfaceController;
+        set
+        {
+            _objectiveInterfaceController = value;
         }
     }
 
