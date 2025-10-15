@@ -42,11 +42,14 @@ public class EnemyMovement : MonoBehaviour
 
     private IEnumerator CheckDistanceAgroRoutine()
     {
-        if(aggroTarget != null && Vector3.Distance(transform.position, aggroTarget.position) > 10f)
+        while(true)
         {
-            OnDeath();
+            if (aggroTarget != null && Vector3.Distance(transform.position, aggroTarget.position) > 10f)
+            {
+                OnDeath();
+            }
+            yield return new WaitForSeconds(5f * Random.Range(0f, 1f));
         }
-        yield return new WaitForSeconds(5f * Random.Range(0f, 1f));
     }
 
     private void Update()
