@@ -57,8 +57,8 @@ public class SystemManager : MonoBehaviour
     public void StartGame()
     {
         GameStarted = true;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
     }
 
     public void StartHostLocal()

@@ -64750,6 +64750,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainInterfaceCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4383510334527000890, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: '- Aperte E nas fontes para salvar ponto de renascimento
+
+        -
+        O jogo possui 3 bosses e 4 inimigos
+
+        - Aperte CTRL para mostrar/ocultar
+        o mouse
+
+        - Insira Texto aqui
+
+        - Insira Texto aqui'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865191377150670655, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: '- Voce recebe recompensa nivel 5, 10, 15 e 20
+
+        - O seu objetivo
+        atual fica no canto superior esquerdo
+
+        - O PVP e balanceado no level
+        maximo 20
+
+        - Os possiveis comandos ficam no canto superior direito'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190171580037392444, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5631859557102737457, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: inputField
       value: 
