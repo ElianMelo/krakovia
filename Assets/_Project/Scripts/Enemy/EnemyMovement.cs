@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody), typeof(Collider))]
 public class EnemyMovement : MonoBehaviour
@@ -36,6 +37,16 @@ public class EnemyMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true; // Avoid physics tipping the enemy over
         animator = GetComponentInChildren<Animator>();
+        StartCoroutine(CheckDistanceAgroRoutine());
+    }
+
+    private IEnumerator CheckDistanceAgroRoutine()
+    {
+        if(aggroTarget != null && Vector3.Distance(transform.position, aggroTarget.position) > 10f)
+        {
+            OnDeath();
+        }
+        yield return new WaitForSeconds(5f * Random.Range(0f, 1f));
     }
 
     private void Update()
