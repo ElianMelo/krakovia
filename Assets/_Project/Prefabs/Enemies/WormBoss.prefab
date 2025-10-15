@@ -56,9 +56,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3098946841812166243, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
+      propertyPath: damage
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 5147054311580931116, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
       propertyPath: GlobalObjectIdHash
       value: 2335554315
+      objectReference: {fileID: 0}
+    - target: {fileID: 8033235953411008976, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
+      propertyPath: maxHP
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8033235953411008976, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
+      propertyPath: xpAmount
+      value: 2000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
