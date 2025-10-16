@@ -64,6 +64,30 @@ PrefabInstance:
       propertyPath: damage
       value: 250
       objectReference: {fileID: 0}
+    - target: {fileID: 3066065264092073755, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: m_Height
+      value: 1.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066065264092073755, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: m_Radius
+      value: 0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066065264092073755, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066065264092073755, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: m_Center.y
+      value: 0.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066065264092073755, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: m_Center.z
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066065264092073755, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5147054311580931116, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: GlobalObjectIdHash
       value: 2627719133
@@ -119,6 +143,42 @@ PrefabInstance:
     - target: {fileID: 8053839496377515357, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 2.028
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: attackRange
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: wanderRadius
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: rotationSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: aggroMoveSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: attackCooldown
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: stuckTimeToReset
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: aggroLoseDistance
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: obstacleSphereRadius
+      value: 0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -268,13 +328,13 @@ MonoBehaviour:
   handler:
     _Editor_SelectedChain: 0
     _Editor_ChainCategory: 0
-    _EditorCategory: 4
+    _EditorCategory: 3
     _EditorMainCategory: 0
     _EditorMotionCategory: 0
-    m_hemi: {fileID: 0}
-    m_cyli: {fileID: 0}
-    m_sphere: {fileID: 0}
-    m_box: {fileID: 0}
+    m_hemi: {fileID: -2508796484986968503, guid: 44d994eaad14fdf49a2dd378b4d62094, type: 3}
+    m_cyli: {fileID: 2534964839176971238, guid: 2ea99bbc50a9266448416f21d645a771, type: 3}
+    m_sphere: {fileID: 4711208715938537054, guid: b43618aedd7473a4eb1aaa5e80012a1d, type: 3}
+    m_box: {fileID: -5495902117074765545, guid: 556fd6baa0902304189e57acd1d60fa6, type: 3}
     _EditorBoneScenePreviews: []
     StoredReferenceTPose:
       BonePoses:
@@ -657,7 +717,7 @@ MonoBehaviour:
     SpringsOnFall: 0
     DampingValue: 40
     DampingValueOnFall: 0
-    HardMatching: 0
+    HardMatching: 1
     HardMatchPositions: 0
     HardMatchPositionsOnFall: 0
     PositionHardMatchingMultiplier: 1
@@ -695,7 +755,7 @@ MonoBehaviour:
     MaxDepenetrationVelocity: 0
     ProjectionMode: 0
     PreProcessing: 0
-    RagdollBlend: 0.49829316
+    RagdollBlend: 0.38596356
     animatingMode: 1
     UseReconstruction: 0
     UnitySolverIterations: 12

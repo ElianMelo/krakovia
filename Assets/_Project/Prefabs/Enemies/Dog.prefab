@@ -2723,6 +2723,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.987
       objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: attackRange
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: wanderRadius
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: aggroMoveSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: stuckTimeToReset
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: aggroLoseDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: obstacleSphereRadius
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: obstacleDetectDistance
+      value: 0.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8693007809300120879, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}

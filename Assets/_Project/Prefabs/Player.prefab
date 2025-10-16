@@ -10572,7 +10572,7 @@ MonoBehaviour:
         ChannelMode: 0
         Channel: 0
         MMChannelDefinition: {fileID: 0}
-        Chance: 100
+        Chance: 50
         DisplayColor: {r: 0, g: 0, b: 0, a: 1}
         Timing:
           TimescaleMode: 0
@@ -10824,7 +10824,7 @@ MonoBehaviour:
         ChannelMode: 0
         Channel: 0
         MMChannelDefinition: {fileID: 0}
-        Chance: 45.5
+        Chance: 16
         DisplayColor: {r: 0, g: 0, b: 0, a: 1}
         Timing:
           TimescaleMode: 0
@@ -12733,7 +12733,7 @@ MonoBehaviour:
         ChannelMode: 0
         Channel: 0
         MMChannelDefinition: {fileID: 0}
-        Chance: 40.6
+        Chance: 15
         DisplayColor: {r: 0, g: 0, b: 0, a: 1}
         Timing:
           TimescaleMode: 0

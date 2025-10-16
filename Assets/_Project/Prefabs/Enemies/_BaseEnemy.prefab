@@ -161,6 +161,13 @@ MonoBehaviour:
     m_Bits: 64
   aggroMoveSpeed: 4
   minAggroTime: 3
+  aggroLoseDistance: 25
+  obstacleDetectDistance: 0.6
+  obstacleSphereRadius: 0.3
+  stuckTimeToReset: 1
+  attackRange: 1.5
+  WalkAnim: Walking
+  AttackAnim: Attacking
 --- !u!114 &-1079369031430894768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,11 +183,10 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   maxHP: 5
   xpAmount: 5
-  explosionEffect: {fileID: 7780183107191031951, guid: 75cc95414f895d24a9ea78a02136df7b, type: 3}
-  bloodEffect: {fileID: 2856443763802584437, guid: 230024bbb992cbd4f9edfb98f3a6a30c, type: 3}
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+  enemySpawnerZone: {fileID: 0}
 --- !u!114 &4947161926761419523
 MonoBehaviour:
   m_ObjectHideFlags: 0
