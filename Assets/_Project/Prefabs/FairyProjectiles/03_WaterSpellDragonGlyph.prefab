@@ -14490,7 +14490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 2323596799
+  GlobalObjectIdHash: 3368907972
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -14851,7 +14851,7 @@ MonoBehaviour:
         RemapRangeFalloff: {x: 0, y: 1}
         Owner: {fileID: 4087577817351150038}
         DebugActive: 0
-        Sfx: {fileID: 8300000, guid: 59252c14c17bb7c44978059c2a9fefb0, type: 3}
+        Sfx: {fileID: 8300000, guid: f35cd3bc14bc5f54ba8edcd88ef29f41, type: 3}
         RandomSfx: []
         TestPlayButton:
           ButtonText: Debug Play Sound

@@ -1143,6 +1143,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: SavePoint
       objectReference: {fileID: 0}
+    - target: {fileID: 6013486300359559361, guid: 68ccca0279283464980324e250b77854, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7006493438293073145, guid: 68ccca0279283464980324e250b77854, type: 3}
       propertyPath: m_text
       value: '(E) - Salvar Ponto '
@@ -1162,6 +1166,10 @@ PrefabInstance:
     - target: {fileID: 7006493438293073145, guid: 68ccca0279283464980324e250b77854, type: 3}
       propertyPath: m_margin.z
       value: -27.351555
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006493438293073145, guid: 68ccca0279283464980324e250b77854, type: 3}
+      propertyPath: m_isRightToLeft
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7357703593462878482, guid: 68ccca0279283464980324e250b77854, type: 3}
       propertyPath: m_Name

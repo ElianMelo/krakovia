@@ -381,7 +381,7 @@ public class PlayerMovementController : NetworkBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Wave"))
         {
             hittingGround = true;
         }
@@ -389,7 +389,7 @@ public class PlayerMovementController : NetworkBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Wave"))
         {
             if(delayedSurfingResetCoroutine != null) StopCoroutine(delayedSurfingResetCoroutine);
             delayedSurfingResetCoroutine = StartCoroutine(DelayedSurfingReset());

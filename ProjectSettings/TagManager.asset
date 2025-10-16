@@ -9,6 +9,7 @@ TagManager:
   - Obstacle
   - AttackCollider
   - SavePoint
+  - Wave
   layers:
   - Default
   - TransparentFX

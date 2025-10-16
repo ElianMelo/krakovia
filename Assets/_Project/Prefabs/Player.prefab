@@ -886,14 +886,14 @@ MonoBehaviour:
   orientation: {fileID: 601245606459656940}
   playerCam: {fileID: 601245606459656940}
   dashForce: 20
-  dashUpwardForce: 2
+  dashUpwardForce: 0
   maxDashYSpeed: 10
   dashDuration: 0.6
   useCameraForward: 0
   allowAllDirections: 0
   disableGravity: 0
   resetVel: 1
-  dashCd: 2
+  dashCd: 3
   dashCdTimer: 0
   dashKey: 304
 --- !u!114 &8047847355979524310
@@ -923,11 +923,11 @@ MonoBehaviour:
   horseData: {fileID: 11400000, guid: ebe444d9b1671d1469a85a309c4f008f, type: 2}
   experienceIncreaseAmount: 300
   fairyMouseLeftSkillDamagePercentage: 300
-  fairyMouseRightSkillDamagePercentage: 200
+  fairyMouseRightSkillDamagePercentage: 350
   fairyQSkillDamagePercentage: 1000
   fairyFSkillDamagePercentage: 3000
   fairyMouseLeftSkillCooldownSeconds: 2
-  fairyMouseRightSkillCooldownSeconds: 2
+  fairyMouseRightSkillCooldownSeconds: 3
   fairyQSkillCooldownSeconds: 8
   fairyFSkillCooldownSeconds: 15
   skeletonMouseLeftSkillDamagePercentage: 100

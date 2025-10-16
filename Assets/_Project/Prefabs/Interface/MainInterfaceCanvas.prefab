@@ -446,15 +446,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Voce recebe recompensa nivel 5, 10, 15 e 20
-
-    - O seu objetivo atual
-    fica no canto superior esquerdo
-
-    - O PVP e balanceado no level maximo 20
-
-    -
-    Os possiveis comandos ficam no canto superior direito'
+  m_text: "- Recompensas Lvl. 5/10/15/20\n- Objetivo Atual <<<< canto superior esquerdo\n-
+    PvP Balanceado para endgame (Lvl.20) \n- (TAB) Comandos/Dicas >>>> canto superior
+    direito"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -2660,14 +2654,15 @@ MonoBehaviour:
   m_text: '- Aperte E nas fontes para salvar ponto de renascimento
 
     - O jogo
-    possui 3 bosses e 4 inimigos
+    possui 3 chefes para subjugar
 
     - Aperte CTRL para mostrar/ocultar o mouse
 
     -
-    Insira Texto aqui
+    Cada nivel aumenta seus atributos exponencialmente
 
-    - Insira Texto aqui'
+    - Divirta-se acima de
+    tudo'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
