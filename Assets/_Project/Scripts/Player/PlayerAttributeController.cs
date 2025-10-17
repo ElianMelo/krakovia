@@ -414,9 +414,23 @@ public class PlayerAttributeController : NetworkBehaviour
         bool isMaxLevel = currentLevel == MaxLevel;
         if (isMaxLevel) {
             GetComponent<PlayerController>().isMaxLevel.Value = true;
+            RequestMaxLevelRpc(NetworkObjectId);
             InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerLevel(MaxLevel);
             InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerExperience(0, maxExperience);
         }
         return isMaxLevel;
+    }
+
+    [Rpc(SendTo.Server)]
+    private void RequestMaxLevelRpc(ulong targetNetworkObjectId)
+    {
+        if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(targetNetworkObjectId, out var playerObj))
+        {
+            PlayerController playerController = playerObj.GetComponent<PlayerController>();
+            if (playerController != null)
+            {
+                playerController.isMaxLevel.Value = true;
+            }
+        }
     }
 }
