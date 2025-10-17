@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1079369031430894768, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: xpAmount
-      value: 400
+      value: 230
       objectReference: {fileID: 0}
     - target: {fileID: 1160617717093947312, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: m_Name
@@ -154,15 +154,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: wanderRadius
-      value: 15
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: rotationSpeed
-      value: 20
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: aggroMoveSpeed
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: attackCooldown
@@ -182,7 +182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: obstacleDetectDistance
-      value: 0.1
+      value: 0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
