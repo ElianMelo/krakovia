@@ -929,7 +929,7 @@ MonoBehaviour:
   fairyData: {fileID: 11400000, guid: a43d63ec606d2004cbb87a0f7b7929e7, type: 2}
   skeletonData: {fileID: 11400000, guid: 93d6f6fb5828ac44c92c6c10d26cb435, type: 2}
   horseData: {fileID: 11400000, guid: ebe444d9b1671d1469a85a309c4f008f, type: 2}
-  experienceIncreaseAmount: 300
+  experienceIncreaseAmount: 400
   fairyMouseLeftSkillDamagePercentage: 300
   fairyMouseRightSkillDamagePercentage: 350
   fairyQSkillDamagePercentage: 1000
