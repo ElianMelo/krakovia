@@ -413,6 +413,7 @@ public class PlayerAttributeController : NetworkBehaviour
     {
         bool isMaxLevel = currentLevel == MaxLevel;
         if (isMaxLevel) {
+            GetComponent<PlayerController>().isMaxLevel.Value = true;
             InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerLevel(MaxLevel);
             InterfaceManager.Instance.PlayerInterfaceController.UpdatePlayerExperience(0, maxExperience);
         }
