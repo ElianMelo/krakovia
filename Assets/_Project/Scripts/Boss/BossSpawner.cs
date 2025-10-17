@@ -28,7 +28,7 @@ public class BossSpawner : NetworkBehaviour
 
     private void SpawnBoss()
     {
-        var instance = Instantiate(bossPrefab, transform);
+        var instance = Instantiate(bossPrefab, transform.position, transform.rotation);
         currentBossController = instance.GetComponent<BossController>();
         currentBossController.SetupBossSpawner(this);
         currentBossController.GetComponent<NetworkObject>().Spawn();

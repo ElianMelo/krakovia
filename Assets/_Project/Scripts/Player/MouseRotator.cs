@@ -15,12 +15,27 @@ public class MouseRotator : MonoBehaviour
     public float rotationPower = 3f;
     public float rotationLerp = 0.5f;
 
+    private float initialRotationPower;
+
     public float speed = 1f;
     // public Transform playerTransform;
 
+    public static MouseRotator Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     private void Start()
     {
-        // Cursor.lockState = CursorLockMode.Locked;
+        initialRotationPower = rotationPower;
+    }
+
+    public void SetupRotationPower(float power)
+    {
+        power += 0.5f;
+        rotationPower = initialRotationPower * power;
     }
 
     private void FixedUpdate()

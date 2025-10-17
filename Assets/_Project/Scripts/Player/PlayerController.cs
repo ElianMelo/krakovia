@@ -14,6 +14,8 @@ public class PlayerController : NetworkBehaviour
     private PlayerFollower playerFollower;
     private ClientNetworkAnimator clientNetworkAnimator;
 
+    private SpawnPointManager spawnPointManager;
+
     public TMP_Text playerNameText;
     public Image playerIsPvP;
 
@@ -86,6 +88,7 @@ public class PlayerController : NetworkBehaviour
     private void Start()
     {
         playerClassController.DisableColliders();
+        spawnPointManager = FindFirstObjectByType<SpawnPointManager>();
         StartCoroutine(ForceInitialPosition());
     }
 
@@ -95,9 +98,7 @@ public class PlayerController : NetworkBehaviour
         while(count <= 1)
         {
             yield return new WaitForSeconds(1f);
-            // Dog Position
-            // transform.position = new Vector3(325.59f, 3.07f, 27.87f);
-            transform.position = new Vector3(7.2f, -0.24f, 68.9f);
+            transform.position = spawnPointManager.transform.position;
             count++;
         }
     }

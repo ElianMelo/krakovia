@@ -29,8 +29,7 @@ public class SystemManager : MonoBehaviour
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        ForceUnlockedMouse();
     }
 
     public void SwapSavePoint(SavePoint savePoint)
@@ -42,23 +41,39 @@ public class SystemManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.LeftControl))
         {
-            if(Cursor.lockState == CursorLockMode.None)
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-            } else
-            {
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-            }
+            SwitchCursorLockMode();
+        }
+    }
+
+    public void ForceUnlockedMouse()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void ForceLockMouse()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    public void SwitchCursorLockMode()
+    {
+        if (Cursor.lockState == CursorLockMode.None)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 
     public void StartGame()
     {
         GameStarted = true;
-        //Cursor.lockState = CursorLockMode.Locked;
-        //Cursor.visible = false;
     }
 
     public void StartHostLocal()

@@ -29,6 +29,7 @@ public class InterfaceManager : MonoBehaviour
     public PlayerInterfaceController _playerInterfaceController;
     public PvPInterfaceController _pvPInterfaceController;
     public ObjectiveInterfaceController _objectiveInterfaceController;
+    public MenuInterfaceController _menuInterfaceController;
 
     public PlayerInterfaceController PlayerInterfaceController
     {
@@ -161,6 +162,11 @@ public class InterfaceManager : MonoBehaviour
         {
             NetworkManager.Singleton.StartClient();
             SystemManager.Instance.StartGame();
+        }
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            _menuInterfaceController.ShowMenuVisuals();
+            SystemManager.Instance.ForceUnlockedMouse();
         }
     }
 }
