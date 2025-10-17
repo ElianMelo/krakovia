@@ -6,11 +6,7 @@ using UnityEngine;
 [Serializable]
 public class AttackConfig
 {
-    public GameObject attackBox;
-    public GameObject attackFill;
-    public float frames;
-    public float damage;
-    public float finalScale;
+    public float animationLength;
     public AttackAnim attackAnim;
 }
 
@@ -24,8 +20,6 @@ public class BossAttack : MonoBehaviour
     public LayerMask mask;
     public int damage;
     public float range;
-    public float frameSeconds;
-    public float stayAttackActive;
     public float attackDelay;
 
     private Animator animator;
@@ -61,52 +55,13 @@ public class BossAttack : MonoBehaviour
     private IEnumerator AttackRoutine()
     {
         attackRoutineRunning = true;
-        bool isAttacking = true;
-        float currentScale = 0f;
-        float currentDuration = 0;
         AttackConfig attackConfig = attackConfigs[UnityEngine.Random.Range(0, attackConfigs.Count)];
-        Collider attackFillCollider = attackConfig.attackFill.GetComponent<Collider>();
-        MeshRenderer attackFillMesh = attackConfig.attackFill.GetComponent<MeshRenderer>();
-        MeshRenderer attackBoxMesh = attackConfig.attackBox.GetComponent<MeshRenderer>();
-        attackFillCollider.enabled = false;
-        attackFillMesh.enabled = true;
-        attackBoxMesh.enabled = true;
-        float maxDuration = attackConfig.frames * frameSeconds;
-        // animator.SetTrigger(AttackAnim);
         while (!bossController.IsDead)
         {
-            if(currentDuration == 0)
-            {
-                animator.SetTrigger(attackConfig.attackAnim.ToString());
-            }
-            if(isAttacking && currentDuration < maxDuration)
-            {
-                currentDuration += Time.deltaTime;
-                currentScale = attackConfig.finalScale * (currentDuration / maxDuration);
-                attackConfig.attackFill.transform.localScale = new Vector3(currentScale, currentScale, currentScale);
-                yield return null;
-            } else
-            {
-                currentScale = 0f;
-                currentDuration = 0f;
-                attackConfig.attackFill.GetComponent<BossColliderAttack>().SetupDamage(attackConfig.damage);
-                attackFillCollider.enabled = true;
-                yield return new WaitForSeconds(stayAttackActive);
-                attackFillCollider.enabled = false;
-                attackFillMesh.enabled = false;
-                attackBoxMesh.enabled = false;
-                yield return new WaitForSeconds(attackDelay);
-
-                // Reset
-                attackConfig = attackConfigs[UnityEngine.Random.Range(0, attackConfigs.Count)];
-                attackFillCollider = attackConfig.attackFill.GetComponent<Collider>();
-                attackFillMesh = attackConfig.attackFill.GetComponent<MeshRenderer>();
-                attackBoxMesh = attackConfig.attackBox.GetComponent<MeshRenderer>();
-                attackFillCollider.enabled = false;
-                attackFillMesh.enabled = true;
-                attackBoxMesh.enabled = true;
-                maxDuration = attackConfig.frames * frameSeconds;
-            }
+            animator.SetTrigger(attackConfig.attackAnim.ToString());
+            yield return new WaitForSeconds(attackConfig.animationLength);
+            yield return new WaitForSeconds(attackDelay);
+            attackConfig = attackConfigs[UnityEngine.Random.Range(0, attackConfigs.Count)];
         }
     }
 
