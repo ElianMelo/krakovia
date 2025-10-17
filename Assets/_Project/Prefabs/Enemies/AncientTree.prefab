@@ -1,5 +1,759 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3541579329208076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5192437090933394715}
+  - component: {fileID: 7450533329659734889}
+  - component: {fileID: 350520815818478662}
+  m_Layer: 0
+  m_Name: AttackBox (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5192437090933394715
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3541579329208076}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.14713278, y: -0.69569474, z: 0.14896312, w: 0.68714684}
+  m_LocalPosition: {x: 10.2, y: 13.3, z: -2.3}
+  m_LocalScale: {x: 18, y: 18, z: 18}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5535303508115583535}
+  m_LocalEulerAnglesHint: {x: 24.172, y: -90.708, z: 0}
+--- !u!33 &7450533329659734889
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3541579329208076}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &350520815818478662
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3541579329208076}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: c10d54d61349a1b4b896395e9a358ceb, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &7131235447503002383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2612788492238344736}
+  - component: {fileID: 4238638474719072266}
+  - component: {fileID: 9219040443635489020}
+  - component: {fileID: 8322250859482296885}
+  - component: {fileID: 4055972216089220976}
+  - component: {fileID: 3583726933030295728}
+  - component: {fileID: 779380263600201093}
+  m_Layer: 0
+  m_Name: AttackFill (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2612788492238344736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131235447503002383}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.14713278, y: -0.69569474, z: 0.14896312, w: 0.68714684}
+  m_LocalPosition: {x: 10.199997, y: 13.299999, z: -2.3000002}
+  m_LocalScale: {x: 18, y: 18, z: 18}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 5535303508115583535}
+  m_LocalEulerAnglesHint: {x: 24.172, y: -90.708, z: 0}
+--- !u!33 &4238638474719072266
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131235447503002383}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &9219040443635489020
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131235447503002383}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a5b63db5043d73b4199e4705dbbd2ba8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8322250859482296885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131235447503002383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
+  GlobalObjectIdHash: 2696384088
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  DeferredDespawnTick: 0
+  Ownership: 1
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 0
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+  SyncOwnerTransformWhenParented: 1
+  AllowOwnerToParent: 0
+--- !u!114 &4055972216089220976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131235447503002383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bddf88fa82279814e8df2166ded9ec87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossColliderAttack
+  ShowTopMostFoldoutHeaderGroup: 1
+--- !u!54 &3583726933030295728
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131235447503002383}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!136 &779380263600201093
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131235447503002383}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.5000005
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.00000005960469, y: 0, z: -0.0000005662442}
+--- !u!1 &7264367427714407847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7846468430832123314}
+  - component: {fileID: 5483302352358231729}
+  - component: {fileID: 4810224506344866164}
+  m_Layer: 0
+  m_Name: AttackBox (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7846468430832123314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7264367427714407847}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.71146417, z: -0, w: 0.7027225}
+  m_LocalPosition: {x: -0.09, y: 16.99, z: 0.71}
+  m_LocalScale: {x: 20, y: 19.999979, z: 20}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 5535303508115583535}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &5483302352358231729
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7264367427714407847}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &4810224506344866164
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7264367427714407847}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: c10d54d61349a1b4b896395e9a358ceb, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &7409351352281240161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2345339710106102862}
+  - component: {fileID: 3908128184172520156}
+  - component: {fileID: 6347172340801943373}
+  - component: {fileID: 2912103197830268158}
+  - component: {fileID: 1941042482762395285}
+  - component: {fileID: 8647634288770510427}
+  m_Layer: 0
+  m_Name: AttackFill (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2345339710106102862
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7409351352281240161}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.71146417, z: -0, w: 0.7027225}
+  m_LocalPosition: {x: -0.09, y: 16.99, z: 0.71}
+  m_LocalScale: {x: 20, y: 19.999979, z: 20}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 5535303508115583535}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3908128184172520156
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7409351352281240161}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &6347172340801943373
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7409351352281240161}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a5b63db5043d73b4199e4705dbbd2ba8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2912103197830268158
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7409351352281240161}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 1.0000007, y: 1, z: 1.0000007}
+  m_Center: {x: 0.0000057220514, y: 0, z: -0.0000305176}
+--- !u!114 &1941042482762395285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7409351352281240161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bddf88fa82279814e8df2166ded9ec87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossColliderAttack
+  ShowTopMostFoldoutHeaderGroup: 1
+--- !u!54 &8647634288770510427
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7409351352281240161}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!1 &7787578703456929923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7750730097341456746}
+  - component: {fileID: 3268676954634166247}
+  - component: {fileID: 6160150692400170910}
+  m_Layer: 0
+  m_Name: AttackBox (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7750730097341456746
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7787578703456929923}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.71146417, z: -0, w: 0.7027225}
+  m_LocalPosition: {x: 0.2, y: 10.1, z: 1.3}
+  m_LocalScale: {x: 24, y: 24, z: 24}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5535303508115583535}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3268676954634166247
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7787578703456929923}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &6160150692400170910
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7787578703456929923}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: c10d54d61349a1b4b896395e9a358ceb, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &9157501914661897691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3648102671406372016}
+  - component: {fileID: 5317179752900342063}
+  - component: {fileID: 9061535677359714476}
+  - component: {fileID: 6488436399191081888}
+  - component: {fileID: 6061521524114414346}
+  - component: {fileID: 9025369080114000791}
+  m_Layer: 0
+  m_Name: AttackFill (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3648102671406372016
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9157501914661897691}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.71146417, z: -0, w: 0.7027225}
+  m_LocalPosition: {x: 0.19999695, y: 10.100003, z: 1.3000002}
+  m_LocalScale: {x: 24, y: 24, z: 24}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 5535303508115583535}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &5317179752900342063
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9157501914661897691}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &9061535677359714476
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9157501914661897691}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a5b63db5043d73b4199e4705dbbd2ba8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6488436399191081888
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9157501914661897691}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 1.0000007, y: 1, z: 1.0000007}
+  m_Center: {x: 0.0000057220514, y: 0, z: -0.0000305176}
+--- !u!114 &6061521524114414346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9157501914661897691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bddf88fa82279814e8df2166ded9ec87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossColliderAttack
+  ShowTopMostFoldoutHeaderGroup: 1
+--- !u!54 &9025369080114000791
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9157501914661897691}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &872881183512468742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10,39 +764,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -9114496787053588016, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -47.44451
+      value: 2.960405
       objectReference: {fileID: 0}
     - target: {fileID: -9114496787053588016, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 16.011951
+      value: -1.6104048
       objectReference: {fileID: 0}
     - target: {fileID: -9114496787053588016, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 6.3106174
+      value: -7.414312
       objectReference: {fileID: 0}
     - target: {fileID: -9026270872346444399, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -51.31485
+      value: 0.00000017888047
       objectReference: {fileID: 0}
     - target: {fileID: -9026270872346444399, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 13.501907
+      value: 0.000020525189
       objectReference: {fileID: 0}
     - target: {fileID: -9026270872346444399, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 11.493825
+      value: -3.0285387
       objectReference: {fileID: 0}
     - target: {fileID: -8792490210414139502, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.0000009488294
+      value: 0.0000008439166
       objectReference: {fileID: 0}
     - target: {fileID: -8792490210414139502, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.000015257366
+      value: 0.000015257523
       objectReference: {fileID: 0}
     - target: {fileID: -8792490210414139502, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -5.4635983
+      value: -5.463598
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalScale.x
@@ -70,7 +824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalRotation.x
@@ -78,7 +832,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalRotation.z
@@ -90,7 +844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -114,11 +868,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8287098605873437821, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.0000017576655
+      value: 0.0000015633192
       objectReference: {fileID: 0}
     - target: {fileID: -8287098605873437821, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -0.000005398054
+      value: -0.0000048011866
       objectReference: {fileID: 0}
     - target: {fileID: -8287098605873437821, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -126,47 +880,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8201243596049249177, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.00000008537614
+      value: 0.00000007593606
       objectReference: {fileID: 0}
     - target: {fileID: -8201243596049249177, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.0000000258861
+      value: 0.000000023023858
       objectReference: {fileID: 0}
     - target: {fileID: -8201243596049249177, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0.7793364
+      value: 0.7793371
       objectReference: {fileID: 0}
     - target: {fileID: -7934516414439092885, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -45.95262
+      value: -0.90958315
       objectReference: {fileID: 0}
     - target: {fileID: -7934516414439092885, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -25.987854
+      value: 5.4228964
       objectReference: {fileID: 0}
     - target: {fileID: -7934516414439092885, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 69.33069
+      value: 35.792667
       objectReference: {fileID: 0}
     - target: {fileID: -7772768314004405881, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 48.73543
+      value: -3.1127102
       objectReference: {fileID: 0}
     - target: {fileID: -7772768314004405881, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -9.706501
+      value: 1.291447
       objectReference: {fileID: 0}
     - target: {fileID: -7772768314004405881, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 14.775158
+      value: -1.3983028
       objectReference: {fileID: 0}
     - target: {fileID: -7529832955970669729, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -0.0000004830482
+      value: -0.00000042963725
       objectReference: {fileID: 0}
     - target: {fileID: -7529832955970669729, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.000000057966524
+      value: 0.000000051557127
       objectReference: {fileID: 0}
     - target: {fileID: -7529832955970669729, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -174,11 +928,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7475803382765077724, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.00031695547
+      value: 0.00031734016
       objectReference: {fileID: 0}
     - target: {fileID: -7475803382765077724, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -0.0000075331914
+      value: -0.000006700242
       objectReference: {fileID: 0}
     - target: {fileID: -7475803382765077724, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -186,55 +940,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7204904624975594680, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -49.201035
+      value: 2.5787356
       objectReference: {fileID: 0}
     - target: {fileID: -7204904624975594680, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 16.17573
+      value: 4.85796
       objectReference: {fileID: 0}
     - target: {fileID: -7204904624975594680, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 14.35239
+      value: -1.5963752
       objectReference: {fileID: 0}
     - target: {fileID: -6896797411722940186, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 46.333652
+      value: -3.2667189
       objectReference: {fileID: 0}
     - target: {fileID: -6896797411722940186, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -24.73221
+      value: -4.4251156
       objectReference: {fileID: 0}
     - target: {fileID: -6896797411722940186, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 145.41734
+      value: 169.9302
       objectReference: {fileID: 0}
     - target: {fileID: -5648598372621090850, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 47.444515
+      value: -2.960403
       objectReference: {fileID: 0}
     - target: {fileID: -5648598372621090850, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -16.012093
+      value: 1.6104444
       objectReference: {fileID: 0}
     - target: {fileID: -5648598372621090850, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 6.3104367
+      value: -7.4143014
       objectReference: {fileID: 0}
     - target: {fileID: -5340440069304377802, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.00000047754406
+      value: 0.00000042474187
       objectReference: {fileID: 0}
     - target: {fileID: -5340440069304377802, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.000015068288
+      value: 0.000015089352
       objectReference: {fileID: 0}
     - target: {fileID: -5340440069304377802, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -5.4636
+      value: -5.463601
       objectReference: {fileID: 0}
     - target: {fileID: -5036476678694501429, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -0.00015337938
+      value: -0.00015329187
       objectReference: {fileID: 0}
     - target: {fileID: -5036476678694501429, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -246,11 +1000,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4861888868532761677, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -0.00000010968461
+      value: -0.000000097556715
       objectReference: {fileID: 0}
     - target: {fileID: -4861888868532761677, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.0000027685703
+      value: 0.0000024624478
       objectReference: {fileID: 0}
     - target: {fileID: -4861888868532761677, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -258,59 +1012,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4759269407618927549, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 45.9528
+      value: 0.9096401
       objectReference: {fileID: 0}
     - target: {fileID: -4759269407618927549, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 25.987568
+      value: -5.423082
       objectReference: {fileID: 0}
     - target: {fileID: -4759269407618927549, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 69.33059
+      value: 35.792625
       objectReference: {fileID: 0}
     - target: {fileID: -4453909662290313623, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 1.0733657
+      value: 14.109264
       objectReference: {fileID: 0}
     - target: {fileID: -4453909662290313623, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 39.766956
+      value: 92.64781
       objectReference: {fileID: 0}
     - target: {fileID: -4453909662290313623, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 101.63633
+      value: 89.17539
       objectReference: {fileID: 0}
     - target: {fileID: -3604924455293339195, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -47.699276
+      value: 3.0726383
       objectReference: {fileID: 0}
     - target: {fileID: -3604924455293339195, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 30.484447
+      value: 4.562083
       objectReference: {fileID: 0}
     - target: {fileID: -3604924455293339195, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -10.502123
+      value: -7.59284
       objectReference: {fileID: 0}
     - target: {fileID: -3324048499342487595, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.045626335
+      value: 0.04562605
       objectReference: {fileID: 0}
     - target: {fileID: -3324048499342487595, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -0.000003297588
+      value: -0.0000029329715
       objectReference: {fileID: 0}
     - target: {fileID: -3324048499342487595, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -3.0285294
+      value: -3.02853
       objectReference: {fileID: 0}
     - target: {fileID: -2941197909975960973, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.0000017576655
+      value: 0.0000015633192
       objectReference: {fileID: 0}
     - target: {fileID: -2941197909975960973, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -0.000005398054
+      value: -0.0000048011866
       objectReference: {fileID: 0}
     - target: {fileID: -2941197909975960973, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -318,23 +1072,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2451292412557073642, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -0.04562524
+      value: -0.04562508
       objectReference: {fileID: 0}
     - target: {fileID: -2451292412557073642, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.0000013169496
+      value: 0.0000011713335
       objectReference: {fileID: 0}
     - target: {fileID: -2451292412557073642, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -3.028529
+      value: -3.0285294
       objectReference: {fileID: 0}
     - target: {fileID: -1697698354715479069, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -0.0000004830482
+      value: -0.00000042963725
       objectReference: {fileID: 0}
     - target: {fileID: -1697698354715479069, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.000000057966524
+      value: 0.000000051557127
       objectReference: {fileID: 0}
     - target: {fileID: -1697698354715479069, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -342,63 +1096,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1061172392569607033, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -3.6113014
+      value: -9.625375
       objectReference: {fileID: 0}
     - target: {fileID: -1061172392569607033, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 67.294075
+      value: 89.731926
       objectReference: {fileID: 0}
     - target: {fileID: -1061172392569607033, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -81.92587
+      value: -157.89894
       objectReference: {fileID: 0}
     - target: {fileID: -316094967117144421, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.0000008366003
+      value: 0.00000074409684
       objectReference: {fileID: 0}
     - target: {fileID: -316094967117144421, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.0000151552495
+      value: 0.000015166698
       objectReference: {fileID: 0}
     - target: {fileID: -316094967117144421, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -5.463601
+      value: -5.4636
       objectReference: {fileID: 0}
     - target: {fileID: -96345317471733722, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 50.07853
+      value: 69.18014
       objectReference: {fileID: 0}
     - target: {fileID: -96345317471733722, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -124.032
+      value: 13.411476
       objectReference: {fileID: 0}
     - target: {fileID: -96345317471733722, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -148.67401
+      value: -0.16475406
       objectReference: {fileID: 0}
     - target: {fileID: 261782416013340905, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -36.402813
+      value: -43.45793
       objectReference: {fileID: 0}
     - target: {fileID: 261782416013340905, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 21.509369
+      value: 94.23961
       objectReference: {fileID: 0}
     - target: {fileID: 261782416013340905, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 150.65535
+      value: 79.442696
       objectReference: {fileID: 0}
     - target: {fileID: 908276781140129939, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -0.00023739177
+      value: -0.00023813799
       objectReference: {fileID: 0}
     - target: {fileID: 908276781140129939, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.00007982025
+      value: 0.00007943035
       objectReference: {fileID: 0}
     - target: {fileID: 908276781140129939, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.045626376
+      value: -0.04562609
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_Name
@@ -410,7 +1164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 920676918501120980, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 8.800651
+      value: 8.80065
       objectReference: {fileID: 0}
     - target: {fileID: 920676918501120980, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -418,27 +1172,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 961210195233335601, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 53.98688
+      value: -6.73859
       objectReference: {fileID: 0}
     - target: {fileID: 961210195233335601, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -106.31747
+      value: -4.360564
       objectReference: {fileID: 0}
     - target: {fileID: 961210195233335601, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -96.86224
+      value: 17.854774
       objectReference: {fileID: 0}
     - target: {fileID: 1061864644485942223, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.000003854151
+      value: 0.0000017780728
       objectReference: {fileID: 0}
     - target: {fileID: 1061864644485942223, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.000006105868
+      value: -0.00000041903505
       objectReference: {fileID: 0}
     - target: {fileID: 1061864644485942223, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 95.85231
+      value: 70.029335
       objectReference: {fileID: 0}
     - target: {fileID: 1764910268326094525, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -454,47 +1208,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1780818568989936416, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 46.333652
+      value: -3.2667189
       objectReference: {fileID: 0}
     - target: {fileID: 1780818568989936416, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -24.73221
+      value: -4.4251156
       objectReference: {fileID: 0}
     - target: {fileID: 1780818568989936416, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 145.41734
+      value: 169.9302
       objectReference: {fileID: 0}
     - target: {fileID: 3002439604278784018, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -36.40309
+      value: -43.457867
       objectReference: {fileID: 0}
     - target: {fileID: 3002439604278784018, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -158.49043
+      value: -85.759964
       objectReference: {fileID: 0}
     - target: {fileID: 3002439604278784018, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -29.344769
+      value: -100.55759
       objectReference: {fileID: 0}
     - target: {fileID: 3167525983759868075, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -19.210564
+      value: -10.04077
       objectReference: {fileID: 0}
     - target: {fileID: 3167525983759868075, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -141.93011
+      value: -86.87566
       objectReference: {fileID: 0}
     - target: {fileID: 3167525983759868075, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -62.97766
+      value: -98.18364
       objectReference: {fileID: 0}
     - target: {fileID: 3413071510019326072, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -0.00000010968461
+      value: -0.000000097556715
       objectReference: {fileID: 0}
     - target: {fileID: 3413071510019326072, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.0000027685703
+      value: 0.0000024624478
       objectReference: {fileID: 0}
     - target: {fileID: 3413071510019326072, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -502,55 +1256,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3506456149707651469, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.0000014657222
+      value: 0.0000013036564
       objectReference: {fileID: 0}
     - target: {fileID: 3506456149707651469, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.000007638067
+      value: 0.000008480694
       objectReference: {fileID: 0}
     - target: {fileID: 3506456149707651469, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -3.0285282
+      value: -3.028529
       objectReference: {fileID: 0}
     - target: {fileID: 4042478520410266605, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.0000010722694
+      value: 0.000000953708
       objectReference: {fileID: 0}
     - target: {fileID: 4042478520410266605, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.000014874338
+      value: 0.000014916847
       objectReference: {fileID: 0}
     - target: {fileID: 4042478520410266605, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -5.4636
+      value: -5.463601
       objectReference: {fileID: 0}
     - target: {fileID: 4120569220309444157, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -23.518726
+      value: -3.9331884
       objectReference: {fileID: 0}
     - target: {fileID: 4120569220309444157, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -47.983063
+      value: 3.8451192
       objectReference: {fileID: 0}
     - target: {fileID: 4120569220309444157, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 105.25362
+      value: 71.882126
       objectReference: {fileID: 0}
     - target: {fileID: 4394799111272402798, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 17.313074
+      value: 0.00013470734
       objectReference: {fileID: 0}
     - target: {fileID: 4394799111272402798, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 51.692665
+      value: -0.00015855755
       objectReference: {fileID: 0}
     - target: {fileID: 4394799111272402798, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 105.165054
+      value: 76.70095
       objectReference: {fileID: 0}
     - target: {fileID: 5026965684383827013, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -0.00015337938
+      value: -0.00015329187
       objectReference: {fileID: 0}
     - target: {fileID: 5026965684383827013, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -562,51 +1316,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5086721507376491561, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 52.315674
+      value: 0.0000010850306
       objectReference: {fileID: 0}
     - target: {fileID: 5086721507376491561, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -6.3356695
+      value: -0.00001983601
       objectReference: {fileID: 0}
     - target: {fileID: 5086721507376491561, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 20.615616
+      value: 2.9809346
       objectReference: {fileID: 0}
     - target: {fileID: 5144064044125678655, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -10.939167
+      value: 9.985764
       objectReference: {fileID: 0}
     - target: {fileID: 5144064044125678655, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -126.848076
+      value: -98.75739
       objectReference: {fileID: 0}
     - target: {fileID: 5144064044125678655, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -173.11996
+      value: -152.97429
       objectReference: {fileID: 0}
     - target: {fileID: 5822709375572720899, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 31.386871
+      value: -24.348555
       objectReference: {fileID: 0}
     - target: {fileID: 5822709375572720899, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 104.530045
+      value: -85.23674
       objectReference: {fileID: 0}
     - target: {fileID: 5822709375572720899, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -164.43307
+      value: 56.13603
       objectReference: {fileID: 0}
     - target: {fileID: 6185553899691907483, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.0000007876074
+      value: 0.0000007005211
       objectReference: {fileID: 0}
     - target: {fileID: 6185553899691907483, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.000015035508
+      value: 0.000015060196
       objectReference: {fileID: 0}
     - target: {fileID: 6185553899691907483, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -5.463602
+      value: -5.4636025
       objectReference: {fileID: 0}
     - target: {fileID: 6392945504394638004, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -614,7 +1368,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6392945504394638004, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -8.8006525
+      value: -8.800653
       objectReference: {fileID: 0}
     - target: {fileID: 6392945504394638004, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -622,75 +1376,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6409123163116773040, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -47.28914
+      value: 3.0726414
       objectReference: {fileID: 0}
     - target: {fileID: 6409123163116773040, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 22.343546
+      value: 4.5620975
       objectReference: {fileID: 0}
     - target: {fileID: 6409123163116773040, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 6.1114726
+      value: -7.5928407
       objectReference: {fileID: 0}
     - target: {fileID: 7050811251044763002, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -46.351818
+      value: 3.2635093
       objectReference: {fileID: 0}
     - target: {fileID: 7050811251044763002, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 24.688946
+      value: 4.4277163
       objectReference: {fileID: 0}
     - target: {fileID: 7050811251044763002, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 2.9166784
+      value: -10.024134
       objectReference: {fileID: 0}
     - target: {fileID: 7696200768387677094, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -47.28914
+      value: 3.0726423
       objectReference: {fileID: 0}
     - target: {fileID: 7696200768387677094, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 22.343544
+      value: 4.562097
       objectReference: {fileID: 0}
     - target: {fileID: 7696200768387677094, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 6.1114693
+      value: -7.5928392
       objectReference: {fileID: 0}
     - target: {fileID: 8896563786012999581, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.00000008537614
+      value: 0.00000007593606
       objectReference: {fileID: 0}
     - target: {fileID: 8896563786012999581, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.0000000258861
+      value: 0.000000023023858
       objectReference: {fileID: 0}
     - target: {fileID: 8896563786012999581, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0.7793364
+      value: 0.7793371
       objectReference: {fileID: 0}
     - target: {fileID: 8907610631071953990, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.0000018616504
+      value: -0.00000082747096
       objectReference: {fileID: 0}
     - target: {fileID: 8907610631071953990, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -0.0000026984917
+      value: 0.000002782738
       objectReference: {fileID: 0}
     - target: {fileID: 8907610631071953990, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 96.35594
+      value: 70.533005
       objectReference: {fileID: 0}
     - target: {fileID: 9167867866720200719, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -49.20106
+      value: 2.5787346
       objectReference: {fileID: 0}
     - target: {fileID: 9167867866720200719, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 16.175709
+      value: 4.857968
       objectReference: {fileID: 0}
     - target: {fileID: 9167867866720200719, guid: babd85e662142394e92f1ae349e40085, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 14.3524275
+      value: -1.5963871
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -699,9 +1453,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: babd85e662142394e92f1ae349e40085, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3325797984863804378}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: babd85e662142394e92f1ae349e40085, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1612001148713750353}
     - targetCorrespondingSourceObject: {fileID: -2750501195568244532, guid: babd85e662142394e92f1ae349e40085, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6556038168162711184}
@@ -712,16 +1463,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7363568129095702908}
   m_SourcePrefab: {fileID: 100100000, guid: babd85e662142394e92f1ae349e40085, type: 3}
---- !u!4 &38210384250119573 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 908276781140129939, guid: babd85e662142394e92f1ae349e40085, type: 3}
-  m_PrefabInstance: {fileID: 872881183512468742}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &61922331325040338 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 920676918501120980, guid: babd85e662142394e92f1ae349e40085, type: 3}
-  m_PrefabInstance: {fileID: 872881183512468742}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &62048869318336599 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: babd85e662142394e92f1ae349e40085, type: 3}
@@ -749,2095 +1490,9 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1612001148713750353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 62048869318336599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 104179351ca7dd24a8f5bd7beecf8d06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FIMSpace.FProceduralAnimation.RagdollAnimator2
-  handler:
-    _Editor_SelectedChain: 0
-    _Editor_ChainCategory: 0
-    _EditorCategory: 3
-    _EditorMainCategory: 0
-    _EditorMotionCategory: 2
-    m_hemi: {fileID: -2508796484986968503, guid: 44d994eaad14fdf49a2dd378b4d62094, type: 3}
-    m_cyli: {fileID: 2534964839176971238, guid: 2ea99bbc50a9266448416f21d645a771, type: 3}
-    m_sphere: {fileID: 4711208715938537054, guid: b43618aedd7473a4eb1aaa5e80012a1d, type: 3}
-    m_box: {fileID: -5495902117074765545, guid: 556fd6baa0902304189e57acd1d60fa6, type: 3}
-    _EditorBoneScenePreviews: []
-    StoredReferenceTPose:
-      BonePoses:
-      - SourceBone: {fileID: 1469053388714294203}
-        localPosition: {x: -0, y: 0, z: 0}
-        rootSpacePosition: {x: -0.00022947117, y: 0.009032955, z: 0.0000000012964011}
-        localRotation: {x: -0.5, y: 0.5, z: 0.49999934, w: 0.50000066}
-        rootSpaceRotation: {x: -0.5000011, y: 0.5000004, z: 0.4999998, w: -0.4999991}
-      - SourceBone: {fileID: 38210384250119573}
-        localPosition: {x: -0.0009338277, y: -0.0000011203273, z: 0.0000000012852251}
-        rootSpacePosition: {x: -0.00022947264, y: 0.009966786, z: -0.0000011126996}
-        localRotation: {x: -0.000002080476, y: 0.000000693676, z: -0.000398159, w: 0.99999994}
-        rootSpaceRotation: {x: -0.5001994, y: 0.4997999, z: 0.50019944, w: -0.4998014}
-      - SourceBone: {fileID: 981738237411806422}
-        localPosition: {x: -0.0014076763, y: -0.0000022351048, z: -0.0000001203455}
-        rootSpacePosition: {x: -0.00022935447, y: 0.011374462, z: -0.0000022252054}
-        localRotation: {x: 0.0263476, y: -0.013049864, z: -0.037884474, w: 0.9988495}
-        rootSpaceRotation: {x: -0.5251996, y: 0.49997655, z: 0.51191765, w: -0.4605752}
-      - SourceBone: {fileID: 7409403377034454688}
-        localPosition: {x: -0.0028189898, y: -0.0000011155754, z: -0.000000052638352}
-        rootSpacePosition: {x: -0.00016138273, y: 0.014184312, z: 0.0002141926}
-        localRotation: {x: 0.02518382, y: 0.040822025, z: -0.040840946, w: 0.99801373}
-        rootSpaceRotation: {x: -0.57707256, y: 0.47162428, z: 0.49568024, w: -0.44593662}
-      - SourceBone: {fileID: 4748382256265766083}
-        localPosition: {x: -0.0014075482, y: -0.0000004826486, z: -0.000000022687017}
-        rootSpacePosition: {x: -0.00025103372, y: 0.015572802, z: 0.00042689146}
-        localRotation: {x: 0.025183832, y: 0.04082191, z: -0.040840868, w: 0.99801373}
-        rootSpaceRotation: {x: -0.62665284, y: 0.44139847, z: 0.47747356, w: -0.42952666}
-      - SourceBone: {fileID: 93448986739864631}
-        localPosition: {x: -0.0006090164, y: 0, z: -1.4901161e-10}
-        rootSpacePosition: {x: -0.00034504925, y: 0.016159518, z: 0.0005604135}
-        localRotation: {x: -0.05741823, y: -0.028572446, z: 0.07448314, w: 0.99515784}
-        rootSpaceRotation: {x: -0.55243653, y: 0.4707932, z: 0.48641846, w: -0.48638}
-      - SourceBone: {fileID: 3893309010782330573}
-        localPosition: {x: 0.00093382713, y: 0.000001866598, z: -0.000812024}
-        rootSpacePosition: {x: 0.00058255275, y: 0.009032957, z: -3.5762787e-10}
-        localRotation: {x: -0.050376862, y: 0.9987303, z: 0.0000013365978, w: 0.00000006590813}
-        rootSpaceRotation: {x: -0.47438535, y: -0.5243646, z: -0.47438657, w: -0.52436453}
-      - SourceBone: {fileID: 158273225903280481}
-        localPosition: {x: -0.003248096, y: 7.4505804e-11, z: 3.7252902e-11}
-        rootSpacePosition: {x: 0.0005825572, y: 0.0058010877, z: 0.00032425855}
-        localRotation: {x: 6.972837e-14, y: 3.425623e-15, z: 0.099833444, w: 0.9950042}
-        rootSpaceRotation: {x: -0.52436453, y: -0.47438544, z: -0.5243658, w: -0.4743852}
-      - SourceBone: {fileID: 5322769222653499715}
-        localPosition: {x: 0.00093382713, y: 0.0000018620933, z: 0.0008120241}
-        rootSpacePosition: {x: -0.0010414956, y: 0.009032955, z: 0.0000000029802323}
-        localRotation: {x: -0.050376862, y: 0.9987303, z: 0.0000013365978, w: 0.00000006590813}
-        rootSpaceRotation: {x: -0.47438535, y: -0.5243646, z: -0.47438657, w: -0.52436453}
-      - SourceBone: {fileID: 8605228177323369115}
-        localPosition: {x: -0.003248096, y: 0, z: 0}
-        rootSpacePosition: {x: -0.0010414916, y: 0.005801086, z: 0.0003242618}
-        localRotation: {x: 6.972837e-14, y: 3.425623e-15, z: 0.099833444, w: 0.9950042}
-        rootSpaceRotation: {x: -0.52436453, y: -0.47438544, z: -0.5243658, w: -0.4743852}
-      - SourceBone: {fileID: 9032230302752043393}
-        localPosition: {x: 0.000023742914, y: -0.000012853146, z: -0.00028290047}
-        rootSpacePosition: {x: 0.00003103492, y: 0.015586079, z: 0.0004588844}
-        localRotation: {x: 0.69594663, y: -0.111801416, z: 0.682038, w: -0.1948923}
-        rootSpaceRotation: {x: 0.17763495, y: 0.7216937, z: -0.6231384, w: 0.24352226}
-      - SourceBone: {fileID: 6688816987360665605}
-        localPosition: {x: -0.003030212, y: 0, z: 0}
-        rootSpacePosition: {x: 0.0025106138, y: 0.015728803, z: 0.0021948256}
-        localRotation: {x: -0.508431, y: -0.44627526, z: 0.27158272, w: 0.6845284}
-        rootSpaceRotation: {x: -0.084309824, y: 0.65392226, z: -0.072762124, w: 0.74832076}
-      - SourceBone: {fileID: 189600383910516425}
-        localPosition: {x: -0.0059274547, y: 0.0000000011920929, z: 0}
-        rootSpacePosition: {x: 0.0017152502, y: 0.017027881, z: 0.007923225}
-        localRotation: {x: -0.000000008232073, y: -0.0000000060978476, z: 0.59522855, w: 0.80355644}
-        rootSpaceRotation: {x: 0.3214855, y: 0.5756471, z: 0.38695332, w: 0.6446281}
-      - SourceBone: {fileID: 61922331325040338}
-        localPosition: {x: -0.0060625137, y: 0, z: 0}
-        rootSpacePosition: {x: 0.0014861131, y: 0.011759519, z: 0.010914197}
-        localRotation: {x: 0.7059287, y: 0.03561701, z: -0.035588637, w: 0.70649105}
-        rootSpaceRotation: {x: 0.64791936, y: 0.7142519, z: -0.14447777, w: 0.2217464}
-      - SourceBone: {fileID: 5535303508115583535}
-        localPosition: {x: 223.36, y: 9.66, z: -7.13}
-        rootSpacePosition: {x: 0, y: 0, z: 0}
-        localRotation: {x: -0, y: 0.71146417, z: -0, w: 0.7027225}
-        rootSpaceRotation: {x: 0, y: 0, z: 0, w: 1.0000001}
-      - SourceBone: {fileID: 835314044811311853}
-        localPosition: {x: 0, y: 0, z: 0}
-        rootSpacePosition: {x: 0, y: 0, z: 0}
-        localRotation: {x: 0, y: 0, z: 0, w: 1}
-        rootSpaceRotation: {x: 0, y: 0, z: 0, w: 1.0000001}
-      - SourceBone: {fileID: 532570246120787931}
-        localPosition: {x: -0.00022947123, y: 0.009032956, z: 1.9108296e-12}
-        rootSpacePosition: {x: -0.00022947117, y: 0.009032955, z: 0.0000000012964011}
-        localRotation: {x: -0.50000036, y: 0.49999967, z: 0.49999967, w: 0.50000036}
-        rootSpaceRotation: {x: -0.5000004, y: 0.49999976, z: 0.49999976, w: 0.5000004}
-      - SourceBone: {fileID: 5633317095625417583}
-        localPosition: {x: -0.00008131634, y: -0.0025062521, z: 0.007334772}
-        rootSpacePosition: {x: 0.002276782, y: 0.016367728, z: 0.00008131457}
-        localRotation: {x: 0.5760226, y: 0.43657705, z: 0.43225712, w: 0.5392145}
-        rootSpaceRotation: {x: 0.016244115, y: 0.99203575, z: -0.020564038, w: 0.123202235}
-      - SourceBone: {fileID: 5439919753627595065}
-        localPosition: {x: -0.000023742914, y: 0.0000138229125, z: 0.00028290047}
-        rootSpacePosition: {x: -0.00053324044, y: 0.015559292, z: 0.000395843}
-        localRotation: {x: 0.7405745, y: -0.15957634, z: -0.61551464, w: 0.21731684}
-        rootSpaceRotation: {x: -0.6497724, y: 0.13235633, z: 0.14125359, w: 0.7350685}
-      - SourceBone: {fileID: 8265423349114545440}
-        localPosition: {x: -0.003030211, y: -1.4901161e-10, z: 0.0000000011920929}
-        rootSpacePosition: {x: -0.0033363644, y: 0.015451238, z: 0.0015417126}
-        localRotation: {x: 0.6284242, y: 0.04504692, z: -0.041458502, w: 0.775458}
-        rootSpaceRotation: {x: -0.05378666, y: 0.1975779, z: -0.033384837, w: 0.9782413}
-      - SourceBone: {fileID: 8611771319956760896}
-        localPosition: {x: -0.005927455, y: 0.0000000011920929, z: 0}
-        rootSpacePosition: {x: -0.008787825, y: 0.015964387, z: 0.0038117277}
-        localRotation: {x: 0.0000000015498074, y: 0.00000003836812, z: 0.5987547, w: 0.80093247}
-        rootSpaceRotation: {x: 0.075221166, y: 0.19045164, z: 0.5589877, w: 0.8034946}
-      - SourceBone: {fileID: 6099376787928477618}
-        localPosition: {x: -0.0060625137, y: 0, z: -2.9802322e-10}
-        rootSpacePosition: {x: -0.010621875, y: 0.010344809, z: 0.005157353}
-        localRotation: {x: -0.7059287, y: -0.035616986, z: -0.035588656, w: 0.70649105}
-        rootSpaceRotation: {x: -0.5009352, y: -0.28599414, z: 0.4980905, w: 0.6474395}
-      - SourceBone: {fileID: 2875628447591415213}
-        localPosition: {x: -0.0000813247, y: 0.0025067674, z: 0.007334784}
-        rootSpacePosition: {x: -0.0027362392, y: 0.01636774, z: 0.00008132243}
-        localRotation: {x: -0.46274334, y: 0.5089544, z: 0.5745491, w: -0.4435396}
-        rootSpaceRotation: {x: 0.023195464, y: 0.088610984, z: 0.04239923, w: -0.9948934}
-      LastBaseTransform: {fileID: 835314044811311853}
-    UseExtraFeatures: 1
-    ExtraFeatures: []
-    IsHumanoid: 1
-    dummyContainer: {fileID: 0}
-    inBetweenPreGenerateMemory: []
-    skeletonFillExtraBonesList: []
-    MusclesPower: 1
-    SpringsValue: 1500
-    SpringsOnFall: 0
-    DampingValue: 40
-    DampingValueOnFall: 0
-    HardMatching: 0
-    HardMatchPositions: 0
-    HardMatchPositionsOnFall: 0
-    PositionHardMatchingMultiplier: 1
-    HardMatchingOnFalling: 0
-    MotionInfluence: 1
-    AnchorBoneSpring: 1
-    MakeAnchorKinematicOnMaxSpring: 0
-    UnaffectedMovement: 0
-    AutoUnstuck: 0
-    LockAnchorRotation: 1
-    AnchorJointLimits: 0
-    FallOnZeroAnchor: 1
-    BaseTransform: {fileID: 5535303508115583535}
-    Mecanim: {fileID: 3325797984863804378}
-    RagdollLogic: 0
-    RagdollSizeMultiplier: 1
-    RagdollThicknessMultiplier: 1
-    ReferenceMass: 50
-    RigidbodiesInterpolation: 1
-    RigidbodiesDetectionMode: 0
-    RigidbodyDragValue: 0
-    RigidbodyAngularDragValue: 0.2
-    JointContactDistance: 0
-    JointBounciness: 0
-    JointLimitSpring: 0
-    JointLimitDamper: 0
-    ConnectedMassMultiply: 0.5
-    MassMultiplyOnFalling: 1
-    ConnectedMassTransition: 0
-    CollidersPhysicMaterial: {fileID: 0}
-    PhysicMaterialOnFall: {fileID: 0}
-    MaxAngularVelocity: 50
-    MaxVelocity: 0
-    NoGravityOnStanding: 0
-    MaxDepenetrationVelocity: 0
-    ProjectionMode: 0
-    PreProcessing: 0
-    RagdollBlend: 0
-    animatingMode: 1
-    UseReconstruction: 0
-    UnitySolverIterations: 12
-    Calibrate: 1
-    AnimatePhysics: 0
-    ApplyPositions: 0
-    OptimizeOnZeroBlend: 0
-    HideDummyInSceneView: 0
-    IgnoreBoundedColliders: 1
-    RagdollDummyLayer: 0
-    UnscaledTime: 0
-    FadeInAnimation: 0
-    IgnoreSourceSkeletonColliders: 1
-    WaitForInit: 1
-    AnimationMatchLimits: 1
-    TargetParentForRagdollDummy: {fileID: 0}
-    BoundedCollidersIgnoreScaleup: 1.2
-    UnityVelocitySolverIterations: 0
-    DisableMecanimOnSleep: 1
-    chains:
-    - ChainName: Core
-      ChainType: 2
-      BoneSetups:
-      - SourceBone: {fileID: 1469053388714294203}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 0
-        colliders:
-        - ColliderType: 2
-          ColliderCenter: {x: -0.000015265308, y: -0.0000005588618, z: -0.000011472937}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 0
-          ColliderRadius: 0.00018499995
-          ColliderLength: 0.0018372695
-          ColliderBoxSize: {x: 0.0018372695, y: 0.00027749993, z: 0.00027749993}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.086666666
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 2
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 0
-        MainAxisLowLimit: -35
-        MainAxisHighLimit: 35
-        SecondaryAxis: 0
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 1
-        SecondaryAxisAngleLimit: 20
-        ThirdAxisAngleLimit: 20
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      - SourceBone: {fileID: 38210384250119573}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 7
-        colliders:
-        - ColliderType: 2
-          ColliderCenter: {x: -0.00070384, y: -0.000001103634, z: -0.000000059541478}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 0
-          ColliderRadius: 0.00018499998
-          ColliderLength: 0.0014076771
-          ColliderBoxSize: {x: 0.0014076771, y: 0.00027749996, z: 0.00027749996}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.06
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 2
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 0
-        MainAxisLowLimit: -5.5
-        MainAxisHighLimit: 17.5
-        SecondaryAxis: 0
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 1
-        SecondaryAxisAngleLimit: 30
-        ThirdAxisAngleLimit: 20
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      - SourceBone: {fileID: 981738237411806422}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 8
-        colliders:
-        - ColliderType: 2
-          ColliderCenter: {x: -0.0014094958, y: -0.00000055921254, z: -0.000000026554517}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 0
-          ColliderRadius: 0.00018499997
-          ColliderLength: 0.0028189905
-          ColliderBoxSize: {x: 0.0028189905, y: 0.00027749996, z: 0.00027749996}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.06
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 2
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 0
-        MainAxisLowLimit: -5.5
-        MainAxisHighLimit: 17.5
-        SecondaryAxis: 0
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 1
-        SecondaryAxisAngleLimit: 30
-        ThirdAxisAngleLimit: 20
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      - SourceBone: {fileID: 7409403377034454688}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 54
-        colliders:
-        - ColliderType: 2
-          ColliderCenter: {x: -0.00070377544, y: -0.00000023432949, z: -0.000000012175406}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 0
-          ColliderRadius: 0.00018499988
-          ColliderLength: 0.0014075458
-          ColliderBoxSize: {x: 0.0014075458, y: 0.0002774998, z: 0.0002774998}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.06
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 2
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 0
-        MainAxisLowLimit: -5.5
-        MainAxisHighLimit: 17.5
-        SecondaryAxis: 0
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 1
-        SecondaryAxisAngleLimit: 30
-        ThirdAxisAngleLimit: 20
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      - SourceBone: {fileID: 4748382256265766083}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: -1
-        colliders:
-        - ColliderType: 2
-          ColliderCenter: {x: -0.00030450814, y: -0.000000005132279, z: 0.0000000014429133}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 0
-          ColliderRadius: 0.00018499991
-          ColliderLength: 0.0006090176
-          ColliderBoxSize: {x: 0.0006090176, y: 0.00027749987, z: 0.00027749987}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.06
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 2
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 0
-        MainAxisLowLimit: -5.5
-        MainAxisHighLimit: 17.5
-        SecondaryAxis: 0
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 1
-        SecondaryAxisAngleLimit: 30
-        ThirdAxisAngleLimit: 20
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      - SourceBone: {fileID: 93448986739864631}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 10
-        colliders:
-        - ColliderType: 0
-          ColliderCenter: {x: -0.00030063305, y: 0.00004414129, z: 0.000019921028}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 0
-          ColliderRadius: 0.00013999992
-          ColliderLength: 0.0006090176
-          ColliderBoxSize: {x: 0.0006090176, y: 0.00020999988, z: 0.00020999988}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.12
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 2
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 1
-        MainAxisLowLimit: -45
-        MainAxisHighLimit: 30
-        SecondaryAxis: 1
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 0
-        SecondaryAxisAngleLimit: 20
-        ThirdAxisAngleLimit: 55
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      ChainThicknessMultiplier: 1
-      ChainScaleMultiplier: 1
-      MassMultiplier: 0.5
-      MusclesForce: 1
-      AxisLimitRange: 1
-      UnlimitedRotations: 0
-      ConnectedMassScale: 1
-      ConnectedMassOverride: 0
-      Detach: 1
-      ChainBlend: 1
-      OverrideBlend: 0
-      AlternativeTensors: 0
-      AlternativeTensorsOnFall: 0
-      HardMatchMultiply: 1
-    - ChainName: Right Leg
-      ChainType: 32
-      BoneSetups:
-      - SourceBone: {fileID: 3893309010782330573}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 2
-        colliders:
-        - ColliderType: 0
-          ColliderCenter: {x: -0.001507887, y: 0.0000115011035, z: -0.00010150273}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 0
-          ColliderRadius: 0.00008499998
-          ColliderLength: 0.003486408
-          ColliderBoxSize: {x: 0.003486408, y: 0.00012749997, z: 0.00012749997}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.16
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 2
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 0
-        MainAxisLowLimit: -55
-        MainAxisHighLimit: 45
-        SecondaryAxis: 0
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 1
-        SecondaryAxisAngleLimit: 15
-        ThirdAxisAngleLimit: 45
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      - SourceBone: {fileID: 158273225903280481}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 4
-        colliders:
-        - ColliderType: 0
-          ColliderCenter: {x: -0.0016240494, y: 0.0000000074687705, z: 4.316448e-11}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 0
-          ColliderRadius: 0.00008499998
-          ColliderLength: 0.0032480971
-          ColliderBoxSize: {x: 0.0032480971, y: 0.00012749997, z: 0.00012749997}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.08
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 2
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 0
-        MainAxisLowLimit: -40
-        MainAxisHighLimit: 40
-        SecondaryAxis: 0
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 1
-        SecondaryAxisAngleLimit: 15
-        ThirdAxisAngleLimit: 40
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      ChainThicknessMultiplier: 1
-      ChainScaleMultiplier: 1
-      MassMultiplier: 0.5
-      MusclesForce: 1
-      AxisLimitRange: 1
-      UnlimitedRotations: 0
-      ConnectedMassScale: 1
-      ConnectedMassOverride: 0
-      Detach: 1
-      ChainBlend: 1
-      OverrideBlend: 0
-      AlternativeTensors: 0
-      AlternativeTensorsOnFall: 0
-      HardMatchMultiply: 1
-    - ChainName: Left Leg
-      ChainType: 16
-      BoneSetups:
-      - SourceBone: {fileID: 5322769222653499715}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 1
-        colliders:
-        - ColliderType: 0
-          ColliderCenter: {x: -0.0015078883, y: 0.000011513404, z: 0.00010150283}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 0
-          ColliderRadius: 0.00008499998
-          ColliderLength: 0.0034864075
-          ColliderBoxSize: {x: 0.0034864075, y: 0.00012749997, z: 0.00012749997}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.16
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 2
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 0
-        MainAxisLowLimit: -55
-        MainAxisHighLimit: 45
-        SecondaryAxis: 0
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 1
-        SecondaryAxisAngleLimit: 15
-        ThirdAxisAngleLimit: 45
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      - SourceBone: {fileID: 8605228177323369115}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 3
-        colliders:
-        - ColliderType: 0
-          ColliderCenter: {x: -0.0016240504, y: -0.000000002404704, z: -9.673474e-10}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 0
-          ColliderRadius: 0.00008499998
-          ColliderLength: 0.0032480985
-          ColliderBoxSize: {x: 0.0032480985, y: 0.00012749997, z: 0.00012749997}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.08
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 2
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 0
-        MainAxisLowLimit: -40
-        MainAxisHighLimit: 40
-        SecondaryAxis: 0
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 1
-        SecondaryAxisAngleLimit: 15
-        ThirdAxisAngleLimit: 40
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      ChainThicknessMultiplier: 1
-      ChainScaleMultiplier: 1
-      MassMultiplier: 0.5
-      MusclesForce: 1
-      AxisLimitRange: 1
-      UnlimitedRotations: 0
-      ConnectedMassScale: 1
-      ConnectedMassOverride: 0
-      Detach: 1
-      ChainBlend: 1
-      OverrideBlend: 0
-      AlternativeTensors: 0
-      AlternativeTensorsOnFall: 0
-      HardMatchMultiply: 1
-    - ChainName: Right Arm
-      ChainType: 8
-      BoneSetups:
-      - SourceBone: {fileID: 9032230302752043393}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 14
-        colliders:
-        - ColliderType: 0
-          ColliderCenter: {x: -0.0014838881, y: -0.000016758802, z: -0.0000025354095}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 0
-          ColliderRadius: 0.000059999966
-          ColliderLength: 0.0030928396
-          ColliderBoxSize: {x: 0.0030928396, y: 0.00008999995, z: 0.00008999995}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.054
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 2
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 1
-        MainAxisLowLimit: -50
-        MainAxisHighLimit: 75
-        SecondaryAxis: 0
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 1
-        SecondaryAxisAngleLimit: 35
-        ThirdAxisAngleLimit: 55
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      - SourceBone: {fileID: 6688816987360665605}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 16
-        colliders:
-        - ColliderType: 0
-          ColliderCenter: {x: -0.0029637348, y: 0.0000000016298143, z: 0.0000000035506669}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 0
-          ColliderRadius: 0.00005999992
-          ColliderLength: 0.005927461
-          ColliderBoxSize: {x: 0.005927461, y: 0.00008999988, z: 0.00008999988}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.0168
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 2
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 1
-        MainAxisLowLimit: -8
-        MainAxisHighLimit: 55
-        SecondaryAxis: 0
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 1
-        SecondaryAxisAngleLimit: 10
-        ThirdAxisAngleLimit: 10
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      - SourceBone: {fileID: 189600383910516425}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 18
-        colliders:
-        - ColliderType: 0
-          ColliderCenter: {x: -0.003031266, y: 0.000000013504177, z: 0.0000000055879346}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 0
-          ColliderRadius: 0.000059999926
-          ColliderLength: 0.006062515
-          ColliderBoxSize: {x: 0.006062515, y: 0.000089999885, z: 0.000089999885}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.0168
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 2
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 0
-        MainAxisLowLimit: -8
-        MainAxisHighLimit: 55
-        SecondaryAxis: 0
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 1
-        SecondaryAxisAngleLimit: 10
-        ThirdAxisAngleLimit: 10
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      - SourceBone: {fileID: 61922331325040338}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 18
-        colliders:
-        - ColliderType: 2
-          ColliderCenter: {x: -0.002552841, y: 0.0000000057334537, z: -8.731147e-11}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 0
-          ColliderRadius: 0.000049999962
-          ColliderLength: 0.0051056775
-          ColliderBoxSize: {x: 0.0051056775, y: 0.000074999945, z: 0.000074999945}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.0168
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 1
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 0
-        MainAxisLowLimit: -75
-        MainAxisHighLimit: 50
-        SecondaryAxis: 0
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 1
-        SecondaryAxisAngleLimit: 90
-        ThirdAxisAngleLimit: 30
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      ChainThicknessMultiplier: 1
-      ChainScaleMultiplier: 1
-      MassMultiplier: 0.5
-      MusclesForce: 1
-      AxisLimitRange: 1
-      UnlimitedRotations: 0
-      ConnectedMassScale: 1
-      ConnectedMassOverride: 0
-      Detach: 1
-      ChainBlend: 1
-      OverrideBlend: 0
-      AlternativeTensors: 0
-      AlternativeTensorsOnFall: 0
-      HardMatchMultiply: 1
-    - ChainName: Right Arm
-      ChainType: 8
-      BoneSetups:
-      - SourceBone: {fileID: 5535303508115583535}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 14
-        colliders:
-        - ColliderType: 0
-          ColliderCenter: {x: 0, y: 0, z: 0}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 1
-          ColliderRadius: 0
-          ColliderLength: 0
-          ColliderBoxSize: {x: 0.08999997, y: 0, z: 0.08999997}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.054
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 0
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 0
-        MainAxisLowLimit: -50
-        MainAxisHighLimit: 75
-        SecondaryAxis: 1
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 1
-        SecondaryAxisAngleLimit: 35
-        ThirdAxisAngleLimit: 55
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      - SourceBone: {fileID: 835314044811311853}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 16
-        colliders:
-        - ColliderType: 0
-          ColliderCenter: {x: -0.00011473583, y: 0.0045164777, z: 6.4820055e-10}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 1
-          ColliderRadius: 0.000059999973
-          ColliderLength: 0.0090358695
-          ColliderBoxSize: {x: 0.00008999996, y: 0.0090358695, z: 0.00008999996}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.0168
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 0
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 1
-        MainAxisLowLimit: -8
-        MainAxisHighLimit: 55
-        SecondaryAxis: 1
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 0
-        SecondaryAxisAngleLimit: 10
-        ThirdAxisAngleLimit: 10
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      - SourceBone: {fileID: 532570246120787931}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 18
-        colliders:
-        - ColliderType: 0
-          ColliderCenter: {x: -0.00004065625, y: -0.0012531263, z: 0.0036673844}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 2
-          ColliderRadius: 0.000059999966
-          ColliderLength: 0.0077515678
-          ColliderBoxSize: {x: 0.00008999995, y: 0.00008999995, z: 0.0077515678}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.0168
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 1
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 0
-        MainAxisLowLimit: -8
-        MainAxisHighLimit: 55
-        SecondaryAxis: 2
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 0
-        SecondaryAxisAngleLimit: 10
-        ThirdAxisAngleLimit: 10
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      - SourceBone: {fileID: 5633317095625417583}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 18
-        colliders:
-        - ColliderType: 2
-          ColliderCenter: {x: -0.0025751912, y: -0.0000005885959, z: -0.000000027008355}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 0
-          ColliderRadius: 0.000049999962
-          ColliderLength: 0.0051503815
-          ColliderBoxSize: {x: 0.0051503815, y: 0.000074999945, z: 0.000074999945}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.0168
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 1
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 0
-        MainAxisLowLimit: -75
-        MainAxisHighLimit: 50
-        SecondaryAxis: 0
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 1
-        SecondaryAxisAngleLimit: 90
-        ThirdAxisAngleLimit: 30
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      ChainThicknessMultiplier: 1
-      ChainScaleMultiplier: 1
-      MassMultiplier: 0.5
-      MusclesForce: 1
-      AxisLimitRange: 1
-      UnlimitedRotations: 0
-      ConnectedMassScale: 1
-      ConnectedMassOverride: 0
-      Detach: 1
-      ChainBlend: 1
-      OverrideBlend: 0
-      AlternativeTensors: 0
-      AlternativeTensorsOnFall: 0
-      HardMatchMultiply: 1
-    - ChainName: Left Arm
-      ChainType: 4
-      BoneSetups:
-      - SourceBone: {fileID: 5439919753627595065}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 13
-        colliders:
-        - ColliderType: 0
-          ColliderCenter: {x: -0.0014838786, y: -0.000016752221, z: 0.0000025331976}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 0
-          ColliderRadius: 0.00005999996
-          ColliderLength: 0.0030928538
-          ColliderBoxSize: {x: 0.0030928538, y: 0.000089999936, z: 0.000089999936}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.054
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 2
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 1
-        MainAxisLowLimit: -50
-        MainAxisHighLimit: 75
-        SecondaryAxis: 0
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 1
-        SecondaryAxisAngleLimit: 35
-        ThirdAxisAngleLimit: 55
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      - SourceBone: {fileID: 8265423349114545440}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 15
-        colliders:
-        - ColliderType: 0
-          ColliderCenter: {x: -0.0029637255, y: 0.000000002095476, z: -0.000000009109499}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 0
-          ColliderRadius: 0.000059999966
-          ColliderLength: 0.0059274556
-          ColliderBoxSize: {x: 0.0059274556, y: 0.00008999995, z: 0.00008999995}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.0168
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 1
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 1
-        MainAxisLowLimit: -8
-        MainAxisHighLimit: 55
-        SecondaryAxis: 0
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 1
-        SecondaryAxisAngleLimit: 10
-        ThirdAxisAngleLimit: 10
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      - SourceBone: {fileID: 8611771319956760896}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 17
-        colliders:
-        - ColliderType: 0
-          ColliderCenter: {x: -0.003031255, y: 0.0000000037252899, z: -0.0000000022761528}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 0
-          ColliderRadius: 0.000059999944
-          ColliderLength: 0.0060625165
-          ColliderBoxSize: {x: 0.0060625165, y: 0.000089999914, z: 0.000089999914}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.0168
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 1
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 1
-        MainAxisLowLimit: -8
-        MainAxisHighLimit: 55
-        SecondaryAxis: 0
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 1
-        SecondaryAxisAngleLimit: 10
-        ThirdAxisAngleLimit: 10
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      - SourceBone: {fileID: 6099376787928477618}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 17
-        colliders:
-        - ColliderType: 2
-          ColliderCenter: {x: -0.0025528376, y: -6.9849193e-10, z: 0.000000003201421}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 0
-          ColliderRadius: 0.000049999962
-          ColliderLength: 0.0051056705
-          ColliderBoxSize: {x: 0.0051056705, y: 0.000074999945, z: 0.000074999945}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.0168
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 2
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 1
-        MainAxisLowLimit: -75
-        MainAxisHighLimit: 50
-        SecondaryAxis: 0
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 1
-        SecondaryAxisAngleLimit: 90
-        ThirdAxisAngleLimit: 30
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      ChainThicknessMultiplier: 1
-      ChainScaleMultiplier: 1
-      MassMultiplier: 0.5
-      MusclesForce: 1
-      AxisLimitRange: 1
-      UnlimitedRotations: 0
-      ConnectedMassScale: 1
-      ConnectedMassOverride: 0
-      Detach: 1
-      ChainBlend: 1
-      OverrideBlend: 0
-      AlternativeTensors: 0
-      AlternativeTensorsOnFall: 0
-      HardMatchMultiply: 1
-    - ChainName: Left Arm
-      ChainType: 4
-      BoneSetups:
-      - SourceBone: {fileID: 5535303508115583535}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 13
-        colliders:
-        - ColliderType: 0
-          ColliderCenter: {x: 0, y: 0, z: 0}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 1
-          ColliderRadius: 0
-          ColliderLength: 0
-          ColliderBoxSize: {x: 0.08999997, y: 0, z: 0.08999997}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.054
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 0
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 0
-        MainAxisLowLimit: -50
-        MainAxisHighLimit: 75
-        SecondaryAxis: 1
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 1
-        SecondaryAxisAngleLimit: 35
-        ThirdAxisAngleLimit: 55
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      - SourceBone: {fileID: 835314044811311853}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 15
-        colliders:
-        - ColliderType: 0
-          ColliderCenter: {x: -0.00011473583, y: 0.0045164777, z: 6.4820055e-10}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 1
-          ColliderRadius: 0.000059999973
-          ColliderLength: 0.0090358695
-          ColliderBoxSize: {x: 0.00008999996, y: 0.0090358695, z: 0.00008999996}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.0168
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 0
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 1
-        MainAxisLowLimit: -8
-        MainAxisHighLimit: 55
-        SecondaryAxis: 1
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 0
-        SecondaryAxisAngleLimit: 10
-        ThirdAxisAngleLimit: 10
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      - SourceBone: {fileID: 532570246120787931}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 17
-        colliders:
-        - ColliderType: 0
-          ColliderCenter: {x: -0.000040663443, y: 0.0012533843, z: 0.0036673918}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 2
-          ColliderRadius: 0.000059999966
-          ColliderLength: 0.007751747
-          ColliderBoxSize: {x: 0.00008999995, y: 0.00008999995, z: 0.007751747}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.0168
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 1
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 0
-        MainAxisLowLimit: -8
-        MainAxisHighLimit: 55
-        SecondaryAxis: 2
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 0
-        SecondaryAxisAngleLimit: 10
-        ThirdAxisAngleLimit: 10
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      - SourceBone: {fileID: 2875628447591415213}
-        PhysicalDummyBone: {fileID: 0}
-        BoundedIgnoreScale: 1
-        BoneID: 17
-        colliders:
-        - ColliderType: 2
-          ColliderCenter: {x: -0.0025751868, y: -0.0000005918555, z: 0.000000024272598}
-          ColliderSizeMultiply: 1
-          CapsuleDirection: 0
-          ColliderRadius: 0.000049999984
-          ColliderLength: 0.0051503703
-          ColliderBoxSize: {x: 0.0051503703, y: 0.000074999974, z: 0.000074999974}
-          ColliderMesh: {fileID: 0}
-          OtherReference: {fileID: 0}
-          RotationCorrection: {x: 0, y: 0, z: 0}
-          ColliderExtraTransform: {fileID: 0}
-        MassMultiplier: 0.0168
-        ForceMultiplier: 1
-        MusclesBoost: 0
-        MainAxis: 1
-        TargetMainAxis: {x: 1, y: 0, z: 0}
-        InverseMainAxis: 1
-        MainAxisLowLimit: -75
-        MainAxisHighLimit: 50
-        SecondaryAxis: 0
-        TargetSecondaryAxis: {x: 0, y: 1, z: 0}
-        InverseSecondaryAxis: 1
-        SecondaryAxisAngleLimit: 90
-        ThirdAxisAngleLimit: 30
-        OverrideMaterial: {fileID: 0}
-        UseIndividualParameters: 0
-        OverrideInterpolation: 1
-        OverrideDetectionMode: 0
-        OverrideDragValue: 0
-        OverrideAngularDrag: 0.2
-        OverrideSpringPower: 0
-        OverrideSpringDamp: 0
-        HardMatchingMultiply: 1
-        HardMatchOverride: 0
-        ConnectionMassOverride: 0
-        DisableCollisionEvents: 0
-        ForceLimitsAllTheTime: 0
-        ForceKinematicOnStanding: 0
-        AllowConfigurablePosition: 0
-        LinearSpringLimit: 10000
-        LinearSpringDamping: 5
-        BoneBlendMultiplier: 1
-        LocalRight: {x: 1, y: 0, z: 0}
-        LocalUp: {x: 0, y: 1, z: 0}
-        LocalForward: {x: 0, y: 0, z: 1}
-        ToBase: {x: 0, y: 0, z: 0}
-        _EditorCollFoldout: 0
-        _EditorCollPosSliders: 0
-        _EditorBoxCollSliders: 0
-        _EditorMeshCollSliders: 0
-        _EditorRadiusSliders: 1
-        _EditorMaxSliderValue: 0.5
-        _EditorMainAxisPreview: 1
-        _EditorSecondAxisPreview: 0
-        _EditorThirdPreview: 0
-        StoredReferencePose:
-          LocalSpacePosition: {x: 0, y: 0, z: 0}
-          LocalSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-          RootSpacePosition: {x: 0, y: 0, z: 0}
-          RootSpaceRotation: {x: 0, y: 0, z: 0, w: 0}
-      ChainThicknessMultiplier: 1
-      ChainScaleMultiplier: 1
-      MassMultiplier: 0.5
-      MusclesForce: 1
-      AxisLimitRange: 1
-      UnlimitedRotations: 0
-      ConnectedMassScale: 1
-      ConnectedMassOverride: 0
-      Detach: 1
-      ChainBlend: 1
-      OverrideBlend: 0
-      AlternativeTensors: 0
-      AlternativeTensorsOnFall: 0
-      HardMatchMultiply: 1
-    parentObject: {fileID: 62048869318336599}
---- !u!4 &93448986739864631 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 961210195233335601, guid: babd85e662142394e92f1ae349e40085, type: 3}
-  m_PrefabInstance: {fileID: 872881183512468742}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &158273225903280481 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8201243596049249177, guid: babd85e662142394e92f1ae349e40085, type: 3}
-  m_PrefabInstance: {fileID: 872881183512468742}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &189600383910516425 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1061864644485942223, guid: babd85e662142394e92f1ae349e40085, type: 3}
-  m_PrefabInstance: {fileID: 872881183512468742}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &532570246120787931 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8396670001580682531, guid: babd85e662142394e92f1ae349e40085, type: 3}
-  m_PrefabInstance: {fileID: 872881183512468742}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &835314044811311853 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: babd85e662142394e92f1ae349e40085, type: 3}
-  m_PrefabInstance: {fileID: 872881183512468742}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &981738237411806422 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -9114496787053588016, guid: babd85e662142394e92f1ae349e40085, type: 3}
-  m_PrefabInstance: {fileID: 872881183512468742}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1469053388714294203 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1764910268326094525, guid: babd85e662142394e92f1ae349e40085, type: 3}
-  m_PrefabInstance: {fileID: 872881183512468742}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &2875628447591415213 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3167525983759868075, guid: babd85e662142394e92f1ae349e40085, type: 3}
-  m_PrefabInstance: {fileID: 872881183512468742}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &3893309010782330573 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -5036476678694501429, guid: babd85e662142394e92f1ae349e40085, type: 3}
-  m_PrefabInstance: {fileID: 872881183512468742}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &4748382256265766083 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -3604924455293339195, guid: babd85e662142394e92f1ae349e40085, type: 3}
-  m_PrefabInstance: {fileID: 872881183512468742}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5322769222653499715 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5026965684383827013, guid: babd85e662142394e92f1ae349e40085, type: 3}
-  m_PrefabInstance: {fileID: 872881183512468742}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5439919753627595065 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5144064044125678655, guid: babd85e662142394e92f1ae349e40085, type: 3}
-  m_PrefabInstance: {fileID: 872881183512468742}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5633317095625417583 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4453909662290313623, guid: babd85e662142394e92f1ae349e40085, type: 3}
-  m_PrefabInstance: {fileID: 872881183512468742}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &6099376787928477618 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6392945504394638004, guid: babd85e662142394e92f1ae349e40085, type: 3}
   m_PrefabInstance: {fileID: 872881183512468742}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &6181570316309628362 stripped
@@ -2903,36 +1558,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f24d6b7b829924db852ba50e9bc30f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossWeakPoint
---- !u!4 &6688816987360665605 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5822709375572720899, guid: babd85e662142394e92f1ae349e40085, type: 3}
-  m_PrefabInstance: {fileID: 872881183512468742}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7409403377034454688 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7696200768387677094, guid: babd85e662142394e92f1ae349e40085, type: 3}
-  m_PrefabInstance: {fileID: 872881183512468742}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &8265423349114545440 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -96345317471733722, guid: babd85e662142394e92f1ae349e40085, type: 3}
-  m_PrefabInstance: {fileID: 872881183512468742}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &8605228177323369115 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8896563786012999581, guid: babd85e662142394e92f1ae349e40085, type: 3}
-  m_PrefabInstance: {fileID: 872881183512468742}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &8611771319956760896 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8907610631071953990, guid: babd85e662142394e92f1ae349e40085, type: 3}
-  m_PrefabInstance: {fileID: 872881183512468742}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &9032230302752043393 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -1061172392569607033, guid: babd85e662142394e92f1ae349e40085, type: 3}
-  m_PrefabInstance: {fileID: 872881183512468742}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6305565251520397093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3008,19 +1633,19 @@ PrefabInstance:
     - target: {fileID: 3098946841812166243, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
       propertyPath: attackConfigs.Array.data[0].attackBox
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7264367427714407847}
     - target: {fileID: 3098946841812166243, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
       propertyPath: attackConfigs.Array.data[1].attackBox
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7787578703456929923}
     - target: {fileID: 3098946841812166243, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
       propertyPath: attackConfigs.Array.data[2].attackBox
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3541579329208076}
     - target: {fileID: 3098946841812166243, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
       propertyPath: attackConfigs.Array.data[0].attackFill
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7409351352281240161}
     - target: {fileID: 3098946841812166243, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
       propertyPath: attackConfigs.Array.data[0].finalScale
       value: 22
@@ -3032,17 +1657,21 @@ PrefabInstance:
     - target: {fileID: 3098946841812166243, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
       propertyPath: attackConfigs.Array.data[1].attackFill
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9157501914661897691}
     - target: {fileID: 3098946841812166243, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
       propertyPath: attackConfigs.Array.data[2].attackFill
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7131235447503002383}
     - target: {fileID: 3098946841812166243, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
       propertyPath: attackConfigs.Array.data[2].finalScale
       value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 5147054311580931116, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
       propertyPath: GlobalObjectIdHash
+      value: 3755099352
+      objectReference: {fileID: 0}
+    - target: {fileID: 5147054311580931116, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
+      propertyPath: InScenePlacedSourceGlobalObjectIdHash
       value: 3755099352
       objectReference: {fileID: 0}
     - target: {fileID: 5200970765192745995, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
@@ -3218,6 +1847,24 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1968221499178913034, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
       insertIndex: 0
       addedObject: {fileID: 835314044811311853}
+    - targetCorrespondingSourceObject: {fileID: 1968221499178913034, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7846468430832123314}
+    - targetCorrespondingSourceObject: {fileID: 1968221499178913034, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2345339710106102862}
+    - targetCorrespondingSourceObject: {fileID: 1968221499178913034, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7750730097341456746}
+    - targetCorrespondingSourceObject: {fileID: 1968221499178913034, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3648102671406372016}
+    - targetCorrespondingSourceObject: {fileID: 1968221499178913034, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5192437090933394715}
+    - targetCorrespondingSourceObject: {fileID: 1968221499178913034, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2612788492238344736}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
 --- !u!4 &5535303508115583535 stripped
