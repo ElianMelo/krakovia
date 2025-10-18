@@ -1,6 +1,7 @@
 using FIMSpace.FProceduralAnimation;
 using NUnit.Framework.Internal.Commands;
 using System.Collections;
+using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -28,6 +29,8 @@ public class EnemyController : NetworkBehaviour
     public float MaxHP => maxHP;
     public bool IsDead => isDead;
     public NetworkVariable<float> CurrentHP => currentHP;
+
+    private HashSet<ulong> playersToReceiveExperience = new();
 
     public override void OnNetworkSpawn()
     {
@@ -79,6 +82,9 @@ public class EnemyController : NetworkBehaviour
     {
         if (isDead) return;
         bool isEnemyDead = false;
+
+        playersToReceiveExperience.Add(sourceDamage);
+
         if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(enemyNetworkObjectId, out var enemyObj))
         {
             var enemy = enemyObj.GetComponent<EnemyController>();
@@ -90,16 +96,28 @@ public class EnemyController : NetworkBehaviour
 
         isDead = isEnemyDead;
 
-        if (isEnemyDead && NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(sourceDamage, out var playerObj))
+        if(isEnemyDead)
         {
-            var player = playerObj.GetComponent<PlayerController>();
-            if (player != null)
-            {
-                player.PlayerAttributeController.ReceiveExp(player.PlayerAttributeController.OwnerClientId, xpAmount);
-            }
+            ApplyExperienceListPlays();
+            playersToReceiveExperience.Clear();
         }
 
         SendDamageClientRpc(enemyNetworkObjectId, isEnemyDead, contactPoint, damage, isCritical);
+    }
+
+    private void ApplyExperienceListPlays()
+    {
+        foreach (var playerReceiver in playersToReceiveExperience)
+        {
+            if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(playerReceiver, out var playerObj))
+            {
+                var player = playerObj.GetComponent<PlayerController>();
+                if (player != null)
+                {
+                    player.PlayerAttributeController.ReceiveExp(player.PlayerAttributeController.OwnerClientId, xpAmount);
+                }
+            }
+        }
     }
 
     [Rpc(SendTo.Everyone)]
