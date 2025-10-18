@@ -7,17 +7,22 @@ public class BossProjectile : NetworkBehaviour
     public Rigidbody Rigidbody;
     public float projectileForce = 100f;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
         if (!IsOwner) return;
 
-        PlayerAttributeController playerAttributeController = other.gameObject.GetComponent<PlayerAttributeController>();
+        PlayerAttributeController playerAttributeController = collision.gameObject.GetComponent<PlayerAttributeController>();
         if (playerAttributeController != null)
         {
-            Physics.IgnoreCollision(GetComponent<Collider>(), other);
+            // Physics.IgnoreCollision(GetComponent<Collider>(), collision.collider);
             playerAttributeController.ReceiveDamageEnemy((int)CurrentBossProjectileData.damage, false);
             BossProjectilePool.Instance.DespawnProjectile(NetworkObject);
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        
     }
 
     public void SetupData(BossProjectileData bossProjectileData)

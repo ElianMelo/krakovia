@@ -93,7 +93,7 @@ public class EnemyMovement : MonoBehaviour
         }
         else
         {
-            if (animator) animator.SetBool(AttackAnim, false);
+            // if (animator) animator.SetBool(AttackAnim, false);
             if (animator) animator.SetBool(WalkAnim, true);
             MoveTowardsTarget(moveSpeed);
         }

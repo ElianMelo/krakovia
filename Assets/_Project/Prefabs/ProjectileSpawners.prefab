@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 86944051
+  GlobalObjectIdHash: 2359128861
   InScenePlacedSourceGlobalObjectIdHash: 1218411184
   DeferredDespawnTick: 0
   Ownership: 1
@@ -73,14 +73,14 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   projectileTypes:
   - type: 0
-    prefab: {fileID: 0}
+    prefab: {fileID: 5858296482405266444, guid: 42987ce726618c343ba28e057c138493, type: 3}
     initialPoolSize: 10
   - type: 1
-    prefab: {fileID: 0}
+    prefab: {fileID: 5858296482405266444, guid: 42987ce726618c343ba28e057c138493, type: 3}
     initialPoolSize: 10
   - type: 2
-    prefab: {fileID: 0}
+    prefab: {fileID: 5858296482405266444, guid: 42987ce726618c343ba28e057c138493, type: 3}
     initialPoolSize: 10
   - type: 3
-    prefab: {fileID: 0}
+    prefab: {fileID: 5858296482405266444, guid: 42987ce726618c343ba28e057c138493, type: 3}
     initialPoolSize: 10
