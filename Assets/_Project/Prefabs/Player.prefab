@@ -870,15 +870,29 @@ MonoBehaviour:
   fairyVisuals: {fileID: 918729702595114992}
   fairyRagdoll: {fileID: 7821704149667457153}
   fairyAnimator: {fileID: 2887041706749027303}
+  fairySkinA: {fileID: 2100000, guid: 235ae8c9e41513c4facae8d37010372c, type: 2}
+  fairySkinB: {fileID: 2100000, guid: 3f7a05c9e207da74c9ed8dcba98f6a3b, type: 2}
+  fairySkinC: {fileID: 2100000, guid: da1a692c4db5807489c7853e8f041af2, type: 2}
+  fairySkinD: {fileID: 2100000, guid: 3f53d1b2ddd04624a8c2bb69a2bf0045, type: 2}
   skeletonVisuals: {fileID: 2602807066036072098}
   skeletonRagdoll: {fileID: 8106033007968019721}
   skeletonAnimator: {fileID: 8539697502186805004}
   skeletonSword: {fileID: 5620682552162001673}
+  skeletonSkinA: {fileID: 2100000, guid: d2f7f9d9e67eed448806a079bfca4083, type: 2}
+  skeletonSkinB: {fileID: 2100000, guid: e6a194ced9cbbad43857b2457b1ce9de, type: 2}
+  skeletonSkinC: {fileID: 2100000, guid: 26b783a0fc2097141b4453090e317ec9, type: 2}
+  skeletonSkinD: {fileID: 2100000, guid: 66bdef1de81f2ca43aaa30f0b1c08b92, type: 2}
   horseVisuals: {fileID: 344590139456553175}
   horseRagdoll: {fileID: 6627748663905623718}
   horseAnimator: {fileID: 3200726180384472797}
   horseLeftHand: {fileID: 7702235991289829304}
   horseRightHand: {fileID: 491619892002004468}
+  horseSkinA: {fileID: 2100000, guid: 972a2660c833b8b4d8cfac347874d216, type: 2}
+  horseSkinB: {fileID: 2100000, guid: a60dd7e12ada0eb408eaf39525cf7807, type: 2}
+  horseSkinC: {fileID: 2100000, guid: 96b5c551a98cfeb44bf21329450f61cc, type: 2}
+  horseSkinD: {fileID: 2100000, guid: 74f88a07f1a0b0b4f8f6956b576abdab, type: 2}
+  _playerNetworkClassSkin:
+    m_InternalValue: 0
 --- !u!114 &2516361281481648060
 MonoBehaviour:
   m_ObjectHideFlags: 0

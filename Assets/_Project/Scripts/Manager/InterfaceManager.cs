@@ -13,11 +13,29 @@ public class InterfaceManager : MonoBehaviour
 
     [Header("Class Selection")]
     public TMP_Dropdown classSelectionDropdown;
+    public TMP_Dropdown classSkinSelectionDropdown;
     public TMP_Text firstDescription;
     public Image iamgeField;
     public GameObject horseModel;
     public GameObject fairyModel;
     public GameObject skeletonModel;
+
+    [Header("Skin Selection")]
+    public SkinnedMeshRenderer horseModelWithMaterial;
+    public SkinnedMeshRenderer fairyModelWithMaterial;
+    public SkinnedMeshRenderer skeletonModelWithMaterial;
+    public Material horseSkinMatA;
+    public Material horseSkinMatB;
+    public Material horseSkinMatC;
+    public Material horseSkinMatD;
+    public Material fairySkinMatA;
+    public Material fairySkinMatB;
+    public Material fairySkinMatC;
+    public Material fairySkinMatD;
+    public Material skeletonSkinMatA;
+    public Material skeletonSkinMatB;
+    public Material skeletonSkinMatC;
+    public Material skeletonSkinMatD;
 
     [TextArea] public string horseFirstDescription;
     public Sprite horseImage;
@@ -58,12 +76,22 @@ public class InterfaceManager : MonoBehaviour
 
     private void Start()
     {
-        classSelectionDropdown.onValueChanged.AddListener(delegate { DropdownValueChanged(classSelectionDropdown); });
+        classSelectionDropdown.onValueChanged.AddListener(delegate { ClassSelectionDropdownValueChanged(classSelectionDropdown); });
+        classSkinSelectionDropdown.onValueChanged.AddListener(delegate { ClassSkinDropdownValueChanged(classSkinSelectionDropdown); });
     }
 
-    void DropdownValueChanged(TMP_Dropdown change)
+    void ClassSkinDropdownValueChanged(TMP_Dropdown change)
     {
-        PlayerClass playerClass = (PlayerClass) change.value;
+        PlayerClass playerClass = (PlayerClass) classSelectionDropdown.value;
+        PlayerClassSkin playerClassSkin = (PlayerClassSkin)change.value;
+
+        ChangeClassSkinVariation(playerClass, playerClassSkin);
+    }
+
+    void ClassSelectionDropdownValueChanged(TMP_Dropdown change)
+    {
+        PlayerClass playerClass = (PlayerClass)change.value;
+        PlayerClassSkin playerClassSkin = (PlayerClassSkin)classSkinSelectionDropdown.value;
 
         switch (playerClass)
         {
@@ -73,6 +101,7 @@ public class InterfaceManager : MonoBehaviour
                 horseModel.SetActive(false);
                 fairyModel.SetActive(true);
                 skeletonModel.SetActive(false);
+                ChangeClassSkinVariation(playerClass, playerClassSkin);
                 break;
             case PlayerClass.Skeleton:
                 firstDescription.text = skeletonFirstDescription;
@@ -80,6 +109,7 @@ public class InterfaceManager : MonoBehaviour
                 horseModel.SetActive(false);
                 fairyModel.SetActive(false);
                 skeletonModel.SetActive(true);
+                ChangeClassSkinVariation(playerClass, playerClassSkin);
                 break;
             case PlayerClass.Horse:
                 firstDescription.text = horseFirstDescription;
@@ -87,6 +117,73 @@ public class InterfaceManager : MonoBehaviour
                 horseModel.SetActive(true);
                 fairyModel.SetActive(false);
                 skeletonModel.SetActive(false);
+                ChangeClassSkinVariation(playerClass, playerClassSkin);
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void ChangeClassSkinVariation(PlayerClass playerClass, PlayerClassSkin playerClassSkin)
+    {
+        switch (playerClass)
+        {
+            case PlayerClass.Fairy:
+                switch (playerClassSkin)
+                {
+                    case PlayerClassSkin.VariationA:
+                        fairyModelWithMaterial.material = fairySkinMatA;
+                        break;
+                    case PlayerClassSkin.VariationB:
+                        fairyModelWithMaterial.material = fairySkinMatB;
+                        break;
+                    case PlayerClassSkin.VariationC:
+                        fairyModelWithMaterial.material = fairySkinMatC;
+                        break;
+                    case PlayerClassSkin.VariationD:
+                        fairyModelWithMaterial.material = fairySkinMatD;
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            case PlayerClass.Skeleton:
+                switch (playerClassSkin)
+                {
+                    case PlayerClassSkin.VariationA:
+                        skeletonModelWithMaterial.material = skeletonSkinMatA;
+                        break;
+                    case PlayerClassSkin.VariationB:
+                        skeletonModelWithMaterial.material = skeletonSkinMatB;
+                        break;
+                    case PlayerClassSkin.VariationC:
+                        skeletonModelWithMaterial.material = skeletonSkinMatC;
+                        break;
+                    case PlayerClassSkin.VariationD:
+                        skeletonModelWithMaterial.material = skeletonSkinMatD;
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            case PlayerClass.Horse:
+                switch (playerClassSkin)
+                {
+                    case PlayerClassSkin.VariationA:
+                        horseModelWithMaterial.material = horseSkinMatA;
+                        break;
+                    case PlayerClassSkin.VariationB:
+                        horseModelWithMaterial.material = horseSkinMatB;
+                        break;
+                    case PlayerClassSkin.VariationC:
+                        horseModelWithMaterial.material = horseSkinMatC;
+                        break;
+                    case PlayerClassSkin.VariationD:
+                        horseModelWithMaterial.material = horseSkinMatD;
+                        break;
+                    default:
+                        break;
+                }
                 break;
             default:
                 break;
@@ -98,6 +195,11 @@ public class InterfaceManager : MonoBehaviour
         thisCanvas.enabled = true;
         otherCanvas.enabled = false;
         return (PlayerClass) classSelectionDropdown.value;
+    }
+
+    public PlayerClassSkin GetSelectedSkinClass()
+    {
+        return (PlayerClassSkin) classSkinSelectionDropdown.value;
     }
 
     public string GetPlayerName()

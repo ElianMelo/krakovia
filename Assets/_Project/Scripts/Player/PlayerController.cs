@@ -5,6 +5,11 @@ using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum PlayerClassSkin
+{
+    VariationA, VariationB, VariationC, VariationD
+}
+
 public class PlayerController : NetworkBehaviour
 {
     private PlayerMovementController playerMovementController;
@@ -65,6 +70,10 @@ public class PlayerController : NetworkBehaviour
             SwapPlayerTo(InterfaceManager.Instance.GetSelectedClass());
             playerClassController.RequestChangePlayerClassRpc(
                 NetworkObjectId, InterfaceManager.Instance.GetSelectedClass());
+
+            SwapClassSkinPlayerTo(InterfaceManager.Instance.GetSelectedSkinClass());
+            playerClassController.RequestChangePlayerClassSkinRpc(
+                NetworkObjectId, InterfaceManager.Instance.GetSelectedSkinClass());
         }
 
         if(!IsOwner)
@@ -241,6 +250,11 @@ public class PlayerController : NetworkBehaviour
         clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(playerClass);
         playerMovementController.SetupPlayerAnimator(clientNetworkAnimator.Animator);
         playerAttackController.SetupPlayerAnimator(clientNetworkAnimator.Animator);
+    }
+
+    public void SwapClassSkinPlayerTo(PlayerClassSkin playerClassSkin)
+    {
+        playerClassController.SwitchMaterial(playerClassSkin);
     }
 
     private void OnTriggerEnter(Collider other)
