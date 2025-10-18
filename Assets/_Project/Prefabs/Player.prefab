@@ -9557,7 +9557,7 @@ MonoBehaviour:
         RandomizedPositionMax: {x: 1, y: 1, z: 1}
         ParentTransform: {fileID: 0}
         CreateObjectPool: 1
-        ObjectPoolSize: 5
+        ObjectPoolSize: 2
         MutualizePools: 0
         PoolParentTransform: {fileID: 0}
 --- !u!4 &7772756160736024436 stripped

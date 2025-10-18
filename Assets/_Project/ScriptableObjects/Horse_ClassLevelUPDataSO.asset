@@ -40,3 +40,5 @@ MonoBehaviour:
       flatAmount: 2
     - attribute: 0
       flatAmount: 0.8
+    - attribute: 5
+      flatAmount: 0.1
