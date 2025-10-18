@@ -37,6 +37,6 @@ MonoBehaviour:
     - attribute: 4
       flatAmount: 2
     - attribute: 0
-      flatAmount: 1
+      flatAmount: 2
     - attribute: 2
       flatAmount: 3
