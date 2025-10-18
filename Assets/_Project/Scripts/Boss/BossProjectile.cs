@@ -4,6 +4,8 @@ using UnityEngine;
 public class BossProjectile : NetworkBehaviour
 {
     public BossProjectileData CurrentBossProjectileData;
+    public Rigidbody Rigidbody;
+    public float projectileForce = 100f;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -25,6 +27,6 @@ public class BossProjectile : NetworkBehaviour
 
     public void ResetProjectileState()
     {
-
+        Rigidbody.AddForce(transform.forward * projectileForce, ForceMode.Impulse);
     }
 }
