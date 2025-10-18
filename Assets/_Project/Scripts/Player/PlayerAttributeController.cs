@@ -359,11 +359,11 @@ public class PlayerAttributeController : NetworkBehaviour
 
     private void Update()
     {
-        if (!IsOwner) return;
-        if (Input.GetKeyDown(KeyCode.K) && IsServer)
-        {
-            HealEverybody();
-        }
+        //if (!IsOwner) return;
+        //if (Input.GetKeyDown(KeyCode.K) && IsServer)
+        //{
+        //    HealEverybody();
+        //}
     }
 
     private void HealEverybody()

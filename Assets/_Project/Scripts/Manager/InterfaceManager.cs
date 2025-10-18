@@ -255,16 +255,16 @@ public class InterfaceManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F1))
-        {
-            NetworkManager.Singleton.StartHost();
-            SystemManager.Instance.StartGame();
-        }
-        if (Input.GetKeyDown(KeyCode.F2))
-        {
-            NetworkManager.Singleton.StartClient();
-            SystemManager.Instance.StartGame();
-        }
+        //if (Input.GetKeyDown(KeyCode.F1))
+        //{
+        //    NetworkManager.Singleton.StartHost();
+        //    SystemManager.Instance.StartGame();
+        //}
+        //if (Input.GetKeyDown(KeyCode.F2))
+        //{
+        //    NetworkManager.Singleton.StartClient();
+        //    SystemManager.Instance.StartGame();
+        //}
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             _menuInterfaceController.ShowMenuVisuals();
