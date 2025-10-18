@@ -388,7 +388,7 @@ Material:
     - _MainAlphaPanning: {r: 1, g: 1, b: 0, a: 0}
     - _MainTextureChannel: {r: 1, g: 0, b: 0, a: 0}
     - _MainTexturePanning: {r: 0.05, g: -1.754386, b: 0, a: 0}
-    - _MidColor: {r: 0, g: 0.28420115, b: 1, a: 0}
+    - _MidColor: {r: 0.6320754, g: 0.13313177, b: 0, a: 0}
     - _Resolution: {r: 64, g: 64, b: 0, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
