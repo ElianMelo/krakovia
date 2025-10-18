@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SavePoint : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class SavePoint : MonoBehaviour
 
     [SerializeField] private TMP_Text savePointText;
     [SerializeField] private List<Transform> respawnPoints = new();
+
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip audioClip;
 
     private void Start()
     {
@@ -43,6 +47,7 @@ public class SavePoint : MonoBehaviour
 
     public void SelectThisSavePoint()
     {
+        audioSource.PlayOneShot(audioClip);
         SystemManager.Instance.CurrentSavePoint = this;
     }
 
