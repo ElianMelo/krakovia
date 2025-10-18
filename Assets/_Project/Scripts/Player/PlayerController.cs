@@ -16,11 +16,21 @@ public class PlayerController : NetworkBehaviour
 
     private SpawnPointManager spawnPointManager;
 
+    [Header("PVP Box")]
     public TMP_Text playerNameText;
     public Image playerIsPvP;
 
+    [Header("Max Level")]
+    public GameObject fairyHat;
+    public GameObject fairyAura;
+    public GameObject horseHat;
+    public GameObject horseAura;
+    public GameObject skeletonHat;
+    public GameObject skeletonAura;
+
     private NetworkVariable<FixedString64Bytes> playerName = new NetworkVariable<FixedString64Bytes>();
     public NetworkVariable<bool> isPvPActive = new NetworkVariable<bool>();
+    public NetworkVariable<bool> isMaxLevel = new NetworkVariable<bool>();
 
     private SavePoint currentSavePoint;
 
@@ -42,6 +52,7 @@ public class PlayerController : NetworkBehaviour
         // clientNetworkAnimator.Animator = playerClassController.ChangeClassTo(PlayerClass.Horse);
 
         isPvPActive.OnValueChanged += OnPvPActiveChanged;
+        isMaxLevel.OnValueChanged += OnMaxLevel;
 
         // Working with classes
         if (IsOwner)
@@ -137,6 +148,27 @@ public class PlayerController : NetworkBehaviour
         //    playerClassController.RequestChangePlayerClassRpc(
         //        NetworkObjectId, PlayerClass.Horse);
         //}
+    }
+
+    private void OnMaxLevel(bool previous, bool currentValue)
+    {
+        switch (playerClassController.ActivePlayerClass)
+        {   
+            case PlayerClass.Fairy:
+                fairyHat.SetActive(true);
+                fairyAura.SetActive(true);
+                break;
+            case PlayerClass.Skeleton:
+                skeletonHat.SetActive(true);
+                skeletonAura.SetActive(true);
+                break;
+            case PlayerClass.Horse:
+                horseHat.SetActive(true);
+                horseAura.SetActive(true);
+                break;
+            default:
+                break;
+        }
     }
 
     private void OnPvPActiveChanged(bool previous, bool currentValue)
