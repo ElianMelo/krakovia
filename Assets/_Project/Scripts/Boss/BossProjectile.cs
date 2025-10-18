@@ -5,6 +5,8 @@ public class BossProjectile : NetworkBehaviour
 {
     public BossProjectileData CurrentBossProjectileData;
     public Rigidbody Rigidbody;
+    public GameObject OnHitEffect;
+    public float hitEffectDestroyTime;
     public float projectileForce = 100f;
 
     private void OnCollisionEnter(Collision collision)
@@ -16,8 +18,16 @@ public class BossProjectile : NetworkBehaviour
         {
             // Physics.IgnoreCollision(GetComponent<Collider>(), collision.collider);
             playerAttributeController.ReceiveDamageEnemy((int)CurrentBossProjectileData.damage, false);
+            OnHitEffectSpawnParticleRpc();
             BossProjectilePool.Instance.DespawnProjectile(NetworkObject);
         }
+    }
+
+    [Rpc(SendTo.Everyone)]
+    private void OnHitEffectSpawnParticleRpc()
+    {
+        GameObject instance = Instantiate(OnHitEffect, transform);
+        Destroy(instance, hitEffectDestroyTime);
     }
 
     private void OnTriggerEnter(Collider other)

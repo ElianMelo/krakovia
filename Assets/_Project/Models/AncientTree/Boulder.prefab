@@ -125,6 +125,8 @@ MonoBehaviour:
     projectileType: 0
     amount: 0
   Rigidbody: {fileID: 535917484107174507}
+  OnHitEffect: {fileID: 7780183107191031951, guid: 7a110eb2775102140bb251e0964b9796, type: 3}
+  hitEffectDestroyTime: 0
   projectileForce: 10
 --- !u!54 &535917484107174507
 Rigidbody:
