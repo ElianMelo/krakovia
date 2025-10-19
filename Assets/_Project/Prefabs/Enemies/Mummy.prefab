@@ -936,6 +936,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: maxWaitTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: wanderRadius
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: stuckTimeToReset
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: obstacleSphereRadius
       value: 0.05
       objectReference: {fileID: 0}
