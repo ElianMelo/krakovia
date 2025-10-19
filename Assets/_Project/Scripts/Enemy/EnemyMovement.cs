@@ -1,8 +1,9 @@
 ﻿using System.Collections;
+using Unity.Netcode;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody), typeof(Collider))]
-public class EnemyMovement : MonoBehaviour
+public class EnemyMovement : NetworkBehaviour
 {
     [Header("Wander Settings")]
     public float wanderRadius = 8f;
@@ -49,6 +50,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void Awake()
     {
+        if (!IsServer) return;
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         animator = GetComponentInChildren<Animator>();
@@ -72,6 +74,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
+        if (!IsServer) return;
         attackTimer -= Time.deltaTime;
 
         if (aggroTarget != null)
