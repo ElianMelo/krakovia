@@ -125,8 +125,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 493922852324703807}
     - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: wanderRadius
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: aggroMoveSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: stuckTimeToReset
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: obstacleSphereRadius
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613249257654796655, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: obstacleDetectDistance
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
