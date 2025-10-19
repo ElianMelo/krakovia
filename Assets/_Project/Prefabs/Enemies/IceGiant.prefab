@@ -479,7 +479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 2016526288
+  GlobalObjectIdHash: 4036403841
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -839,7 +839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5147054311580931116, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
       propertyPath: GlobalObjectIdHash
-      value: 4043092121
+      value: 1249764827
       objectReference: {fileID: 0}
     - target: {fileID: 5255467617548342257, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
       propertyPath: m_LocalScale.x
@@ -1027,7 +1027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8033235953411008976, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
       propertyPath: maxHP
-      value: 5000
+      value: 100000
       objectReference: {fileID: 0}
     - target: {fileID: 8033235953411008976, guid: ef95f8d107f3f454d96c0ca1d0d72e78, type: 3}
       propertyPath: xpAmount

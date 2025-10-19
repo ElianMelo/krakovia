@@ -1030,7 +1030,7 @@ MonoBehaviour:
   - {fileID: 5605128558932787624}
   - {fileID: 8786408428718760100}
   audioSource: {fileID: 3868511335965712908}
-  audioClip: {fileID: 8300000, guid: d02c573afd2e30c4b9faf1f8b3215cf4, type: 3}
+  audioClip: {fileID: 8300000, guid: c683025a3160cbb4e8643687748491d9, type: 3}
 --- !u!82 &3868511335965712908
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1044,8 +1044,8 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.759
+  m_Pitch: 0.91
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -1088,7 +1088,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
