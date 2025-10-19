@@ -1478,17 +1478,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossProjectileController
   atk1Data:
-    hasXRandomRange: 0
-    xRange: 20
-    hasYRandomRange: 0
-    yRange: 20
-    hasZRandomRange: 0
-    zRange: 0
+    hasXRandomRange: 1
+    xRange: 30
+    hasYRandomRange: 1
+    yRange: 30
+    hasZRandomRange: 1
+    zRange: 20
     damage: 50
     soucePosition: {fileID: 4805169942267430361}
     duration: 10
     projectileType: 0
-    amount: 60
+    amount: 25
   atk2Data:
     hasXRandomRange: 0
     xRange: 0
@@ -1503,16 +1503,16 @@ MonoBehaviour:
     amount: 0
   atk3Data:
     hasXRandomRange: 1
-    xRange: 10
-    hasYRandomRange: 0
-    yRange: 0
+    xRange: 20
+    hasYRandomRange: 1
+    yRange: 10
     hasZRandomRange: 1
-    zRange: 10
+    zRange: 20
     damage: 50
     soucePosition: {fileID: 3911998583799032927}
-    duration: 10
+    duration: 5
     projectileType: 0
-    amount: 60
+    amount: 25
 --- !u!114 &3952991618452253071
 MonoBehaviour:
   m_ObjectHideFlags: 0
