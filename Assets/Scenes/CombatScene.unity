@@ -76840,6 +76840,20 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7226220589892473441, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: headerObjectiveToLevelTwenty
+      value: Objetivo do Level 16 ~ 20 (Tundra)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7226220589892473441, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: contentObjectiveToLevelTwenty
+      value: '- Matar Dog das Neves
+
+        - Matar Deus (Chefe)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7226220589892473441, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: headerObjectiveToLevelFifteen
+      value: Objetivo do Level 11 ~ 15 (Ruinas Nevosas)
+      objectReference: {fileID: 0}
     - target: {fileID: 7614833670030641175, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.97
