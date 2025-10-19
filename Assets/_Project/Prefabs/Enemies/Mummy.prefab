@@ -286,7 +286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: handler.ExtraFeatures.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: handler.ExtraFeatures.Array.data[0].enabled
@@ -307,7 +307,7 @@ PrefabInstance:
     - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: handler.ExtraFeatures.Array.data[1].FeatureReference
       value: 
-      objectReference: {fileID: 11400000, guid: 2c895a7f3adf55d4aa2244330feb7ed6, type: 2}
+      objectReference: {fileID: 11400000, guid: 7c6cce75d05d30d4590ad52f05b280f5, type: 2}
     - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: handler.ExtraFeatures.Array.data[2].FeatureReference
       value: 
@@ -318,11 +318,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.size
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: handler.ExtraFeatures.Array.data[2].variables.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[0].Tooltip
+      value: How fast should happen transition from disabled/enabled state
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[3].Tooltip
+      value: Storing animation pose if animator is visible, to prevent offscreen
+        pose calibration issues
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[4].Tooltip
+      value: When character entered min distance range, it needs to go out for max
+        distance + this threshold value in order to be in 'far away' range. Preventing
+        sudden On/Off when character is roaming around max distance.
       objectReference: {fileID: 0}
     - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: handler.ExtraFeatures.Array.data[2].variables.Array.data[0].Tooltip
@@ -349,15 +364,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[0]._value.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
-      propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[2]._value.w
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[1]._value.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[2]._value.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[2]._value.x
-      value: 9
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[4]._value.x
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[5]._value.x
@@ -417,23 +440,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[0].VariableName
-      value: Dist1
+      value: Fade Speed
       objectReference: {fileID: 0}
     - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[1].VariableName
-      value: Hard1
+      value: 'Max Distance:'
       objectReference: {fileID: 0}
     - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[1].VariableType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[2].VariableName
-      value: Iter1
+      value: Visibility Debug
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[2].VariableType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[3].VariableName
-      value: Interp1
+      value: Store Pose
       objectReference: {fileID: 0}
     - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[3].VariableType
@@ -441,11 +468,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[4].VariableName
-      value: Discr1
+      value: 'Enter Threshold:'
       objectReference: {fileID: 0}
     - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[4].VariableType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[5].VariableName
@@ -538,6 +565,14 @@ PrefabInstance:
     - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[14].VariableType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[0]._rangeHelper.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
+      propertyPath: handler.ExtraFeatures.Array.data[1].variables.Array.data[0]._rangeHelper.y
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5798809703633080939, guid: 475c06f4cc27e774ab547acc3c529666, type: 3}
       propertyPath: handler.ExtraFeatures.Array.data[2].variables.Array.data[0]._rangeHelper.x
