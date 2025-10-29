@@ -6,8 +6,8 @@ using UnityEngine.Audio;
 
 public class SavePoint : MonoBehaviour
 {
-    private const string POINT_SAVED = "Ponto Salvo";
-    private const string TOSAVE_POINT = "E - Salvar Ponto";
+    private const string POINT_SAVED = "Point Saved";
+    private const string TOSAVE_POINT = "E - Save Point";
 
     [SerializeField] private TMP_Text savePointText;
     [SerializeField] private List<Transform> respawnPoints = new();

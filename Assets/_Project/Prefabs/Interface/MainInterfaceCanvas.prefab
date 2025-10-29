@@ -155,7 +155,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: WASD - Movimento
+  m_text: WASD - Movement
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -295,8 +295,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5305731644774034704}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -619,9 +619,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "- Recompensas Lvl. 5/10/15/20\n- Objetivo Atual <<<< canto superior esquerdo\n-
-    PvP Balanceado para endgame (Lvl.20) \n- (TAB) Comandos/Dicas >>>> canto superior
-    direito"
+  m_text: '- Rewards Lvl. 5/10/15/20
+
+    - Objectives <<<< (top left corner)
+
+    -
+    PvP Balanced for endgame (Lvl.20)
+
+    - (TAB) Controls/Tips >>>> (top right
+    corner)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -832,7 +838,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sensibilidade
+  m_text: Sensitivity
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -1248,13 +1254,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Tudo que voce precisa saber em tres slides.
-
-    Rapido e essencial, leia.
-
-
-    Aperte
-    proximo para continuar'
+  m_text: "Everything you need to know in three slides.\r\nQuick and essential \u2014
+    read it.\n\nPress Next to continue."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -1394,8 +1395,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5841425477882422383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1640,7 +1641,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Movimentacao
+  m_text: Movement
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -1919,7 +1920,7 @@ RectTransform:
   m_GameObject: {fileID: 1891114296270686568}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 2.97, y: 2.97, z: 2.97}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8894121104827515863}
@@ -1951,7 +1952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.8784314}
+  m_Color: {r: 1, g: 0, b: 0.6766882, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2441,7 +2442,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Proximo
+  m_text: Next
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -2577,7 +2578,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Q - Segunda Skill
+  m_text: Q - 2nd Skill
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -2700,28 +2701,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectiveInterfaceController
   headerTextMesh: {fileID: 2047451607308037104}
   contentTextMesh: {fileID: 1148980051569554299}
-  headerObjectiveToLevelFive: Objetivo do Level 1 ~ 5 (Floresta)
-  contentObjectiveToLevelFive: "- Matar Dog Florestal \n- Matar Arvore do Maleficio
-    (Chefe)"
-  headerObjectiveToLevelTen: Objetivo do Level 6 ~ 10 (Deserto)
-  contentObjectiveToLevelTen: '- Matar Tutankamons (Mumias)
+  headerObjectiveToLevelFive: Objective Lvl 1 ~ 5 (Forest)
+  contentObjectiveToLevelFive: '- Kill Forest Dog
 
-    - Matar Minhoca
-    (Chefe)'
-  headerObjectiveToLevelFifteen: Objetivo do Level 11 ~ 15 (Gelo)
-  contentObjectiveToLevelFifteen: '- Matar Yeti Sarabada'
-  headerObjectiveToLevelTwenty: Objetivo do Level 16 ~ 20 (Gelo Profundo)
-  contentObjectiveToLevelTwenty: '- Matar Dog das Neves
+    - Kill Tree of Malediction
+    (Boss)'
+  headerObjectiveToLevelTen: Objective Lvl 5 ~ 10 (Desert)
+  contentObjectiveToLevelTen: '- Kill Mummies
 
-    - Matar Entidade da
-    Neve (Chefe)'
-  headerObjectiveToLevelTwentyPos: Objetivo Endgame
-  contentObjectiveToLevelTwentyPos: '- Desafie os amigos pra um PvP na arena
+    - Kill Worm (Boss)'
+  headerObjectiveToLevelFifteen: Objective Lvl 10 ~ 15 (Snowy Ruins)
+  contentObjectiveToLevelFifteen: '- Kill Sarabada Yeti'
+  headerObjectiveToLevelTwenty: Objective Lvl 15 ~ 20 (Tundra)
+  contentObjectiveToLevelTwenty: '- Kill Snow Wolf
 
-    -
-    Farmar aura + ego
+    - Kill God (Boss)'
+  headerObjectiveToLevelTwentyPos: Objective Endgame
+  contentObjectiveToLevelTwentyPos: '- Challenge friends for PvP battles
 
-    - Surfar pelo mapa e se divertir'
+    - Farm
+    aura + ego
+
+    - Surf around and have fun'
 --- !u!1 &2386143026227685032
 GameObject:
   m_ObjectHideFlags: 0
@@ -2787,7 +2788,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: P - Ativar
+  m_text: P - Activate
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7a74a243ca11fc14eab880a05f116a4d, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: 7a74a243ca11fc14eab880a05f116a4d, type: 2}
@@ -3166,15 +3167,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Use WASD para se mover
-
-    - Use mouse e teclas para atacar
-
-    -
-    Surf: paredes nao sao obstaculos sao pistas, se jogue contra elas para surfar
-
-    -
-    O mapa e livre pra voce explorar'
+  m_text: "- Use WASD to move\n- Use mouse and keyboard to attack\n- Surf: walls
+    aren\u2019t obstacles, they\u2019re tracks\u2014throw yourself against them to
+    surf\n- Map is free for you to explore"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -3447,21 +3442,38 @@ MonoBehaviour:
   otherCanvas: {fileID: 0}
   playerNameInputField: {fileID: 0}
   classSelectionDropdown: {fileID: 0}
+  classSkinSelectionDropdown: {fileID: 0}
   firstDescription: {fileID: 0}
   iamgeField: {fileID: 0}
   horseModel: {fileID: 0}
   fairyModel: {fileID: 0}
   skeletonModel: {fileID: 0}
-  horseFirstDescription: Juan, o centauro reverso, apos seu exilio encontrou um proposito
-    no monasterio de Krakovia, com monges aprendeu a lutar e busca restaurar a ordem
-    na base da porrada. Muito dano, HP alto, velocidade mediana.
+  horseModelWithMaterial: {fileID: 0}
+  fairyModelWithMaterial: {fileID: 0}
+  skeletonModelWithMaterial: {fileID: 0}
+  horseSkinMatA: {fileID: 2100000, guid: 972a2660c833b8b4d8cfac347874d216, type: 2}
+  horseSkinMatB: {fileID: 2100000, guid: a60dd7e12ada0eb408eaf39525cf7807, type: 2}
+  horseSkinMatC: {fileID: 2100000, guid: 96b5c551a98cfeb44bf21329450f61cc, type: 2}
+  horseSkinMatD: {fileID: 2100000, guid: 74f88a07f1a0b0b4f8f6956b576abdab, type: 2}
+  fairySkinMatA: {fileID: 2100000, guid: 235ae8c9e41513c4facae8d37010372c, type: 2}
+  fairySkinMatB: {fileID: 2100000, guid: 3f7a05c9e207da74c9ed8dcba98f6a3b, type: 2}
+  fairySkinMatC: {fileID: 2100000, guid: da1a692c4db5807489c7853e8f041af2, type: 2}
+  fairySkinMatD: {fileID: 2100000, guid: 3f53d1b2ddd04624a8c2bb69a2bf0045, type: 2}
+  skeletonSkinMatA: {fileID: 2100000, guid: d2f7f9d9e67eed448806a079bfca4083, type: 2}
+  skeletonSkinMatB: {fileID: 2100000, guid: e6a194ced9cbbad43857b2457b1ce9de, type: 2}
+  skeletonSkinMatC: {fileID: 2100000, guid: 26b783a0fc2097141b4453090e317ec9, type: 2}
+  skeletonSkinMatD: {fileID: 2100000, guid: 66bdef1de81f2ca43aaa30f0b1c08b92, type: 2}
+  horseFirstDescription: Juan, the reverse centaur, found purpose after his exile
+    in the monastery of Krakovia. There, he trained with monks, mastered the art
+    of punching problems away. Big damage, big health bar, medium speed.
   horseImage: {fileID: 21300000, guid: b41d825f99c61a343bed24ecba8a2352, type: 3}
-  fairyFirstDescription: O ser mais inteligente de Krakovia, so perde para todos
-    os outros. Fada relaxada muito covarde fica de longe e bate com agua. Muito dano,
-    rapida porem papel.
+  fairyFirstDescription: The smartest being in Krakovia, if you don't take into account
+    everyone else. A laid-back, very cowardly fairy who attacks from afar with water.
+    Deals a lot of damage, fast but fragile.
   fairyImage: {fileID: 21300000, guid: 19f1d68484e66c841a357fbcd2a5cb03, type: 3}
-  skeletonFirstDescription: Esqueleto de um Krakoviano medio, classe sem frescura,
-    bate com a espada mais sinistra de Krakovia. Muito dano, regen de HP mas HP baixo.
+  skeletonFirstDescription: Skeleton of an average Krakovian, a class not meant for
+    the fruity, swings the most sinister ass sword in Krakovia. High damage, HP regen,
+    but low health.
   skeletonImage: {fileID: 21300000, guid: 950f24438b24f414ba38a9291ec3e631, type: 3}
   _playerInterfaceController: {fileID: 4826037418665383553}
   _pvPInterfaceController: {fileID: 2630157146938587367}
@@ -3611,18 +3623,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Aperte E nas fontes para salvar ponto de renascimento
-
-    - O jogo
-    possui 3 chefes para subjugar
-
-    - Aperte CTRL para mostrar/ocultar o mouse
-
-    -
-    Cada nivel aumenta seus atributos exponencialmente
-
-    - Divirta-se acima de
-    tudo'
+  m_text: "- Press E at the fountains to save your respawn point\r\n\r- The game
+    has 3 bosses to defeat\r\n- Press CTRL to show/hide the mouse\r\n- Each level
+    increases your attributes exponentially\r\n- Have fun above all else"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -3758,7 +3761,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Importante
+  m_text: Important
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -3894,7 +3897,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fechar Jogo
+  m_text: Exit Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -3903,8 +3906,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4291751935
-  m_fontColor: {r: 1, g: 0.9372549, b: 0.80784315, a: 1}
+    rgba: 4286466047
+  m_fontColor: {r: 1, g: 0.2783019, b: 0.49251714, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3921,8 +3924,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -4105,14 +4108,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.8784314}
+  m_Color: {r: 1, g: 0, b: 0.9420619, a: 0.8784314}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 58e46246f5417814da2f6d8e436eb7b5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8305458509b3e3f409ce6df1045fa108, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4540,7 +4543,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: P - Ativar PVP
+  m_text: P - Activate PvP
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -4676,7 +4679,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TAB - Dicas
+  m_text: TAB - Tips
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -4812,7 +4815,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continuar
+  m_text: Back
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -4948,7 +4951,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: F - Terceira Skill
+  m_text: F - 3rd Skill
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -5120,7 +5123,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Progressao
+  m_text: Progress
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -5256,7 +5259,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Anterior
+  m_text: Previous
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -5782,14 +5785,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0.9411765, a: 0.8784314}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8784314}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8598f59fc3603ab4ea2c1dd7a31477eb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ee49392cc1dc4d84fa2d494eef315df6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5832,7 +5835,7 @@ RectTransform:
   m_Father: {fileID: 1925715328044652903}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6283,7 +6286,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fechar
+  m_text: Close
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -6555,7 +6558,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PVP desativado
+  m_text: PvP Deactivated
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7a74a243ca11fc14eab880a05f116a4d, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: 7a74a243ca11fc14eab880a05f116a4d, type: 2}
@@ -6827,7 +6830,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: M1 - Ataque Basico
+  m_text: M1 - Attack
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -7099,7 +7102,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CTRL - Exibir Mouse
+  m_text: CTRL - Show Cursor
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -7235,7 +7238,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: V -  Dancar
+  m_text: V -  Dance
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -7521,7 +7524,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: M2 - Primeira Skill
+  m_text: M2 - 1st Skill
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -7720,14 +7723,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.8784314}
+  m_Color: {r: 1, g: 0, b: 0.9420619, a: 0.8784314}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 58e46246f5417814da2f6d8e436eb7b5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8305458509b3e3f409ce6df1045fa108, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8490,7 +8493,7 @@ RectTransform:
   m_Father: {fileID: 4994496004317751717}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8672,7 +8675,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Outros
+  m_text: Others
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}

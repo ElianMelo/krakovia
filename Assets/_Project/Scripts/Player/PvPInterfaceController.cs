@@ -4,11 +4,11 @@ using UnityEngine.UI;
 
 public class PvPInterfaceController : MonoBehaviour
 {
-    public const string PVP_ENABLED = "PVP ativado";
-    public const string PVP_DISABLED = "PVP desativado";
+    public const string PVP_ENABLED = "PVP activated";
+    public const string PVP_DISABLED = "PVP deactivated";
 
-    public const string PVP_SUP_ENABLED = "Ate a morte";
-    public const string PVP_SUP_DISABLED = "P - Ativar";
+    public const string PVP_SUP_ENABLED = "Until death";
+    public const string PVP_SUP_DISABLED = "P - Activate";
 
     public TMP_Text pvpTextBox;
     public TMP_Text supportTextBox;
