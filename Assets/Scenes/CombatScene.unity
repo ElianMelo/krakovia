@@ -74150,7 +74150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 949113563392017299, guid: 4854a3959dc6bb741ae4d9966a199aec, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1178592543926274120, guid: 4854a3959dc6bb741ae4d9966a199aec, type: 3}
       propertyPath: m_IsActive

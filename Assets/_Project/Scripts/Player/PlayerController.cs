@@ -135,10 +135,10 @@ public class PlayerController : NetworkBehaviour
         {
             RequestEnablePvPRpc(NetworkObjectId);
         }
-        //if (Input.GetKeyDown(KeyCode.L))
-        //{
-        //    RequestExperienceRpc(playerAttributeController.NetworkObjectId);
-        //}
+        if (Input.GetKeyDown(KeyCode.L)) 
+        {
+            RequestExperienceRpc(playerAttributeController.NetworkObjectId);
+        }
         //if (Input.GetKeyDown(KeyCode.F5))
         //{
         //    SwapPlayerTo(PlayerClass.Fairy);

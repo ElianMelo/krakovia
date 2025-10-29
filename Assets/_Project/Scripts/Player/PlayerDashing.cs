@@ -59,7 +59,7 @@ public class PlayerDashing : MonoBehaviour
         if (disableGravity)
             rb.useGravity = false;
         delayedForceToApply = forceToApply;
-        Invoke(nameof(DelayedDashForce), 0.025f);
+        Invoke(nameof(DelayedDashForce), 0.0f);
         Invoke(nameof(ResetDash), dashDuration);
     }
     private Vector3 delayedForceToApply;
