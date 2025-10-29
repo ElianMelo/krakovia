@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 280816761266898751, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: M1 - Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 400084267679609186, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: PvP Deactivated
+      objectReference: {fileID: 0}
     - target: {fileID: 515007858479532183, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -112,6 +120,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1148980051569554299, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: '- Kill Forest Dogs
+
+        - Kill Tree of Malediction'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207771314951110509, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: Close
+      objectReference: {fileID: 0}
     - target: {fileID: 1207771314951110509, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_fontColor.b
       value: 0.80784315
@@ -123,6 +141,14 @@ PrefabInstance:
     - target: {fileID: 1207771314951110509, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4291751935
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451418200008292637, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: P - Activate PvP
+      objectReference: {fileID: 0}
+    - target: {fileID: 1671878894779585209, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: TAB - Tips
       objectReference: {fileID: 0}
     - target: {fileID: 1888588719768776590, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_AnchorMax.y
@@ -139,6 +165,10 @@ PrefabInstance:
     - target: {fileID: 1888588719768776590, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076398959892059109, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: Progression
       objectReference: {fileID: 0}
     - target: {fileID: 2076398959892059109, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_fontColor.b
@@ -152,6 +182,16 @@ PrefabInstance:
       propertyPath: m_fontColor.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2203463123516929732, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: "- Use WASD to move\n- Use mouse & keyboard to attack\n- Surf: walls
+        aren\u2019t obstacles, they\u2019re tracks\u2014throw yourself against them
+        to surf\n- Map is free for you to explore"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699211347777940521, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: M2 - 1st Skill
+      objectReference: {fileID: 0}
     - target: {fileID: 2793174949324920475, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -167,6 +207,10 @@ PrefabInstance:
     - target: {fileID: 2793174949324920475, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076175763122395015, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: Other
       objectReference: {fileID: 0}
     - target: {fileID: 3076175763122395015, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_fontColor.b
@@ -188,23 +232,45 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3467015220606775424, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: Q - 2nd Skill
+      objectReference: {fileID: 0}
     - target: {fileID: 3898549682603841144, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3917626365855780512, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: Continue
       objectReference: {fileID: 0}
     - target: {fileID: 4293519121794314919, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4383510334527000890, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: '- Press E at the fountains to save your respawn point
+
+        - The
+        game has 3 bosses to defeat
+
+        - Press CTRL to show/hide the mouse
+
+        -
+        Each level increases your attributes exponentially
+
+        - Have fun above
+        all else'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448000636754702607, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: V -  Dance
+      objectReference: {fileID: 0}
     - target: {fileID: 4461583178199185725, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_text
-      value: 'Tudo que voce precisa saber em tres slides.
-
-        Rapido e essencial,
-        leia.
-
-
-        Aperte proximo para continuar'
+      value: "Everything you need to know in three slides.\nQuick and essential \u2014
+        read it.\n\nPress Next to continue."
       objectReference: {fileID: 0}
     - target: {fileID: 4461583178199185725, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_fontSize
@@ -230,9 +296,22 @@ PrefabInstance:
       propertyPath: m_Color.g
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4845423947023529351, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: WASD - Movement
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865191377150670655, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: "- Rewards Lvl. 5/10/15/20\n- Objective <<<< (top left corner)\n- PvP
+        Balanced for endgame (Lvl.20) \n- (TAB) Controls/Tips >>>> (top right corner)"
+      objectReference: {fileID: 0}
     - target: {fileID: 5190171580037392444, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308435847363990254, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: Movement
       objectReference: {fileID: 0}
     - target: {fileID: 5308435847363990254, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_fontColor.b
@@ -267,6 +346,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5799985492144798149, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: Previous
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799985492144798149, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_fontColor.b
       value: 0.80784315
       objectReference: {fileID: 0}
@@ -299,6 +382,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6089514945347084063, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: Next
+      objectReference: {fileID: 0}
+    - target: {fileID: 6089514945347084063, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_fontColor.b
       value: 0.80784315
       objectReference: {fileID: 0}
@@ -310,9 +397,13 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4291751935
       objectReference: {fileID: 0}
+    - target: {fileID: 6128480017688563542, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: Close Game
+      objectReference: {fileID: 0}
     - target: {fileID: 6239582943483227621, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_text
-      value: Importante
+      value: Important
       objectReference: {fileID: 0}
     - target: {fileID: 6253396695759871092, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_LocalScale.x
@@ -338,6 +429,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6674425584213835727, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: Sensitivity
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687148987853951468, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: F - 3rd Skill
+      objectReference: {fileID: 0}
     - target: {fileID: 6695283420685654641, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -354,6 +453,41 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7226220589892473441, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: contentObjectiveToLevelTen
+      value: '- Kill Mummies
+
+        - Kill Worm (boss)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7226220589892473441, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: contentObjectiveToLevelFive
+      value: '- Kill Forest Dogs
+
+        - Kill Tree of Malediction (boss)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7226220589892473441, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: contentObjectiveToLevelTwenty
+      value: '- Kill Snowy Dogs
+
+        - Kill God'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7226220589892473441, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: contentObjectiveToLevelFifteen
+      value: '- Kill Sarabada Yeti'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7226220589892473441, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: contentObjectiveToLevelTwentyPos
+      value: '- Challenge friends for PvP
+
+        - Farm aura + ego
+
+        - Surf
+        around and have fun'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7226467343937728197, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: P - Activate
+      objectReference: {fileID: 0}
     - target: {fileID: 7670932764420465763, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -361,6 +495,10 @@ PrefabInstance:
     - target: {fileID: 8175135728257592621, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8674909944816806112, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: CTRL - Show Cursor
       objectReference: {fileID: 0}
     - target: {fileID: 8916908726661242262, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_Sprite

@@ -19415,9 +19415,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: O ser mais inteligente de Krakovia, so perde para todos os outros. Fada
-    relaxada muito covarde fica de longe e bate com agua. Muito dano, rapida porem
-    papel.
+  m_text: The smartest being in Krakovia, if you don't take into account everyone
+    else. A laid-back, very cowardly fairy who attacks from afar with water. Deals
+    a lot of damage, fast but fragile.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -36978,6 +36978,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1265536576209853800, guid: 66d7d8834f777b0439c719705ebbdf6c, type: 3}
+      propertyPath: m_text
+      value: (E) - Save Point
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -42898,6 +42902,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1265536576209853800, guid: 66d7d8834f777b0439c719705ebbdf6c, type: 3}
+      propertyPath: m_text
+      value: (E) - Save Point
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -48290,7 +48298,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Criar
+  m_text: Create
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -75835,7 +75843,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Buscar
+  m_text: Search
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -76354,7 +76362,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Gerar
+  m_text: Create
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b986e4afa1498474baf439c91070d7da, type: 2}
   m_sharedMaterial: {fileID: 4842241884682002139, guid: b986e4afa1498474baf439c91070d7da, type: 2}
@@ -76550,6 +76558,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 280816761266898751, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: M1 - Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 400084267679609186, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: PvP Deactivated
+      objectReference: {fileID: 0}
     - target: {fileID: 789855242008598389, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -76650,6 +76666,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1207771314951110509, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: Close
+      objectReference: {fileID: 0}
     - target: {fileID: 1430395298468128315, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -76661,6 +76681,14 @@ PrefabInstance:
     - target: {fileID: 1430395298468128315, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_Color.g
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451418200008292637, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: P - Activate PvP
+      objectReference: {fileID: 0}
+    - target: {fileID: 1671878894779585209, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: TAB - Tips
       objectReference: {fileID: 0}
     - target: {fileID: 1888588719768776590, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_AnchorMax.y
@@ -76698,6 +76726,10 @@ PrefabInstance:
       propertyPath: maxPlayersUI
       value: 
       objectReference: {fileID: 2072810226}
+    - target: {fileID: 2699211347777940521, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: M2 - 1st Skill
+      objectReference: {fileID: 0}
     - target: {fileID: 2793174949324920475, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -76814,13 +76846,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainInterfaceCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3467015220606775424, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: Q - 2nd Skill
+      objectReference: {fileID: 0}
     - target: {fileID: 3782775299001831192, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3917626365855780512, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_text
-      value: Voltar
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448000636754702607, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: V -  Dance
       objectReference: {fileID: 0}
     - target: {fileID: 4643292334167701499, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_AnchorMax.x
@@ -76833,6 +76873,10 @@ PrefabInstance:
     - target: {fileID: 4643292334167701499, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845423947023529351, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: WASD - Movement
       objectReference: {fileID: 0}
     - target: {fileID: 5190171580037392444, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_Enabled
@@ -76894,6 +76938,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5799985492144798149, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: Previous
+      objectReference: {fileID: 0}
     - target: {fileID: 5856617451274189073, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -76910,9 +76958,13 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6089514945347084063, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: Next
+      objectReference: {fileID: 0}
     - target: {fileID: 6128480017688563542, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_text
-      value: SAIR DO JOGO
+      value: Exit Game
       objectReference: {fileID: 0}
     - target: {fileID: 6128480017688563542, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_fontSize
@@ -76954,6 +77006,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6687148987853951468, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: F - 3rd Skill
+      objectReference: {fileID: 0}
     - target: {fileID: 6695283420685654641, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -76984,6 +77040,10 @@ PrefabInstance:
       propertyPath: headerObjectiveToLevelFifteen
       value: Objetivo do Level 11 ~ 15 (Ruinas Nevosas)
       objectReference: {fileID: 0}
+    - target: {fileID: 7226467343937728197, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: P - Activate
+      objectReference: {fileID: 0}
     - target: {fileID: 7614833670030641175, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.97
@@ -76995,6 +77055,10 @@ PrefabInstance:
     - target: {fileID: 7614833670030641175, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_LocalScale.z
       value: 2.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 8674909944816806112, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
+      propertyPath: m_text
+      value: CTRL - Show Cursor
       objectReference: {fileID: 0}
     - target: {fileID: 8779976028050635051, guid: 3fe102c39b0abb745be99fbc06148195, type: 3}
       propertyPath: m_AnchorMax.x

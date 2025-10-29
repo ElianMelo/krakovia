@@ -1251,7 +1251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7006493438293073145, guid: 68ccca0279283464980324e250b77854, type: 3}
       propertyPath: m_text
-      value: '(E) - Salvar Ponto '
+      value: (E) - Save Point
       objectReference: {fileID: 0}
     - target: {fileID: 7006493438293073145, guid: 68ccca0279283464980324e250b77854, type: 3}
       propertyPath: m_Enabled
